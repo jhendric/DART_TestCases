@@ -1,0 +1,1522 @@
+Execute poe command line: poe  ../oceanM ocean.in
+
+ Model Input Parameters:  ROMS/TOMS version 3.7  
+                          Thursday - April 27, 2017 - 11:24:10 AM
+ -----------------------------------------------------------------------------
+
+ California Current System, 1/3 degree resolution
+
+ Operating system : Linux
+ CPU/hardware     : x86_64
+ Compiler system  : ifort
+ Compiler command : /glade/apps/opt/modulefiles/ys/cmpwrappers/mpif90
+ Compiler flags   : -heap-arrays -fp-model precise -ip -O3 -free -free -free
+
+ Input Script  : 
+
+ SVN Root URL  : https:://myroms.org/svn/src
+ SVN Revision  : 813
+
+ Local Root    : /glade/p/work/thoar/roms/trunk
+ Header Dir    : /glade/u/home/thoar/work/roms/test/WC13/timtest2
+ Header file   : wc13.h
+ Analytical Dir: /glade/u/home/thoar/work/roms/test/WC13/Functionals
+
+ Resolution, Grid 01: 0054x0053x030,  Parallel Nodes:  16,  Tiling: 004x004
+
+
+ Physical Parameters, Grid: 01
+ =============================
+
+         48  ntimes            Number of timesteps for 3-D equations.
+   3600.000  dt                Timestep size (s) for 3-D equations.
+         72  ndtfast           Number of timesteps for 2-D equations between
+                                 each 3D timestep.
+          1  ERstr             Starting ensemble/perturbation run number.
+          1  ERend             Ending ensemble/perturbation run number.
+          0  nrrec             Number of restart records to read from disk.
+          T  LcycleRST         Switch to recycle time-records in restart file.
+         24  nRST              Number of timesteps between the writing of data
+                                 into restart fields.
+          1  ninfo             Number of timesteps between print of information
+                                 to standard output.
+          T  ldefout           Switch to create a new output NetCDF file(s).
+         24  nHIS              Number of timesteps between the writing fields
+                                 into history file.
+          0  nQCK              Number of timesteps between the writing fields
+                                 into quicksave file.
+ 4.0000E+00  nl_tnu2(01)       NLM Horizontal, harmonic mixing coefficient
+                                 (m2/s) for tracer 01: temp
+ 4.0000E+00  nl_tnu2(02)       NLM Horizontal, harmonic mixing coefficient
+                                 (m2/s) for tracer 02: salt
+ 4.0000E+00  nl_visc2          NLM Horizontal, harmonic mixing coefficient
+                                 (m2/s) for momentum.
+          T  LuvSponge         Turning ON  sponge on horizontal momentum.
+          T  LtracerSponge(01) Turning ON  sponge on tracer 01: temp
+          T  LtracerSponge(02) Turning ON  sponge on tracer 02: salt
+ 1.0000E-05  Akt_bak(01)       Background vertical mixing coefficient (m2/s)
+                                 for tracer 01: temp
+ 1.0000E-05  Akt_bak(02)       Background vertical mixing coefficient (m2/s)
+                                 for tracer 02: salt
+ 1.0000E-05  Akv_bak           Background vertical mixing coefficient (m2/s)
+                                 for momentum.
+ 5.0000E-06  Akk_bak           Background vertical mixing coefficient (m2/s)
+                                 for turbulent energy.
+ 5.0000E-06  Akp_bak           Background vertical mixing coefficient (m2/s)
+                                 for turbulent generic statistical field.
+     -1.000  gls_p             GLS stability exponent.
+      0.500  gls_m             GLS turbulent kinetic energy exponent.
+     -1.000  gls_n             GLS turbulent length scale exponent.
+ 7.6000E-06  gls_Kmin          GLS minimum value of turbulent kinetic energy.
+ 1.0000E-12  gls_Pmin          GLS minimum value of dissipation.
+ 5.4770E-01  gls_cmu0          GLS stability coefficient.
+ 5.5500E-01  gls_c1            GLS shear production coefficient.
+ 8.3300E-01  gls_c2            GLS dissipation coefficient.
+-6.0000E-01  gls_c3m           GLS stable buoyancy production coefficient.
+ 1.0000E+00  gls_c3p           GLS unstable buoyancy production coefficient.
+ 2.0000E+00  gls_sigk          GLS constant Schmidt number for TKE.
+ 2.0000E+00  gls_sigp          GLS constant Schmidt number for PSI.
+   1400.000  charnok_alpha     Charnok factor for Zos calculation.
+      0.500  zos_hsig_alpha    Factor for Zos calculation using Hsig(Awave).
+      0.250  sz_alpha          Factor for Wave dissipation surface tke flux .
+    100.000  crgban_cw         Factor for Craig/Banner surface tke flux.
+ 3.0000E-04  rdrg              Linear bottom drag coefficient (m/s).
+ 2.5000E-03  rdrg2             Quadratic bottom drag coefficient.
+ 2.0000E-02  Zob               Bottom roughness (m).
+ 2.0000E-02  Zos               Surface roughness (m).
+ 1.0000E+01  blk_ZQ            Height (m) of surface air humidity measurement.
+ 2.0000E+00  blk_ZT            Height (m) of surface air temperature measurement.
+ 1.0000E+01  blk_ZW            Height (m) of surface winds measurement.
+          1  lmd_Jwt           Jerlov water type.
+          1  Vtransform        S-coordinate transformation equation.
+          1  Vstretching       S-coordinate stretching function.
+ 5.0000E+00  theta_s           S-coordinate surface control parameter.
+ 4.0000E-01  theta_b           S-coordinate bottom  control parameter.
+     10.000  Tcline            S-coordinate surface/bottom layer width (m) used
+                                 in vertical coordinate stretching.
+   1025.000  rho0              Mean density (kg/m3) for Boussinesq approximation.
+  41273.000  dstart            Time-stamp assigned to model initialization (days).
+19000101.00  time_ref          Reference time for units attribute (yyyymmdd.dd)
+ 3.6000E+02  Tnudg(01)         Nudging/relaxation time scale (days)
+                                 for tracer 01: temp
+ 3.6000E+02  Tnudg(02)         Nudging/relaxation time scale (days)
+                                 for tracer 02: salt
+ 3.6000E+02  Znudg             Nudging/relaxation time scale (days)
+                                 for free-surface.
+ 3.6000E+02  M2nudg            Nudging/relaxation time scale (days)
+                                 for 2D momentum.
+ 3.6000E+02  M3nudg            Nudging/relaxation time scale (days)
+                                 for 3D momentum.
+ 3.6000E+02  obcfac            Factor between passive and active
+                                 open boundary conditions.
+          F  VolCons(1)        NLM western  edge boundary volume conservation.
+          F  VolCons(2)        NLM southern edge boundary volume conservation.
+          F  VolCons(3)        NLM eastern  edge boundary volume conservation.
+          F  VolCons(4)        NLM northern edge boundary volume conservation.
+      5.000  T0                Background potential temperature (C) constant.
+     35.000  S0                Background salinity (PSU) constant.
+      1.000  gamma2            Slipperiness variable: free-slip (1.0) or 
+                                                      no-slip (-1.0).
+          F  LuvSrc            Turning OFF momentum point Sources/Sinks.
+          F  LwSrc             Turning OFF volume influx point Sources/Sinks.
+          F  LtracerSrc(01)    Turning OFF point Sources/Sinks on tracer 01: temp
+          F  LtracerSrc(02)    Turning OFF point Sources/Sinks on tracer 02: salt
+          F  LsshCLM           Turning OFF processing of SSH climatology.
+          F  Lm2CLM            Turning OFF processing of 2D momentum climatology.
+          F  Lm3CLM            Turning OFF processing of 3D momentum climatology.
+          F  LtracerCLM(01)    Turning OFF processing of climatology tracer 01: temp
+          F  LtracerCLM(02)    Turning OFF processing of climatology tracer 02: salt
+          F  LnudgeM2CLM       Turning OFF nudging of 2D momentum climatology.
+          F  LnudgeM3CLM       Turning OFF nudging of 3D momentum climatology.
+          F  LnudgeTCLM(01)    Turning OFF nudging of climatology tracer 01: temp
+          F  LnudgeTCLM(02)    Turning OFF nudging of climatology tracer 02: salt
+
+          T  Hout(idFsur)      Write out free-surface.
+          T  Hout(idUbar)      Write out 2D U-momentum component.
+          T  Hout(idVbar)      Write out 2D V-momentum component.
+          T  Hout(idUvel)      Write out 3D U-momentum component.
+          T  Hout(idVvel)      Write out 3D V-momentum component.
+          T  Hout(idWvel)      Write out W-momentum component.
+          T  Hout(idOvel)      Write out omega vertical velocity.
+          T  Hout(idTvar)      Write out tracer 01: temp
+          T  Hout(idTvar)      Write out tracer 02: salt
+          T  Hout(idUsms)      Write out surface U-momentum stress.
+          T  Hout(idVsms)      Write out surface V-momentum stress.
+          T  Hout(idTsur)      Write out surface net heat flux.
+          T  Hout(idTsur)      Write out surface net salt flux.
+          T  Hout(idSrad)      Write out shortwave radiation flux.
+          T  Hout(idLrad)      Write out longwave radiation flux.
+          T  Hout(idLhea)      Write out latent heat flux.
+          T  Hout(idShea)      Write out sensible heat flux.
+          T  Hout(idEmPf)      Write out E-P flux.
+          T  Hout(idevap)      Write out evaporation rate.
+          T  Hout(idrain)      Write out rain rate.
+          T  Hout(idVvis)      Write out vertical viscosity: AKv.
+          T  Hout(idTdif)      Write out vertical diffusion: AKt(itemp).
+          T  Hout(idSdif)      Write out vertical diffusion: AKt(isalt).
+
+ Output/Input Files:
+
+  Output DA Initial/Restart File:  roms_dai.nc
+             Output Restart File:  roms_rst.nc
+             Output History File:  wc13_his.nc
+                 Input Grid File:  ../Data/wc13_grd.nc
+    Input Nonlinear Initial File:  wc13_ini_0015_2013_01_01.nc
+           Input Forcing File 01:  ../Data/coamps_wc13.0_lwrad_down_20121231_20140101_tave24.nc
+           Input Forcing File 02:  ../Data/coamps_wc13.0_Pair_20121231_20140101_tave24.nc
+           Input Forcing File 03:  ../Data/coamps_wc13.0_Qair_20121231_20140101_tave24.nc
+           Input Forcing File 04:  ../Data/coamps_wc13.0_rain_20121231_20140101_tave24.nc
+           Input Forcing File 05:  ../Data/coamps_wc13.0_swrad_20121231_20140101_tave24.nc
+           Input Forcing File 06:  ../Data/coamps_wc13.0_Tair_20121231_20140101_tave24.nc
+           Input Forcing File 07:  ../Data/coamps_wc13.0_wind_20121231_20140101_tave24.nc
+             Input Boundary File:  ../Data/hycom_wc13.0_20121230_20140102_bry.nc
+          Input/Output USER File:  MyFile.dat
+
+ Generic User Parameters:
+
+ 5.0000E+00  user(01)          User parameter 01.
+
+ Tile partition information for Grid 01:  0054x0053x0030  tiling: 004x004
+
+     tile     Istr     Iend     Jstr     Jend     Npts
+
+        0        1       13        1       13     5070
+        1       14       27        1       13     5460
+        2       28       41        1       13     5460
+        3       42       54        1       13     5070
+        4        1       13       14       27     5460
+        5       14       27       14       27     5880
+        6       28       41       14       27     5880
+        7       42       54       14       27     5460
+        8        1       13       28       41     5460
+        9       14       27       28       41     5880
+       10       28       41       28       41     5880
+       11       42       54       28       41     5460
+       12        1       13       42       53     4680
+       13       14       27       42       53     5040
+       14       28       41       42       53     5040
+       15       42       54       42       53     4680
+
+ Tile minimum and maximum fractional coordinates for Grid 01:
+   (interior and boundary points)
+
+     tile     Xmin     Xmax     Ymin     Ymax     grid
+
+        0     0.00    13.50     0.00    13.50  RHO-points
+        1    13.50    27.50     0.00    13.50  RHO-points
+        2    27.50    41.50     0.00    13.50  RHO-points
+        3    41.50    55.00     0.00    13.50  RHO-points
+        4     0.00    13.50    13.50    27.50  RHO-points
+        5    13.50    27.50    13.50    27.50  RHO-points
+        6    27.50    41.50    13.50    27.50  RHO-points
+        7    41.50    55.00    13.50    27.50  RHO-points
+        8     0.00    13.50    27.50    41.50  RHO-points
+        9    13.50    27.50    27.50    41.50  RHO-points
+       10    27.50    41.50    27.50    41.50  RHO-points
+       11    41.50    55.00    27.50    41.50  RHO-points
+       12     0.00    13.50    41.50    54.00  RHO-points
+       13    13.50    27.50    41.50    54.00  RHO-points
+       14    27.50    41.50    41.50    54.00  RHO-points
+       15    41.50    55.00    41.50    54.00  RHO-points
+
+        0     0.50    13.50     0.00    13.50    U-points
+        1    13.50    27.50     0.00    13.50    U-points
+        2    27.50    41.50     0.00    13.50    U-points
+        3    41.50    54.50     0.00    13.50    U-points
+        4     0.50    13.50    13.50    27.50    U-points
+        5    13.50    27.50    13.50    27.50    U-points
+        6    27.50    41.50    13.50    27.50    U-points
+        7    41.50    54.50    13.50    27.50    U-points
+        8     0.50    13.50    27.50    41.50    U-points
+        9    13.50    27.50    27.50    41.50    U-points
+       10    27.50    41.50    27.50    41.50    U-points
+       11    41.50    54.50    27.50    41.50    U-points
+       12     0.50    13.50    41.50    54.00    U-points
+       13    13.50    27.50    41.50    54.00    U-points
+       14    27.50    41.50    41.50    54.00    U-points
+       15    41.50    54.50    41.50    54.00    U-points
+
+        0     0.00    13.50     0.50    13.50    V-points
+        1    13.50    27.50     0.50    13.50    V-points
+        2    27.50    41.50     0.50    13.50    V-points
+        3    41.50    55.00     0.50    13.50    V-points
+        4     0.00    13.50    13.50    27.50    V-points
+        5    13.50    27.50    13.50    27.50    V-points
+        6    27.50    41.50    13.50    27.50    V-points
+        7    41.50    55.00    13.50    27.50    V-points
+        8     0.00    13.50    27.50    41.50    V-points
+        9    13.50    27.50    27.50    41.50    V-points
+       10    27.50    41.50    27.50    41.50    V-points
+       11    41.50    55.00    27.50    41.50    V-points
+       12     0.00    13.50    41.50    53.50    V-points
+       13    13.50    27.50    41.50    53.50    V-points
+       14    27.50    41.50    41.50    53.50    V-points
+       15    41.50    55.00    41.50    53.50    V-points
+
+ Maximum halo size in XI and ETA directions:
+
+               HaloSizeI(1) =      52
+               HaloSizeJ(1) =      52
+                TileSide(1) =      20
+                TileSize(1) =     400
+
+
+ Input Assimilation Files:
+
+   Verification Parameters File:  s4dvar.in
+      Input/Output Lanczos File:  ocean_lcz.nc
+      Input/Output Hessian File:  ocean_hss.nc
+       Output verification File:  roms_mod_obs.nc
+
+ Lateral Boundary Conditions: NLM
+ ============================
+
+ Variable               Grid  West Edge    South Edge   East Edge    North Edge
+ ---------              ----  ----------   ----------   ----------   ----------
+
+ zeta                     1   Chapman Imp  Chapman Imp  Closed       Chapman Imp
+
+ ubar                     1   Flather      Flather      Closed       Flather
+
+ vbar                     1   Flather      Flather      Closed       Flather
+
+ u                        1   Clamped      Clamped      Closed       Clamped
+
+ v                        1   Clamped      Clamped      Closed       Clamped
+
+ temp                     1   Clamped      Clamped      Closed       Clamped
+
+ salt                     1   Clamped      Clamped      Closed       Clamped
+
+ tke                      1   Gradient     Gradient     Closed       Gradient
+
+ Activated C-preprocessing Options:
+
+ WC13                California Current System, 1/3 degree resolution
+ ANA_BSFLUX          Analytical kinematic bottom salinity flux.
+ ANA_BTFLUX          Analytical kinematic bottom temperature flux.
+ ANA_SPONGE          Analytical enhanced viscosity/diffusion sponge.
+ ASSUMED_SHAPE       Using assumed-shape arrays.
+ BULK_FLUXES         Surface bulk fluxes parameterization.
+ CURVGRID            Orthogonal curvilinear grid.
+ DIURNAL_SRFLUX      Modulate shortwave radiation by the local diurnal cycle.
+ DJ_GRADPS           Parabolic Splines density Jacobian (Shchepetkin, 2002).
+ DOUBLE_PRECISION    Double precision arithmetic.
+ EMINUSP             Compute Salt Flux using E-P.
+ ENKF_RESTART        Writting fields for offline Ensemble Kalman Filter.
+ FULL_GRID           Considering observations at interior and boundary points.
+ GLS_MIXING          Generic Length-Scale turbulence closure.
+ KANTHA_CLAYSON      Kantha and Clayson stability function formulation.
+ LONGWAVE_OUT        Compute outgoing longwave radiation internally.
+ MASKING             Land/Sea masking.
+ MIX_GEO_TS          Mixing of tracers along geopotential surfaces.
+ MIX_S_UV            Mixing of momentum along constant S-surfaces.
+ MPI                 MPI distributed-memory configuration.
+ NONLINEAR           Nonlinear Model.
+ NONLIN_EOS          Nonlinear Equation of State for seawater.
+ N2S2_HORAVG         Horizontal smoothing of buoyancy and shear.
+ OBSERVATIONS        Processing 4DVar observations.
+ POWER_LAW           Power-law shape time-averaging barotropic filter.
+ PROFILE             Time profiling activated .
+ K_GSCHEME           Third-order upstream advection of TKE fields.
+ RI_SPLINES          Parabolic Spline Reconstruction for Richardson Number.
+ !RST_SINGLE         Double precision fields in restart NetCDF file.
+ SALINITY            Using salinity.
+ SOLAR_SOURCE        Solar Radiation Source Term.
+ SOLVE3D             Solving 3D Primitive Equations.
+ SPLINES_VDIFF       Parabolic Spline Reconstruction for Vertical Diffusion.
+ SPLINES_VVISC       Parabolic Spline Reconstruction for Vertical Viscosity.
+ SPHERICAL           Spherical grid configuration.
+ TS_U3HADVECTION     Third-order upstream horizontal advection of tracers.
+ TS_C4VADVECTION     Fourth-order centered vertical advection of tracers.
+ TS_DIF2             Harmonic mixing of tracers.
+ UV_ADV              Advection of momentum.
+ UV_COR              Coriolis term.
+ UV_U3HADVECTION     Third-order upstream horizontal advection of 3D momentum.
+ UV_C4VADVECTION     Fourth-order centered vertical advection of momentum.
+ UV_QDRAG            Quadratic bottom stress.
+ UV_VIS2             Harmonic mixing of momentum.
+ VAR_RHO_2D          Variable density barotropic mode.
+ VERIFICATION        Proccess model solution at observation locations.
+
+ Process Information:
+
+ Node #  0 (pid=   24393) is active.
+ Node #  2 (pid=   24395) is active.
+ Node #  3 (pid=   24396) is active.
+ Node #  4 (pid=   24397) is active.
+ Node #  5 (pid=   24398) is active.
+ Node #  6 (pid=   24399) is active.
+ Node #  8 (pid=   24401) is active.
+ Node # 12 (pid=   24405) is active.
+ Node # 14 (pid=   24407) is active.
+ Node # 15 (pid=   24408) is active.
+ Node #  1 (pid=   24394) is active.
+ Node #  7 (pid=   24400) is active.
+ Node #  9 (pid=   24402) is active.
+ Node # 10 (pid=   24403) is active.
+ Node # 11 (pid=   24404) is active.
+ Node # 13 (pid=   24406) is active.
+
+ INITIAL: Configuring and initializing forward nonlinear model ...
+ *******
+
+ Vertical S-coordinate System, Grid 01:
+
+ level   S-coord     Cs-curve   Z   at hmin       at hc    half way     at hmax
+
+    30   0.0000000   0.0000000        0.000       0.000       0.000       0.000
+    29  -0.0333333  -0.0024174       -0.333      -0.333      -6.606     -12.878
+    28  -0.0666667  -0.0052838       -0.667      -0.667     -14.377     -28.087
+    27  -0.1000000  -0.0087922       -1.000      -1.000     -23.814     -46.627
+    26  -0.1333333  -0.0131904       -1.333      -1.333     -35.559     -69.785
+    25  -0.1666667  -0.0187972       -1.667      -1.667     -50.441     -99.215
+    24  -0.2000000  -0.0260168       -2.000      -2.000     -69.507    -137.015
+    23  -0.2333333  -0.0353508       -2.333      -2.333     -94.060    -185.787
+    22  -0.2666667  -0.0473981       -2.667      -2.667    -125.653    -248.640
+    21  -0.3000000  -0.0628318       -3.000      -3.000    -166.033    -329.067
+    20  -0.3333333  -0.0823381       -3.333      -3.333    -216.981    -430.629
+    19  -0.3666667  -0.1065031       -3.667      -3.667    -280.017    -556.367
+    18  -0.4000000  -0.1356491       -4.000      -4.000    -355.977    -707.954
+    17  -0.4333333  -0.1696534       -4.333      -4.333    -444.543    -884.753
+    16  -0.4666667  -0.2078237       -4.667      -4.667    -543.920   -1083.173
+    15  -0.5000000  -0.2489214       -5.000      -5.000    -650.892   -1296.783
+    14  -0.5333333  -0.2913811       -5.333      -5.333    -761.398   -1517.462
+    13  -0.5666667  -0.3336756       -5.667      -5.667    -871.475   -1737.284
+    12  -0.6000000  -0.3746809       -6.000      -6.000    -978.208   -1950.415
+    11  -0.6333333  -0.4138998       -6.333      -6.333   -1080.305   -2154.276
+    10  -0.6666667  -0.4514899       -6.667      -6.667   -1178.175   -2349.684
+     9  -0.7000000  -0.4881475       -7.000      -7.000   -1273.626   -2540.253
+     8  -0.7333333  -0.5249360       -7.333      -7.333   -1369.417   -2731.501
+     7  -0.7666667  -0.5631362       -7.667      -7.667   -1468.871   -2930.075
+     6  -0.8000000  -0.6041494       -8.000      -8.000   -1575.624   -3143.247
+     5  -0.8333333  -0.6494565       -8.333      -8.333   -1693.518   -3378.703
+     4  -0.8666667  -0.7006196       -8.667      -8.667   -1826.608   -3644.548
+     3  -0.9000000  -0.7593114       -9.000      -9.000   -1979.232   -3949.464
+     2  -0.9333333  -0.8273620       -9.333      -9.333   -2156.140   -4302.947
+     1  -0.9666667  -0.9068164       -9.667      -9.667   -2362.639   -4715.611
+     0  -1.0000000  -1.0000000      -10.000     -10.000   -2604.762   -5199.523
+
+ Time Splitting Weights for Grid 01:    ndtfast =  72    nfast =  98
+ ==================================
+
+    Primary            Secondary            Accumulated to Current Step
+
+  1-0.0002697221589845 0.0138888888888889-0.0002697221589845 0.0138888888888889
+  2-0.0005179738466200 0.0138926350299859-0.0007876960056045 0.0277815239188748
+  3-0.0007447551074202 0.0138998291111890-0.0015324511130247 0.0416813530300638
+  4-0.0009500661144945 0.0139101729321254-0.0024825172275192 0.0555915259621891
+  5-0.0011339073179268 0.0139233682948267-0.0036164245454460 0.0695148942570158
+  6-0.0012962796525070 0.0139391170075756-0.0049127041979530 0.0834540112645914
+  7-0.0014371848048139 0.0139571208916382-0.0063498890027669 0.0974111321562297
+  8-0.0015566255396494 0.0139770817917051-0.0079065145424162 0.1113882139479348
+  9-0.0016546060858249 0.0139987015908669-0.0095611206282412 0.1253869155388017
+ 10-0.0017311325812999 0.0140216822309478-0.0112922532095411 0.1394085977697495
+ 11-0.0017862135776710 0.0140457257390214-0.0130784667872121 0.1534543235087709
+ 12-0.0018198606040138 0.0140705342609335-0.0148983273912259 0.1675248577697044
+ 13-0.0018320887900766 0.0140958101026559-0.0167304161813025 0.1816206678723603
+ 14-0.0018229175488246 0.0141212557802959-0.0185533337301271 0.1957419236526562
+ 15-0.0017923713183374 0.0141465740795851-0.0203457050484645 0.2098884977322413
+ 16-0.0017404803630569 0.0141714681256731-0.0220861854115213 0.2240599658579144
+ 17-0.0016672816343881 0.0141956414640489-0.0237534670459094 0.2382556073219634
+ 18-0.0015728196906507 0.0142187981534154-0.0253262867365601 0.2524744054753787
+ 19-0.0014571476763831 0.0142406428713411-0.0267834344129432 0.2667150483467199
+ 20-0.0013203283609977 0.0142608810335131-0.0281037627739409 0.2809759293802330
+ 21-0.0011624352367880 0.0142792189274159-0.0292661980107289 0.2952551483076488
+ 22-0.0009835536762878 0.0142953638612601-0.0302497516870167 0.3095505121689089
+ 23-0.0007837821489820 0.0143090243289864-0.0310335338359988 0.3238595364978953
+ 24-0.0005632334973686 0.0143199101921667-0.0315967673333673 0.3381794466900619
+ 25-0.0003220362723731 0.0143277328796301-0.0319188036057405 0.3525071795696921
+ 26-0.0000603361281147 0.0143322056056353-0.0319791397338552 0.3668393851753274
+ 27 0.0002217027239766 0.0143330436074147-0.0317574370098786 0.3811724287827420
+ 28 0.0005238960016901 0.0143299644029150-0.0312335410081885 0.3955023931856571
+ 29 0.0008460377792135 0.0143226880695582-0.0303875032289750 0.4098250812552152
+ 30 0.0011878988549600 0.0143109375448469-0.0291996043740150 0.4241360188000621
+ 31 0.0015492250600437 0.0142944389496391-0.0276503793139713 0.4384304577497012
+ 32 0.0019297355074029 0.0142729219349163-0.0257206438065684 0.4527033796846174
+ 33 0.0023291207815727 0.0142461200528690-0.0233915230249958 0.4669494997374865
+ 34 0.0027470410691043 0.0142137711531249-0.0206444819558915 0.4811632708906114
+ 35 0.0031831242296341 0.0141756178049429-0.0174613577262575 0.4953388886955543
+ 36 0.0036369638075999 0.0141314077461980-0.0138243939186576 0.5094702964417523
+ 37 0.0041081169846063 0.0140808943599814-0.0097162769340513 0.5235511908017337
+ 38 0.0045961024724372 0.0140238371796396-0.0051201744616140 0.5375750279813734
+ 39 0.0051003983467181 0.0139600024230780-0.0000197761148959 0.5515350304044513
+ 40 0.0056204398212250 0.0138891635571513 0.0056006637063291 0.5654241939616026
+ 41 0.0061556169628429 0.0138111018929677 0.0117562806691720 0.5792352958545702
+ 42 0.0067052723471717 0.0137256072129282 0.0184615530163437 0.5929609030674984
+ 43 0.0072686986547809 0.0136324784303286 0.0257302516711247 0.6065933814978269
+ 44 0.0078451362081123 0.0135315242823455 0.0335753878792370 0.6201249057801724
+ 45 0.0084337704490309 0.0134225640572328 0.0420091583282679 0.6335474698374053
+ 46 0.0090337293570240 0.0133054283565518 0.0510428876852919 0.6468528981939571
+ 47 0.0096440808080493 0.0131799598932598 0.0606869684933412 0.6600328580872169
+ 48 0.0102638298740300 0.0130460143264814 0.0709507983673713 0.6730788724136982
+ 49 0.0108919160629993 0.0129034611337865 0.0818427144303705 0.6859823335474847
+ 50 0.0115272104998922 0.0127521845218004 0.0933699249302627 0.6987345180692851
+ 51 0.0121685130479867 0.0125920843759686 0.1055384379782495 0.7113266024452537
+ 52 0.0128145493709923 0.0124230772503021 0.1183529873492417 0.7237496796955558
+ 53 0.0134639679357865 0.0122450973979272 0.1318169552850283 0.7359947770934830
+ 54 0.0141153369558014 0.0120580978432635 0.1459322922408297 0.7480528749367465
+ 55 0.0147671412750559 0.0118620514966551 0.1606994335158856 0.7599149264334017
+ 56 0.0154177791928386 0.0116569523122794 0.1761172127087242 0.7715718787456811
+ 57 0.0160655592290373 0.0114428164901566 0.1921827719377615 0.7830146952358378
+ 58 0.0167086968301175 0.0112196837230866 0.2088914687678790 0.7942343789589245
+ 59 0.0173453110157492 0.0109876184893350 0.2262367797836282 0.8052219974482595
+ 60 0.0179734209660816 0.0107467113918941 0.2442102007497098 0.8159687088401536
+ 61 0.0185909425496662 0.0104970805451429 0.2628011432993760 0.8264657893852965
+ 62 0.0191956847920284 0.0102388730097309 0.2819968280914044 0.8367046623950274
+ 63 0.0197853462848869 0.0099722662765083 0.3017821743762913 0.8466769286715357
+ 64 0.0203575115360218 0.0096974698003293 0.3221396859123131 0.8563743984718649
+ 65 0.0209096472597907 0.0094147265845512 0.3430493331721038 0.8657891250564161
+ 66 0.0214390986082931 0.0091243148170541 0.3644884317803970 0.8749134398734703
+ 67 0.0219430853431833 0.0088265495586056 0.3864315171235803 0.8837399894320759
+ 68 0.0224186979481308 0.0085217844843947 0.4088502150717111 0.8922617739164705
+ 69 0.0228628936819303 0.0082104136795596 0.4317131087536414 0.9004721875960301
+ 70 0.0232724925722585 0.0078928734895328 0.4549856013258999 0.9083650610855628
+ 71 0.0236441733500801 0.0075696444260292 0.4786297746759800 0.9159347055115920
+ 72 0.0239744693247019 0.0072412531295003 0.5026042440006819 0.9231759586410923
+ 73 0.0242597641994746 0.0069082743888794 0.5268640082001566 0.9300842330299717
+ 74 0.0244962878281439 0.0065713332194423 0.5513602960283005 0.9366555662494139
+ 75 0.0246801119118487 0.0062311069996069 0.5760404079401492 0.9428866732490209
+ 76 0.0248071456367686 0.0058883276674979 0.6008475535769178 0.9487750009165188
+ 77 0.0248731312524188 0.0055437839780984 0.6257206848293365 0.9543187848946172
+ 78 0.0248736395905937 0.0051983238218148 0.6505943244199301 0.9595171087164319
+ 79 0.0248040655249589 0.0048528566052787 0.6753983899448891 0.9643699653217107
+ 80 0.0246596233712912 0.0045083556952099 0.7000580133161803 0.9688783210169206
+ 81 0.0244353422283667 0.0041658609261642 0.7244933555445470 0.9730441819430847
+ 82 0.0241260612594974 0.0038264811729924 0.7486194168040444 0.9768706631160772
+ 83 0.0237264249147164 0.0034913969888327 0.7723458417187609 0.9803620601049099
+ 84 0.0232308780936106 0.0031618633094617 0.7955767198123714 0.9835239234143716
+ 85 0.0226336612488020 0.0028392122248282 0.8182103810611735 0.9863631356391998
+ 86 0.0219288054300778 0.0025248558185948 0.8401391864912513 0.9888879914577946
+ 87 0.0211101272691677 0.0022202890765104 0.8612493137604190 0.9911082805343050
+ 88 0.0201712239051703 0.0019270928644386 0.8814205376655893 0.9930353733987436
+ 89 0.0191054678506273 0.0016469369768668 0.9005260055162165 0.9946823103756104
+ 90 0.0179060017982467 0.0013815832567192 0.9184320073144632 0.9960638936323296
+ 91 0.0165657333682728 0.0011328887872991 0.9349977406827360 0.9971967824196287
+ 92 0.0150773297965061 0.0009028091571842 0.9500750704792420 0.9980995915768129
+ 93 0.0134332125629703 0.0006934017988994 0.9635082830422124 0.9987929933757124
+ 94 0.0116255519612283 0.0005068294021915 0.9751338350034406 0.9992998227779039
+ 95 0.0096462616083458 0.0003453634027300 0.9847800966117864 0.9996451861806338
+ 96 0.0074869928955037 0.0002113875470585 0.9922670895072901 0.9998565737276923
+ 97 0.0051391293792585 0.0001074015346210 0.9974062188865486 0.9999639752623133
+ 98 0.0025937811134509 0.0000360247376868 0.9999999999999996 1.0000000000000000
+
+ ndtfast, nfast =   72  98   nfast/ndtfast =  1.36111
+
+ Centers of gravity and integrals (values must be 1, 1, approx 1/2, 1, 1):
+
+    1.000000000000 1.025151749473 0.512575874736 1.000000000000 1.000000000000
+
+ Power filter parameters, Fgamma, gamma =  0.28400   0.24456
+
+ Metrics information for Grid 01:
+ ===============================
+
+ Minimum X-grid spacing, DXmin =  2.47874425E+01 km
+ Maximum X-grid spacing, DXmax =  3.20812765E+01 km
+ Minimum Y-grid spacing, DYmin =  3.70442804E+01 km
+ Maximum Y-grid spacing, DYmax =  3.70442804E+01 km
+ Minimum Z-grid spacing, DZmin =  3.33333333E-01 m
+ Maximum Z-grid spacing, DZmax =  4.83911595E+02 m
+
+ Minimum barotropic Courant Number =  5.82433030E-02
+ Maximum barotropic Courant Number =  4.84665473E-01
+ Maximum Coriolis   Courant Number =  3.89109721E-01
+
+
+ NLM: GET_STATE - Read state initial conditions,             t = 41273 00:00:00
+                   (Grid 01, File: wc13_ini_0015_2013_01_01.nc, Rec=0001, Index=1)
+                - free-surface
+                   (Min = -4.74195508E-02 Max =  4.30407996E-01)
+                - vertically integrated u-momentum component
+                   (Min = -2.39704874E-01 Max =  1.71483468E-01)
+                - vertically integrated v-momentum component
+                   (Min = -3.15577501E-01 Max =  2.92306116E-01)
+                - u-momentum component
+                   (Min = -9.50113881E-01 Max =  5.56132351E-01)
+                - v-momentum component
+                   (Min = -8.60142591E-01 Max =  7.53666613E-01)
+                - potential temperature
+                   (Min =  1.12949642E+00 Max =  2.09784640E+01)
+                - salinity
+                   (Min =  3.19147736E+01 Max =  3.47240836E+01)
+                - vertical viscosity coefficient
+                   (Min =  0.00000000E+00 Max =  2.00673180E+00)
+                - temperature vertical diffusion coefficient
+                   (Min =  0.00000000E+00 Max =  2.72410926E+00)
+                - salinity vertical diffusion coefficient
+                   (Min =  0.00000000E+00 Max =  2.72410926E+00)
+    GET_2DFLD   - surface u-wind component,                  t = 41272 12:30:00
+                   (Rec=0000001, Index=1, File: coamps_wc13.0_wind_20121231_20140101_tave24.nc)
+                   (Tmin=      41272.5208 Tmax=      41638.5208)
+                   (Min = -4.30790710E+00 Max =  4.47005320E+00)
+    GET_2DFLD   - surface v-wind component,                  t = 41272 12:30:00
+                   (Rec=0000001, Index=1, File: coamps_wc13.0_wind_20121231_20140101_tave24.nc)
+                   (Tmin=      41272.5208 Tmax=      41638.5208)
+                   (Min = -8.39031124E+00 Max =  4.95870686E+00)
+    GET_2DFLD   - surface air pressure,                      t = 41272 12:30:00
+                   (Rec=0000001, Index=1, File: coamps_wc13.0_Pair_20121231_20140101_tave24.nc)
+                   (Tmin=      41272.5208 Tmax=      41638.5208)
+                   (Min =  1.02019604E+03 Max =  1.02781995E+03)
+    GET_2DFLD   - solar shortwave radiation flux,            t = 41272 12:30:00
+                   (Rec=0000001, Index=1, File: coamps_wc13.0_swrad_20121231_20140101_tave24.nc)
+                   (Tmin=      41272.5208 Tmax=      41638.5208)
+                   (Min =  3.74038883E-06 Max =  3.81667362E-05)
+    GET_2DFLD   - downwelling longwave radiation flux,       t = 41272 12:30:00
+                   (Rec=0000001, Index=1, File: coamps_wc13.0_lwrad_down_20121231_20140101_tave24.nc)
+                   (Tmin=      41272.5208 Tmax=      41638.5208)
+                   (Min =  5.68773279E-05 Max =  8.95539745E-05)
+    GET_2DFLD   - surface air temperature,                   t = 41272 12:30:00
+                   (Rec=0000001, Index=1, File: coamps_wc13.0_Tair_20121231_20140101_tave24.nc)
+                   (Tmin=      41272.5208 Tmax=      41638.5208)
+                   (Min =  5.63823986E+00 Max =  1.66821022E+01)
+    GET_2DFLD   - surface air relative humidity,             t = 41272 12:30:00
+                   (Rec=0000001, Index=1, File: coamps_wc13.0_Qair_20121231_20140101_tave24.nc)
+                   (Tmin=      41272.5208 Tmax=      41638.5208)
+                   (Min =  5.10996475E-01 Max =  9.85041351E-01)
+    GET_2DFLD   - rain fall rate,                            t = 41272 12:30:00
+                   (Rec=0000001, Index=1, File: coamps_wc13.0_rain_20121231_20140101_tave24.nc)
+                   (Tmin=      41272.5208 Tmax=      41638.5208)
+                   (Min = -1.69406589E-21 Max =  1.78835355E-04)
+    GET_NGFLD   - free-surface western boundary condition,   t = 41273 00:00:00
+                   (Rec=0000003, Index=2, File: hycom_wc13.0_20121230_20140102_bry.nc)
+                   (Tmin=      41271.0000 Tmax=      41639.0000)
+                   (Min =  4.80000004E-02 Max =  4.07333344E-01)
+    GET_NGFLD   - free-surface southern boundary condition,  t = 41273 00:00:00
+                   (Rec=0000003, Index=2, File: hycom_wc13.0_20121230_20140102_bry.nc)
+                   (Tmin=      41271.0000 Tmax=      41639.0000)
+                   (Min =  0.00000000E+00 Max =  3.70333344E-01)
+    GET_NGFLD   - free-surface northern boundary condition,  t = 41273 00:00:00
+                   (Rec=0000003, Index=2, File: hycom_wc13.0_20121230_20140102_bry.nc)
+                   (Tmin=      41271.0000 Tmax=      41639.0000)
+                   (Min = -1.05000008E-02 Max =  1.51000008E-01)
+    GET_NGFLD   - 2D u-momentum western boundary condition,  t = 41273 00:00:00
+                   (Rec=0000003, Index=2, File: hycom_wc13.0_20121230_20140102_bry.nc)
+                   (Tmin=      41271.0000 Tmax=      41639.0000)
+                   (Min = -2.70776115E-02 Max =  2.62970217E-02)
+    GET_NGFLD   - 2D v-momentum western boundary condition,  t = 41273 00:00:00
+                   (Rec=0000003, Index=2, File: hycom_wc13.0_20121230_20140102_bry.nc)
+                   (Tmin=      41271.0000 Tmax=      41639.0000)
+                   (Min = -1.31288897E-02 Max =  1.20056299E-02)
+    GET_NGFLD   - 2D u-momentum southern boundary condition, t = 41273 00:00:00
+                   (Rec=0000003, Index=2, File: hycom_wc13.0_20121230_20140102_bry.nc)
+                   (Tmin=      41271.0000 Tmax=      41639.0000)
+                   (Min = -1.23484293E-02 Max =  1.70527697E-02)
+    GET_NGFLD   - 2D v-momentum southern boundary condition, t = 41273 00:00:00
+                   (Rec=0000003, Index=2, File: hycom_wc13.0_20121230_20140102_bry.nc)
+                   (Tmin=      41271.0000 Tmax=      41639.0000)
+                   (Min = -2.46864222E-02 Max =  1.31908190E-02)
+    GET_NGFLD   - 2D u-momentum northern boundary condition, t = 41273 00:00:00
+                   (Rec=0000003, Index=2, File: hycom_wc13.0_20121230_20140102_bry.nc)
+                   (Tmin=      41271.0000 Tmax=      41639.0000)
+                   (Min = -1.07067302E-01 Max =  1.89983342E-02)
+    GET_NGFLD   - 2D v-momentum northern boundary condition, t = 41273 00:00:00
+                   (Rec=0000003, Index=2, File: hycom_wc13.0_20121230_20140102_bry.nc)
+                   (Tmin=      41271.0000 Tmax=      41639.0000)
+                   (Min = -2.48207338E-02 Max =  8.53372067E-02)
+    GET_NGFLD   - 3D u-momentum western boundary condition,  t = 41273 00:00:00
+                   (Rec=0000003, Index=2, File: hycom_wc13.0_20121230_20140102_bry.nc)
+                   (Tmin=      41271.0000 Tmax=      41639.0000)
+                   (Min = -1.39549255E-01 Max =  4.65336412E-01)
+    GET_NGFLD   - 3D v-momentum western boundary condition,  t = 41273 00:00:00
+                   (Rec=0000003, Index=2, File: hycom_wc13.0_20121230_20140102_bry.nc)
+                   (Tmin=      41271.0000 Tmax=      41639.0000)
+                   (Min = -1.96120366E-01 Max =  2.27007121E-01)
+    GET_NGFLD   - 3D u-momentum southern boundary condition, t = 41273 00:00:00
+                   (Rec=0000003, Index=2, File: hycom_wc13.0_20121230_20140102_bry.nc)
+                   (Tmin=      41271.0000 Tmax=      41639.0000)
+                   (Min = -9.92500186E-02 Max =  2.41364509E-01)
+    GET_NGFLD   - 3D v-momentum southern boundary condition, t = 41273 00:00:00
+                   (Rec=0000003, Index=2, File: hycom_wc13.0_20121230_20140102_bry.nc)
+                   (Tmin=      41271.0000 Tmax=      41639.0000)
+                   (Min = -1.59972608E-01 Max =  2.43823647E-01)
+    GET_NGFLD   - 3D u-momentum northern boundary condition, t = 41273 00:00:00
+                   (Rec=0000003, Index=2, File: hycom_wc13.0_20121230_20140102_bry.nc)
+                   (Tmin=      41271.0000 Tmax=      41639.0000)
+                   (Min = -5.12944758E-01 Max =  4.65336412E-01)
+    GET_NGFLD   - 3D v-momentum northern boundary condition, t = 41273 00:00:00
+                   (Rec=0000003, Index=2, File: hycom_wc13.0_20121230_20140102_bry.nc)
+                   (Tmin=      41271.0000 Tmax=      41639.0000)
+                   (Min = -1.28462955E-01 Max =  3.77818644E-01)
+    GET_NGFLD   - temperature western boundary condition,    t = 41273 00:00:00
+                   (Rec=0000003, Index=2, File: hycom_wc13.0_20121230_20140102_bry.nc)
+                   (Tmin=      41271.0000 Tmax=      41639.0000)
+                   (Min =  1.41333246E+00 Max =  1.94651031E+01)
+    GET_NGFLD   - salinity western boundary condition,       t = 41273 00:00:00
+                   (Rec=0000003, Index=2, File: hycom_wc13.0_20121230_20140102_bry.nc)
+                   (Tmin=      41271.0000 Tmax=      41639.0000)
+                   (Min =  3.24879990E+01 Max =  3.48780022E+01)
+    GET_NGFLD   - temperature southern boundary condition,   t = 41273 00:00:00
+                   (Rec=0000003, Index=2, File: hycom_wc13.0_20121230_20140102_bry.nc)
+                   (Tmin=      41271.0000 Tmax=      41639.0000)
+                   (Min =  0.00000000E+00 Max =  1.96610832E+01)
+    GET_NGFLD   - salinity southern boundary condition,      t = 41273 00:00:00
+                   (Rec=0000003, Index=2, File: hycom_wc13.0_20121230_20140102_bry.nc)
+                   (Tmin=      41271.0000 Tmax=      41639.0000)
+                   (Min =  0.00000000E+00 Max =  3.49153061E+01)
+    GET_NGFLD   - temperature northern boundary condition,   t = 41273 00:00:00
+                   (Rec=0000003, Index=2, File: hycom_wc13.0_20121230_20140102_bry.nc)
+                   (Tmin=      41271.0000 Tmax=      41639.0000)
+                   (Min =  0.00000000E+00 Max =  1.06339989E+01)
+    GET_NGFLD   - salinity northern boundary condition,      t = 41273 00:00:00
+                   (Rec=0000003, Index=2, File: hycom_wc13.0_20121230_20140102_bry.nc)
+                   (Tmin=      41271.0000 Tmax=      41639.0000)
+                   (Min =  0.00000000E+00 Max =  3.46958351E+01)
+
+ Basin information for Grid 01:
+
+ Maximum grid stiffness ratios:  rx0 =   2.434239E-01 (Beckmann and Haidvogel)
+                                 rx1 =   7.002261E+00 (Haney)
+
+ Initial basin volumes: TotVolume =  6.9075994994E+15 m3
+                        MinVolume =  4.7447891644E+08 m3
+                        MaxVolume =  5.4076837992E+11 m3
+                          Max/Min =  1.1397100296E+03
+
+      DEF_MOD   - creating model/observation data file, Grid 01: roms_mod_obs.nc
+      DEF_AVG     - creating  DA INI/RST   file, Grid 01: roms_dai.nc
+
+ NL ROMS/TOMS: started time-stepping: (Grid: 01 TimeSteps: 00000001 - 00000048)
+
+    GET_2DFLD   - surface u-wind component,                  t = 41273 12:30:00
+                   (Rec=0000002, Index=2, File: coamps_wc13.0_wind_20121231_20140101_tave24.nc)
+                   (Tmin=      41272.5208 Tmax=      41638.5208)
+                   (Min = -8.34960079E+00 Max =  3.49470305E+00)
+    GET_2DFLD   - surface v-wind component,                  t = 41273 12:30:00
+                   (Rec=0000002, Index=2, File: coamps_wc13.0_wind_20121231_20140101_tave24.nc)
+                   (Tmin=      41272.5208 Tmax=      41638.5208)
+                   (Min = -5.19647694E+00 Max =  1.34639111E+01)
+    GET_2DFLD   - surface air pressure,                      t = 41273 12:30:00
+                   (Rec=0000002, Index=2, File: coamps_wc13.0_Pair_20121231_20140101_tave24.nc)
+                   (Tmin=      41272.5208 Tmax=      41638.5208)
+                   (Min =  1.01855536E+03 Max =  1.02895654E+03)
+    GET_2DFLD   - solar shortwave radiation flux,            t = 41273 12:30:00
+                   (Rec=0000002, Index=2, File: coamps_wc13.0_swrad_20121231_20140101_tave24.nc)
+                   (Tmin=      41272.5208 Tmax=      41638.5208)
+                   (Min =  2.54807979E-06 Max =  3.67238656E-05)
+    GET_2DFLD   - downwelling longwave radiation flux,       t = 41273 12:30:00
+                   (Rec=0000002, Index=2, File: coamps_wc13.0_lwrad_down_20121231_20140101_tave24.nc)
+                   (Tmin=      41272.5208 Tmax=      41638.5208)
+                   (Min =  5.49256449E-05 Max =  8.95014212E-05)
+    GET_2DFLD   - surface air temperature,                   t = 41273 12:30:00
+                   (Rec=0000002, Index=2, File: coamps_wc13.0_Tair_20121231_20140101_tave24.nc)
+                   (Tmin=      41272.5208 Tmax=      41638.5208)
+                   (Min =  5.82518339E+00 Max =  1.74043789E+01)
+    GET_2DFLD   - surface air relative humidity,             t = 41273 12:30:00
+                   (Rec=0000002, Index=2, File: coamps_wc13.0_Qair_20121231_20140101_tave24.nc)
+                   (Tmin=      41272.5208 Tmax=      41638.5208)
+                   (Min =  5.64613380E-01 Max =  9.79478455E-01)
+    GET_2DFLD   - rain fall rate,                            t = 41273 12:30:00
+                   (Rec=0000002, Index=2, File: coamps_wc13.0_rain_20121231_20140101_tave24.nc)
+                   (Tmin=      41272.5208 Tmax=      41638.5208)
+                   (Min = -4.23516474E-22 Max =  8.18230692E-05)
+    GET_NGFLD   - free-surface western boundary condition,   t = 41274 00:00:00
+                   (Rec=0000004, Index=1, File: hycom_wc13.0_20121230_20140102_bry.nc)
+                   (Tmin=      41271.0000 Tmax=      41639.0000)
+                   (Min =  5.80000021E-02 Max =  4.24333364E-01)
+    GET_NGFLD   - free-surface southern boundary condition,  t = 41274 00:00:00
+                   (Rec=0000004, Index=1, File: hycom_wc13.0_20121230_20140102_bry.nc)
+                   (Tmin=      41271.0000 Tmax=      41639.0000)
+                   (Min =  0.00000000E+00 Max =  3.76166552E-01)
+    GET_NGFLD   - free-surface northern boundary condition,  t = 41274 00:00:00
+                   (Rec=0000004, Index=1, File: hycom_wc13.0_20121230_20140102_bry.nc)
+                   (Tmin=      41271.0000 Tmax=      41639.0000)
+                   (Min = -3.00000003E-03 Max =  1.61500007E-01)
+    GET_NGFLD   - 2D u-momentum western boundary condition,  t = 41274 00:00:00
+                   (Rec=0000004, Index=1, File: hycom_wc13.0_20121230_20140102_bry.nc)
+                   (Tmin=      41271.0000 Tmax=      41639.0000)
+                   (Min = -2.71007195E-02 Max =  2.70907860E-02)
+    GET_NGFLD   - 2D v-momentum western boundary condition,  t = 41274 00:00:00
+                   (Rec=0000004, Index=1, File: hycom_wc13.0_20121230_20140102_bry.nc)
+                   (Tmin=      41271.0000 Tmax=      41639.0000)
+                   (Min = -1.30719431E-02 Max =  9.36687458E-03)
+    GET_NGFLD   - 2D u-momentum southern boundary condition, t = 41274 00:00:00
+                   (Rec=0000004, Index=1, File: hycom_wc13.0_20121230_20140102_bry.nc)
+                   (Tmin=      41271.0000 Tmax=      41639.0000)
+                   (Min = -1.17919836E-02 Max =  3.07896435E-02)
+    GET_NGFLD   - 2D v-momentum southern boundary condition, t = 41274 00:00:00
+                   (Rec=0000004, Index=1, File: hycom_wc13.0_20121230_20140102_bry.nc)
+                   (Tmin=      41271.0000 Tmax=      41639.0000)
+                   (Min = -3.21319550E-02 Max =  1.82164609E-02)
+    GET_NGFLD   - 2D u-momentum northern boundary condition, t = 41274 00:00:00
+                   (Rec=0000004, Index=1, File: hycom_wc13.0_20121230_20140102_bry.nc)
+                   (Tmin=      41271.0000 Tmax=      41639.0000)
+                   (Min = -9.83024910E-02 Max =  1.30393673E-02)
+    GET_NGFLD   - 2D v-momentum northern boundary condition, t = 41274 00:00:00
+                   (Rec=0000004, Index=1, File: hycom_wc13.0_20121230_20140102_bry.nc)
+                   (Tmin=      41271.0000 Tmax=      41639.0000)
+                   (Min = -2.24860236E-02 Max =  1.19803861E-01)
+    GET_NGFLD   - 3D u-momentum western boundary condition,  t = 41274 00:00:00
+                   (Rec=0000004, Index=1, File: hycom_wc13.0_20121230_20140102_bry.nc)
+                   (Tmin=      41271.0000 Tmax=      41639.0000)
+                   (Min = -3.69666219E-01 Max =  1.59980923E-01)
+    GET_NGFLD   - 3D v-momentum western boundary condition,  t = 41274 00:00:00
+                   (Rec=0000004, Index=1, File: hycom_wc13.0_20121230_20140102_bry.nc)
+                   (Tmin=      41271.0000 Tmax=      41639.0000)
+                   (Min = -3.62689316E-01 Max =  1.84527591E-01)
+    GET_NGFLD   - 3D u-momentum southern boundary condition, t = 41274 00:00:00
+                   (Rec=0000004, Index=1, File: hycom_wc13.0_20121230_20140102_bry.nc)
+                   (Tmin=      41271.0000 Tmax=      41639.0000)
+                   (Min = -1.06496401E-01 Max =  2.84296960E-01)
+    GET_NGFLD   - 3D v-momentum southern boundary condition, t = 41274 00:00:00
+                   (Rec=0000004, Index=1, File: hycom_wc13.0_20121230_20140102_bry.nc)
+                   (Tmin=      41271.0000 Tmax=      41639.0000)
+                   (Min = -1.63914710E-01 Max =  2.00766936E-01)
+    GET_NGFLD   - 3D u-momentum northern boundary condition, t = 41274 00:00:00
+                   (Rec=0000004, Index=1, File: hycom_wc13.0_20121230_20140102_bry.nc)
+                   (Tmin=      41271.0000 Tmax=      41639.0000)
+                   (Min = -4.81223166E-01 Max =  2.71240413E-01)
+    GET_NGFLD   - 3D v-momentum northern boundary condition, t = 41274 00:00:00
+                   (Rec=0000004, Index=1, File: hycom_wc13.0_20121230_20140102_bry.nc)
+                   (Tmin=      41271.0000 Tmax=      41639.0000)
+                   (Min = -4.44803298E-01 Max =  4.00327623E-01)
+    GET_NGFLD   - temperature western boundary condition,    t = 41274 00:00:00
+                   (Rec=0000004, Index=1, File: hycom_wc13.0_20121230_20140102_bry.nc)
+                   (Tmin=      41271.0000 Tmax=      41639.0000)
+                   (Min =  1.41316581E+00 Max =  1.94999619E+01)
+    GET_NGFLD   - salinity western boundary condition,       t = 41274 00:00:00
+                   (Rec=0000004, Index=1, File: hycom_wc13.0_20121230_20140102_bry.nc)
+                   (Tmin=      41271.0000 Tmax=      41639.0000)
+                   (Min =  3.24921837E+01 Max =  3.48470001E+01)
+    GET_NGFLD   - temperature southern boundary condition,   t = 41274 00:00:00
+                   (Rec=0000004, Index=1, File: hycom_wc13.0_20121230_20140102_bry.nc)
+                   (Tmin=      41271.0000 Tmax=      41639.0000)
+                   (Min =  0.00000000E+00 Max =  1.95521469E+01)
+    GET_NGFLD   - salinity southern boundary condition,      t = 41274 00:00:00
+                   (Rec=0000004, Index=1, File: hycom_wc13.0_20121230_20140102_bry.nc)
+                   (Tmin=      41271.0000 Tmax=      41639.0000)
+                   (Min =  0.00000000E+00 Max =  3.49020004E+01)
+    GET_NGFLD   - temperature northern boundary condition,   t = 41274 00:00:00
+                   (Rec=0000004, Index=1, File: hycom_wc13.0_20121230_20140102_bry.nc)
+                   (Tmin=      41271.0000 Tmax=      41639.0000)
+                   (Min =  0.00000000E+00 Max =  1.06959991E+01)
+    GET_NGFLD   - salinity northern boundary condition,      t = 41274 00:00:00
+                   (Rec=0000004, Index=1, File: hycom_wc13.0_20121230_20140102_bry.nc)
+                   (Tmin=      41271.0000 Tmax=      41639.0000)
+                   (Min =  0.00000000E+00 Max =  3.46949997E+01)
+
+   STEP   Day HH:MM:SS  KINETIC_ENRG   POTEN_ENRG    TOTAL_ENRG    NET_VOLUME
+          C => (i,j,k)       Cu            Cv            Cw         Max Speed
+
+      0 41273 00:00:00  1.543775E-03  1.995820E+04  1.995820E+04  6.931955E+15
+            (30,27,30)  1.450873E-02  7.870497E-02  0.000000E+00  8.278622E-01
+      DEF_HIS     - creating  history      file, Grid 01: wc13_his.nc
+      WRT_HIS     - wrote history     fields (Index=1,1) in record = 0000001
+      1 41273 01:00:00  1.536387E-03  1.995833E+04  1.995833E+04  6.931981E+15
+            (53,01,20)  4.691384E-02  1.405501E-02  3.831783E-01  7.437754E-01
+
+ Number of State Observations Processed:                 ObsTime =   41273.0312
+
+          Variable          IstrObs    IendObs      Count   Rejected
+
+          zeta                    1       1864       1864          0
+          temp                 1865       1914         50          0
+          salt                 1915       3478       1564         34
+
+          Total                                      3478         34
+          Obs Tally                                  3478         34
+
+ Wrote NLM state at observation locations, datum = 0000001 - 0003478
+
+      2 41273 02:00:00  1.526397E-03  1.995830E+04  1.995830E+04  6.931997E+15
+            (29,52,30)  5.113850E-03  1.403053E-03  1.165572E+00  7.114954E-01
+
+ Number of State Observations Processed:                 ObsTime =   41273.0938
+
+          Variable          IstrObs    IendObs      Count   Rejected
+
+          temp                 3479       3489         11          0
+          salt                 3490       3500         11          0
+
+          Total                                        22          0
+          Obs Tally                                  3500         34
+
+ Wrote NLM state at observation locations, datum = 0003479 - 0003500
+
+      3 41273 03:00:00  1.518994E-03  1.995830E+04  1.995830E+04  6.932003E+15
+            (29,52,30)  4.399138E-03  1.037620E-03  7.297845E-01  6.573371E-01
+      4 41273 04:00:00  1.516158E-03  1.995828E+04  1.995828E+04  6.931998E+15
+            (53,01,07)  3.313411E-02  1.047923E-02  4.814413E-01  6.320459E-01
+
+ Number of State Observations Processed:                 ObsTime =   41273.1562
+
+          Variable          IstrObs    IendObs      Count   Rejected
+
+          temp                 3501       3539         39          0
+          salt                 3540       3578         39          0
+
+          Total                                        78          0
+          Obs Tally                                  3578         34
+
+ Wrote NLM state at observation locations, datum = 0003501 - 0003578
+
+      5 41273 05:00:00  1.518158E-03  1.995829E+04  1.995830E+04  6.931997E+15
+            (53,01,07)  3.313529E-02  1.222296E-02  4.977292E-01  6.487848E-01
+
+ Number of State Observations Processed:                 ObsTime =   41273.2188
+
+          Variable          IstrObs    IendObs      Count   Rejected
+
+          temp                 3579       3589         11          0
+          salt                 3590       3600         11          0
+
+          Total                                        22          0
+          Obs Tally                                  3600         34
+
+ Wrote NLM state at observation locations, datum = 0003579 - 0003600
+
+      6 41273 06:00:00  1.524513E-03  1.995829E+04  1.995830E+04  6.931997E+15
+            (53,01,07)  3.052590E-02  1.252798E-02  5.377403E-01  6.776966E-01
+      7 41273 07:00:00  1.533498E-03  1.995829E+04  1.995829E+04  6.931999E+15
+            (53,01,08)  2.704848E-02  1.090256E-02  5.526447E-01  7.020229E-01
+
+ Number of State Observations Processed:                 ObsTime =   41273.2812
+
+          Variable          IstrObs    IendObs      Count   Rejected
+
+          temp                 3601       3639         39          0
+          salt                 3640       3678         39          0
+
+          Total                                        78          0
+          Obs Tally                                  3678         34
+
+ Wrote NLM state at observation locations, datum = 0003601 - 0003678
+
+      8 41273 08:00:00  1.544537E-03  1.995829E+04  1.995829E+04  6.931999E+15
+            (53,01,08)  2.505157E-02  1.004415E-02  5.599845E-01  7.214366E-01
+
+ Number of State Observations Processed:                 ObsTime =   41273.3438
+
+          Variable          IstrObs    IendObs      Count   Rejected
+
+          temp                 3679       3689         11          0
+          salt                 3690       3700         11          0
+
+          Total                                        22          0
+          Obs Tally                                  3700         34
+
+ Wrote NLM state at observation locations, datum = 0003679 - 0003700
+
+      9 41273 09:00:00  1.556458E-03  1.995830E+04  1.995830E+04  6.932000E+15
+            (53,01,08)  2.358285E-02  8.362860E-03  5.616627E-01  7.360839E-01
+     10 41273 10:00:00  1.568386E-03  1.995830E+04  1.995830E+04  6.932001E+15
+            (53,01,08)  2.145491E-02  6.536227E-03  5.543102E-01  7.549256E-01
+
+ Number of State Observations Processed:                 ObsTime =   41273.4062
+
+          Variable          IstrObs    IendObs      Count   Rejected
+
+          temp                 3701       3739         39          0
+          salt                 3740       3778         39          0
+
+          Total                                        78          0
+          Obs Tally                                  3778         34
+
+ Wrote NLM state at observation locations, datum = 0003701 - 0003778
+
+     11 41273 11:00:00  1.579433E-03  1.995830E+04  1.995830E+04  6.932002E+15
+            (53,01,08)  1.880310E-02  4.695850E-03  5.343448E-01  7.765094E-01
+
+ Number of State Observations Processed:                 ObsTime =   41273.4688
+
+          Variable          IstrObs    IendObs      Count   Rejected
+
+          temp                 3779       3789         11          0
+          salt                 3790       3800         11          0
+
+          Total                                        22          0
+          Obs Tally                                  3800         34
+
+ Wrote NLM state at observation locations, datum = 0003779 - 0003800
+
+     12 41273 12:00:00  1.589346E-03  1.995831E+04  1.995831E+04  6.932003E+15
+            (53,01,08)  1.580873E-02  2.941664E-03  5.033979E-01  7.903011E-01
+    GET_2DFLD   - surface u-wind component,                  t = 41274 12:30:00
+                   (Rec=0000003, Index=1, File: coamps_wc13.0_wind_20121231_20140101_tave24.nc)
+                   (Tmin=      41272.5208 Tmax=      41638.5208)
+                   (Min = -9.67135715E+00 Max =  6.35664797E+00)
+    GET_2DFLD   - surface v-wind component,                  t = 41274 12:30:00
+                   (Rec=0000003, Index=1, File: coamps_wc13.0_wind_20121231_20140101_tave24.nc)
+                   (Tmin=      41272.5208 Tmax=      41638.5208)
+                   (Min = -7.68210125E+00 Max =  1.36448603E+01)
+    GET_2DFLD   - surface air pressure,                      t = 41274 12:30:00
+                   (Rec=0000003, Index=1, File: coamps_wc13.0_Pair_20121231_20140101_tave24.nc)
+                   (Tmin=      41272.5208 Tmax=      41638.5208)
+                   (Min =  1.00904810E+03 Max =  1.02644690E+03)
+    GET_2DFLD   - solar shortwave radiation flux,            t = 41274 12:30:00
+                   (Rec=0000003, Index=1, File: coamps_wc13.0_swrad_20121231_20140101_tave24.nc)
+                   (Tmin=      41272.5208 Tmax=      41638.5208)
+                   (Min =  1.85066588E-06 Max =  3.83654511E-05)
+    GET_2DFLD   - downwelling longwave radiation flux,       t = 41274 12:30:00
+                   (Rec=0000003, Index=1, File: coamps_wc13.0_lwrad_down_20121231_20140101_tave24.nc)
+                   (Tmin=      41272.5208 Tmax=      41638.5208)
+                   (Min =  5.56934061E-05 Max =  8.77237902E-05)
+    GET_2DFLD   - surface air temperature,                   t = 41274 12:30:00
+                   (Rec=0000003, Index=1, File: coamps_wc13.0_Tair_20121231_20140101_tave24.nc)
+                   (Tmin=      41272.5208 Tmax=      41638.5208)
+                   (Min =  7.37325716E+00 Max =  1.84972744E+01)
+    GET_2DFLD   - surface air relative humidity,             t = 41274 12:30:00
+                   (Rec=0000003, Index=1, File: coamps_wc13.0_Qair_20121231_20140101_tave24.nc)
+                   (Tmin=      41272.5208 Tmax=      41638.5208)
+                   (Min =  3.59732475E-01 Max =  9.51752853E-01)
+    GET_2DFLD   - rain fall rate,                            t = 41274 12:30:00
+                   (Rec=0000003, Index=1, File: coamps_wc13.0_rain_20121231_20140101_tave24.nc)
+                   (Tmin=      41272.5208 Tmax=      41638.5208)
+                   (Min = -3.38813179E-21 Max =  4.37697076E-04)
+     13 41273 13:00:00  1.597911E-03  1.995831E+04  1.995831E+04  6.932003E+15
+            (53,01,08)  1.240888E-02  1.475341E-03  4.605747E-01  7.975168E-01
+
+ Number of State Observations Processed:                 ObsTime =   41273.5312
+
+          Variable          IstrObs    IendObs      Count   Rejected
+
+          temp                 3801       5872       2072          0
+          salt                 5873       5911         39          0
+
+          Total                                      2111          0
+          Obs Tally                                  5911         34
+
+ Wrote NLM state at observation locations, datum = 0003801 - 0005911
+
+     14 41273 14:00:00  1.605255E-03  1.995832E+04  1.995832E+04  6.932004E+15
+            (53,01,09)  7.960973E-03  6.301702E-04  4.084553E-01  7.990994E-01
+
+ Number of State Observations Processed:                 ObsTime =   41273.5938
+
+          Variable          IstrObs    IendObs      Count   Rejected
+
+          temp                 5912       5922         11          0
+          salt                 5923       5933         11          0
+
+          Total                                        22          0
+          Obs Tally                                  5933         34
+
+ Wrote NLM state at observation locations, datum = 0005912 - 0005933
+
+     15 41273 15:00:00  1.611074E-03  1.995832E+04  1.995832E+04  6.932005E+15
+            (53,01,09)  4.523674E-03  5.858562E-04  3.484715E-01  8.004473E-01
+     16 41273 16:00:00  1.615305E-03  1.995833E+04  1.995833E+04  6.932006E+15
+            (52,02,07)  1.601335E-02  9.362753E-03  3.231396E-01  8.097627E-01
+
+ Number of State Observations Processed:                 ObsTime =   41273.6562
+
+          Variable          IstrObs    IendObs      Count   Rejected
+
+          temp                 5934       5981         48          0
+          salt                 5982       6029         48          0
+
+          Total                                        96          0
+          Obs Tally                                  6029         34
+
+ Wrote NLM state at observation locations, datum = 0005934 - 0006029
+
+     17 41273 17:00:00  1.618057E-03  1.995833E+04  1.995833E+04  6.932007E+15
+            (52,02,07)  1.553982E-02  9.648637E-03  3.471745E-01  8.228619E-01
+
+ Number of State Observations Processed:                 ObsTime =   41273.7188
+
+          Variable          IstrObs    IendObs      Count   Rejected
+
+          temp                 6030       6040         11          0
+          salt                 6041       6051         11          0
+
+          Total                                        22          0
+          Obs Tally                                  6051         34
+
+ Wrote NLM state at observation locations, datum = 0006030 - 0006051
+
+     18 41273 18:00:00  1.619546E-03  1.995833E+04  1.995834E+04  6.932009E+15
+            (52,02,07)  1.490994E-02  9.980319E-03  3.675694E-01  8.464429E-01
+     19 41273 19:00:00  1.620041E-03  1.995834E+04  1.995834E+04  6.932010E+15
+            (52,02,08)  1.853771E-02  1.292112E-02  3.821611E-01  8.675871E-01
+
+ Number of State Observations Processed:                 ObsTime =   41273.7812
+
+          Variable          IstrObs    IendObs      Count   Rejected
+
+          temp                 6052       6101         50          0
+          salt                 6102       6151         50          0
+
+          Total                                       100          0
+          Obs Tally                                  6151         34
+
+ Wrote NLM state at observation locations, datum = 0006052 - 0006151
+
+     20 41273 20:00:00  1.619950E-03  1.995835E+04  1.995835E+04  6.932012E+15
+            (52,02,08)  1.731387E-02  1.354717E-02  4.024857E-01  8.851204E-01
+
+ Number of State Observations Processed:                 ObsTime =   41273.8438
+
+          Variable          IstrObs    IendObs      Count   Rejected
+
+          temp                 6152       6171         20          0
+          salt                 6172       6191         20          0
+
+          Total                                        40          0
+          Obs Tally                                  6191         34
+
+ Wrote NLM state at observation locations, datum = 0006152 - 0006191
+
+     21 41273 21:00:00  1.619584E-03  1.995835E+04  1.995835E+04  6.932014E+15
+            (52,02,08)  1.590168E-02  1.406647E-02  4.194179E-01  8.978973E-01
+     22 41273 22:00:00  1.619373E-03  1.995836E+04  1.995836E+04  6.932016E+15
+            (52,02,08)  1.435715E-02  1.438779E-02  4.330169E-01  9.049859E-01
+
+ Number of State Observations Processed:                 ObsTime =   41273.9062
+
+          Variable          IstrObs    IendObs      Count   Rejected
+
+          temp                 6192       6222         31          0
+          salt                 6223       6253         31          0
+
+          Total                                        62          0
+          Obs Tally                                  6253         34
+
+ Wrote NLM state at observation locations, datum = 0006192 - 0006253
+
+     23 41273 23:00:00  1.619713E-03  1.995837E+04  1.995837E+04  6.932018E+15
+            (52,02,09)  1.658359E-02  1.793488E-02  4.383592E-01  9.058849E-01
+
+ Number of State Observations Processed:                 ObsTime =   41273.9688
+
+          Variable          IstrObs    IendObs      Count   Rejected
+
+          temp                 6254       6273         20          0
+          salt                 6274       6293         20          0
+
+          Total                                        40          0
+          Obs Tally                                  6293         34
+
+ Wrote NLM state at observation locations, datum = 0006254 - 0006293
+
+     24 41274 00:00:00  1.621069E-03  1.995837E+04  1.995838E+04  6.932020E+15
+            (52,02,09)  1.445643E-02  1.813811E-02  4.511063E-01  9.006242E-01
+      WRT_HIS     - wrote history     fields (Index=1,1) in record = 0000002
+      WRT_RST     - wrote re-start    fields (Index=1,1) in record = 0000001
+    GET_NGFLD   - free-surface western boundary condition,   t = 41275 00:00:00
+                   (Rec=0000005, Index=2, File: hycom_wc13.0_20121230_20140102_bry.nc)
+                   (Tmin=      41271.0000 Tmax=      41639.0000)
+                   (Min =  3.50000001E-02 Max =  4.14000034E-01)
+    GET_NGFLD   - free-surface southern boundary condition,  t = 41275 00:00:00
+                   (Rec=0000005, Index=2, File: hycom_wc13.0_20121230_20140102_bry.nc)
+                   (Tmin=      41271.0000 Tmax=      41639.0000)
+                   (Min =  0.00000000E+00 Max =  3.72166544E-01)
+    GET_NGFLD   - free-surface northern boundary condition,  t = 41275 00:00:00
+                   (Rec=0000005, Index=2, File: hycom_wc13.0_20121230_20140102_bry.nc)
+                   (Tmin=      41271.0000 Tmax=      41639.0000)
+                   (Min = -3.03330813E-02 Max =  1.57500014E-01)
+    GET_NGFLD   - 2D u-momentum western boundary condition,  t = 41275 00:00:00
+                   (Rec=0000005, Index=2, File: hycom_wc13.0_20121230_20140102_bry.nc)
+                   (Tmin=      41271.0000 Tmax=      41639.0000)
+                   (Min = -2.76258271E-02 Max =  2.62394845E-02)
+    GET_NGFLD   - 2D v-momentum western boundary condition,  t = 41275 00:00:00
+                   (Rec=0000005, Index=2, File: hycom_wc13.0_20121230_20140102_bry.nc)
+                   (Tmin=      41271.0000 Tmax=      41639.0000)
+                   (Min = -1.61653422E-02 Max =  8.25174432E-03)
+    GET_NGFLD   - 2D u-momentum southern boundary condition, t = 41275 00:00:00
+                   (Rec=0000005, Index=2, File: hycom_wc13.0_20121230_20140102_bry.nc)
+                   (Tmin=      41271.0000 Tmax=      41639.0000)
+                   (Min = -1.20068165E-02 Max =  1.63182076E-02)
+    GET_NGFLD   - 2D v-momentum southern boundary condition, t = 41275 00:00:00
+                   (Rec=0000005, Index=2, File: hycom_wc13.0_20121230_20140102_bry.nc)
+                   (Tmin=      41271.0000 Tmax=      41639.0000)
+                   (Min = -2.80218981E-02 Max =  2.59622596E-02)
+    GET_NGFLD   - 2D u-momentum northern boundary condition, t = 41275 00:00:00
+                   (Rec=0000005, Index=2, File: hycom_wc13.0_20121230_20140102_bry.nc)
+                   (Tmin=      41271.0000 Tmax=      41639.0000)
+                   (Min = -1.10427484E-01 Max =  2.04940755E-02)
+    GET_NGFLD   - 2D v-momentum northern boundary condition, t = 41275 00:00:00
+                   (Rec=0000005, Index=2, File: hycom_wc13.0_20121230_20140102_bry.nc)
+                   (Tmin=      41271.0000 Tmax=      41639.0000)
+                   (Min = -2.63968799E-02 Max =  2.18277201E-01)
+    GET_NGFLD   - 3D u-momentum western boundary condition,  t = 41275 00:00:00
+                   (Rec=0000005, Index=2, File: hycom_wc13.0_20121230_20140102_bry.nc)
+                   (Tmin=      41271.0000 Tmax=      41639.0000)
+                   (Min = -1.65314183E-01 Max =  5.05686820E-01)
+    GET_NGFLD   - 3D v-momentum western boundary condition,  t = 41275 00:00:00
+                   (Rec=0000005, Index=2, File: hycom_wc13.0_20121230_20140102_bry.nc)
+                   (Tmin=      41271.0000 Tmax=      41639.0000)
+                   (Min = -1.50416687E-01 Max =  2.41642728E-01)
+    GET_NGFLD   - 3D u-momentum southern boundary condition, t = 41275 00:00:00
+                   (Rec=0000005, Index=2, File: hycom_wc13.0_20121230_20140102_bry.nc)
+                   (Tmin=      41271.0000 Tmax=      41639.0000)
+                   (Min = -1.30069241E-01 Max =  2.40997359E-01)
+    GET_NGFLD   - 3D v-momentum southern boundary condition, t = 41275 00:00:00
+                   (Rec=0000005, Index=2, File: hycom_wc13.0_20121230_20140102_bry.nc)
+                   (Tmin=      41271.0000 Tmax=      41639.0000)
+                   (Min = -2.53141582E-01 Max =  2.04070762E-01)
+    GET_NGFLD   - 3D u-momentum northern boundary condition, t = 41275 00:00:00
+                   (Rec=0000005, Index=2, File: hycom_wc13.0_20121230_20140102_bry.nc)
+                   (Tmin=      41271.0000 Tmax=      41639.0000)
+                   (Min = -3.95963699E-01 Max =  5.05686820E-01)
+    GET_NGFLD   - 3D v-momentum northern boundary condition, t = 41275 00:00:00
+                   (Rec=0000005, Index=2, File: hycom_wc13.0_20121230_20140102_bry.nc)
+                   (Tmin=      41271.0000 Tmax=      41639.0000)
+                   (Min = -2.66783684E-01 Max =  4.53728735E-01)
+    GET_NGFLD   - temperature western boundary condition,    t = 41275 00:00:00
+                   (Rec=0000005, Index=2, File: hycom_wc13.0_20121230_20140102_bry.nc)
+                   (Tmin=      41271.0000 Tmax=      41639.0000)
+                   (Min =  1.41416585E+00 Max =  1.93982067E+01)
+    GET_NGFLD   - salinity western boundary condition,       t = 41275 00:00:00
+                   (Rec=0000005, Index=2, File: hycom_wc13.0_20121230_20140102_bry.nc)
+                   (Tmin=      41271.0000 Tmax=      41639.0000)
+                   (Min =  3.24851837E+01 Max =  3.48470001E+01)
+    GET_NGFLD   - temperature southern boundary condition,   t = 41275 00:00:00
+                   (Rec=0000005, Index=2, File: hycom_wc13.0_20121230_20140102_bry.nc)
+                   (Tmin=      41271.0000 Tmax=      41639.0000)
+                   (Min =  0.00000000E+00 Max =  1.94798679E+01)
+    GET_NGFLD   - salinity southern boundary condition,      t = 41275 00:00:00
+                   (Rec=0000005, Index=2, File: hycom_wc13.0_20121230_20140102_bry.nc)
+                   (Tmin=      41271.0000 Tmax=      41639.0000)
+                   (Min =  0.00000000E+00 Max =  3.48979988E+01)
+    GET_NGFLD   - temperature northern boundary condition,   t = 41275 00:00:00
+                   (Rec=0000005, Index=2, File: hycom_wc13.0_20121230_20140102_bry.nc)
+                   (Tmin=      41271.0000 Tmax=      41639.0000)
+                   (Min =  0.00000000E+00 Max =  1.07009993E+01)
+    GET_NGFLD   - salinity northern boundary condition,      t = 41275 00:00:00
+                   (Rec=0000005, Index=2, File: hycom_wc13.0_20121230_20140102_bry.nc)
+                   (Tmin=      41271.0000 Tmax=      41639.0000)
+                   (Min =  0.00000000E+00 Max =  3.46949997E+01)
+     25 41274 01:00:00  1.623843E-03  1.995838E+04  1.995838E+04  6.932023E+15
+            (52,02,09)  1.233062E-02  1.804040E-02  4.592843E-01  8.896740E-01
+
+ Number of State Observations Processed:                 ObsTime =   41274.0312
+
+          Variable          IstrObs    IendObs      Count   Rejected
+
+          zeta                 6294       8157       1864          0
+          temp                 8158       8213         56          0
+          salt                 8214       9782       1569         34
+
+          Total                                      3489         34
+          Obs Tally                                  9782         68
+
+ Wrote NLM state at observation locations, datum = 0006294 - 0009782
+
+     26 41274 02:00:00  1.626475E-03  1.995839E+04  1.995839E+04  6.932024E+15
+            (52,02,09)  1.045947E-02  1.775818E-02  4.624659E-01  8.738577E-01
+
+ Number of State Observations Processed:                 ObsTime =   41274.0938
+
+          Variable          IstrObs    IendObs      Count   Rejected
+
+          temp                 9783       9802         20          0
+          salt                 9803       9822         20          0
+
+          Total                                        40          0
+          Obs Tally                                  9822         68
+
+ Wrote NLM state at observation locations, datum = 0009783 - 0009822
+
+     27 41274 03:00:00  1.630002E-03  1.995839E+04  1.995839E+04  6.932024E+15
+            (52,02,10)  8.310495E-03  2.075663E-02  4.562181E-01  8.748103E-01
+     28 41274 04:00:00  1.634751E-03  1.995839E+04  1.995839E+04  6.932025E+15
+            (52,02,10)  6.409788E-03  2.004189E-02  4.532339E-01  8.941136E-01
+
+ Number of State Observations Processed:                 ObsTime =   41274.1562
+
+          Variable          IstrObs    IendObs      Count   Rejected
+
+          temp                 9823       9863         41          0
+          salt                 9864       9904         41          0
+
+          Total                                        82          0
+          Obs Tally                                  9904         68
+
+ Wrote NLM state at observation locations, datum = 0009823 - 0009904
+
+     29 41274 05:00:00  1.640336E-03  1.995840E+04  1.995840E+04  6.932025E+15
+            (52,02,10)  4.748322E-03  1.909306E-02  4.433693E-01  9.060010E-01
+
+ Number of State Observations Processed:                 ObsTime =   41274.2188
+
+          Variable          IstrObs    IendObs      Count   Rejected
+
+          temp                 9905       9923         19          0
+          salt                 9924       9942         19          0
+
+          Total                                        38          0
+          Obs Tally                                  9942         68
+
+ Wrote NLM state at observation locations, datum = 0009905 - 0009942
+
+     30 41274 06:00:00  1.646368E-03  1.995840E+04  1.995840E+04  6.932026E+15
+            (52,02,10)  3.372677E-03  1.793079E-02  4.263236E-01  9.111377E-01
+     31 41274 07:00:00  1.652451E-03  1.995840E+04  1.995840E+04  6.932026E+15
+            (53,02,23)  3.177491E-02  1.232915E-02  3.822426E-01  9.239534E-01
+
+ Number of State Observations Processed:                 ObsTime =   41274.2812
+
+          Variable          IstrObs    IendObs      Count   Rejected
+
+          temp                 9943      10018         76          0
+          salt                10019      10094         76          0
+
+          Total                                       152          0
+          Obs Tally                                 10094         68
+
+ Wrote NLM state at observation locations, datum = 0009943 - 0010094
+
+     32 41274 08:00:00  1.658386E-03  1.995840E+04  1.995840E+04  6.932026E+15
+            (53,02,23)  3.309200E-02  1.188003E-02  3.902762E-01  9.408460E-01
+     33 41274 09:00:00  1.663986E-03  1.995840E+04  1.995841E+04  6.932026E+15
+            (53,02,23)  3.417248E-02  1.129125E-02  3.935701E-01  9.524676E-01
+     34 41274 10:00:00  1.669325E-03  1.995840E+04  1.995841E+04  6.932025E+15
+            (53,02,23)  3.503243E-02  1.060752E-02  3.925217E-01  9.801150E-01
+
+ Number of State Observations Processed:                 ObsTime =   41274.4062
+
+          Variable          IstrObs    IendObs      Count   Rejected
+
+          temp                10095      10184         90          0
+          salt                10185      10274         90          0
+
+          Total                                       180          0
+          Obs Tally                                 10274         68
+
+ Wrote NLM state at observation locations, datum = 0010095 - 0010274
+
+     35 41274 11:00:00  1.674412E-03  1.995841E+04  1.995841E+04  6.932025E+15
+            (53,02,23)  3.574792E-02  9.828248E-03  3.878815E-01  1.002045E+00
+     36 41274 12:00:00  1.679510E-03  1.995841E+04  1.995841E+04  6.932025E+15
+            (53,02,23)  3.633501E-02  9.016716E-03  3.799281E-01  1.031979E+00
+    GET_2DFLD   - surface u-wind component,                  t = 41275 12:30:00
+                   (Rec=0000004, Index=2, File: coamps_wc13.0_wind_20121231_20140101_tave24.nc)
+                   (Tmin=      41272.5208 Tmax=      41638.5208)
+                   (Min = -8.36664677E+00 Max =  1.01196060E+01)
+    GET_2DFLD   - surface v-wind component,                  t = 41275 12:30:00
+                   (Rec=0000004, Index=2, File: coamps_wc13.0_wind_20121231_20140101_tave24.nc)
+                   (Tmin=      41272.5208 Tmax=      41638.5208)
+                   (Min = -6.38529634E+00 Max =  1.05420055E+01)
+    GET_2DFLD   - surface air pressure,                      t = 41275 12:30:00
+                   (Rec=0000004, Index=2, File: coamps_wc13.0_Pair_20121231_20140101_tave24.nc)
+                   (Tmin=      41272.5208 Tmax=      41638.5208)
+                   (Min =  1.01028577E+03 Max =  1.02401770E+03)
+    GET_2DFLD   - solar shortwave radiation flux,            t = 41275 12:30:00
+                   (Rec=0000004, Index=2, File: coamps_wc13.0_swrad_20121231_20140101_tave24.nc)
+                   (Tmin=      41272.5208 Tmax=      41638.5208)
+                   (Min =  2.64615289E-06 Max =  3.91328650E-05)
+    GET_2DFLD   - downwelling longwave radiation flux,       t = 41275 12:30:00
+                   (Rec=0000004, Index=2, File: coamps_wc13.0_lwrad_down_20121231_20140101_tave24.nc)
+                   (Tmin=      41272.5208 Tmax=      41638.5208)
+                   (Min =  5.77080538E-05 Max =  9.11293640E-05)
+    GET_2DFLD   - surface air temperature,                   t = 41275 12:30:00
+                   (Rec=0000004, Index=2, File: coamps_wc13.0_Tair_20121231_20140101_tave24.nc)
+                   (Tmin=      41272.5208 Tmax=      41638.5208)
+                   (Min =  7.20235300E+00 Max =  1.78171024E+01)
+    GET_2DFLD   - surface air relative humidity,             t = 41275 12:30:00
+                   (Rec=0000004, Index=2, File: coamps_wc13.0_Qair_20121231_20140101_tave24.nc)
+                   (Tmin=      41272.5208 Tmax=      41638.5208)
+                   (Min =  4.22605133E-01 Max =  9.51583176E-01)
+    GET_2DFLD   - rain fall rate,                            t = 41275 12:30:00
+                   (Rec=0000004, Index=2, File: coamps_wc13.0_rain_20121231_20140101_tave24.nc)
+                   (Tmin=      41272.5208 Tmax=      41638.5208)
+                   (Min = -1.69406589E-21 Max =  2.93327786E-04)
+     37 41274 13:00:00  1.684730E-03  1.995841E+04  1.995841E+04  6.932024E+15
+            (53,02,23)  3.678141E-02  8.232845E-03  3.696113E-01  1.065102E+00
+
+ Number of State Observations Processed:                 ObsTime =   41274.5312
+
+          Variable          IstrObs    IendObs      Count   Rejected
+
+          temp                10275      12358       2084          0
+          salt                12359      12409         51          0
+
+          Total                                      2135          0
+          Obs Tally                                 12409         68
+
+ Wrote NLM state at observation locations, datum = 0010275 - 0012409
+
+     38 41274 14:00:00  1.690443E-03  1.995841E+04  1.995841E+04  6.932024E+15
+            (53,02,23)  3.698783E-02  7.428023E-03  3.565518E-01  1.085617E+00
+     39 41274 15:00:00  1.696026E-03  1.995841E+04  1.995841E+04  6.932023E+15
+            (52,02,24)  3.362514E-02  1.731911E-02  3.446074E-01  1.112259E+00
+     40 41274 16:00:00  1.701217E-03  1.995841E+04  1.995841E+04  6.932022E+15
+            (52,02,24)  3.082829E-02  1.923250E-02  3.538767E-01  1.140933E+00
+
+ Number of State Observations Processed:                 ObsTime =   41274.6562
+
+          Variable          IstrObs    IendObs      Count   Rejected
+
+          temp                12410      12474         65          0
+          salt                12475      12539         65          0
+
+          Total                                       130          0
+          Obs Tally                                 12539         68
+
+ Wrote NLM state at observation locations, datum = 0012410 - 0012539
+
+     41 41274 17:00:00  1.706042E-03  1.995841E+04  1.995841E+04  6.932021E+15
+            (52,02,23)  2.738457E-02  2.090665E-02  3.598354E-01  1.156815E+00
+
+ Number of State Observations Processed:                 ObsTime =   41274.7188
+
+          Variable          IstrObs    IendObs      Count   Rejected
+
+          temp                12540      12545          6          0
+          salt                12546      12551          6          0
+
+          Total                                        12          0
+          Obs Tally                                 12551         68
+
+ Wrote NLM state at observation locations, datum = 0012540 - 0012551
+
+     42 41274 18:00:00  1.710755E-03  1.995840E+04  1.995841E+04  6.932020E+15
+            (52,02,23)  2.515171E-02  2.178846E-02  3.618446E-01  1.172750E+00
+     43 41274 19:00:00  1.715241E-03  1.995840E+04  1.995841E+04  6.932019E+15
+            (52,02,23)  2.306640E-02  2.245616E-02  3.573451E-01  1.196103E+00
+
+ Number of State Observations Processed:                 ObsTime =   41274.7812
+
+          Variable          IstrObs    IendObs      Count   Rejected
+
+          temp                12552      12608         57          0
+          salt                12609      12665         57          0
+
+          Total                                       114          0
+          Obs Tally                                 12665         68
+
+ Wrote NLM state at observation locations, datum = 0012552 - 0012665
+
+     44 41274 20:00:00  1.719760E-03  1.995840E+04  1.995840E+04  6.932018E+15
+            (52,02,23)  2.120909E-02  2.285689E-02  3.460223E-01  1.207443E+00
+
+ Number of State Observations Processed:                 ObsTime =   41274.8438
+
+          Variable          IstrObs    IendObs      Count   Rejected
+
+          temp                12666      12671          6          0
+          salt                12672      12677          6          0
+
+          Total                                        12          0
+          Obs Tally                                 12677         68
+
+ Wrote NLM state at observation locations, datum = 0012666 - 0012677
+
+     45 41274 21:00:00  1.724400E-03  1.995840E+04  1.995840E+04  6.932017E+15
+            (53,01,13)  1.512706E-02  1.346951E-02  3.574978E-01  1.218902E+00
+     46 41274 22:00:00  1.729476E-03  1.995840E+04  1.995840E+04  6.932016E+15
+            (52,02,12)  6.163297E-03  1.040629E-02  3.665442E-01  1.244809E+00
+
+ Number of State Observations Processed:                 ObsTime =   41274.9062
+
+          Variable          IstrObs    IendObs      Count   Rejected
+
+          temp                12678      12733         56          0
+          salt                12734      12789         56          0
+
+          Total                                       112          0
+          Obs Tally                                 12789         68
+
+ Wrote NLM state at observation locations, datum = 0012678 - 0012789
+
+     47 41274 23:00:00  1.735028E-03  1.995840E+04  1.995840E+04  6.932015E+15
+            (52,02,11)  8.896549E-03  1.021132E-02  3.814415E-01  1.268100E+00
+
+ Number of State Observations Processed:                 ObsTime =   41274.9688
+
+          Variable          IstrObs    IendObs      Count   Rejected
+
+          temp                12790      12824         35          0
+          salt                12825      12859         35          0
+
+          Total                                        70          0
+          Obs Tally                                 12859         68
+
+ Wrote NLM state at observation locations, datum = 0012790 - 0012859
+
+     48 41275 00:00:00  1.741177E-03  1.995839E+04  1.995840E+04  6.932014E+15
+            (52,02,11)  1.079419E-02  1.091229E-02  3.826743E-01  1.281828E+00
+      WRT_HIS     - wrote history     fields (Index=1,1) in record = 0000003
+      WRT_RST     - wrote re-start    fields (Index=1,1) in record = 0000002
+      WRT_DAI   - wrote DA IC    fields (Index=1,1) into time record = 0000001
+
+ Model-Observations Comparison Statistics:
+
+                     zeta        temp        salt       
+                     ----------- ----------- -----------
+Observation Min      -2.7600E-02  1.7958E+00  3.2137E+01
+Observation Max       4.0740E-01  1.9281E+01  3.4919E+01
+Observation Mean      1.7244E-01  1.2664E+01  3.3336E+01
+Observation STD       1.0671E-01  3.2158E+00  4.5874E-01
+Model Min            -6.0938E-03  2.0155E+00  3.1079E+01
+Model Max             4.7635E-01  1.9333E+01  3.4907E+01
+Model Mean            1.9264E-01  1.3498E+01  3.3149E+01
+Model STD             1.1323E-01  3.2335E+00  5.2926E-01
+Model Bias            2.0196E-02  8.3420E-01 -1.8624E-01
+STD Error             6.5240E-03  1.7682E-02  7.0514E-02
+Cross-Correlation     7.6013E-01  9.4147E-01  7.9612E-01
+Mean Squared Error    6.2472E-03  1.9134E+00  1.3866E-01
+Observation Count           3728        5085        3978
+
+ Elapsed CPU time (seconds):
+
+ Node   #  0 CPU:       4.719
+ Total:                95.048
+ Node   #  1 CPU:       6.025
+ Node   #  2 CPU:       6.022
+ Node   #  3 CPU:       6.022
+ Node   #  4 CPU:       6.025
+ Node   #  5 CPU:       6.017
+ Node   #  6 CPU:       6.018
+ Node   #  7 CPU:       6.024
+ Node   #  8 CPU:       6.023
+ Node   #  9 CPU:       6.021
+ Node   # 10 CPU:       6.022
+ Node   # 11 CPU:       6.020
+ Node   # 12 CPU:       6.023
+ Node   # 13 CPU:       6.024
+ Node   # 14 CPU:       6.021
+ Node   # 15 CPU:       6.020
+
+ Nonlinear model elapsed time profile, Grid: 01
+
+  Allocation and array initialization ..............         0.057  ( 0.0600 %)
+  Ocean state initialization .......................         0.069  ( 0.0726 %)
+  Reading of input data ............................        15.335  (16.1337 %)
+  Processing of input data .........................         0.290  ( 0.3051 %)
+  Computation of vertical boundary conditions ......         0.018  ( 0.0189 %)
+  Computation of global information integrals ......         0.144  ( 0.1515 %)
+  Writing of output data ...........................        31.585  (33.2309 %)
+  Model 2D kernel ..................................        14.122  (14.8577 %)
+  2D/3D coupling, vertical metrics .................         0.329  ( 0.3461 %)
+  Omega vertical velocity ..........................         0.206  ( 0.2167 %)
+  Equation of state for seawater ...................         0.653  ( 0.6869 %)
+  Atmosphere-Ocean bulk flux parameterization ......         0.581  ( 0.6112 %)
+  GLS vertical mixing parameterization .............         3.890  ( 4.0931 %)
+  3D equations right-side terms ....................         0.307  ( 0.3229 %)
+  3D equations predictor step ......................         1.005  ( 1.0572 %)
+  Pressure gradient ................................         0.375  ( 0.3945 %)
+  Harmonic mixing of tracers, geopotentials ........         0.586  ( 0.6165 %)
+  Harmonic stress tensor, S-surfaces ...............         0.250  ( 0.2630 %)
+  Corrector time-step for 3D momentum ..............         0.494  ( 0.5197 %)
+  Corrector time-step for tracers ..................         0.477  ( 0.5018 %)
+                                              Total:        70.772   74.4598
+
+ Nonlinear model message Passage profile, Grid: 01
+
+  Message Passage: 2D halo exchanges ...............         6.484  ( 6.8219 %)
+  Message Passage: 3D halo exchanges ...............         1.487  ( 1.5642 %)
+  Message Passage: 4D halo exchanges ...............         0.463  ( 0.4870 %)
+  Message Passage: data broadcast ..................        64.101  (67.4412 %)
+  Message Passage: data reduction ..................         0.046  ( 0.0484 %)
+  Message Passage: data gathering ..................         0.354  ( 0.3724 %)
+  Message Passage: data scattering..................         0.113  ( 0.1189 %)
+  Message Passage: point data gathering ............         0.960  ( 1.0099 %)
+                                              Total:        74.008   77.8639
+
+ All percentages are with respect to total time =           95.048
+
+
+ ROMS/TOMS - Output NetCDF summary for Grid 01:
+             number of time records written in HISTORY file = 00000003
+             number of time records written in RESTART file = 00000002
+             number of time records written in DA IC   file = 00000001
+
+ Analytical header files used:
+
+     ROMS/Functionals/ana_btflux.h
+     /glade/u/home/thoar/work/roms/test/WC13/Functionals/ana_sponge.h
+     ROMS/Functionals/ana_srflux.h
+
+ ROMS/TOMS: DONE... Thursday - April 27, 2017 - 11:24:16 AM

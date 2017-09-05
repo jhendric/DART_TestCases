@@ -1,0 +1,26 @@
+****************************************************************************
+MPAS Test Directory
+****************************************************************************
+
+This directory contains input files to run regular sized MPAS case
+
+***********
+** CASES **
+***********
+
+   (a) MPAS_regular
+
+****************************************************************************
+
+CHANGES TO DIRECTORY
+
+Jan 20, 2016
+
+  removed filter_nml::start_from_restart
+  removed io_filenames_nml -> moved to filter
+  removed ensemble_manager::single_restart_file_in -> moved to filter
+
+  added   state_space_diag_nml::single_file = .TRUE.
+  added   state_space_diag_nml::make_diagnostic_files
+  added   filter_nml::restart_in_file_name
+  added   filter_nml::restart_out_file_name

@@ -1,0 +1,3 @@
+advance_temp1/wrfinput_d02
+advance_temp2/wrfinput_d02
+advance_temp3/wrfinput_d02

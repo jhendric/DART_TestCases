@@ -1,0 +1,60 @@
+--------------------------------------------------------------------------------
+WRF small test case (TRUNK)
+--------------------------------------------------------------------------------
+
+  - two domains (model_size 2558463)
+  - 3 member ensemble
+  - 55 observations (obs_seq.out)
+
+------------------- 
+Compiling
+-------------------
+
+Compile with r8. This can be set in common/types_mod.f90.
+
+The obs_seq.out file contains 55 observations, and should 
+run in less than a minute with 16 tasks.
+
+This test case can be run on your laptop. To run copy 
+filter into this directory and execute.
+
+------------------- 
+Files
+-------------------
+
+  * input files
+    
+    dart restart files
+     - filter_ics.0001
+     - filter_ics.0002
+     - filter_ics.0003
+
+    observation sequence file
+    - obs_seq.out (55 observations)
+    - obs_seq.assort (assortment of observations to test variout qc failures)
+
+    inflation file
+     - prior_inf_ic_new
+
+   * output files
+
+     dart restart files after assimilation
+     - filter_ics_new.0001
+     - filter_ics_new.0002
+     - filter_ics_new.0003
+    
+     diagnostic files
+     - Prior_Diag.nc
+     - Posterior_Diag.nc
+
+   * namelist
+    
+     - input.nml
+
+------------------- 
+WRF Files
+-------------------
+  - wrfinput_d01 (variable information for domain 1)
+  - wrfinput_d02 (variable information for domain 2)
+
+--------------------------------------------------------------------------------

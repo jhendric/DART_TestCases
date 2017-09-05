@@ -1,0 +1,67 @@
+********************************************************************************
+WRF Test Cases
+********************************************************************************
+
+This directory contains input files to run various sized WRF tests for both the
+RMA and TRUNK versions of DART.
+
+-- copy time --
+  wrf_small   :  0.5s
+  wrf_regular : 26.0s
+  wrf_large   : 57.0s
+
+***********
+** CASES **
+***********
+
+   (a) wrf_small (ens_size = 3, num_obs = 55, model_size = 2,558,463) 
+       
+       * this is a small enough test case to run on your laptop
+       * compile with r8 and big_endian
+       * single domain 
+        
+   (b) wrf_regular (ens_size = 50, num_obs = 55,400, model_size = 74,474,262)
+
+       * this is a 'typical' sized wrf run
+       * compile with r4 and big_endian
+   
+   (c) wrf_large (ens_size = 50, num_obs = 43,898, model_size = 93,029,454)
+
+       * this is too big to run with the Lanai branch, this is for 
+         testing new code
+       * compile with r4 and little_endian
+       * when using dart_to_wrf you need to ensure that 
+         model_advance_file = .false. in the model_nml
+
+***************
+** COMPILING **
+***************
+
+wrf_regular must be compiled with r4.  Different trunk versions of the test 
+cases may or may not need to be compiled with big_endian. RMA versions of the
+test cases do not need an endian flag as there is no binary files being read. 
+
+  * aliasing r8 to r4 this can be done in the header of common/type_mod.f90. 
+    
+    ----------------------------------------------------------------------------
+    !! comment in only one of the following lines, not both.   
+    !! the first is the default.
+    ! integer, parameter :: r8 = SELECTED_REAL_KIND(12)   ! real r8
+    integer, parameter :: r8 = r4                       ! alias r8 to r4
+    integer, parameter :: c8 = SELECTED_REAL_KIND(12)
+    ----------------------------------------------------------------------------
+
+  * compiling with big_endian. this can be done by editing your mkmf.template 
+    file's FFLAGS
+    
+    if you do not switch to r4 or turn on big_endian and try and run filter you
+    should get a message similar to:
+
+    ----------------------------------------------------------------------------
+    ERROR FROM:
+    task id:            1
+    routine: set_time
+    message:  seconds, days are            0 -2008481280 cannot be negative 
+    ----------------------------------------------------------------------------
+
+********************************************************************************
