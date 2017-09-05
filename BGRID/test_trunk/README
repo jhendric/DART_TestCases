@@ -1,0 +1,69 @@
+--------------------------------------------------------------------------------
+MODEL test case (TRUNK)
+--------------------------------------------------------------------------------
+
+  - model_size XXXXX
+  - XX member ensemble
+  - XXXXX observations (obs_seq.out)
+
+------------------- 
+Compiling
+-------------------
+
+  - 
+
+------------------- 
+DART Files
+-------------------
+
+  * INPUT FILES
+    
+    dart restart files
+    - filter_ics.XXXX  ( restart files ) 
+
+    observation sequence files
+    - obs_seq.out (XXXX observations)
+    - obs_seq.small.out (XXXX observations)
+
+  * OUTPUT FILES
+
+    dart restart files after assimilation
+    - filter_restart_XXXX
+
+    diagnostic files
+    - Prior_Diag.nc
+    - Posterior_Diag.nc
+
+    observation sequence files
+    - obs_seq.final
+
+  * NAMELIST
+   
+    - input.nml
+
+------------------- 
+MODEL Files
+-------------------
+
+  - model_restart.nc  ( restart variable information )
+  - model_grid.nc     ( grid information )
+
+------------------- 
+Timing (Yellowstone)
+-------------------
+  
+ |---------|------|--------|------------------|
+ |ens_size |   NP |  # obs | filter_time(sec) |
+ |---------|------|--------|------------------|
+ |      XX |  XXX |  XXXXX |           XXXXXX |
+ |      XX |  XXX |  XXXXX |           XXXXXX |
+ |      XX |  XXX |  XXXXX |           XXXXXX |
+ |---------|------|--------|------------------|
+
+------------------- 
+Notes
+-------------------
+  
+  - 
+
+--------------------------------------------------------------------------------

@@ -1,0 +1,75 @@
+--------------------------------------------------------------------------------
+MODEL test case (RMA)
+--------------------------------------------------------------------------------
+
+  - model_size XXXXX
+  - XX member ensemble
+  - XXXXX observations (obs_seq.out)
+
+------------------- 
+Compiling
+-------------------
+
+  - 
+
+------------------- 
+DART Files
+-------------------
+
+  * INPUT FILES
+    
+    dart restart files
+    - restart_XXXX.nc  ( restart files ) 
+
+    observation sequence files
+    - obs_seq.out       (XXXX observations)
+    - obs_seq.small.out (XXXX observations)
+
+  * OUTPUT FILES
+
+    dart restart files after assimilation
+    - model_output.XXXX.nc
+
+    restart files after prior to assimilation
+    - prior_member.XXXX.nc
+       
+    diagnostic files
+    - sd.nc
+    - mean.nc
+    - Prior_Diag_sd.nc
+    - Prior_Diag_mean.nc
+    - Posterior_Diag_sd.nc
+    - Posterior_Diag_mean.nc
+
+    obs_seq.final
+
+  * NAMELIST
+   
+    - input.nml
+
+------------------- 
+MODEL Files
+-------------------
+
+  - model_restart.nc  ( restart variable information )
+  - model_grid.nc     ( grid information )
+
+------------------- 
+Timing (Yellowstone)
+-------------------
+  
+ |---------|------|--------|------------------|
+ |ens_size |   NP |  # obs | filter_time(sec) |
+ |---------|------|--------|------------------|
+ |      XX |  XXX |  XXXXX |           XXXXXX |
+ |      XX |  XXX |  XXXXX |           XXXXXX |
+ |      XX |  XXX |  XXXXX |           XXXXXX |
+ |---------|------|--------|------------------|
+
+------------------- 
+Notes
+-------------------
+  
+  - 
+
+--------------------------------------------------------------------------------
