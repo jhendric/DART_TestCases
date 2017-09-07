@@ -131,7 +131,7 @@
 # hist_nhtfrq should be negative (hours) ... same context as in
 # the CLM namelist for the .h1. files.
 &obs_def_tower_nml
-   casename    = 'tower_history_files/clm4_121_hybrid_test'
+   casename    = '../tower_history_files/clm4_121_hybrid_test'
    hist_nhtfrq = -24
    debug       = .false.
    /

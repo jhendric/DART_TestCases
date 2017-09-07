@@ -17,7 +17,7 @@ csh convert_clm_to_dart.csh
 
 echo "Running filter"
 
-time mpirun.lsf ./filter >& filter.$$.log
+time mpirun.lsf ./filter
 
 echo "Converting DART files to CLM files "
 

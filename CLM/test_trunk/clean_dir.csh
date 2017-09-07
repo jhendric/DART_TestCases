@@ -1,3 +1,3 @@
 #!/bin/tcsh
 
-rm *.nc *.txt *.log dart_log.*
+rm -f *.nc *.txt *.log dart_log.* filter_*

@@ -14,7 +14,7 @@ foreach FILTER_RESTART (filter_restart.*)
    ln -sf $clm_history        clm_history.nc
    ln -sf $clm_vector_history clm_vector_history.nc
 
-   echo "Running dart_to_clm"
+   echo "Running dart_to_clm for member $n"
    
    # unique to the unique input file
    cp $FILTER_RESTART dart_restart 
@@ -27,6 +27,8 @@ foreach FILTER_RESTART (filter_restart.*)
    @ n = $n + 1
 
 end
+
+rm dart_restart
 
 echo "`date` -- END DART-TO-CLM"
 
