@@ -14,4 +14,7 @@ setenv TARGET_CPU_LIST "-1"
 
 time mpirun.lsf ./filter
 
+mkdir -p logs
+mv *.log *.err logs
+
 exit 0

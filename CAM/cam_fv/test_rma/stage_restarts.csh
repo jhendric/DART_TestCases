@@ -2,21 +2,23 @@
 
 set n = 1
 
-foreach file (../restarts/fv_testcase.i.000[1..2..3].nc)
+set CAM_DIR = '/glade/p/image/DART_test_cases/cam/cam_fv' 
 
-   set fileout = `printf "%s%4.4d%s" cam_out. $n .nc`
+foreach file ($CAM_DIR/restarts/*.nc)
 
-   echo "linking $file to test_rma run directory"
+   set fout = `printf "%s%4.4d%s" cam_out. $n .nc`
+
+   echo "linking '$file' here "
    ln -sf $file .
    
-   touch $fileout
-   
-   echo "copying $file to $fileout in test_rma run directory"
-   cp $file $fileout 
-   chmod u+w $fileout
+   echo "copying '$file' to '$fout'"
+   cp $file  $fout 
+   chmod u+w $fout
 
    @ n = $n + 1
 
 end
 
-
+ln -sf $CAM_DIR/test_rma/camfile.nc   . 
+ln -sf $CAM_DIR/test_rma/caminput.nc  . 
+ln -sf $CAM_DIR/test_rma/cam_phis.nc  . 
