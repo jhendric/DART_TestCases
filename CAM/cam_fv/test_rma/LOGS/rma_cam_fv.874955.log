@@ -1,0 +1,200 @@
+Execute poe command line: poe  ./filter
+ Starting program Filter
+ Initializing the utilities module.
+ Trying to log to unit           10
+ Trying to open file dart_log.out
+ 
+ --------------------------------------
+ Starting ... at YYYY MM DD HH MM SS = 
+                 2017  9  7 13 47 14
+ Program Filter
+ --------------------------------------
+ 
+ set_nml_output Echo NML values to log file only
+ Trying to open namelist log dart_log.nml
+ PE 0: initialize_mpi_utilities:  Running with           64 MPI processes.
+ PE 0: location_mod: using code with optimized cutoffs
+ PE 0: location_mod: Ignoring vertical separation when computing distances; horizontal distances only
+ PE 0: location_mod: Using table-lookup approximation for distance computations
+ PE 0: order_state_fields State vector is composed of these fields:
+ PE 0: order_state_fields PS
+ PE 0: order_state_fields T
+ PE 0: order_state_fields US
+ PE 0: order_state_fields VS
+ PE 0: order_state_fields Q
+ PE 0: order_state_fields CLDLIQ
+ PE 0: order_state_fields CLDICE
+ PE 0: static_init_model CAM state vector size:   9999936
+ PE 0: quality_control_mod: Will reject obs with Data QC larger than    3
+ PE 0: quality_control_mod: Will reject obs values more than    3.000000 sigma from mean
+ ------------------------------------------------------
+ 
+ 
+ -------------- ASSIMILATE_THESE_OBS_TYPES --------------
+ RADIOSONDE_U_WIND_COMPONENT
+ RADIOSONDE_V_WIND_COMPONENT
+ RADIOSONDE_TEMPERATURE
+ RADIOSONDE_SPECIFIC_HUMIDITY
+ AIRCRAFT_U_WIND_COMPONENT
+ AIRCRAFT_V_WIND_COMPONENT
+ AIRCRAFT_TEMPERATURE
+ ACARS_U_WIND_COMPONENT
+ ACARS_V_WIND_COMPONENT
+ ACARS_TEMPERATURE
+ MARINE_SFC_U_WIND_COMPONENT
+ MARINE_SFC_V_WIND_COMPONENT
+ MARINE_SFC_TEMPERATURE
+ MARINE_SFC_SPECIFIC_HUMIDITY
+ SAT_U_WIND_COMPONENT
+ SAT_V_WIND_COMPONENT
+ RADIOSONDE_SURFACE_ALTIMETER
+ MARINE_SFC_ALTIMETER
+ LAND_SFC_ALTIMETER
+ GPSRO_REFRACTIVITY
+ -------------- EVALUATE_THESE_OBS_TYPES --------------
+ ------------------------------------------------------
+ 
+ ---------- USE_PRECOMPUTED_FO_OBS_TYPES --------------
+ ------------------------------------------------------
+ 
+ PE 0: assim_tools_init: Selected filter type is Ensemble Adjustment Kalman Filter (EAKF)
+ PE 0: assim_tools_init: The cutoff namelist value is           0.200000
+ PE 0: assim_tools_init: ... cutoff is the localization half-width parameter,
+ PE 0: assim_tools_init: ... so the effective localization radius is           0.400000
+ PE 0: assim_tools_init: Replicating a copy of the ensemble mean on every task
+ PE 0: assim_tools_init: ... uses more memory per task but may run faster if doing vertical
+ PE 0: assim_tools_init: ... coordinate conversion; controlled by namelist item "distribute_mean"
+ PE 0: assim_tools_init: Not doing vertical localization, no vertical coordinate conversion required
+ PE 0:  filter trace: Filter start
+ Filter start TIME: 2017/09/07 13:47:15
+ PE 0: filter_main: running with an ensemble size of     3
+ PE 0:  filter trace: Before initializing inflation
+ PE 0:  filter trace: After  initializing inflation
+ PE 0: parse_stages_to_write:  filter will write stage : output
+ PE 0:  filter trace: Before setting up space for observations
+ Before setting up space for observations TIME: 2017/09/07 13:47:15
+ After  setting up space for observations TIME: 2017/09/07 13:47:15
+ PE 0:  filter trace: After  setting up space for observations
+ PE 0:  filter trace: Before setting up space for ensembles
+ PE 0:  filter trace: After  setting up space for ensembles
+ PE 0:  filter trace: Before reading in ensemble restart files
+ Before reading in ensemble restart files TIME: 2017/09/07 13:47:15
+ PE 0: Prior inflation: None
+ PE 0: Posterior inflation: None
+ PE 0: filter_main: Reading in initial condition/restart data for all ensemble members from file(s)
+ After  reading in ensemble restart files TIME: 2017/09/07 13:47:15
+ PE 0:  filter trace: After  reading in ensemble restart files
+ PE 0:  filter trace: Before initializing output files
+ Before initializing output files TIME: 2017/09/07 13:47:15
+ After  initializing output files TIME: 2017/09/07 13:47:15
+ PE 0:  filter trace: After  initializing output files
+ PE 0:  filter trace: Before trimming obs seq if start/stop time specified
+ PE 0:  filter trace: After  trimming obs seq if start/stop time specified
+ PE 0:  filter trace: Top of main advance time loop
+ PE 0:  
+ PE 0: filter: Main assimilation loop, starting iteration    0
+ PE 0:  filter trace: Before move_ahead checks time of data and next obs
+ PE 0: move_ahead Current model data time            is:  day=  147206 sec=     0
+ PE 0: move_ahead Current assimilation window starts at:  day=  147205 sec= 75601
+ PE 0: move_ahead Next available observation time    is:  day=  147205 sec= 75614
+ PE 0: move_ahead Current assimilation window ends   at:  day=  147206 sec= 10800
+ PE 0: move_ahead Next available observation time    is:  day=  147205 sec= 75614
+ PE 0: move_ahead Within current assimilation window, model does not need advance.
+ PE 0: move_ahead Next assimilation window contains up to       25 observations
+ PE 0:  filter trace: After  move_ahead checks time of data and next obs
+ PE 0: filter: Model does not need to run; data already at required time
+ PE 0:  filter trace: Before setup for next group of observations
+ PE 0:  filter trace: Number of observations to be assimilated     25
+ filter trace: Time of first observation in window day=147205, sec=75614
+ filter trace: Time of last  observation in window day=147205, sec=75661
+ PE 0:  filter trace: After  setup for next group of observations
+ PE 0:  filter trace: Before computing prior observation values
+ Before computing prior observation values TIME: 2017/09/07 13:47:15
+ After  computing prior observation values TIME: 2017/09/07 13:47:16
+ PE 0:  filter trace: After  computing prior observation values
+ PE 0:  filter trace: Before observation space diagnostics
+ PE 0:  filter trace: After  observation space diagnostics
+ PE 0: filter: Ready to assimilate up to      25 observations
+ PE 0:  filter trace: Before observation assimilation
+ Before observation assimilation TIME: 2017/09/07 13:47:16
+Processing observation         1  of       25 TIME: 2017/09/07 13:47:16
+ PE 0: comp_cov_factor: Standard Gaspari Cohn localization selected
+Processing observation         2  of       25 TIME: 2017/09/07 13:47:16
+Processing observation         3  of       25 TIME: 2017/09/07 13:47:16
+Processing observation         4  of       25 TIME: 2017/09/07 13:47:16
+Processing observation         5  of       25 TIME: 2017/09/07 13:47:16
+Processing observation         6  of       25 TIME: 2017/09/07 13:47:16
+Processing observation         7  of       25 TIME: 2017/09/07 13:47:16
+Processing observation         8  of       25 TIME: 2017/09/07 13:47:16
+Processing observation         9  of       25 TIME: 2017/09/07 13:47:16
+Processing observation        10  of       25 TIME: 2017/09/07 13:47:16
+Processing observation        11  of       25 TIME: 2017/09/07 13:47:16
+Processing observation        12  of       25 TIME: 2017/09/07 13:47:16
+Processing observation        13  of       25 TIME: 2017/09/07 13:47:16
+Processing observation        14  of       25 TIME: 2017/09/07 13:47:16
+Processing observation        15  of       25 TIME: 2017/09/07 13:47:16
+Processing observation        16  of       25 TIME: 2017/09/07 13:47:16
+Processing observation        17  of       25 TIME: 2017/09/07 13:47:16
+Processing observation        18  of       25 TIME: 2017/09/07 13:47:16
+Processing observation        19  of       25 TIME: 2017/09/07 13:47:16
+Processing observation        20  of       25 TIME: 2017/09/07 13:47:16
+Processing observation        21  of       25 TIME: 2017/09/07 13:47:16
+Processing observation        22  of       25 TIME: 2017/09/07 13:47:16
+Processing observation        23  of       25 TIME: 2017/09/07 13:47:16
+Processing observation        24  of       25 TIME: 2017/09/07 13:47:16
+Processing observation        25  of       25 TIME: 2017/09/07 13:47:16
+ PE 0: filter_assim: Processed      25 total observations
+ Total number of calls made    to get_close_obs for obs/states:              14
+ Total number of calls avoided to get_close_obs for obs/states:              24
+ Percent saved:    63.1578947368421     
+ After  observation assimilation TIME: 2017/09/07 13:47:16
+ PE 0:  filter trace: After  observation assimilation
+ PE 0:  filter trace: Before computing posterior observation values
+ Before computing posterior observation values TIME: 2017/09/07 13:47:16
+ After  computing posterior observation values TIME: 2017/09/07 13:47:16
+ PE 0:  filter trace: After  computing posterior observation values
+ PE 0:  filter trace: Before posterior obs space diagnostics
+ PE 0:  filter trace: After  posterior obs space diagnostics
+ PE 0:  filter trace: Near bottom of main loop, cleaning up obs space
+ PE 0:  filter trace: Bottom of main advance time loop
+ PE 0:  filter trace: Top of main advance time loop
+ PE 0:  
+ PE 0: filter: Main assimilation loop, starting iteration    1
+ PE 0:  filter trace: Before move_ahead checks time of data and next obs
+ PE 0:  filter trace: After  move_ahead checks time of data and next obs
+ PE 0: filter: No more obs to assimilate, exiting main loop
+ PE 0: filter: End of main filter assimilation loop, starting cleanup
+ PE 0:  filter trace: Before state space output
+ Before state space output TIME: 2017/09/07 13:47:16
+ PE     3: clamp_variable  Q lower bound   1.000000000000000E-012 min value  -5.892002596343807E-006
+ PE     3: clamp_variable  CLDLIQ lower bound   0.000000000000000E+000 min value  -5.612296705944979E-006
+ PE     0: clamp_variable  Q lower bound   1.000000000000000E-012 min value  -4.390279257175281E-004
+ PE     2: clamp_variable  Q lower bound   1.000000000000000E-012 min value  -3.978729481203144E-005
+ PE     3: clamp_variable  CLDICE lower bound   0.000000000000000E+000 min value  -7.649587250141094E-007
+ PE     1: clamp_variable  Q lower bound   1.000000000000000E-012 min value  -4.210389426643037E-004
+ PE     0: clamp_variable  CLDLIQ lower bound   0.000000000000000E+000 min value  -8.566628071243583E-005
+ PE     2: clamp_variable  CLDLIQ lower bound   0.000000000000000E+000 min value  -6.138948022726861E-006
+ PE     1: clamp_variable  CLDLIQ lower bound   0.000000000000000E+000 min value  -5.938490951168776E-005
+ PE     0: clamp_variable  CLDICE lower bound   0.000000000000000E+000 min value  -9.244441087548075E-006
+ PE     1: clamp_variable  CLDICE lower bound   0.000000000000000E+000 min value  -8.945218746274722E-006
+ After  state space output TIME: 2017/09/07 13:47:18
+ PE 0:  filter trace: After  state space output
+ PE 0:  filter trace: Before writing output sequence file
+ PE     2: clamp_variable  CLDICE lower bound   0.000000000000000E+000 min value  -9.592666771509015E-007
+ PE 0: write_obs_seq  opening formatted observation sequence file "obs_seq.final"
+ PE 0: write_obs_seq  closed observation sequence file "obs_seq.final"
+ PE 0:  filter trace: After  writing output sequence file
+ PE 0:  filter trace: Before end_model call
+ PE 0:  filter trace: After  end_model call
+ PE 0:  filter trace: Before ensemble and obs memory cleanup
+ PE 0:  filter trace: After  ensemble and obs memory cleanup
+ PE 0:  filter trace: Filter done
+ Filter done TIME: 2017/09/07 13:47:18
+ 
+ --------------------------------------
+ Finished ... at YYYY MM DD HH MM SS = 
+                 2017  9  7 13 47 18
+ Program Filter
+ --------------------------------------
+ 
+0.141u 0.066s 0:06.14 3.2%	0+0k 0+0io 0pf+0w
