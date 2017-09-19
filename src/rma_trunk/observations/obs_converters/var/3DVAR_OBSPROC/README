@@ -1,0 +1,34 @@
+# DART software - Copyright UCAR. This open source software is provided
+# by UCAR, "as is", without charge, subject to all terms of use at
+# http://www.image.ucar.edu/DAReS/DART/DART_download
+#
+# DART $Id: README 10998 2017-02-03 22:23:13Z thoar@ucar.edu $
+
+Before building the executables in the work directory you 
+will need to copy some of the WRF distribution files into 
+this directory.  The files listed below are what is needed 
+with WRFDA v3.2.1 (the current release at this time).
+
+From WRFDA/var/obsproc/MAP_plot/Dir_map, copy to here:
+
+DA_Constants.f90
+DA_Define_Structures.f90
+DA_Read_Obs.inc
+DA_Read_Obs_Info.inc
+DA_Setup_Obs_Structures.inc
+module_obs.F90
+
+As well as from WRFDA/var/obsproc/MAP_plot/include, copy to here:
+
+maps.incl
+nestdmn.incl
+
+
+See here for more info on this code:
+
+http://www.mmm.ucar.edu/wrf/WG4/wrfvar/3dvar_obsproc.htm
+
+# <next few lines under version control, do not edit>
+# $URL: https://svn-dares-dart.cgd.ucar.edu/DART/branches/rma_trunk/observations/obs_converters/var/3DVAR_OBSPROC/README $
+# $Revision: 10998 $
+# $Date: 2017-02-03 15:23:13 -0700 (Fri, 03 Feb 2017) $

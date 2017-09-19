@@ -1,0 +1,523 @@
+netcdf \1264095 {
+dimensions:
+	string1 = 1 ;
+	string2 = 2 ;
+	string4 = 4 ;
+	string6 = 6 ;
+	string8 = 8 ;
+	string10 = 10 ;
+	string12 = 12 ;
+	depth = 15 ;
+	time = 1 ;
+	latitude = 1 ;
+	longitude = 1 ;
+	no_prof = 1 ;
+	no_parms = 1 ;
+	no_surf = 7 ;
+	no_hist = 8 ;
+variables:
+	float depth(depth) ;
+		depth:long_name = "Depths of the observations" ;
+		depth:units = "meters" ;
+		depth:data_min = 0.f ;
+		depth:data_max = 512.f ;
+		depth:positive = "down" ;
+		depth:C_format = "%6.2f" ;
+		depth:FORTRAN_format = "F6.2" ;
+		depth:epic_code = 3 ;
+	float temperature(time, depth, latitude, longitude) ;
+		temperature:long_name = "temperature" ;
+		temperature:units = "degree C" ;
+		temperature:data_min = 7.1f ;
+		temperature:data_max = 23.7f ;
+		temperature:C_format = "%9.4f" ;
+		temperature:FORTRAN_format = "F9.4" ;
+		temperature:_FillValue = -99.f ;
+		temperature:Station_Duplication_Flag = "N" ;
+		temperature:Digitization_Method = "8" ;
+		temperature:Standard = "5" ;
+		temperature:Deepest_Depth_m = 512.f ;
+		temperature:epic_code = 28 ;
+	char format_version(string8) ;
+		format_version:long_name = "File format version" ;
+		format_version:_FillValue = " " ;
+		format_version:description = "the version number of the GTSPP NetCDF format" ;
+	char handbook_version(string8) ;
+		handbook_version:long_name = "GTSPP CMD System handbook version" ;
+		handbook_version:_FillValue = " " ;
+		handbook_version:description = "U.S. NODC GTSPP System Technical Document and User\'s Manual" ;
+	int station_id(time, latitude, longitude) ;
+		station_id:long_name = "Station ID Number" ;
+		station_id:units = " " ;
+		station_id:description = "Identification number of the station in the GTSPP Continuously Managed Database" ;
+	int woce_date ;
+		woce_date:long_name = "WOCE date" ;
+		woce_date:units = "yyyymmdd UTC" ;
+		woce_date:data_min = 20000131 ;
+		woce_date:data_max = 20000131 ;
+	int woce_time ;
+		woce_time:long_name = "WOCE time" ;
+		woce_time:units = "hhmmss UTC" ;
+		woce_time:data_min = 20000 ;
+		woce_time:data_max = 20000 ;
+	double ref_date_time ;
+		ref_date_time:long_name = "Reference date and time for observation days" ;
+		ref_date_time:units = " " ;
+		ref_date_time:_FillValue = 999999. ;
+		ref_date_time:description = "Julian Day Number of 1900-01-01 00:00:00 UTC" ;
+	double time(time) ;
+		time:long_name = "time" ;
+		time:units = "days since 1900-01-01 00:00:00" ;
+		time:data_min = 36554.0833333333 ;
+		time:data_max = 36554.0833333333 ;
+	char obs_year(string4) ;
+		obs_year:long_name = "Observation Year" ;
+		obs_year:_FillValue = " " ;
+		obs_year:description = "Century and year of observation" ;
+	char obs_month(string2) ;
+		obs_month:long_name = "Observation Month" ;
+		obs_month:_FillValue = " " ;
+		obs_month:description = "Month number of the observation year" ;
+	char obs_day(string2) ;
+		obs_day:long_name = "Observation Day" ;
+		obs_day:_FillValue = " " ;
+		obs_day:description = "Day number of the observation month" ;
+	char obs_hour(string2) ;
+		obs_hour:long_name = "Observation Hour" ;
+		obs_hour:_FillValue = " " ;
+		obs_hour:description = "Hour number of the observation day" ;
+	char obs_minute(string2) ;
+		obs_minute:long_name = "Observation Minute" ;
+		obs_minute:_FillValue = " " ;
+		obs_minute:description = "Minute number of the observation hour" ;
+	char q_date_time ;
+		q_date_time:long_name = "Date-Time Quality Flag" ;
+		q_date_time:_FillValue = "9" ;
+		q_date_time:description = "Date-Time Quality" ;
+	float latitude(latitude) ;
+		latitude:long_name = "latitude" ;
+		latitude:units = "degrees_N" ;
+		latitude:data_min = -19.45f ;
+		latitude:data_max = -19.45f ;
+		latitude:valid_min = -90.f ;
+		latitude:valid_max = 90.f ;
+		latitude:C_format = "%8.4f" ;
+		latitude:FORTRAN_format = "F8.4" ;
+		latitude:epic_code = 500 ;
+		latitude:description = "Decimal degrees (+ = north, - = south)" ;
+	float longitude(longitude) ;
+		longitude:long_name = "longitude" ;
+		longitude:units = "degrees_E" ;
+		longitude:data_min = 5.2333f ;
+		longitude:data_max = 5.2333f ;
+		longitude:valid_min = -180.f ;
+		longitude:valid_max = 180.f ;
+		longitude:C_format = "%9.4f" ;
+		longitude:FORTRAN_format = "F9.4" ;
+		longitude:epic_code = 502 ;
+		longitude:description = "Decimal degrees (+ = east, - = west)" ;
+	char q_pos ;
+		q_pos:long_name = "Position Quality Flag" ;
+		q_pos:_FillValue = "9" ;
+		q_pos:description = "Station Position Quality" ;
+	char q_record ;
+		q_record:long_name = "Worst Quality Flag" ;
+		q_record:_FillValue = "9" ;
+		q_record:description = "Worst Quality flag in the station" ;
+	char one_deg_sq(string8) ;
+		one_deg_sq:long_name = "One Deg. Square" ;
+		one_deg_sq:units = " " ;
+		one_deg_sq:description = "MEDS geographic 1 degree square" ;
+	char cruise_id(string10) ;
+		cruise_id:long_name = "Cruise ID Number" ;
+		cruise_id:_FillValue = " " ;
+		cruise_id:description = "Radio callsign + year for real time data, or NODC reference number for delayed mode data." ;
+	char data_type(string2) ;
+		data_type:long_name = "Data Type" ;
+		data_type:_FillValue = " " ;
+		data_type:description = "Instrument type or type of IGOSS radio message" ;
+	char uflag ;
+		uflag:long_name = "Update Flag" ;
+		uflag:_FillValue = " " ;
+		uflag:description = "Record update action" ;
+	char up_date(string8) ;
+		up_date:long_name = "Up Date" ;
+		up_date:_FillValue = " " ;
+		up_date:description = "Date of last action on record" ;
+	char bul_time(string12) ;
+		bul_time:long_name = "Bulletin Time" ;
+		bul_time:_FillValue = " " ;
+		bul_time:description = "Time bulletin was placed on GTS" ;
+	char bul_header(string6) ;
+		bul_header:long_name = "Bulletin Header" ;
+		bul_header:_FillValue = " " ;
+		bul_header:description = "GTS bulletin header" ;
+	char source_id(string4) ;
+		source_id:long_name = "Source ID" ;
+		source_id:_FillValue = " " ;
+		source_id:description = "GTS node which placed message on the GTS" ;
+	char stream_ident(string4) ;
+		stream_ident:long_name = "Stream Identification" ;
+		stream_ident:_FillValue = " " ;
+		stream_ident:description = "Source and type of data. Bytes 1-2 show the data source center. Bytes 3-4 show data type" ;
+	char qc_version(string4) ;
+		qc_version:long_name = "QC Program Version No." ;
+		qc_version:_FillValue = " " ;
+		qc_version:description = "Version of the QC program used." ;
+	short no_prof ;
+		no_prof:long_name = "Number of Profiles" ;
+		no_prof:units = "count" ;
+		no_prof:description = "Number of Parameter profiles in station" ;
+	char prof_type(no_prof, string4) ;
+		prof_type:long_name = "Profile Type" ;
+		prof_type:_FillValue = " " ;
+		prof_type:description = "Type of data in profile" ;
+	char digit_code(no_prof, string1) ;
+		digit_code:long_name = "Digitization Code" ;
+		digit_code:_FillValue = " " ;
+		digit_code:description = "Data digitization method" ;
+	char standard(no_prof, string1) ;
+		standard:long_name = "Observation Standards" ;
+		standard:_FillValue = " " ;
+		standard:description = "Standards to which the observations were made" ;
+	float deep_depth ;
+		deep_depth:long_name = "Deepest Depth(m)" ;
+		deep_depth:_FillValue = -99.f ;
+		deep_depth:description = "Depth (m) of the deepest observation in the profile." ;
+	short no_parms ;
+		no_parms:long_name = "Number of Surface Parameters" ;
+		no_parms:units = "count" ;
+		no_parms:description = "Number of Surface Parameter groups" ;
+	char pcode(no_parms, string4) ;
+		pcode:long_name = "Parameter Code" ;
+		pcode:_FillValue = " " ;
+		pcode:description = "Consult the GTSPP and WMO Code Tables to interpret what variable this is." ;
+	char parm(no_parms, string10) ;
+		parm:long_name = "surface Parameter Value" ;
+		parm:_FillValue = " " ;
+		parm:description = "Measured Surface Parameter Value. Units depend on the variable reported. They are always in SI." ;
+	char q_parm(no_parms, string1) ;
+		q_parm:long_name = "Surface Parameter Quality Flag" ;
+		q_parm:_FillValue = " " ;
+		q_parm:description = "Consult the GTSPP and WMO Code Tables to interpret the quality flag value." ;
+	short no_surf ;
+		no_surf:long_name = "Number of Surface Codes" ;
+		no_surf:units = "count" ;
+		no_surf:description = "Number of Surface Codes groups" ;
+	char surfacecodes_pcode(no_surf, string4) ;
+		surfacecodes_pcode:long_name = "Surface Parameter Code" ;
+		surfacecodes_pcode:_FillValue = " " ;
+		surfacecodes_pcode:description = "Consult the GTSPP and WMO Code Tables to interpret what variable this is" ;
+	char surfacecodes_cparm(no_surf, string10) ;
+		surfacecodes_cparm:long_name = "Surface Code" ;
+		surfacecodes_cparm:_FillValue = " " ;
+		surfacecodes_cparm:description = "These are values that are stored as characters" ;
+	char surfacecodes_qparm(no_surf, string1) ;
+		surfacecodes_qparm:long_name = "Surface Code Quality Flag" ;
+		surfacecodes_qparm:_FillValue = " " ;
+		surfacecodes_qparm:description = "Consult the GTSPP and WMO Code Tables to interpret what variable this is" ;
+	short no_hist ;
+		no_hist:long_name = "Number of History groups" ;
+		no_hist:units = "count" ;
+		no_hist:description = "Number of History groups" ;
+	char hist_identcode(no_hist, string2) ;
+		hist_identcode:long_name = "History Identification Code" ;
+		hist_identcode:_FillValue = " " ;
+		hist_identcode:description = "Identifies the agency which wrote this history record. See GTSPP and WMO Code Tables to interpret this." ;
+	char hist_prccode(no_hist, string4) ;
+		hist_prccode:long_name = "History Processing Code" ;
+		hist_prccode:_FillValue = " " ;
+		hist_prccode:description = "Identifies the software through which the data passed. See GTSPP and WMO Code Table to interpret this." ;
+	char hist_version(no_hist, string4) ;
+		hist_version:long_name = "History Processing Version" ;
+		hist_version:_FillValue = " " ;
+		hist_version:description = "Identifies the version of the software through which the data passed." ;
+	char hist_prcdate(no_hist, string8) ;
+		hist_prcdate:long_name = "History Processing Date" ;
+		hist_prcdate:_FillValue = " " ;
+		hist_prcdate:description = "Records the date as YYYYMMDD that this history record was created." ;
+	char hist_actcode(no_hist, string2) ;
+		hist_actcode:long_name = "History Action Code" ;
+		hist_actcode:_FillValue = " " ;
+		hist_actcode:description = "Identifies the action taken against the data by the software. See table (Codes Used) to interpret this." ;
+	char hist_actparm(no_hist, string4) ;
+		hist_actparm:long_name = "History Action Parm" ;
+		hist_actparm:_FillValue = " " ;
+		hist_actparm:description = "Identifies the measured variable affected by the action. See table (Codes Used) to interpret this. This is the same as pcode used above." ;
+	char hist_auxid(no_hist, string8) ;
+		hist_auxid:long_name = "History Auxilary Identification" ;
+		hist_auxid:_FillValue = " " ;
+		hist_auxid:description = "Normally this is the depth at which the value of a variable was acted upon by the software." ;
+	char hist_ovalue(no_hist, string10) ;
+		hist_ovalue:long_name = "History Original Value" ;
+		hist_ovalue:_FillValue = " " ;
+		hist_ovalue:description = "The original value before being acted upon by software." ;
+	char d_p_code(no_prof, string1) ;
+		d_p_code:long_name = "Depth/Pressure code" ;
+		d_p_code:_FillValue = " " ;
+		d_p_code:description = "Depth/Pressure code" ;
+	char DEPH_qparm(depth, string1) ;
+		DEPH_qparm:long_name = "Depth_Pressure Quality Flag" ;
+		DEPH_qparm:_FillValue = "9" ;
+		DEPH_qparm:description = "Depth_Pressure Quality Flag" ;
+	char TEMP_qparm(depth, string1) ;
+		TEMP_qparm:long_name = "Temperature Quality Flag" ;
+		TEMP_qparm:_FillValue = "9" ;
+		TEMP_qparm:description = "Temperature Quality Flag" ;
+
+// global attributes:
+		:title = "Global Temperature-Salinity Profile Program Data" ;
+		:format_version = "GTSPP NetCDF format Ver. 3.7" ;
+		:Conventions = "COARDS, WOCE, GTSPP" ;
+		:file_source = "The GTSPP Continuously Managed Data Base" ;
+		:history = "Program used to create this file: meds2ncdf.pro Ver. 1.4 2005-09-18" ;
+		:LEXICON = "NODC_GTSPP" ;
+data:
+
+ depth =   0.00,  24.00,  28.00,  38.00,  48.00,  54.00, 118.00, 150.00, 
+    170.00, 182.00, 198.00, 222.00, 238.00, 322.00, 512.00 ;
+
+ temperature =
+    23.7000,
+    23.6000,
+    22.9000,
+    20.4000,
+    18.9000,
+    18.5000,
+    15.5000,
+    13.6000,
+    13.6000,
+    12.7000,
+    12.8000,
+    11.7000,
+    11.6000,
+     9.7000,
+     7.1000 ;
+
+ format_version = "GTSPP3.7" ;
+
+ handbook_version = "GTSPP2.0" ;
+
+ station_id =
+  1264095 ;
+
+ woce_date = 20000131 ;
+
+ woce_time = 20000 ;
+
+ ref_date_time = 2415020.5 ;
+
+ time = 36554.0833333333 ;
+
+ obs_year = "2000" ;
+
+ obs_month = "01" ;
+
+ obs_day = "31" ;
+
+ obs_hour = "02" ;
+
+ obs_minute = "00" ;
+
+ q_date_time = "5" ;
+
+ latitude = -19.4500 ;
+
+ longitude =    5.2333 ;
+
+ q_pos = "1" ;
+
+ q_record = "5" ;
+
+ one_deg_sq = "  175071" ;
+
+ cruise_id = "ZTSG    00" ;
+
+ data_type = "BA" ;
+
+ uflag = "U" ;
+
+ up_date = "20040422" ;
+
+ bul_time = "200001310827" ;
+
+ bul_header = "SOVF01" ;
+
+ source_id = "    " ;
+
+ stream_ident = "MEBA" ;
+
+ qc_version = "1.0 " ;
+
+ no_prof = 1 ;
+
+ prof_type =
+  "TEMP" ;
+
+ digit_code =
+  "8" ;
+
+ standard =
+  "5" ;
+
+ deep_depth = 512 ;
+
+ no_parms = 1 ;
+
+ pcode =
+  "" ;
+
+ parm =
+  "" ;
+
+ q_parm =
+  "" ;
+
+ no_surf = 7 ;
+
+ surfacecodes_pcode =
+  "DBID",
+  "PLAT",
+  "PFR$",
+  "QCP$",
+  "QCF$",
+  "STAT",
+  "DPC$" ;
+
+ surfacecodes_cparm =
+  "1264095   ",
+  "91SG      ",
+  "04222     ",
+  "41E1FFDF  ",
+  "00000011  ",
+  "1         ",
+  "02        " ;
+
+ surfacecodes_qparm =
+  "0",
+  "0",
+  "0",
+  "0",
+  "0",
+  "0",
+  "0" ;
+
+ no_hist = 8 ;
+
+ hist_identcode =
+  "ME",
+  "ME",
+  "ME",
+  "ME",
+  "ME",
+  "NO",
+  "NO",
+  "NO" ;
+
+ hist_prccode =
+  "IG02",
+  "QCA1",
+  "QCA1",
+  "IGO3",
+  "IG05",
+  "tstm",
+  "ld00",
+  "ld08" ;
+
+ hist_version =
+  "2.0 ",
+  "1.0 ",
+  "1.0 ",
+  "1.1 ",
+  "2.0 ",
+  "2.61",
+  "1.0 ",
+  "1.2 " ;
+
+ hist_prcdate =
+  "20000131",
+  "20000131",
+  "20000131",
+  "20000131",
+  "20000131",
+  "20011213",
+  "20011213",
+  "20040422" ;
+
+ hist_actcode =
+  "CR",
+  "QC",
+  "ED",
+  "DC",
+  "QC",
+  "CR",
+  "CR",
+  "UP" ;
+
+ hist_actparm =
+  "RCRD",
+  "RCRD",
+  "HHMM",
+  "RCRD",
+  "RCRD",
+  "RCRD",
+  "RCRD",
+  "RCRD" ;
+
+ hist_auxid =
+  "9999.999",
+  "9999.999",
+  "9999.999",
+  "9999.999",
+  "0.000   ",
+  "9999.999",
+  "9999.999",
+  "9999.999" ;
+
+ hist_ovalue =
+  "9999.999  ",
+  "9999.999  ",
+  "0006.000  ",
+  "0.00000   ",
+  "0.00000   ",
+  "9999.999  ",
+  "9999.999  ",
+  "  9999.999" ;
+
+ d_p_code =
+  "D" ;
+
+ DEPH_qparm =
+  "1",
+  "1",
+  "1",
+  "1",
+  "1",
+  "1",
+  "1",
+  "1",
+  "1",
+  "1",
+  "1",
+  "1",
+  "1",
+  "1",
+  "1" ;
+
+ TEMP_qparm =
+  "1",
+  "1",
+  "1",
+  "1",
+  "1",
+  "1",
+  "1",
+  "1",
+  "1",
+  "1",
+  "1",
+  "1",
+  "1",
+  "1",
+  "1" ;
+}

@@ -1,0 +1,57 @@
+# DART software - Copyright UCAR. This open source software is provided
+# by UCAR, "as is", without charge, subject to all terms of use at
+# http://www.image.ucar.edu/DAReS/DART/DART_download
+#
+# DART $Id: README 11794 2017-07-07 17:20:17Z nancy@ucar.edu $
+
+This directory contains the interface code and the shell scripts to
+run the MPAS-ATM atmospheric model with DART ensemble data assimilation.
+
+The 'work' directory is where the executables are built.
+Run 'quickbuild.csh' to compile all the executables.  
+'quickbuild.csh -nompi' builds the serial versions only, 
+'quickbuild.csh -mpi' is the default and builds MPI (parallel) versions
+of the filter and any other executables that can run on multiple CPUs.
+
+The 'shell_scripts' directory contains a collection of scripts that 
+support the workflow for cycling.  The ensemble of MPAS-ATM models have 
+to run to advance the time, then 'filter' runs to do data assimilation 
+on the ensemble of MPAS restart files, then the ensemble of MPAS models 
+advances again, then 'filter' runs, in a cycle.
+
+The 'data' directory contains a single small example MPAS-ATM restart
+file along with some stream files for an MPAS run.  See the README.txt
+for more details.
+
+Here are more details on how the information in the input and output
+files are handled in a cycling experiment.
+
+Very many thanks to Soyoung Ha (NCAR/MMM) and Ryan Torn (U Albany) for 
+developing and documenting these scripts.
+
+
+"filter_in.txt" : member1/restart.nc
+       |          member2/restart.nc
+       |
+       | as input_state_file_list in &filter_nml
+       V
+    <filter> - produces the EnKF analyses 
+       |
+       | as output_state_file_list in &filter_nml
+       V
+"filter_out.txt" : member1/analysis.nc
+       |           member2/analysis.nc
+       |
+       | as input_file_list in &update_mpas_states_nml
+       V
+<update_mpas_states> - updates analysis vector in MPAS restart files for all members
+       |
+       | as output_file_list in &update_mpas_states_nml
+       V
+"filter_in.txt" : member1/restart.nc
+       |          member2/restart.nc
+       | (Warning: restart.nc are overwritten for analysis fields.)
+       | same as input_state_file_list in &filter_nml 
+       V
+advance_model.csh ensemble_member_number
+

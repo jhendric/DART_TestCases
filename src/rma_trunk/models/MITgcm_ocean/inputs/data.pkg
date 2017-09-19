@@ -1,0 +1,12 @@
+#
+# DART $Id: data.pkg 6269 2013-06-13 21:40:55Z thoar $
+#
+# Packages
+ &PACKAGES
+  useGMRedi=.FALSE.,
+  useKPP=.true.,
+  useECCO=.true.,
+  useEXF=.true.,
+  useOBCS=.true.,
+  useSEAICE=.false.,
+ &

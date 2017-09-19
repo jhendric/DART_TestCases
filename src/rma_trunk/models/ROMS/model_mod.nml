@@ -1,0 +1,22 @@
+
+# Each variable must have 5 entries.
+# 1: variable name
+# 2: DART KIND
+# 3: minimum value - as a character string - if none, use 'NA'
+# 4: maximum value - as a character string - if none, use 'NA'
+# 5: does the variable get updated in the restart file or not ...
+#    only variables from restart files may be updated.
+#    'UPDATE' =>        update the variable in the restart file
+#    'NO_COPY_BACK' => do not update the variable in the restart file
+#    all these variables will be updated INTERNALLY IN DART
+#    only variables marked 'UPDATE' will be modified for ROMS.
+
+&model_nml
+   roms_filename               = 'roms_init.nc'
+   assimilation_period_days    = 1
+   assimilation_period_seconds = 0
+   vert_localization_coord     = 3
+   debug                       = 0
+   variables                   = ''
+/
+

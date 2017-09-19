@@ -1,0 +1,10 @@
+#
+# DART $Id: data.kpp 6269 2013-06-13 21:40:55Z thoar $
+#
+# KPP parameters
+ &KPP_PARM01
+ KPPmixingMaps   = .FALSE.,
+ KPPwriteState   = .FALSE.,
+ kpp_dumpFreq    = 864000.0,
+ Riinfty = 0.3,
+&

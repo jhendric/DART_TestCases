@@ -1,0 +1,24 @@
+# DART software - Copyright UCAR. This open source software is provided
+# by UCAR, "as is", without charge, subject to all terms of use at
+# http://www.image.ucar.edu/DAReS/DART/DART_download
+#
+# DART $Id: README 10998 2017-02-03 22:23:13Z thoar@ucar.edu $
+
+To use this model, you must go to the COAMPS web site 
+(at http://www.nrlmry.navy.mil/coamps-web/web/home ) 
+and download the COAMPS model.
+
+Then go into the shell_scripts directory and run
+the initialize_dart.sh script to set up the necessary
+files before trying to build the programs in the work directory.
+
+Since you have these files, we assume you have already
+downloaded the DART code.  If not, go here to register
+and get information about checking DART out from subversion:
+
+http://www.image.ucar.edu/DAReS/DART/DART_download
+
+# <next few lines under version control, do not edit>
+# $URL: https://svn-dares-dart.cgd.ucar.edu/DART/branches/rma_trunk/models/coamps/README $
+# $Revision: 10998 $
+# $Date: 2017-02-03 15:23:13 -0700 (Fri, 03 Feb 2017) $

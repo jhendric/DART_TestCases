@@ -1,0 +1,18 @@
+#!/bin/csh
+#
+# DART software - Copyright UCAR. This open source software is provided
+# by UCAR, "as is", without charge, subject to all terms of use at
+# http://www.image.ucar.edu/DAReS/DART/DART_download
+#
+# DART $Id: mkmf_convert_cosmic_ionosphere 11639 2017-05-16 02:53:42Z thoar@ucar.edu $
+
+../../../../build_templates/mkmf -p convert_cosmic_ionosphere -t ../../../../build_templates/mkmf.template   \
+ -a "../../../.." path_names_convert_cosmic_ionosphere
+
+exit $status
+
+# <next few lines under version control, do not edit>
+# $URL: https://svn-dares-dart.cgd.ucar.edu/DART/branches/rma_trunk/observations/obs_converters/gps/work/mkmf_convert_cosmic_ionosphere $
+# $Revision: 11639 $
+# $Date: 2017-05-15 20:53:42 -0600 (Mon, 15 May 2017) $
+

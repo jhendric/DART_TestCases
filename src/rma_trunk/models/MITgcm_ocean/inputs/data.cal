@@ -1,0 +1,11 @@
+#
+# DART $Id: data.cal 6269 2013-06-13 21:40:55Z thoar $
+#
+# *******************
+# Calendar Parameters
+# *******************
+&CAL_NML
+  TheCalendar = 'gregorian',
+  startDate_1 = 20080601,
+  startDate_2 = 00000,
+ &

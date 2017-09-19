@@ -1,0 +1,12 @@
+&model_nml
+   assimilation_period_days     = 0
+   assimilation_period_seconds  = 21600
+   model_perturbation_amplitude = 0.2
+   cm1_template_file            = 'null'
+   calendar                     = 'Gregorian'
+   periodic_x                   = .true.
+   periodic_y                   = .true.
+   periodic_z                   = .false.
+   debug                        = 0
+   model_variables              = ' '
+  /

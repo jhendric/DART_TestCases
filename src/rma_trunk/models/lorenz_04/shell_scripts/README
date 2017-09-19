@@ -1,0 +1,28 @@
+# DART software - Copyright UCAR. This open source software is provided
+# by UCAR, "as is", without charge, subject to all terms of use at
+# http://www.image.ucar.edu/DAReS/DART/DART_download
+#
+# DART $Id: README 10998 2017-02-03 22:23:13Z thoar@ucar.edu $
+
+coseq.pl generates a file that can be redirected into
+create_obs_sequence.  It requires only two pieces of information 
+from STDIN.  As it currently stands, it assumes that the output 
+filename is set_def.out, and it assumes a single uniqe observation 
+set.
+
+The user inputs are the spacing between obs (the script figures
+out the resulting observation locations under the assumption
+that the first observation is at location 1) and the observational
+variance (the script assumes all observations have the same error
+variance).
+
+After running this script, the user runs the command:
+
+   ./create_obs_sequence < coseq.dat
+
+coseq.pl should be moved into the work directory before being run.
+
+# <next few lines under version control, do not edit>
+# $URL: https://svn-dares-dart.cgd.ucar.edu/DART/branches/rma_trunk/models/lorenz_04/shell_scripts/README $
+# $Revision: 10998 $
+# $Date: 2017-02-03 15:23:13 -0700 (Fri, 03 Feb 2017) $

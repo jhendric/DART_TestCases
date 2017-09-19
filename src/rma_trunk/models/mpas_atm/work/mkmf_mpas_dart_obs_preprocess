@@ -1,0 +1,17 @@
+#!/bin/csh
+#
+# DART software - Copyright UCAR. This open source software is provided
+# by UCAR, "as is", without charge, subject to all terms of use at
+# http://www.image.ucar.edu/DAReS/DART/DART_download
+#
+# DART $Id: mkmf_mpas_dart_obs_preprocess 11383 2017-03-21 21:04:46Z nancy@ucar.edu $
+
+../../../build_templates/mkmf -p mpas_dart_obs_preprocess -t ../../../build_templates/mkmf.template   \
+ -a "../../.." path_names_mpas_dart_obs_preprocess
+
+exit $status
+
+# <next few lines under version control, do not edit>
+# $URL: https://svn-dares-dart.cgd.ucar.edu/DART/branches/rma_trunk/models/mpas_atm/work/mkmf_mpas_dart_obs_preprocess $
+# $Revision: 11383 $
+# $Date: 2017-03-21 15:04:46 -0600 (Tue, 21 Mar 2017) $

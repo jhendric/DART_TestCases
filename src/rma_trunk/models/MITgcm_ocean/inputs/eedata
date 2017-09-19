@@ -1,0 +1,15 @@
+#
+# DART $Id: eedata 6269 2013-06-13 21:40:55Z thoar $
+#
+# Example "eedata" file
+# Lines beginning "#" are comments
+# nTx - No. threads per process in X
+# nTy - No. threads per process in Y
+ &EEPARMS
+ useCubedSphereExchange=.FALSE.,
+ nTx=1,
+ nTy=1,
+ &
+# Note: Some systems use & as the
+# namelist terminator. Other systems
+# use a / character (as shown here).
