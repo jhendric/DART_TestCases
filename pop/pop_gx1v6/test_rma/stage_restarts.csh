@@ -1,7 +1,7 @@
 #!/bin/csh
 set n = 1
 
-set POP_DIR = '/glade/p/image/DART_test_cases/pop/pop_gx1v6/' 
+set POP_DIR = '/glade/p/image/DART_test_cases/pop/pop_gx1v6' 
 
 if ( 1 == 0) then
 
@@ -27,5 +27,8 @@ endif
 
 foreach file ($POP_DIR/inputdata/*)
    echo "filling pop input data with '$file'"
-   cp $file ../inputdata
+   cp -v $file ../inputdata/
 end
+
+
+exit 0
