@@ -1,0 +1,83 @@
+--------------------------------------------------------------------------------
+WRF regular test case
+--------------------------------------------------------------------------------
+
+  - one domain (model_size 74474262)
+  - 50 member ensemble
+  - 54400 observations (obs_seq.out)
+
+------------------- 
+Compiling
+-------------------
+
+big_endian and r4 sized restart files.  To run with r4 sized values edit the 
+common/types_mod.f90 file and make sure you have select real r4 selected 
+in order for this model to run properly. 
+
+   ! comment in only one of the following lines, not both. the first is the default.
+   !!integer, parameter :: r8 = SELECTED_REAL_KIND(12)   ! real r8
+   integer, parameter :: r8 = r4 
+
+To run with big_endian edit your mkmf.template file and make sure that you set
+the appropriate compiler flag. For intel compilers this flag is 
+
+   -convert big_endian
+
+------------------- 
+Files
+-------------------
+
+  * input files
+    
+    dart restart files
+    - filter_ic.XXXX
+
+    observation sequence file
+    - obs_seq.out
+
+    inflation file
+    - prior_inf_ic
+
+  * output files
+
+    dart restart files after assimilation
+    - filter_ic_new.XXXX
+
+    diagnostic files
+    - Prior_Diag.nc
+    - Posterior_Diag.nc
+
+    obs_seq.final
+
+  * namelist
+   
+    - input.nml
+
+------------------- 
+WRF Files
+-------------------
+
+  - wrfinput_d01 (variable information for domain 1)
+
+------------------- 
+Timing (Yellowstone)
+-------------------
+ 
+ - approximate timing, run with all the debug flags turned on.
+ 
+ |----------|----------|------|--------|------------------|
+ |    date  | ens_size |   NP |  # obs | filter_time(sec) |
+ |----------|----------|------|--------|------------------|
+ | 11/11/15 |        3 |  256 |    700 |              100 |
+ | 11/11/15 |        3 |  256 |   5000 |              228 |
+ |          |        3 |  256 |  54000 |                  |
+ | ---------|----------|------|--------|------------------|
+
+------------------- 
+Notes
+-------------------
+  
+  - 
+
+
+--------------------------------------------------------------------------------

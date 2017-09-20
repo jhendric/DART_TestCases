@@ -1,0 +1,79 @@
+--------------------------------------------------------------------------------
+clm test case (RMA)
+--------------------------------------------------------------------------------
+
+  - model_size
+  - 10 member ensemble
+  - 13034 observations (obs_seq.out)
+
+------------------- 
+Compiling
+-------------------
+
+Compile with r8. This can be set in common/types_mod.f90.
+
+------------------- 
+DART Files
+-------------------
+
+  * input files
+    
+    dart restart files
+    - clm4_*_XXXX.r.*.nc  ( restart files ) 
+    - clm4_*_XXXX.h0.*.nc ( history vector files ) 
+    - clm4_*_XXXX.h1.*.nc ( history files ) 
+
+    observation sequence file
+    - obs_seq.out (13034 observations)
+
+  * output files
+
+    dart restart files after assimilation
+
+    restart files after prior to assimilation
+    - prior_member.XXXX.nc
+       
+    diagnostic files
+    - sd.nc
+    - mean.nc
+    - Prior_Diag_sd.nc
+    - Prior_Diag_mean.nc
+    - Posterior_Diag_sd.nc
+    - Posterior_Diag_mean.nc
+
+    obs_seq.final
+
+  * namelist
+   
+    - input.nml
+
+------------------- 
+CLM Files
+-------------------
+
+  - clm_restart.nc        ( restart variable information )
+  - clm_history.nc        ( history variable information )
+  - clm_vector_history.nc ( vector history variable information )
+
+------------------- 
+Timing (Yellowstone)
+-------------------
+ 
+ - approximate timing, run with all the debug flags turned on.
+ 
+ |----------|----------|------|--------|------------------|
+ |    date  | ens_size |   NP |  # obs | filter_time(sec) |
+ |----------|----------|------|--------|------------------|
+ | 11/11/15 |        3 |  128 |  13034 |               33 |
+ | 11/11/15 |        3 |   64 |  13034 |               59 |
+ | 11/11/15 |        3 |   32 |  13034 |              111 |
+ | 11/11/15 |       10 |   64 |  13034 |               66 |
+ | ---------|----------|------|--------|------------------|
+
+------------------- 
+Notes
+-------------------
+  
+  - 
+
+--------------------------------------------------------------------------------

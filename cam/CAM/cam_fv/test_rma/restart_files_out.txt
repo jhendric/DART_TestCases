@@ -1,0 +1,3 @@
+cam_out.0001.nc
+cam_out.0002.nc
+cam_out.0003.nc

@@ -1,0 +1,4 @@
+cp prior_inf_ic_new_mean_d01.nc prior_inf_ic_old_mean_d01.nc
+cp prior_inf_ic_new_mean_d02.nc prior_inf_ic_old_mean_d02.nc
+cp prior_inf_ic_new_sd_d01.nc   prior_inf_ic_old_sd_d01.nc
+cp prior_inf_ic_new_sd_d02.nc   prior_inf_ic_old_sd_d02.nc

@@ -1,0 +1,80 @@
+--------------------------------------------------------------------------------
+MPAS regular test case (RMA)
+--------------------------------------------------------------------------------
+
+  - model size  
+  - 96 member ensemble
+  - 201660 observations (obs_seq.out)
+
+------------------- 
+Compiling
+-------------------
+
+   - compile with r8 and little_endian ( default configuration )
+
+------------------- 
+DART Files
+-------------------
+
+  * input files
+    
+    dart restart files
+    - advance_temp*/x1.40961.restart.nc
+
+    observation sequence file
+    - obs_seq.out (201660 observations)
+    - obs_seq.1800obs (subset of obs_seq.out)
+
+    inflation file
+    - prior_inflate_restart
+
+  * output files
+
+    dart restart files after assimilation
+    - mpas_out.XXXX.nc
+
+    restart files after prior to assimilation
+    - prior_member.XXXX.nc
+       
+    diagnostic files
+    - sd.nc
+    - mean.nc
+    - Prior_Diag_sd.nc
+    - Prior_Diag_mean.nc
+    - Posterior_Diag_sd.nc
+    - Posterior_Diag_mean.nc
+
+    obs_seq.final
+
+  * namelist
+   
+    - input.nml
+
+------------------- 
+MPAS files
+------------------- 
+  - x1.40962.mesh.nc (grid information)
+  - x1.40962.restart.nc (variable shape information)
+
+------------------- 
+Timing (Yellowstone)
+-------------------
+ 
+ - approximate timing, run with all the debug flags turned on.
+ 
+ |----------|----------|------|--------|------------------|
+ |    date  | ens_size |   NP |  # obs | filter_time(sec) |
+ |----------|----------|------|--------|------------------|
+ | 11/11/15 |        3 |   32 |   1800 |               30 |
+ | 11/11/15 |        3 |   64 |   1800 |               45 |
+ | 11/11/15 |       96 |  128 |   1800 |              174 |
+ | ---------|----------|------|--------|------------------|
+
+------------------- 
+Notes
+-------------------
+  
+  - 
+
+
+--------------------------------------------------------------------------------

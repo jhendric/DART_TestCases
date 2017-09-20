@@ -1,0 +1,19 @@
+-----------------------------------------------------------
+WRF large test case (experamental)
+-----------------------------------------------------------
+
+NOTE: Johnny Hendricks Nov 2,2015 - this directory needs cleaned
+up and tested.  Has not been run in a while.
+
+-----------------------------------------------------------
+Large Test Case WRF
+
+2 domains, model_size = 184,125,294
+
+There are two domain (one nested within the other), and two sets of observations
+since we have been using a two-pass approach, one call to filter with 
+conventional observations and another with radar.  The radar observations are 
+contained within the smaller nested domain, and use much more aggressive 
+localization than the conventional observations.
+
+ * compiled with r4 and little_endian

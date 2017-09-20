@@ -1,0 +1,83 @@
+--------------------------------------------------------------------------------
+One Degree Greenland Pole Test Case (RMA)
+--------------------------------------------------------------------------------
+
+  - model_size 29614080
+  - 30 member ensemble
+  - 7181 observations (obs_seq.out)
+
+------------------- 
+Compiling
+-------------------
+
+* must compile with big_endian
+
+To run with big_endian edit your mkmf.template file and make sure that you set
+the appropriate compiler flag. For intel compilers this flag is 
+
+   -convert big_endian
+
+------------------- 
+DART Files
+-------------------
+
+  * input files
+    
+    dart restart files
+    - pop.rXXXX.nc
+
+    observation sequence file
+    - obs_seq.out (7181 observations)
+    - obs_seq.out.small (50 observations)
+
+  * output files
+
+    dart restart files after assimilation
+    - pop_out.r.XXXX.nc
+
+    restart files after prior to assimilation
+    - prior_member.XXXX.nc
+       
+    diagnostic files
+    - sd.nc
+    - mean.nc
+    - Prior_Diag_sd.nc
+    - Prior_Diag_mean.nc
+    - Posterior_Diag_sd.nc
+    - Posterior_Diag_mean.nc
+
+    obs_seq.final
+
+  * namelist
+   
+    - input.nml (DART namelist)
+
+------------------- 
+POP Files
+-------------------
+
+ - pop.r.nc (used to get variable information)
+ - pop_in (POP namelist, used for grid information)
+ - the inputdata directory contains pop grid information and binary files
+
+------------------- 
+Timing (Yellowstone)
+-------------------
+ 
+ - approximate timing, run with all the debug flags turned on.
+ 
+ |----------|----------|------|--------|------------------|
+ |    date  | ens_size |   NP |  # obs | filter_time(sec) |
+ |----------|----------|------|--------|------------------|
+ | 11/11/15 |        3 |  256 |   7181 |               92 |
+ | 11/06/15 |        3 |  128 |   7181 |              162 |
+ | 11/06/15 |        3 |   64 |   7181 |              300 |
+ | ---------|----------|------|--------|------------------|
+
+------------------- 
+Notes
+-------------------
+  
+  - 
+
+-----------------------------------------------------------

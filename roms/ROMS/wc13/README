@@ -1,0 +1,12 @@
+
+To test ROMS, you have to run observations/obs_converters/ROMS/work/quickbuild.csh
+to build the ROMS precomputed forward operator program as well as all the normal
+bits in models/ROMS/work/quickbuild.csh
+
+This collection of files was created by simply running 
+models/ROMS/shell_scripts/stage_experiment.csh  - all the ROMS-related bits
+are in $USER == thoar.
+
+From there, all you have to do is   bsub < cycle.csh 
+
+-- Tim

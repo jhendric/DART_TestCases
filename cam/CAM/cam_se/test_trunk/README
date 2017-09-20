@@ -1,0 +1,49 @@
+--------------------------------------------------------------------------------
+CAM Spectral Element Test Case (Trunk)
+--------------------------------------------------------------------------------
+
+  Note : Need to rerun this test case and update information
+
+  - 30 member ensemble
+
+------------------- 
+Compiling
+-------------------
+
+   - compile with r8 and little_endian ( default configuration )
+
+------------------- 
+DART Files
+-------------------
+
+  * input files
+    
+    dart restart files
+    - filter_ics.XXXX
+
+    observation sequence file
+    - obs_seq.out (192895 observations)
+
+  * output files
+
+    dart restart files after assimilation
+    - filter_restart.XXXX
+
+    diagnostic files
+    - Prior_Diag.nc
+    - Posterior_Diag.nc
+
+    obs_seq.final
+
+  * namelist
+   
+    - input.nml
+
+
+------------------- 
+CAM Files
+-------------------
+  - caminput.nc (configuration file)
+  - cam_phis.nc (cam phisics file)
+
+--------------------------------------------------------------------------------

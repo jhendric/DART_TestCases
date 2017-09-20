@@ -1,0 +1,5 @@
+DSTART                41275.00000
+ROMS_offset           3566160000.00000
+ROMS_date 2013 Jan 03 00:00:00
+DART_time day=150482, sec=0
+YYYYMMDD 2013-01-03 00:00:00

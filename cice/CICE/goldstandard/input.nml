@@ -1,0 +1,357 @@
+&perfect_model_obs_nml
+   start_from_restart    = .true.
+   output_restart        = .false.
+   async                 = 0
+   init_time_days        = -1
+   init_time_seconds     = -1
+   first_obs_days        = -1
+   first_obs_seconds     = -1
+   last_obs_days         = -1
+   last_obs_seconds      = -1
+   output_interval       = 1
+   trace_execution       = .false.
+   restart_in_file_name  = "input_cice.nc"
+   restart_out_file_name = "output_cice.nc"
+   obs_seq_in_file_name  = "obs_seq.in"
+   obs_seq_out_file_name = "obs_seq.perfect"
+   adv_ens_command       = "no_advance_script"
+   output_timestamps     = .false.
+   trace_execution       = .false.
+   output_forward_op_errors = .false.
+   print_every_nth_obs   = -1
+   silence               = .false.
+   direct_netcdf_read    = .true.
+   direct_netcdf_write   = .true.
+   /
+
+&filter_nml
+   async                    = 0
+   adv_ens_command          = "no_advance_script"
+   ens_size                 =  6
+   output_restart           = .true.
+   output_restart_mean      = .true.
+   obs_sequence_in_name     = "obs_seq.out"
+   obs_sequence_out_name    = "obs_seq.final"
+   init_time_days           = -1
+   init_time_seconds        = -1
+   first_obs_days           = -1
+   first_obs_seconds        = -1
+   last_obs_days            = -1
+   last_obs_seconds         = -1
+   num_output_state_members = 6
+   num_output_obs_members   = 6
+   output_interval          = 1
+   num_groups               = 1
+   output_forward_op_errors = .false.
+   output_timestamps        = .true.
+   output_inflation         = .true.
+   trace_execution          = .true.
+   silence                  = .false.
+
+   direct_netcdf_read           = .true.
+   direct_netcdf_write          = .true.
+   use_restart_list             = .true.
+   overwrite_state_input        = .true.
+   restart_list_file            = 'cice_restarts.txt'
+   restart_in_file_name         = "not_used_if_use_restart_list_is_true"
+   restart_out_file_name        = "cice_posteriors"
+   single_restart_file_in       = .false.
+   single_restart_file_out      = .false.
+   perturb_from_single_instance = .false.
+   perturbation_amplitude       = 0.2
+
+   inf_flavor                  = 0,                       0
+   inf_initial_from_restart    = .true.,                  .true.
+   inf_sd_initial_from_restart = .true.,                  .true.
+   inf_output_restart          = .true.,                  .true.
+   inf_deterministic           = .true.,                  .true.
+   inf_in_file_name            = 'input_priorinf',        'input_postinf'
+   inf_out_file_name           = 'output_priorinf',       'output_postinf'
+   inf_diag_file_name          = 'output_priorobsinfl',   'output_postobsinf',
+   inf_initial                 = 1.0,                     1.0
+   inf_sd_initial              = 0.6,                     0.6
+   inf_damping                 = 0.9,                     0.9
+   inf_lower_bound             = 1.0,                     1.0
+   inf_upper_bound             = 50.0,               1000.0
+   inf_sd_lower_bound          = 0.6,                     0.6
+   /
+
+# The filenames as determined on 19 Aug 2016
+# {input,preassim,postassim,output}_0001[_dom].nc
+# {input,preassim,postassim,output}_mean[_dom].nc
+# {input,preassim,postassim,output}_sd[_dom].nc
+# {input,preassim,postassim,output}_priorinf_mean[_dom].nc
+# {input,preassim,postassim,output}_priorinf_sd[_dom].nc
+# {input,preassim,postassim,output}_postinf_mean[_dom].nc
+# {input,preassim,postassim,output}_postinf_sd[_dom].nc
+
+&smoother_nml
+   num_lags              = 0
+   start_from_restart    = .false.
+   output_restart        = .false.
+   restart_in_file_name  = 'smoother_ics'
+   restart_out_file_name = 'smoother_restart'
+   /
+
+
+# cutoff of 0.03 (radians) is about 200km
+&assim_tools_nml
+   filter_kind                     = 1
+   cutoff                          = 0.05
+   allow_missing_in_clm            = .false.
+   sort_obs_inc                    = .false.
+   spread_restoration              = .false.
+   sampling_error_correction       = .false.
+   adaptive_localization_threshold = -1
+   output_localization_diagnostics = .false.
+   localization_diagnostics_file   = 'localization_diagnostics'
+   print_every_nth_obs             = 1000
+   /
+
+
+&ensemble_manager_nml
+   layout                  = 1
+   tasks_per_node          = 1
+   /
+
+
+&cov_cutoff_nml
+   select_localization = 1
+   /
+
+
+&reg_factor_nml
+   select_regression    = 1
+   input_reg_file       = "time_mean_reg"
+   save_reg_diagnostics = .false.
+   reg_diagnostics_file = "reg_diagnostics"
+   /
+
+
+&obs_sequence_nml
+   write_binary_obs_sequence = .false.
+   /
+
+
+&preprocess_nml
+    input_obs_kind_mod_file = '../../../obs_kind/DEFAULT_obs_kind_mod.F90'
+   output_obs_kind_mod_file = '../../../obs_kind/obs_kind_mod.f90'
+     input_obs_def_mod_file = '../../../obs_def/DEFAULT_obs_def_mod.F90'
+    output_obs_def_mod_file = '../../../obs_def/obs_def_mod.f90'
+     input_files = '../../../obs_def/obs_def_cice_mod.f90'
+   /
+
+
+&obs_kind_nml
+   assimilate_these_obs_types = 'SAT_SEAICE_AGREG_CONCENTR',
+                                'SAT_SEAICE_AGREG_THICKNESS',
+   evaluate_these_obs_types   = 'null'
+   /
+
+
+&assim_model_nml
+   netCDF_large_file_support  = .true.
+   /
+
+
+# Each variable must have 6 entries.
+# 1: variable name
+# 2: DART KIND
+# 3: minimum value - as a character string - if none, use 'NA'
+# 4: maximum value - as a character string - if none, use 'NA'
+# 5: what file contains the variable - 'restart', 'history'  file'
+# 6: does the variable get updated in the restart file or not ...
+#    only variables from restart files may be updated.
+#    'UPDATE' =>        update the variable in the restart file
+#    'NO_COPY_BACK' => do not update the variable in the restart file
+#    all these variables will be updated INTERNALLY IN DART
+#    only variables marked '.r', 'UPDATE' will be modified for CLM.
+
+&model_nml
+   assimilation_period_days     = 1
+   assimilation_period_seconds  = 0
+   model_perturbation_amplitude = 0.00002
+   output_state_vector          = .false.
+   binary_grid_file_format      = 'big_endian'
+   debug                        = 1
+   model_state_variables  =       'aicen', 'KIND_SEAICE_CONCENTR'        , 'UPDATE',
+                                  'vicen', 'KIND_SEAICE_VOLUME'          , 'UPDATE',
+				  'vsnon', 'KIND_SEAICE_SNOWVOLUME'      , 'UPDATE',
+   /
+
+# See the cice model_mod.html for a larger listing of CICE variables and their
+# associated DART KINDs. The list is by no means complete.
+
+
+&dart_to_cice_nml
+   dart_to_cice_input_file   = 'dart_restart.nc'
+   original_cice_input_file  = 'cice_restart.nc'
+   previous_cice_input_file  = 'pre_restart.nc'
+   balance_method            = 'simple_squeeze'
+   /
+
+
+&location_nml
+   horiz_dist_only             = .true.
+   vert_normalization_pressure = 100000.0
+   vert_normalization_height   = 10000.0
+   vert_normalization_level    = 20.0
+   approximate_distance        = .false.
+   nlon                        = 71
+   nlat                        = 36
+   output_box_info             = .true.
+   /
+
+
+&utilities_nml
+   TERMLEVEL = 2
+   module_details = .false.
+   logfilename = 'dart_log.out'
+   nmlfilename = 'dart_log.nml'
+   write_nml   = 'file'
+   /
+
+
+&mpi_utilities_nml
+   /
+
+
+# Gregorian: 12 Z 1 January 1996 <==> DART: 144270 days 43200 seconds
+# Gregorian: 12 Z 1 January 2000 <==> DART: 145731 days 43200 seconds
+
+&restart_file_tool_nml
+   input_file_name              = "filter_restart"
+   output_file_name             = "filter_updated_restart"
+   ens_size                     = 6
+   single_restart_file_in       = .true.
+   single_restart_file_out      = .true.
+   write_binary_restart_files   = .true.
+   overwrite_data_time          = .false.
+   new_data_days                = -1
+   new_data_secs                = -1
+   input_is_model_advance_file  = .false.
+   output_is_model_advance_file = .false.
+   overwrite_advance_time       = .false.
+   new_advance_days             = -1
+   new_advance_secs             = -1
+   gregorian_cal                = .true.
+   /
+
+
+&obs_common_subset_nml
+   num_to_compare_at_once = 3
+   filename_seq      = ''
+   filename_seq_list = 'list1.txt','list2.txt','list3.txt'
+   filename_out      = '/glade/p/work/yfzhang/observations/syn/cice5/member10/aggre/aice_hice_fy_tsfc/obs_seq.2003-12-31-00000'
+   print_only        = .false.
+   calendar          = 'Gregorian'
+  /
+
+
+# The times in the namelist for the obs_diag program are vectors
+# that follow the following sequence:
+# year   month   day   hour   minute   second
+# max_num_bins can be used to specify a fixed number of bins
+# in which case last_bin_center should be safely in the future.
+#
+# Acceptable latitudes range from  [-90,  90]
+# Acceptable longitudes range from [  0, Inf]
+
+&obs_diag_nml
+    obs_sequence_name = '',
+   obs_sequence_list = 'list2.txt', 
+   first_bin_center =  2002, 1,  2, 0, 0, 0
+   last_bin_center  =  2002, 1, 3, 0, 0, 0
+   bin_separation   =     0, 0,  1, 0, 0, 0
+   bin_width        =     0, 0,  1, 0, 0, 0
+   time_to_skip     =     0, 0,  0, 0, 0, 0
+   max_num_bins     = 1000
+   trusted_obs      = 'null'
+   Nregions   = 1
+   lonlim1    =     0.0,  
+   lonlim2    =   360.0, 
+   latlim1    =    40.0,
+   latlim2    =    90.0,
+   reg_names  = 'Arctic',
+   hlevel_edges =  0.0,1.0
+   print_mismatched_locs = .false.
+   create_rank_histogram = .true.
+   outliers_in_histogram = .true.
+   use_zero_error_obs    = .false.
+   verbose               = .true.
+   /
+
+
+&obs_sequence_tool_nml
+   filename_seq      = ''
+   filename_seq_list = 'all.list'
+      filename_out = '//glade/p/work/yfzhang/observations/syn/cice5/member10/aggre/aice_hice_fy_tsfc/obs_seq.2003-12-31-00000'
+   print_only        = .false.
+   gregorian_cal     = .true.
+   synonymous_qc_list = 'COSMOS QC','Ameriflux QC'
+   /
+
+
+&schedule_nml
+   calendar        = 'Gregorian'
+   first_bin_start =  1601,  1,  1,  0,  0,  0
+   first_bin_end   =  2999,  1,  1,  0,  0,  0
+   last_bin_end    =  2999,  1,  1,  0,  0,  0
+   bin_interval_days    = 1000000
+   bin_interval_seconds = 0
+   max_num_bins         = 1000
+   print_table          = .true.
+   /
+
+
+&obs_seq_to_netcdf_nml
+   obs_sequence_name = ''
+   obs_sequence_list = 'obs_seq_files.txt'
+   append_to_netcdf  = .false.
+   lonlim1    =    0.0
+   lonlim2    =  360.0
+   latlim1    =  0.0
+   latlim2    =   90.0
+   verbose    = .false.
+   /
+
+
+! useful input for model_mod_check_nml ...
+
+   x_inds    of interest   720, 7000
+   loc_of_interest      = 287.5,  82.48, 0.35
+   loc_of_interest      = 287.5, -40.70, 0.35
+   loc_of_interest      =  90.0,  41.00, 0.35
+
+&model_mod_check_nml
+   restart_in_file_name  = 'cice.r'
+   restart_out_file_name = 'cice_mm_out.r'
+   verbose               = .false.,
+   test1thru             = 5
+   x_ind                 = 3210
+   kind_of_interest      = 'KIND_SEAICE_CONCENTR'
+   loc_of_interest       = 287.5, 82.48, 1
+   interp_test_lonrange  = 0.0, 359.0
+   interp_test_dlon      = 1.0
+   interp_test_latrange  = -89.0, 89.0
+   interp_test_dlat      = 1.0
+   interp_test_vertrange = 1.0, 2.0
+   interp_test_dvert     = 1.0
+   /
+
+
+&state_vector_io_nml
+   write_binary_restart_files = .true.
+   /
+
+
+&quality_control_nml
+   input_qc_threshold       = 1.0
+   outlier_threshold        = 3.0
+   /
+
+
+&state_space_diag_nml
+   make_diagnostic_files = .false.
+   /
+
