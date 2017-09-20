@@ -1,0 +1,6 @@
+to branch on github you have to do it from the website?
+
+git fetch branch
+git checkout branch
+
+git remote add branch url
