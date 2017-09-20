@@ -1,3 +1,0 @@
-advance_tmp1/x1.40962.restart.nc
-advance_tmp2/x1.40962.restart.nc
-advance_tmp3/x1.40962.restart.nc

@@ -1,3 +1,0 @@
-mpas_out.0001.nc
-mpas_out.0002.nc
-mpas_out.0003.nc
