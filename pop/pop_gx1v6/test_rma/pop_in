@@ -14,7 +14,7 @@
  num_iotasks = 1
 /
 &time_manager_nml
- accel_file = 'inputdata/gx1v6_depth_accel'
+ accel_file = '../inputdata/gx1v6_depth_accel'
  allow_leapyear = .true.
  date_separator = '-'
  dt_count =  23
@@ -40,19 +40,19 @@
  bathymetry_file = 'unknown_bathymetry'
  bottom_cell_file = 'unknown_bottom_cell'
  flat_bottom = .false.
- horiz_grid_file = 'inputdata/horiz_grid_20010402.ieeer8'
+ horiz_grid_file = '../inputdata/horiz_grid_20010402.ieeer8'
  horiz_grid_opt = 'file'
  kmt_kmin = 3
  lremove_points = .false.
  n_topo_smooth = 0
  partial_bottom_cells = .false.
  region_info_file = 'gx1v6_region_ids'
- region_mask_file = 'inputdata/region_mask_20090205.ieeei4'
+ region_mask_file = '../inputdata/region_mask_20090205.ieeei4'
  sfc_layer_opt = 'varthick'
- topography_file = 'inputdata/topography_20090204.ieeei4'
+ topography_file = '../inputdata/topography_20090204.ieeei4'
  topography_opt = 'file'
  topography_outfile = '.topography_bathymetry.ieeer8'
- vert_grid_file = 'inputdata/gx1v6_vert_grid'
+ vert_grid_file = '../inputdata/gx1v6_vert_grid'
  vert_grid_opt = 'file'
 /
 &init_ts_nml
@@ -102,7 +102,7 @@
  ltavg_one_time_header = .false. .false. .false.
  ltavg_streams_index_present = .true.
  n_tavg_streams = 3
- tavg_contents = 'inputdata/gx1v6_tavg_contents'
+ tavg_contents = '../inputdata/gx1v6_tavg_contents'
  tavg_file_freq = 1 1 1
  tavg_file_freq_opt = 'nmonth' 'nmonth' 'once'
  tavg_fmt_in = 'nc' 'nc' 'nc'
@@ -119,14 +119,14 @@
  tavg_stream_filestrings = 'nmonth1' 'nday1' 'once'
 /
 &history_nml
- history_contents = 'inputdata/gx1v6_history_contents'
+ history_contents = '../inputdata/gx1v6_history_contents'
  history_fmt = 'nc'
  history_freq = 1
  history_freq_opt = 'never'
  history_outfile = './poptest4tim.pop_0001.hs'
 /
 &movie_nml
- movie_contents = 'inputdata/gx1v6_movie_contents'
+ movie_contents = '../inputdata/gx1v6_movie_contents'
  movie_fmt = 'nc'
  movie_freq = 1
  movie_freq_opt = 'never'
@@ -414,7 +414,7 @@
 /
 &overflows_nml
  overflows_diag_outfile = '/glade/scratch/aliciak/poptest4tim/run/./poptest4tim.pop_0001.do'
- overflows_infile = 'inputdata/gx1v6_overflow'
+ overflows_infile = '../inputdata/gx1v6_overflow'
  overflows_interactive = .true.
  overflows_on = .true.
  overflows_restart_type = 'ccsm_continue'
