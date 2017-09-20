@@ -1,0 +1,272 @@
+Execute poe command line: poe  job_memusage.exe ./filter
+ Starting program Filter
+ Initializing the utilities module.
+ Trying to log to unit           10
+ Trying to open file dart_log.out
+ 
+ --------------------------------------
+ Starting ... at YYYY MM DD HH MM SS = 
+                 2017  9 20 16 18 55
+ Program Filter
+ --------------------------------------
+ 
+ set_nml_output Echo NML values to log file only
+ Trying to open namelist log dart_log.nml
+ PE 0: initialize_mpi_utilities:  Running with           64 MPI processes.
+ PE 0: static_init_model model_nml values are
+ &MODEL_NML
+ ASSIMILATION_PERIOD_DAYS        =           1,
+ ASSIMILATION_PERIOD_SECONDS     =           0,
+ MODEL_PERTURBATION_AMPLITUDE    =  0.200000000000000     ,
+ UPDATE_DRY_CELL_WALLS   = F,
+ MODEL_STATE_VARIABLES   =                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 ,
+ BINARY_GRID_FILE_FORMAT = big_endian                      ,
+ MDT_REFERENCE_FILE_NAME = none                                                                                                                                                                                                                                                            ,
+ DEBUG   =           0
+ /
+ PE 0: static_init_model  assimilation period is            1 days            0 seconds
+ PE 0: verify_state_variables model_nml:model_state_variables not specified using default variables
+ ------------------------------------------------------
+ 
+ 
+ -------------- ASSIMILATE_THESE_OBS_TYPES --------------
+ SALINITY
+ TEMPERATURE
+ APB_SALINITY
+ APB_TEMPERATURE
+ ADCP_SALINITY
+ ADCP_TEMPERATURE
+ ARGO_SALINITY
+ ARGO_TEMPERATURE
+ BOTTLE_SALINITY
+ BOTTLE_TEMPERATURE
+ CTD_SALINITY
+ CTD_TEMPERATURE
+ DBT_SALINITY
+ DBT_TEMPERATURE
+ DRIFTER_SALINITY
+ DRIFTER_TEMPERATURE
+ FLOAT_SALINITY
+ FLOAT_TEMPERATURE
+ GLIDER_SALINITY
+ GLIDER_TEMPERATURE
+ MBT_SALINITY
+ MBT_TEMPERATURE
+ MOORING_SALINITY
+ MOORING_TEMPERATURE
+ STD_SALINITY
+ STD_TEMPERATURE
+ TCTD_SALINITY
+ TCTD_TEMPERATURE
+ XBT_SALINITY
+ XBT_TEMPERATURE
+ XCTD_SALINITY
+ XCTD_TEMPERATURE
+ -------------- EVALUATE_THESE_OBS_TYPES --------------
+ SEA_SURFACE_HEIGHT
+ U_CURRENT_COMPONENT
+ V_CURRENT_COMPONENT
+ ------------------------------------------------------
+ 
+ ---------- USE_PRECOMPUTED_FO_OBS_TYPES --------------
+ ------------------------------------------------------
+ 
+ PE 0: verify_state_variables variable  1 is SALT_CUR, QTY_SALINITY, UPDATE
+ PE 0: verify_state_variables variable  2 is TEMP_CUR, QTY_POTENTIAL_TEMPERATURE, UPDATE
+ PE 0: verify_state_variables variable  3 is UVEL_CUR, QTY_U_CURRENT_COMPONENT, UPDATE
+ PE 0: verify_state_variables variable  4 is VVEL_CUR, QTY_V_CURRENT_COMPONENT, UPDATE
+ PE 0: verify_state_variables variable  5 is PSURF_CUR, QTY_SEA_SURFACE_PRESSURE, UPDATE
+ Using grid : Nx, Ny, Nz =          320         384          60
+ to determine (minimum) max_reg_list_num values for new grids ...
+ u_dipole_num is           23
+ t_dipole_num is           25
+ model_size =               29614080
+ PE 0: quality_control_mod: Will reject obs with Data QC larger than    1
+ PE 0: quality_control_mod: Will reject obs values more than    3.000000 sigma from mean
+ PE 0: location_mod: using code with optimized cutoffs
+ PE 0: location_mod: Ignoring vertical separation when computing distances; horizontal distances only
+ PE 0: assim_tools_init: Selected filter type is Ensemble Adjustment Kalman Filter (EAKF)
+ PE 0: assim_tools_init: The cutoff namelist value is           0.200000
+ PE 0: assim_tools_init: ... cutoff is the localization half-width parameter,
+ PE 0: assim_tools_init: ... so the effective localization radius is           0.400000
+ PE 0: assim_tools_init: Replicating a copy of the ensemble mean on every task
+ PE 0: assim_tools_init: ... uses more memory per task but may run faster if doing vertical
+ PE 0: assim_tools_init: ... coordinate conversion; controlled by namelist item "distribute_mean"
+ PE 0: assim_tools_init: Not doing vertical localization, no vertical coordinate conversion required
+ PE 0:  filter trace: Filter start
+ Filter start TIME: 2017/09/20 16:18:55
+ PE 0: filter_main: running with an ensemble size of     3
+ PE 0:  filter trace: Before initializing inflation
+ PE 0:  filter trace: After  initializing inflation
+ PE 0: parse_stages_to_write:  filter will write stage : output
+ PE 0:  filter trace: Before setting up space for observations
+ Before setting up space for observations TIME: 2017/09/20 16:18:55
+ After  setting up space for observations TIME: 2017/09/20 16:18:55
+ PE 0:  filter trace: After  setting up space for observations
+ PE 0:  filter trace: Before setting up space for ensembles
+ PE 0:  filter trace: After  setting up space for ensembles
+ PE 0:  filter trace: Before reading in ensemble restart files
+ Before reading in ensemble restart files TIME: 2017/09/20 16:18:56
+ PE 0: Prior inflation: None
+ PE 0: Posterior inflation: None
+ PE 0: filter_main: Reading in initial condition/restart data for all ensemble members from file(s)
+ After  reading in ensemble restart files TIME: 2017/09/20 16:18:58
+ PE 0:  filter trace: After  reading in ensemble restart files
+ PE 0:  filter trace: Before initializing output files
+ Before initializing output files TIME: 2017/09/20 16:18:58
+ After  initializing output files TIME: 2017/09/20 16:18:58
+ PE 0:  filter trace: After  initializing output files
+ PE 0:  filter trace: Before trimming obs seq if start/stop time specified
+ PE 0:  filter trace: After  trimming obs seq if start/stop time specified
+ PE 0:  filter trace: Top of main advance time loop
+ PE 0:  
+ PE 0: filter: Main assimilation loop, starting iteration    0
+ PE 0:  filter trace: Before move_ahead checks time of data and next obs
+ PE 0: move_ahead Current model data time            is:  day=  147558 sec=     0
+ PE 0: move_ahead Current assimilation window starts at:  day=  147557 sec= 43201
+ PE 0: move_ahead Next available observation time    is:  day=  147557 sec= 44388
+ PE 0: move_ahead Current assimilation window ends   at:  day=  147558 sec= 43200
+ PE 0: move_ahead Next available observation time    is:  day=  147557 sec= 44388
+ PE 0: move_ahead Within current assimilation window, model does not need advance.
+ PE 0: move_ahead Next assimilation window contains up to     7181 observations
+ PE 0:  filter trace: After  move_ahead checks time of data and next obs
+ PE 0: filter: Model does not need to run; data already at required time
+ PE 0:  filter trace: Before setup for next group of observations
+ PE 0:  filter trace: Number of observations to be assimilated   7181
+ filter trace: Time of first observation in window day=147557, sec=44388
+ filter trace: Time of last  observation in window day=147558, sec=43200
+ PE 0:  filter trace: After  setup for next group of observations
+ PE 0:  filter trace: Before computing prior observation values
+ Before computing prior observation values TIME: 2017/09/20 16:18:58
+ After  computing prior observation values TIME: 2017/09/20 16:18:58
+ PE 0:  filter trace: After  computing prior observation values
+ PE 0:  filter trace: Before observation space diagnostics
+ PE 0:  filter trace: After  observation space diagnostics
+ PE 0: filter: Ready to assimilate up to    7181 observations
+ PE 0:  filter trace: Before observation assimilation
+ Before observation assimilation TIME: 2017/09/20 16:18:58
+ PE 0: locations_mod Location module statistics:
+ PE 0: locations_mod  Total boxes (nlon * nlat):      2556
+ PE 0: locations_mod  Total items to put in boxes:    462720
+ PE 0: locations_mod  Percent boxes with 1+ items:    9.39
+ PE 0: locations_mod  Average #items per non-empty box:      1928.00
+ PE 0: locations_mod  Largest #items in one box:      4699
+ PE 0: locations_mod Location module statistics:
+ PE 0: locations_mod  Total boxes (nlon * nlat):      2556
+ PE 0: locations_mod  Total items to put in boxes:       113
+ PE 0: locations_mod  Percent boxes with 1+ items:    3.99
+ PE 0: locations_mod  Average #items per non-empty box:         1.11
+ PE 0: locations_mod  Largest #items in one box:         3
+ PE 0: comp_cov_factor: Standard Gaspari Cohn localization selected
+Processing observation      1000  of     7181 TIME: 2017/09/20 16:19:08
+Processing observation      2000  of     7181 TIME: 2017/09/20 16:19:17
+Processing observation      3000  of     7181 TIME: 2017/09/20 16:19:25
+Processing observation      4000  of     7181 TIME: 2017/09/20 16:19:38
+Processing observation      5000  of     7181 TIME: 2017/09/20 16:19:46
+Processing observation      6000  of     7181 TIME: 2017/09/20 16:19:55
+Processing observation      7000  of     7181 TIME: 2017/09/20 16:20:05
+ PE 0: filter_assim: Processed    7181 total observations
+ Total number of calls made    to get_close_obs for obs/states:            9000
+ Total number of calls avoided to get_close_obs for obs/states:            4886
+ Percent saved:    35.1865187959095     
+ After  observation assimilation TIME: 2017/09/20 16:20:06
+ PE 0:  filter trace: After  observation assimilation
+ PE 0:  filter trace: Before computing posterior observation values
+ Before computing posterior observation values TIME: 2017/09/20 16:20:06
+ After  computing posterior observation values TIME: 2017/09/20 16:20:07
+ PE 0:  filter trace: After  computing posterior observation values
+ PE 0:  filter trace: Before posterior obs space diagnostics
+ PE 0:  filter trace: After  posterior obs space diagnostics
+ PE 0:  filter trace: Near bottom of main loop, cleaning up obs space
+ PE 0:  filter trace: Bottom of main advance time loop
+ PE 0:  filter trace: Top of main advance time loop
+ PE 0:  
+ PE 0: filter: Main assimilation loop, starting iteration    1
+ PE 0:  filter trace: Before move_ahead checks time of data and next obs
+ PE 0:  filter trace: After  move_ahead checks time of data and next obs
+ PE 0: filter: No more obs to assimilate, exiting main loop
+ PE 0: filter: End of main filter assimilation loop, starting cleanup
+ PE 0:  filter trace: Before state space output
+ Before state space output TIME: 2017/09/20 16:20:07
+ After  state space output TIME: 2017/09/20 16:20:10
+ PE 0:  filter trace: After  state space output
+ PE 0:  filter trace: Before writing output sequence file
+ PE 0: write_obs_seq  opening formatted observation sequence file "obs_seq.final"
+ PE 0: write_obs_seq  closed observation sequence file "obs_seq.final"
+ PE 0:  filter trace: After  writing output sequence file
+ PE 0:  filter trace: Before end_model call
+ PE 0:  filter trace: After  end_model call
+ PE 0:  filter trace: Before ensemble and obs memory cleanup
+ PE 0:  filter trace: After  ensemble and obs memory cleanup
+ PE 0:  filter trace: Filter done
+ Filter done TIME: 2017/09/20 16:20:10
+ 
+ --------------------------------------
+ Finished ... at YYYY MM DD HH MM SS = 
+                 2017  9 20 16 20 10
+ Program Filter
+ --------------------------------------
+ 
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@ys0254-ib>
+Subject: Job 132973: <gx1v6_rma> in cluster <yellowstone> Done
+
+Job <gx1v6_rma> was submitted from host <geyser03-ib> by user <hendric> in cluster <yellowstone>.
+Job was executed on host(s) <16*ys0254-ib>, in queue <small>, as user <hendric> in cluster <yellowstone>.
+                            <16*ys0255-ib>
+                            <16*ys0257-ib>
+                            <16*ys0259-ib>
+</glade/u/home/hendric> was used as the home directory.
+</glade/scratch/hendric/GIT_DART/pop/pop_gx1v6/test_rma> was used as the working directory.
+Started at Wed Sep 20 16:18:51 2017
+Results reported on Wed Sep 20 16:20:12 2017
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/csh
+
+#BSUB -J gx1v6_rma
+#BSUB -o gx1v6_rma.%J.log
+#BSUB -e gx1v6_rma.%J.err
+#BSUB -q small 
+#BSUB -n 64 
+#BSUB -R "span[ptile=16]"
+#BSUB -P P86850054 
+#BSUB -W 0:10
+
+# pin tasks to processors
+setenv TARGET_CPU_LIST "-1"
+
+module load job_memusage
+
+mpirun.lsf job_memusage.exe ./filter
+
+exit 0
+
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   4775.50 sec.
+    Max Memory :                                 22909 MB
+    Average Memory :                             3716.50 MB
+    Total Requested Memory :                     -
+    Delta Memory :                               -
+    Max Processes :                              103
+    Max Threads :                                608
+    Run time :                                   80 sec.
+    Turnaround time :                            87 sec.
+
+The output (if any) is above this job summary.
+
+
+
+PS:
+
+Read file <gx1v6_rma.132973.err> for stderr output of this job.
+
