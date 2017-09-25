@@ -211,7 +211,7 @@
       <desc> master configuration file that specifies all relevant filenames
     and directories to configure a case</desc>
     </entry>
-    <entry id="CASEROOT" value="/glade/p/work/nickp/dart/cam5_4_114_dart_wx_nsc.damp">
+    <entry id="CASEROOT" value="/glade/p/work/nickp/dart_forecast/cam5_4_114_dart_wx_nsc.2009JAN15.forecast.dart">
       <type>char</type>
       <desc>full pathname of case</desc>
     </entry>
@@ -223,7 +223,7 @@
       <type>char</type>
       <desc>full pathname of source root directory</desc>
     </entry>
-    <entry id="CASE" value="cam5_4_114_dart_wx_nsc.damp">
+    <entry id="CASE" value="cam5_4_114_dart_wx_nsc.2009JAN15.forecast.dart">
       <type>char</type>
       <desc>case name</desc>
     </entry>

@@ -132,14 +132,14 @@
     </entry>
   </group>
   <group id="build_def">
-    <entry id="CIME_OUTPUT_ROOT" value="/glade/scratch/nickp">
+    <entry id="CIME_OUTPUT_ROOT" value="/glade/scratch/hendric">
       <type>char</type>
       <valid_values/>
       <desc>Output root directory for each machine.
 		Base directory for build and run directories.
     </desc>
     </entry>
-    <entry id="EXEROOT" value="/glade/scratch/nickp/cam5_4_114_dart_wx_nsc.damp/bld">
+    <entry id="EXEROOT" value="/glade/scratch/hendric/git_dart/waccmx_nick/cam5_4_114_dart_wx_nsc.damp/bld/">
       <type>char</type>
       <valid_values/>
       <desc>Case executable root directory.

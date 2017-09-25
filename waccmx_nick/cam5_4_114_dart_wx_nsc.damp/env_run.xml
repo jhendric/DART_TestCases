@@ -16,7 +16,7 @@
       <type>char</type>
       <desc>case description</desc>
     </entry>
-    <entry id="RUNDIR" value="/glade/scratch/nickp/cam5_4_114_dart_wx_nsc.damp/run">
+    <entry id="RUNDIR" value="/glade/scratch/hendric/git_dart/waccmx_nick/cam5_4_114_dart_wx_nsc.damp/run/">
       <type>char</type>
       <desc>
       The directory where the executable will be run.
@@ -26,7 +26,7 @@
     </entry>
   </group>
   <group id="run_begin_stop_restart">
-    <entry id="RUN_TYPE" value="branch">
+    <entry id="RUN_TYPE" value="hybrid">
       <type>char</type>
       <valid_values>startup,hybrid,branch</valid_values>
       <desc>
@@ -88,13 +88,13 @@
       Reference directory containing RUN_REFCASE data - used for hybrid or branch runs
     </desc>
     </entry>
-    <entry id="RUN_REFCASE" value="cam5_4_114_dart_wx_nsc">
+    <entry id="RUN_REFCASE" value="cam5_4_114_dart_wx_nsc.damp">
       <type>char</type>
       <desc>
       Reference case for hybrid or branch runs
     </desc>
     </entry>
-    <entry id="RUN_REFDATE" value="2008-10-10">
+    <entry id="RUN_REFDATE" value="2009-01-15">
       <type>char</type>
       <desc>
       Reference date for hybrid or branch runs (yyyy-mm-dd)
@@ -114,7 +114,7 @@
       If TRUE, then the refcase data is prestaged into the executable directory
     </desc>
     </entry>
-    <entry id="RUN_STARTDATE" value="2008-10-10">
+    <entry id="RUN_STARTDATE" value="2009-01-15">
       <type>char</type>
       <desc>
       Run start date (yyyy-mm-dd). Only used for startup or hybrid runs.
@@ -126,7 +126,7 @@
       Run start time-of-day
     </desc>
     </entry>
-    <entry id="STOP_OPTION" value="nhours">
+    <entry id="STOP_OPTION" value="nhour">
       <type>char</type>
       <valid_values>none,never,nsteps,nstep,nseconds,nsecond,nminutes,nminute,nhours,nhour,ndays,nday,nmonths,nmonth,nyears,nyear,date,ifdays0,end</valid_values>
       <desc>
@@ -193,7 +193,7 @@
       Set to TRUE when continuing a run.
     </desc>
     </entry>
-    <entry id="RESUBMIT" value="27">
+    <entry id="RESUBMIT" value="0">
       <type>integer</type>
       <desc>If RESUBMIT is greater than 0, then case will automatically resubmit
     Enables the model to automatically resubmit a new run.  To get
@@ -205,7 +205,7 @@
     restarting where the previous finished.
     </desc>
     </entry>
-    <entry id="RESUBMIT_SETS_CONTINUE_RUN" value="FALSE">
+    <entry id="RESUBMIT_SETS_CONTINUE_RUN" value="TRUE">
       <type>logical</type>
       <desc>This flag controls whether the RESUBMIT flag causes
       CONTINUE_RUN to toggle from FALSE to TRUE.  The default is
@@ -694,11 +694,11 @@
     </entry>
   </group>
   <group id="run_dout">
-    <entry id="DOUT_S_ROOT" value="/glade/scratch/nickp/archive/cam5_4_114_dart_wx_nsc.damp">
+    <entry id="DOUT_S_ROOT" value="/glade/scratch/hendric/git_dart/waccmx_nick/archive">
       <type>char</type>
       <desc>Root directory for short term archiving. This directory must be visible to compute nodes.</desc>
     </entry>
-    <entry id="DOUT_L_MSROOT" value="csm/cam5_4_114_dart_wx_nsc.damp">
+    <entry id="DOUT_L_MSROOT" value="csm/cam5_4_114_dart_wx_nsc.2009JAN15.forecast.dart">
       <type>char</type>
       <desc>Root directory on long term archiving store system for long-term data archives.</desc>
     </entry>
@@ -978,7 +978,7 @@
       <valid_values/>
       <desc> Number of model run - data assimilation steps to complete </desc>
     </entry>
-    <entry id="DATA_ASSIMILATION_SCRIPT" value="/glade/p/work/nickp/dart/cam5_4_114_dart_wx_nsc.damp/assimilate.csh">
+    <entry id="DATA_ASSIMILATION_SCRIPT" value="/glade/scratch/hendric/git_dart/waccmx_nick/cam5_4_114_dart_wx_nsc.damp/assimilate.csh">
       <type>char</type>
       <valid_values/>
       <desc>External script to be run after model completion</desc>

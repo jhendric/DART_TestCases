@@ -18,47 +18,56 @@ set nonomatch       # suppress "rm" warnings if wildcard does not match anything
 # The VERBOSE options are useful for debugging though
 # some systems don't like the -v option to any of the following
 #echo "`hostname`"
-#switch ("`hostname`")
-   #case ys*:
-#   case ch*:
+switch ("`hostname`")
+   case ys*:
       # NCAR "yellowstone"
       alias ls ls
       set   MOVE = 'mv -fv'
       set   COPY = 'cp -fv --preserve=timestamps'
       set   LINK = 'ln -fvs'
-      set   LS = 'ls'
+      set   LS   = 'ls'
       set REMOVE = 'rm -fr'
       set TASKS_PER_NODE = `echo $LSB_SUB_RES_REQ | sed -ne '/ptile/s#.*\[ptile=\([0-9][0-9]*\)]#\1#p'`
       setenv MP_DEBUG_NOTIMEOUT yes
 
       set BASEOBSDIR = /glade/p/hao/nickp/dart_obs/saber_data/nsc_waccmx_dart/obs_seq_6hr_allobs/
-      #set  LAUNCHCMD = mpirun.lsf
+      set  LAUNCHCMD = mpirun.lsf
+   breaksw
+
+   case ch*:
+      alias ls ls
+      set   MOVE = 'mv -fv'
+      set   COPY = 'cp -fv --preserve=timestamps'
+      set   LINK = 'ln -fvs'
+      set   LS   = 'ls'
+      set REMOVE = 'rm -fr'
       set  LAUNCHCMD = 'mpiexec_mpt dplace '
-#   breaksw
-#
-#   case linux_system_with_utils_in_other_dirs*:
-#      # example of pointing this script at a different set of basic commands
-#      set   MOVE = '/usr/local/bin/mv -fv'
-#      set   COPY = '/usr/local/bin/cp -fv --preserve=timestamps'
-#      set   LINK = '/usr/local/bin/ln -fvs'
-#      set REMOVE = '/usr/local/bin/rm -fr'
-#
-#      set BASEOBSDIR = BOGUSBASEOBSDIR
-#      set LAUNCHCMD  = mpirun.lsf
-#   breaksw
+      set    TASKS_PER_NODE = `echo $LSB_SUB_RES_REQ | sed -ne '/ptile/s#.*\[ptile=\([0-9][0-9]*\)]#\1#p'`
+      setenv MP_DEBUG_NOTIMEOUT yes
 
-#   default:
-#      # NERSC "hopper"
-#      set   MOVE = 'mv -fv'
-#      set   COPY = 'cp -fv --preserve=timestamps'
-#      set   LINK = 'ln -fvs'
-#      set REMOVE = 'rm -fr'
-#
-#      set BASEOBSDIR = BOGUSBASEOBSDIR
-#      set LAUNCHCMD  = "aprun -n $NTASKS"
+   case linux_system_with_utils_in_other_dirs*:
+      # example of pointing this script at a different set of basic commands
+      set   MOVE = '/usr/local/bin/mv -fv'
+      set   COPY = '/usr/local/bin/cp -fv --preserve=timestamps'
+      set   LINK = '/usr/local/bin/ln -fvs'
+      set REMOVE = '/usr/local/bin/rm -fr'
 
-#   breaksw
-#endsw
+      set BASEOBSDIR = BOGUSBASEOBSDIR
+      set LAUNCHCMD  = mpirun.lsf
+   breaksw
+
+   default:
+      # NERSC "hopper"
+      set   MOVE = 'mv -fv'
+      set   COPY = 'cp -fv --preserve=timestamps'
+      set   LINK = 'ln -fvs'
+      set REMOVE = 'rm -fr'
+
+      set BASEOBSDIR = BOGUSBASEOBSDIR
+      set LAUNCHCMD  = "aprun -n $NTASKS"
+
+   breaksw
+endsw
 
 # In CESM1_4 xmlquery must be executed in $CASEROOT.
 setenv CASEROOT /glade/p/work/nickp/dart/cam5_4_114_dart_wx_nsc.damp
