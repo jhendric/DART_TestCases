@@ -1,0 +1,226 @@
+--------------------------------------------------------------------------
+Linking POP files 
+--------------------------------------------------------------------------
+Currently Loaded Modules:
+  1) ncarenv/1.0          6)  subversion/1.8.9    11) pygraphviz/1.4rc1
+  2) ncarbinlibs/1.1      7)  git/2.10.0          12) graphviz/2.40.1
+  3) intel/12.1.5         8)  ncview/2.1.1        13) pygtk/2.17.0
+  4) ncarcompilers/1.0    9)  nco/4.5.5           14) cylc/7.4.0
+  5) netcdf/4.3.0         10) python/2.7.7
+....... Makefile is ready.
+ifort -O -assume buffered_io -I/glade/apps/opt/netcdf/4.3.0/intel/12.1.5/include  -c	../../../assimilation_code/modules/utilities/types_mod.f90
+ifort -O -assume buffered_io -I/glade/apps/opt/netcdf/4.3.0/intel/12.1.5/include  -c	../../../assimilation_code/modules/utilities/utilities_mod.f90
+ifort -O -assume buffered_io -I/glade/apps/opt/netcdf/4.3.0/intel/12.1.5/include  -c	../../../assimilation_code/modules/utilities/time_manager_mod.f90
+ifort -O -assume buffered_io -I/glade/apps/opt/netcdf/4.3.0/intel/12.1.5/include  -c	../../../assimilation_code/programs/preprocess/preprocess.f90
+ifort -O -assume buffered_io -I/glade/apps/opt/netcdf/4.3.0/intel/12.1.5/include  -c	../../../assimilation_code/modules/utilities/null_mpi_utilities_mod.f90
+ifort time_manager_mod.o preprocess.o null_mpi_utilities_mod.o utilities_mod.o types_mod.o -o preprocess  -O -assume buffered_io -I/glade/apps/opt/netcdf/4.3.0/intel/12.1.5/include -L/glade/apps/opt/netcdf/4.3.0/intel/12.1.5/lib -lnetcdff -lnetcdf
+ Starting program preprocess
+ Initializing the utilities module.
+ Trying to log to unit           10
+ Trying to open file dart_log.out
+ 
+ --------------------------------------
+ Starting ... at YYYY MM DD HH MM SS = 
+                 2017  9 25 13 37 11
+ Program preprocess
+ --------------------------------------
+ 
+ set_nml_output Echo NML values to log file only
+ Trying to open namelist log dart_log.nml
+ Path names of default obs_def and obs_kind modules
+ ../../../observations/forward_operators/DEFAULT_obs_def_mod.F90
+ ../../../assimilation_code/modules/observations/DEFAULT_obs_kind_mod.F90
+ Path names of output obs_def and obs_kind modules
+ ../../../observations/forward_operators/obs_def_mod.f90
+ ../../../assimilation_code/modules/observations/obs_kind_mod.f90
+ INPUT obs_def files follow:
+ ../../../observations/forward_operators/obs_def_ocean_mod.f90
+ INPUT model files follow:
+ preprocess Finished successfully.
+ 
+ --------------------------------------
+ Finished ... at YYYY MM DD HH MM SS = 
+                 2017  9 25 13 37 12
+ Program preprocess
+ --------------------------------------
+ 
+Making Makefile with MPI
+..........................................Using MPI wrappers
+ Makefile is ready.
+mpif90 -O -assume buffered_io -I/glade/apps/opt/netcdf/4.3.0/intel/12.1.5/include  -c	../../../assimilation_code/modules/utilities/mpi_utilities_mod.f90
+mpif90 -O -assume buffered_io -I/glade/apps/opt/netcdf/4.3.0/intel/12.1.5/include  -c	../../../assimilation_code/modules/utilities/sort_mod.f90
+mpif90 -O -assume buffered_io -I/glade/apps/opt/netcdf/4.3.0/intel/12.1.5/include  -c	../../../assimilation_code/modules/utilities/ensemble_manager_mod.f90
+mpif90 -O -assume buffered_io -I/glade/apps/opt/netcdf/4.3.0/intel/12.1.5/include  -c	../../../assimilation_code/modules/utilities/random_seq_mod.f90
+mpif90 -O -assume buffered_io -I/glade/apps/opt/netcdf/4.3.0/intel/12.1.5/include  -c	../../../assimilation_code/modules/observations/obs_kind_mod.f90
+mpif90 -O -assume buffered_io -I/glade/apps/opt/netcdf/4.3.0/intel/12.1.5/include  -c	../../../assimilation_code/location/threed_sphere/location_mod.f90
+mpif90 -O -assume buffered_io -I/glade/apps/opt/netcdf/4.3.0/intel/12.1.5/include  -c	../../../assimilation_code/modules/utilities/netcdf_utilities_mod.f90
+mpif90 -O -assume buffered_io -I/glade/apps/opt/netcdf/4.3.0/intel/12.1.5/include  -c	../../../models/POP/dart_pop_mod.f90
+mpif90 -O -assume buffered_io -I/glade/apps/opt/netcdf/4.3.0/intel/12.1.5/include  -c	../../../assimilation_code/modules/utilities/no_cray_win_mod.f90
+mpif90 -O -assume buffered_io -I/glade/apps/opt/netcdf/4.3.0/intel/12.1.5/include  -c	../../../assimilation_code/modules/utilities/distributed_state_mod.f90
+mpif90 -O -assume buffered_io -I/glade/apps/opt/netcdf/4.3.0/intel/12.1.5/include  -c	../../../assimilation_code/modules/io/state_structure_mod.f90
+mpif90 -O -assume buffered_io -I/glade/apps/opt/netcdf/4.3.0/intel/12.1.5/include  -c	../../../assimilation_code/modules/io/dart_time_io_mod.f90
+mpif90 -O -assume buffered_io -I/glade/apps/opt/netcdf/4.3.0/intel/12.1.5/include  -c	../../../models/utilities/default_model_mod.f90
+mpif90 -O -assume buffered_io -I/glade/apps/opt/netcdf/4.3.0/intel/12.1.5/include  -c	../../../models/POP/model_mod.f90
+mpif90 -O -assume buffered_io -I/glade/apps/opt/netcdf/4.3.0/intel/12.1.5/include  -c	../../../assimilation_code/modules/assimilation/assim_model_mod.f90
+mpif90 -O -assume buffered_io -I/glade/apps/opt/netcdf/4.3.0/intel/12.1.5/include  -c	../../../assimilation_code/modules/assimilation/adaptive_inflate_mod.f90
+mpif90 -O -assume buffered_io -I/glade/apps/opt/netcdf/4.3.0/intel/12.1.5/include  -c	../../../assimilation_code/modules/utilities/options_mod.f90
+mpif90 -O -assume buffered_io -I/glade/apps/opt/netcdf/4.3.0/intel/12.1.5/include  -c	../../../assimilation_code/modules/io/io_filenames_mod.f90
+mpif90 -O -assume buffered_io -I/glade/apps/opt/netcdf/4.3.0/intel/12.1.5/include  -c	../../../assimilation_code/modules/io/direct_netcdf_mod.f90
+mpif90 -O -assume buffered_io -I/glade/apps/opt/netcdf/4.3.0/intel/12.1.5/include  -c	../../../assimilation_code/modules/io/state_vector_io_mod.f90
+mpif90 -O -assume buffered_io -I/glade/apps/opt/netcdf/4.3.0/intel/12.1.5/include  -c	../../../observations/forward_operators/obs_def_utilities_mod.f90
+mpif90 -O -assume buffered_io -I/glade/apps/opt/netcdf/4.3.0/intel/12.1.5/include  -c	../../../observations/forward_operators/obs_def_mod.f90
+mpif90 -O -assume buffered_io -I/glade/apps/opt/netcdf/4.3.0/intel/12.1.5/include  -c	../../../assimilation_code/modules/observations/obs_sequence_mod.f90
+mpif90 -O -assume buffered_io -I/glade/apps/opt/netcdf/4.3.0/intel/12.1.5/include  -c	../../../assimilation_code/modules/assimilation/obs_model_mod.f90
+mpif90 -O -assume buffered_io -I/glade/apps/opt/netcdf/4.3.0/intel/12.1.5/include  -c	../../../assimilation_code/location/utilities/location_io_mod.f90
+mpif90 -O -assume buffered_io -I/glade/apps/opt/netcdf/4.3.0/intel/12.1.5/include  -c	../../../assimilation_code/modules/assimilation/cov_cutoff_mod.f90
+mpif90 -O -assume buffered_io -I/glade/apps/opt/netcdf/4.3.0/intel/12.1.5/include  -c	../../../assimilation_code/modules/assimilation/reg_factor_mod.f90
+../../../assimilation_code/modules/assimilation/reg_factor_mod.f90(186): remark #8290: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+3'.
+11    format(f5.3)
+--------------^
+../../../assimilation_code/modules/assimilation/reg_factor_mod.f90(143): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+         22 format(4(i7, 1x), e10.4)
+-------------------------------^
+mpif90 -O -assume buffered_io -I/glade/apps/opt/netcdf/4.3.0/intel/12.1.5/include  -c	../../../assimilation_code/modules/utilities/parse_args_mod.f90
+mpif90 -O -assume buffered_io -I/glade/apps/opt/netcdf/4.3.0/intel/12.1.5/include  -c	../../../assimilation_code/modules/utilities/obs_impact_mod.f90
+mpif90 -O -assume buffered_io -I/glade/apps/opt/netcdf/4.3.0/intel/12.1.5/include  -c	../../../assimilation_code/modules/assimilation/sampling_error_correction_mod.f90
+mpif90 -O -assume buffered_io -I/glade/apps/opt/netcdf/4.3.0/intel/12.1.5/include  -c	../../../assimilation_code/modules/assimilation/quality_control_mod.f90
+mpif90 -O -assume buffered_io -I/glade/apps/opt/netcdf/4.3.0/intel/12.1.5/include  -c	../../../assimilation_code/modules/assimilation/assim_tools_mod.f90
+mpif90 -O -assume buffered_io -I/glade/apps/opt/netcdf/4.3.0/intel/12.1.5/include  -c	../../../assimilation_code/modules/assimilation/smoother_mod.f90
+../../../assimilation_code/modules/assimilation/smoother_mod.f90(480): warning #6843: A dummy argument with an explicit INTENT(OUT) declaration is not given an explicit value.   [TEMP_ENS]
+   temp_ens, ENS_MEAN_COPY, ENS_SD_COPY, POST_INF_COPY, POST_INF_SD_COPY)
+---^
+mpif90 -O -assume buffered_io -I/glade/apps/opt/netcdf/4.3.0/intel/12.1.5/include  -c	../../../assimilation_code/modules/observations/forward_operator_mod.f90
+mpif90 -O -assume buffered_io -I/glade/apps/opt/netcdf/4.3.0/intel/12.1.5/include  -c	../../../assimilation_code/modules/assimilation/filter_mod.f90
+mpif90 -O -assume buffered_io -I/glade/apps/opt/netcdf/4.3.0/intel/12.1.5/include  -c	../../../assimilation_code/programs/filter/filter.f90
+mpif90 -O -assume buffered_io -I/glade/apps/opt/netcdf/4.3.0/intel/12.1.5/include  -c	../../../assimilation_code/location/utilities/default_location_mod.f90
+mpif90 obs_model_mod.o state_structure_mod.o model_mod.o adaptive_inflate_mod.o no_cray_win_mod.o obs_kind_mod.o options_mod.o location_io_mod.o random_seq_mod.o assim_tools_mod.o utilities_mod.o time_manager_mod.o cov_cutoff_mod.o quality_control_mod.o netcdf_utilities_mod.o smoother_mod.o io_filenames_mod.o state_vector_io_mod.o obs_def_mod.o obs_impact_mod.o sort_mod.o dart_time_io_mod.o location_mod.o filter.o filter_mod.o assim_model_mod.o sampling_error_correction_mod.o default_location_mod.o direct_netcdf_mod.o mpi_utilities_mod.o obs_def_utilities_mod.o default_model_mod.o reg_factor_mod.o distributed_state_mod.o types_mod.o forward_operator_mod.o ensemble_manager_mod.o dart_pop_mod.o obs_sequence_mod.o parse_args_mod.o -o filter  -O -assume buffered_io -I/glade/apps/opt/netcdf/4.3.0/intel/12.1.5/include -L/glade/apps/opt/netcdf/4.3.0/intel/12.1.5/lib -lnetcdff -lnetcdf
+Making Makefile without MPI
+.......................................... Makefile is ready.
+PID: Undefined variable.
+--------------------------------------------------------------------------
+Staging POP files 
+--------------------------------------------------------------------------
+copying /glade/p/image/DART_test_cases/pop/pop_gx1v6/restarts/pop.r0001.nc here
+copying '/glade/p/image/DART_test_cases/pop/pop_gx1v6/restarts/pop.r0001.nc' to 'pop_out.0001.nc' here
+filling restart directory with '/glade/p/image/DART_test_cases/pop/pop_gx1v6/restarts/pop.r0001.nc'
+copying /glade/p/image/DART_test_cases/pop/pop_gx1v6/restarts/pop.r0002.nc here
+copying '/glade/p/image/DART_test_cases/pop/pop_gx1v6/restarts/pop.r0002.nc' to 'pop_out.0002.nc' here
+filling restart directory with '/glade/p/image/DART_test_cases/pop/pop_gx1v6/restarts/pop.r0002.nc'
+copying /glade/p/image/DART_test_cases/pop/pop_gx1v6/restarts/pop.r0003.nc here
+copying '/glade/p/image/DART_test_cases/pop/pop_gx1v6/restarts/pop.r0003.nc' to 'pop_out.0003.nc' here
+filling restart directory with '/glade/p/image/DART_test_cases/pop/pop_gx1v6/restarts/pop.r0003.nc'
+copying /glade/p/image/DART_test_cases/pop/pop_gx1v6/restarts/pop.r0004.nc here
+copying '/glade/p/image/DART_test_cases/pop/pop_gx1v6/restarts/pop.r0004.nc' to 'pop_out.0004.nc' here
+filling restart directory with '/glade/p/image/DART_test_cases/pop/pop_gx1v6/restarts/pop.r0004.nc'
+copying /glade/p/image/DART_test_cases/pop/pop_gx1v6/restarts/pop.r0005.nc here
+copying '/glade/p/image/DART_test_cases/pop/pop_gx1v6/restarts/pop.r0005.nc' to 'pop_out.0005.nc' here
+filling restart directory with '/glade/p/image/DART_test_cases/pop/pop_gx1v6/restarts/pop.r0005.nc'
+copying /glade/p/image/DART_test_cases/pop/pop_gx1v6/restarts/pop.r0006.nc here
+copying '/glade/p/image/DART_test_cases/pop/pop_gx1v6/restarts/pop.r0006.nc' to 'pop_out.0006.nc' here
+filling restart directory with '/glade/p/image/DART_test_cases/pop/pop_gx1v6/restarts/pop.r0006.nc'
+copying /glade/p/image/DART_test_cases/pop/pop_gx1v6/restarts/pop.r0007.nc here
+copying '/glade/p/image/DART_test_cases/pop/pop_gx1v6/restarts/pop.r0007.nc' to 'pop_out.0007.nc' here
+filling restart directory with '/glade/p/image/DART_test_cases/pop/pop_gx1v6/restarts/pop.r0007.nc'
+copying /glade/p/image/DART_test_cases/pop/pop_gx1v6/restarts/pop.r0008.nc here
+copying '/glade/p/image/DART_test_cases/pop/pop_gx1v6/restarts/pop.r0008.nc' to 'pop_out.0008.nc' here
+filling restart directory with '/glade/p/image/DART_test_cases/pop/pop_gx1v6/restarts/pop.r0008.nc'
+copying /glade/p/image/DART_test_cases/pop/pop_gx1v6/restarts/pop.r0009.nc here
+copying '/glade/p/image/DART_test_cases/pop/pop_gx1v6/restarts/pop.r0009.nc' to 'pop_out.0009.nc' here
+filling restart directory with '/glade/p/image/DART_test_cases/pop/pop_gx1v6/restarts/pop.r0009.nc'
+copying /glade/p/image/DART_test_cases/pop/pop_gx1v6/restarts/pop.r0010.nc here
+copying '/glade/p/image/DART_test_cases/pop/pop_gx1v6/restarts/pop.r0010.nc' to 'pop_out.0010.nc' here
+filling restart directory with '/glade/p/image/DART_test_cases/pop/pop_gx1v6/restarts/pop.r0010.nc'
+copying /glade/p/image/DART_test_cases/pop/pop_gx1v6/restarts/pop.r0011.nc here
+copying '/glade/p/image/DART_test_cases/pop/pop_gx1v6/restarts/pop.r0011.nc' to 'pop_out.0011.nc' here
+filling restart directory with '/glade/p/image/DART_test_cases/pop/pop_gx1v6/restarts/pop.r0011.nc'
+copying /glade/p/image/DART_test_cases/pop/pop_gx1v6/restarts/pop.r0012.nc here
+copying '/glade/p/image/DART_test_cases/pop/pop_gx1v6/restarts/pop.r0012.nc' to 'pop_out.0012.nc' here
+filling restart directory with '/glade/p/image/DART_test_cases/pop/pop_gx1v6/restarts/pop.r0012.nc'
+copying /glade/p/image/DART_test_cases/pop/pop_gx1v6/restarts/pop.r0013.nc here
+copying '/glade/p/image/DART_test_cases/pop/pop_gx1v6/restarts/pop.r0013.nc' to 'pop_out.0013.nc' here
+filling restart directory with '/glade/p/image/DART_test_cases/pop/pop_gx1v6/restarts/pop.r0013.nc'
+copying /glade/p/image/DART_test_cases/pop/pop_gx1v6/restarts/pop.r0014.nc here
+copying '/glade/p/image/DART_test_cases/pop/pop_gx1v6/restarts/pop.r0014.nc' to 'pop_out.0014.nc' here
+filling restart directory with '/glade/p/image/DART_test_cases/pop/pop_gx1v6/restarts/pop.r0014.nc'
+copying /glade/p/image/DART_test_cases/pop/pop_gx1v6/restarts/pop.r0015.nc here
+copying '/glade/p/image/DART_test_cases/pop/pop_gx1v6/restarts/pop.r0015.nc' to 'pop_out.0015.nc' here
+filling restart directory with '/glade/p/image/DART_test_cases/pop/pop_gx1v6/restarts/pop.r0015.nc'
+copying /glade/p/image/DART_test_cases/pop/pop_gx1v6/restarts/pop.r0016.nc here
+copying '/glade/p/image/DART_test_cases/pop/pop_gx1v6/restarts/pop.r0016.nc' to 'pop_out.0016.nc' here
+filling restart directory with '/glade/p/image/DART_test_cases/pop/pop_gx1v6/restarts/pop.r0016.nc'
+copying /glade/p/image/DART_test_cases/pop/pop_gx1v6/restarts/pop.r0017.nc here
+copying '/glade/p/image/DART_test_cases/pop/pop_gx1v6/restarts/pop.r0017.nc' to 'pop_out.0017.nc' here
+filling restart directory with '/glade/p/image/DART_test_cases/pop/pop_gx1v6/restarts/pop.r0017.nc'
+copying /glade/p/image/DART_test_cases/pop/pop_gx1v6/restarts/pop.r0018.nc here
+copying '/glade/p/image/DART_test_cases/pop/pop_gx1v6/restarts/pop.r0018.nc' to 'pop_out.0018.nc' here
+filling restart directory with '/glade/p/image/DART_test_cases/pop/pop_gx1v6/restarts/pop.r0018.nc'
+copying /glade/p/image/DART_test_cases/pop/pop_gx1v6/restarts/pop.r0019.nc here
+copying '/glade/p/image/DART_test_cases/pop/pop_gx1v6/restarts/pop.r0019.nc' to 'pop_out.0019.nc' here
+filling restart directory with '/glade/p/image/DART_test_cases/pop/pop_gx1v6/restarts/pop.r0019.nc'
+copying /glade/p/image/DART_test_cases/pop/pop_gx1v6/restarts/pop.r0020.nc here
+copying '/glade/p/image/DART_test_cases/pop/pop_gx1v6/restarts/pop.r0020.nc' to 'pop_out.0020.nc' here
+filling restart directory with '/glade/p/image/DART_test_cases/pop/pop_gx1v6/restarts/pop.r0020.nc'
+copying /glade/p/image/DART_test_cases/pop/pop_gx1v6/restarts/pop.r0021.nc here
+copying '/glade/p/image/DART_test_cases/pop/pop_gx1v6/restarts/pop.r0021.nc' to 'pop_out.0021.nc' here
+filling restart directory with '/glade/p/image/DART_test_cases/pop/pop_gx1v6/restarts/pop.r0021.nc'
+copying /glade/p/image/DART_test_cases/pop/pop_gx1v6/restarts/pop.r0022.nc here
+copying '/glade/p/image/DART_test_cases/pop/pop_gx1v6/restarts/pop.r0022.nc' to 'pop_out.0022.nc' here
+filling restart directory with '/glade/p/image/DART_test_cases/pop/pop_gx1v6/restarts/pop.r0022.nc'
+copying /glade/p/image/DART_test_cases/pop/pop_gx1v6/restarts/pop.r0023.nc here
+copying '/glade/p/image/DART_test_cases/pop/pop_gx1v6/restarts/pop.r0023.nc' to 'pop_out.0023.nc' here
+filling restart directory with '/glade/p/image/DART_test_cases/pop/pop_gx1v6/restarts/pop.r0023.nc'
+copying /glade/p/image/DART_test_cases/pop/pop_gx1v6/restarts/pop.r0024.nc here
+copying '/glade/p/image/DART_test_cases/pop/pop_gx1v6/restarts/pop.r0024.nc' to 'pop_out.0024.nc' here
+filling restart directory with '/glade/p/image/DART_test_cases/pop/pop_gx1v6/restarts/pop.r0024.nc'
+copying /glade/p/image/DART_test_cases/pop/pop_gx1v6/restarts/pop.r0025.nc here
+copying '/glade/p/image/DART_test_cases/pop/pop_gx1v6/restarts/pop.r0025.nc' to 'pop_out.0025.nc' here
+filling restart directory with '/glade/p/image/DART_test_cases/pop/pop_gx1v6/restarts/pop.r0025.nc'
+copying /glade/p/image/DART_test_cases/pop/pop_gx1v6/restarts/pop.r0026.nc here
+copying '/glade/p/image/DART_test_cases/pop/pop_gx1v6/restarts/pop.r0026.nc' to 'pop_out.0026.nc' here
+filling restart directory with '/glade/p/image/DART_test_cases/pop/pop_gx1v6/restarts/pop.r0026.nc'
+copying /glade/p/image/DART_test_cases/pop/pop_gx1v6/restarts/pop.r0027.nc here
+copying '/glade/p/image/DART_test_cases/pop/pop_gx1v6/restarts/pop.r0027.nc' to 'pop_out.0027.nc' here
+filling restart directory with '/glade/p/image/DART_test_cases/pop/pop_gx1v6/restarts/pop.r0027.nc'
+copying /glade/p/image/DART_test_cases/pop/pop_gx1v6/restarts/pop.r0028.nc here
+copying '/glade/p/image/DART_test_cases/pop/pop_gx1v6/restarts/pop.r0028.nc' to 'pop_out.0028.nc' here
+filling restart directory with '/glade/p/image/DART_test_cases/pop/pop_gx1v6/restarts/pop.r0028.nc'
+copying /glade/p/image/DART_test_cases/pop/pop_gx1v6/restarts/pop.r0029.nc here
+copying '/glade/p/image/DART_test_cases/pop/pop_gx1v6/restarts/pop.r0029.nc' to 'pop_out.0029.nc' here
+filling restart directory with '/glade/p/image/DART_test_cases/pop/pop_gx1v6/restarts/pop.r0029.nc'
+copying /glade/p/image/DART_test_cases/pop/pop_gx1v6/restarts/pop.r0030.nc here
+copying '/glade/p/image/DART_test_cases/pop/pop_gx1v6/restarts/pop.r0030.nc' to 'pop_out.0030.nc' here
+filling restart directory with '/glade/p/image/DART_test_cases/pop/pop_gx1v6/restarts/pop.r0030.nc'
+filling pop input data with '/glade/p/image/DART_test_cases/pop/pop_gx1v6/inputdata/gx1v6_depth_accel'
+`/glade/p/image/DART_test_cases/pop/pop_gx1v6/inputdata/gx1v6_depth_accel' -> `../inputdata/gx1v6_depth_accel'
+filling pop input data with '/glade/p/image/DART_test_cases/pop/pop_gx1v6/inputdata/gx1v6_history_contents'
+`/glade/p/image/DART_test_cases/pop/pop_gx1v6/inputdata/gx1v6_history_contents' -> `../inputdata/gx1v6_history_contents'
+filling pop input data with '/glade/p/image/DART_test_cases/pop/pop_gx1v6/inputdata/gx1v6_movie_contents'
+`/glade/p/image/DART_test_cases/pop/pop_gx1v6/inputdata/gx1v6_movie_contents' -> `../inputdata/gx1v6_movie_contents'
+filling pop input data with '/glade/p/image/DART_test_cases/pop/pop_gx1v6/inputdata/gx1v6_overflow'
+`/glade/p/image/DART_test_cases/pop/pop_gx1v6/inputdata/gx1v6_overflow' -> `../inputdata/gx1v6_overflow'
+filling pop input data with '/glade/p/image/DART_test_cases/pop/pop_gx1v6/inputdata/gx1v6_region_ids'
+`/glade/p/image/DART_test_cases/pop/pop_gx1v6/inputdata/gx1v6_region_ids' -> `../inputdata/gx1v6_region_ids'
+filling pop input data with '/glade/p/image/DART_test_cases/pop/pop_gx1v6/inputdata/gx1v6_tavg_contents'
+`/glade/p/image/DART_test_cases/pop/pop_gx1v6/inputdata/gx1v6_tavg_contents' -> `../inputdata/gx1v6_tavg_contents'
+filling pop input data with '/glade/p/image/DART_test_cases/pop/pop_gx1v6/inputdata/gx1v6_transport_contents'
+`/glade/p/image/DART_test_cases/pop/pop_gx1v6/inputdata/gx1v6_transport_contents' -> `../inputdata/gx1v6_transport_contents'
+filling pop input data with '/glade/p/image/DART_test_cases/pop/pop_gx1v6/inputdata/gx1v6_vert_grid'
+`/glade/p/image/DART_test_cases/pop/pop_gx1v6/inputdata/gx1v6_vert_grid' -> `../inputdata/gx1v6_vert_grid'
+filling pop input data with '/glade/p/image/DART_test_cases/pop/pop_gx1v6/inputdata/horiz_grid_20010402.ieeer8'
+`/glade/p/image/DART_test_cases/pop/pop_gx1v6/inputdata/horiz_grid_20010402.ieeer8' -> `../inputdata/horiz_grid_20010402.ieeer8'
+filling pop input data with '/glade/p/image/DART_test_cases/pop/pop_gx1v6/inputdata/kmt_gx1v6_lgm21ka.110315.ieeei4'
+`/glade/p/image/DART_test_cases/pop/pop_gx1v6/inputdata/kmt_gx1v6_lgm21ka.110315.ieeei4' -> `../inputdata/kmt_gx1v6_lgm21ka.110315.ieeei4'
+filling pop input data with '/glade/p/image/DART_test_cases/pop/pop_gx1v6/inputdata/region_mask_20090205.ieeei4'
+`/glade/p/image/DART_test_cases/pop/pop_gx1v6/inputdata/region_mask_20090205.ieeei4' -> `../inputdata/region_mask_20090205.ieeei4'
+filling pop input data with '/glade/p/image/DART_test_cases/pop/pop_gx1v6/inputdata/region_mask_gx1v6_lgm21ka.110315.ieeei4'
+`/glade/p/image/DART_test_cases/pop/pop_gx1v6/inputdata/region_mask_gx1v6_lgm21ka.110315.ieeei4' -> `../inputdata/region_mask_gx1v6_lgm21ka.110315.ieeei4'
+filling pop input data with '/glade/p/image/DART_test_cases/pop/pop_gx1v6/inputdata/topography_20090204.ieeei4'
+`/glade/p/image/DART_test_cases/pop/pop_gx1v6/inputdata/topography_20090204.ieeei4' -> `../inputdata/topography_20090204.ieeei4'
+filling pop input data with '/glade/p/image/DART_test_cases/pop/pop_gx1v6/inputdata/ts_PHC2_jan_ic_gx1v6_20090205.ieeer8'
+`/glade/p/image/DART_test_cases/pop/pop_gx1v6/inputdata/ts_PHC2_jan_ic_gx1v6_20090205.ieeer8' -> `../inputdata/ts_PHC2_jan_ic_gx1v6_20090205.ieeer8'
+PID: Undefined variable.
+--------------------------------------------------------------------------
+Submitting to queue
+--------------------------------------------------------------------------
+LSB_JOBNAME: Undefined variable.
+cp: No match.

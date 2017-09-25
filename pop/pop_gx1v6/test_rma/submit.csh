@@ -52,10 +52,10 @@ if ($?LSF_QUEUE) then
    module load job_memusage
    
    setenv ORIGINALDIR `pwd`
-   setenv JOBNAME     $LSB_JOBNAME
-   setenv JOBID       $LSB_JOBID
-   setenv MYQUEUE     $LSB_QUEUE
-   setenv MYHOST      $LSB_SUB_HOST
+   setenv JOBNAME     "pop_gx1v6"       ##$LSB_JOBNAME
+   setenv JOBID       "??????"          ##$LSB_JOBID
+   setenv MYQUEUE     "regular"         ##$LSB_QUEUE
+   setenv MYHOST      "??????"          ##$LSB_SUB_HOST
    setenv MPI         mpirun.lsf
    set NCPUS      = "UNKNOWN"
    set NODES      = "UNKNOWN"

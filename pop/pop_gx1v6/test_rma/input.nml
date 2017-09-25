@@ -25,7 +25,7 @@
 &filter_nml
    async                    = 4,
    adv_ens_command          = "no_CESM_advance_script",
-   ens_size                 =  3,
+   ens_size                 =  30,
    obs_sequence_in_name     = "obs_seq.out",
    obs_sequence_out_name    = "obs_seq.final",
    init_time_days           = -1,
