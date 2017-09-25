@@ -1,0 +1,149 @@
+*******************************
+ PBS_JOB_ID  '1843371.chadmin1'
+ PBS_JOBNAME 'mpt_wrf_omplace_vv_np:16:32:32'
+ NCPUS       '512'
+ NODES       '16'
+*******************************
+*****************************
+ --- mpiexec_mpt STARTED ----
+*****************************
+
+Currently Loaded Modules:
+  1) ncarenv/1.2           4) netcdf/4.4.1.1   7) peak_memusage/1.1
+  2) intel/17.0.1          5) xxdiff/4.0.1
+  3) ncarcompilers/0.4.1   6) mpt/2.15f
+
+ 
+
+
+omplace information:
+   32 threads, thread model is intel
+   placement file /tmp/omplace.file.hendric.21658:
+omplace information:
+   32 threads, thread model is intel
+   placement file /tmp/omplace.file.hendric.21657:
+omplace information:
+   32 threads, thread model is intel
+   placement file /tmp/omplace.file.hendric.21660:
+omplace information:
+   32 threads, thread model is intel
+   placement file /tmp/omplace.file.hendric.21648:
+omplace information:
+   32 threads, thread model is intel
+   placement file /tmp/omplace.file.hendric.21655:
+omplace information:
+   32 threads, thread model is intel
+   placement file /tmp/omplace.file.hendric.21645:
+omplace information:
+   32 threads, thread model is intel
+   placement file /tmp/omplace.file.hendric.21654:
+omplace information:
+   32 threads, thread model is intel
+   placement file /tmp/omplace.file.hendric.21650:
+omplace information:
+   32 threads, thread model is intel
+   placement file /tmp/omplace.file.hendric.21646:
+omplace information:
+   32 threads, thread model is intel
+   placement file /tmp/omplace.file.hendric.21652:
+    firsttask cpu=0 
+    thread oncpu=0 cpu=31,63,95,127,159,191,233,255,287,319,351,383,415,447,479 noplace=1  exact
+    firsttask cpu=0 
+    thread oncpu=0 cpu=31,63,95,127,159,191,233,255,287,319,351,383,415,447,479 noplace=1  exact
+omplace information:
+   32 threads, thread model is intel
+   placement file /tmp/omplace.file.hendric.21647:
+    firsttask cpu=0 
+    thread oncpu=0 cpu=31,63,95,127,159,191,233,255,287,319,351,383,415,447,479 noplace=1  exact
+omplace information:
+   32 threads, thread model is intel
+   placement file /tmp/omplace.file.hendric.21659:
+    firsttask cpu=0 
+    thread oncpu=0 cpu=31,63,95,127,159,191,233,255,287,319,351,383,415,447,479 noplace=1  exact
+omplace information:
+   32 threads, thread model is intel
+   placement file /tmp/omplace.file.hendric.21653:
+omplace information:
+   32 threads, thread model is intel
+   placement file /tmp/omplace.file.hendric.21656:
+    firsttask cpu=0 
+    thread oncpu=0 cpu=31,63,95,127,159,191,233,255,287,319,351,383,415,447,479 noplace=1  exact
+    firsttask cpu=0 
+    thread oncpu=0 cpu=31,63,95,127,159,191,233,255,287,319,351,383,415,447,479 noplace=1  exact
+omplace information:
+   32 threads, thread model is intel
+   placement file /tmp/omplace.file.hendric.21651:
+    firsttask cpu=0 
+    thread oncpu=0 cpu=31,63,95,127,159,191,233,255,287,319,351,383,415,447,479 noplace=1  exact
+    firsttask cpu=0 
+    thread oncpu=0 cpu=31,63,95,127,159,191,233,255,287,319,351,383,415,447,479 noplace=1  exact
+syntax error in placement file /tmp/omplace.file.hendric.21658, line 2:
+  thread oncpu=0 cpu=31,63,95,127,159,191,233,255,287,319,351,383,415,447,479 noplace=1  exact
+                           ^-- invalid cpu specified - too big
+    firsttask cpu=0 
+    thread oncpu=0 cpu=31,63,95,127,159,191,233,255,287,319,351,383,415,447,479 noplace=1  exact
+syntax error in placement file /tmp/omplace.file.hendric.21657, line 2:
+  thread oncpu=0 cpu=31,63,95,127,159,191,233,255,287,319,351,383,415,447,479 noplace=1  exact
+                           ^-- invalid cpu specified - too big
+syntax error in placement file /tmp/omplace.file.hendric.21660, line 2:
+  thread oncpu=0 cpu=31,63,95,127,159,191,233,255,287,319,351,383,415,447,479 noplace=1  exact
+                           ^-- invalid cpu specified - too big
+    firsttask cpu=0 
+    thread oncpu=0 cpu=31,63,95,127,159,191,233,255,287,319,351,383,415,447,479 noplace=1  exact
+omplace information:
+   32 threads, thread model is intel
+   placement file /tmp/omplace.file.hendric.21649:
+syntax error in placement file /tmp/omplace.file.hendric.21648, line 2:
+  thread oncpu=0 cpu=31,63,95,127,159,191,233,255,287,319,351,383,415,447,479 noplace=1  exact
+syntax error in placement file /tmp/omplace.file.hendric.21655, line 2:
+  thread oncpu=0 cpu=31,63,95,127,159,191,233,255,287,319,351,383,415,447,479 noplace=1  exact
+                           ^-- invalid cpu specified - too big
+                           ^-- invalid cpu specified - too big
+syntax error in placement file /tmp/omplace.file.hendric.21645, line 2:
+  thread oncpu=0 cpu=31,63,95,127,159,191,233,255,287,319,351,383,415,447,479 noplace=1  exact
+                           ^-- invalid cpu specified - too big
+    firsttask cpu=0 
+    thread oncpu=0 cpu=31,63,95,127,159,191,233,255,287,319,351,383,415,447,479 noplace=1  exact
+    firsttask cpu=0 
+    thread oncpu=0 cpu=31,63,95,127,159,191,233,255,287,319,351,383,415,447,479 noplace=1  exact
+    firsttask cpu=0 
+    thread oncpu=0 cpu=31,63,95,127,159,191,233,255,287,319,351,383,415,447,479 noplace=1  exact
+    firsttask cpu=0 
+    thread oncpu=0 cpu=31,63,95,127,159,191,233,255,287,319,351,383,415,447,479 noplace=1  exact
+syntax error in placement file /tmp/omplace.file.hendric.21650, line 2:
+  thread oncpu=0 cpu=31,63,95,127,159,191,233,255,287,319,351,383,415,447,479 noplace=1  exact
+                           ^-- invalid cpu specified - too big
+syntax error in placement file /tmp/omplace.file.hendric.21654, line 2:
+  thread oncpu=0 cpu=31,63,95,127,159,191,233,255,287,319,351,383,415,447,479 noplace=1  exact
+                           ^-- invalid cpu specified - too big
+syntax error in placement file /tmp/omplace.file.hendric.21646, line 2:
+  thread oncpu=0 cpu=31,63,95,127,159,191,233,255,287,319,351,383,415,447,479 noplace=1  exact
+                           ^-- invalid cpu specified - too big
+    firsttask cpu=0 
+    thread oncpu=0 cpu=31,63,95,127,159,191,233,255,287,319,351,383,415,447,479 noplace=1  exact
+syntax error in placement file /tmp/omplace.file.hendric.21652, line 2:
+  thread oncpu=0 cpu=31,63,95,127,159,191,233,255,287,319,351,383,415,447,479 noplace=1  exact
+                           ^-- invalid cpu specified - too big
+syntax error in placement file /tmp/omplace.file.hendric.21659, line 2:
+  thread oncpu=0 cpu=31,63,95,127,159,191,233,255,287,319,351,383,415,447,479 noplace=1  exact
+                           ^-- invalid cpu specified - too big
+    firsttask cpu=0 
+    thread oncpu=0 cpu=31,63,95,127,159,191,233,255,287,319,351,383,415,447,479 noplace=1  exact
+syntax error in placement file /tmp/omplace.file.hendric.21647, line 2:
+  thread oncpu=0 cpu=31,63,95,127,159,191,233,255,287,319,351,383,415,447,479 noplace=1  exact
+                           ^-- invalid cpu specified - too big
+syntax error in placement file /tmp/omplace.file.hendric.21653, line 2:
+  thread oncpu=0 cpu=31,63,95,127,159,191,233,255,287,319,351,383,415,447,479 noplace=1  exact
+                           ^-- invalid cpu specified - too big
+syntax error in placement file /tmp/omplace.file.hendric.21656, line 2:
+  thread oncpu=0 cpu=31,63,95,127,159,191,233,255,287,319,351,383,415,447,479 noplace=1  exact
+                           ^-- invalid cpu specified - too big
+syntax error in placement file /tmp/omplace.file.hendric.21651, line 2:
+  thread oncpu=0 cpu=31,63,95,127,159,191,233,255,287,319,351,383,415,447,479 noplace=1  exact
+                           ^-- invalid cpu specified - too big
+syntax error in placement file /tmp/omplace.file.hendric.21649, line 2:
+  thread oncpu=0 cpu=31,63,95,127,159,191,233,255,287,319,351,383,415,447,479 noplace=1  exact
+                           ^-- invalid cpu specified - too big
+*****************************
+ --- mpiexec_mpt FINISHED ---
+*****************************

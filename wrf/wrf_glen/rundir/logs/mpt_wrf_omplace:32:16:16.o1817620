@@ -1,0 +1,248 @@
+*******************************
+ PBS_JOB_ID  '1817620.chadmin1'
+ PBS_JOBNAME 'mpt_wrf:32:16:16'
+ NCPUS       '512'
+ NODES       '32'
+*******************************
+*****************************
+ --- mpiexec_mpt STARTED ----
+*****************************
+
+Currently Loaded Modules:
+  1) ncarenv/1.2           4) netcdf/4.4.1.1   7) peak_memusage/1.1
+  2) intel/17.0.1          5) xxdiff/4.0.1
+  3) ncarcompilers/0.4.1   6) mpt/2.15f
+
+ 
+
+
+ Starting program Filter
+ Initializing the utilities module.
+ Trying to log to unit           10
+ Trying to open file dart_log.out
+ 
+ --------------------------------------
+ Starting ... at YYYY MM DD HH MM SS = 
+                 2017  9 19 10 50 34
+ Program Filter
+ --------------------------------------
+ 
+ set_nml_output Echo NML values to log file only
+ Trying to open namelist log dart_log.nml
+ 
+ DEBUG FROM: initialize_utilities  ..  digits12 is            8
+ DEBUG FROM: initialize_utilities ...  r8       is            8
+ DEBUG FROM: initialize_utilities ...  r4       is            4
+ DEBUG FROM: initialize_utilities  ..  integer  is            4
+ DEBUG FROM: initialize_utilities ...  i8       is            8
+ DEBUG FROM: initialize_utilities ...  i4       is            4
+ PE 0: initialize_mpi_utilities:  Running with          512  MPI processes.
+ ------------------------------------------------------
+ 
+ 
+ -------------- ASSIMILATE_THESE_OBS_TYPES --------------
+ RADIOSONDE_TEMPERATURE
+ RADIOSONDE_U_WIND_COMPONENT
+ RADIOSONDE_V_WIND_COMPONENT
+ RADIOSONDE_SPECIFIC_HUMIDITY
+ RADIOSONDE_SURFACE_ALTIMETER
+ ACARS_U_WIND_COMPONENT
+ ACARS_V_WIND_COMPONENT
+ ACARS_TEMPERATURE
+ ACARS_DEWPOINT
+ SAT_U_WIND_COMPONENT
+ SAT_V_WIND_COMPONENT
+ GPSRO_REFRACTIVITY
+ PROFILER_U_WIND_COMPONENT
+ PROFILER_V_WIND_COMPONENT
+ METAR_U_10_METER_WIND
+ METAR_V_10_METER_WIND
+ METAR_TEMPERATURE_2_METER
+ METAR_DEWPOINT_2_METER
+ METAR_ALTIMETER
+ MARINE_SFC_U_WIND_COMPONENT
+ MARINE_SFC_V_WIND_COMPONENT
+ MARINE_SFC_TEMPERATURE
+ MARINE_SFC_ALTIMETER
+ MARINE_SFC_DEWPOINT
+ RADAR_REFLECTIVITY
+ DOPPLER_RADIAL_VELOCITY
+ RADAR_CLEARAIR_REFLECTIVITY
+ -------------- EVALUATE_THESE_OBS_TYPES --------------
+ LAND_SFC_TEMPERATURE
+ LAND_SFC_U_WIND_COMPONENT
+ LAND_SFC_V_WIND_COMPONENT
+ LAND_SFC_ALTIMETER
+ LAND_SFC_DEWPOINT
+ ------------------------------------------------------
+ 
+ ---------- USE_PRECOMPUTED_FO_OBS_TYPES --------------
+ ------------------------------------------------------
+ 
+ ******************
+ **  DOMAIN # 1  **
+ ******************
+ PE 0:   dt from wrfinput_d0X file is:    75.0000000000000
+ PE 0: static_init_model: state vector array    1 is U
+ PE 0: static_init_model: state vector array    2 is V
+ PE 0: static_init_model: state vector array    3 is W
+ PE 0: static_init_model: state vector array    4 is T
+ PE 0: static_init_model: state vector array    5 is PH
+ PE 0: static_init_model: state vector array    6 is MU
+ PE 0: static_init_model: state vector array    7 is QVAPOR
+ PE 0: static_init_model: state vector array    8 is QCLOUD
+ PE 0: static_init_model: state vector array    9 is QRAIN
+ PE 0: static_init_model: state vector array   10 is QICE
+ PE 0: static_init_model: state vector array   11 is QGRAUP
+ PE 0: static_init_model: state vector array   12 is QNICE
+ PE 0: static_init_model: state vector array   13 is QNRAIN
+ PE 0: static_init_model: state vector array   14 is H_DIABATIC
+ PE 0: static_init_model: state vector array   15 is U10
+ PE 0: static_init_model: state vector array   16 is V10
+ PE 0: static_init_model: state vector array   17 is T2
+ PE 0: static_init_model: state vector array   18 is Q2
+ PE 0: static_init_model: state vector array   19 is PSFC
+ ******************
+ **  DOMAIN # 2  **
+ ******************
+ PE 0:   dt from wrfinput_d0X file is:    18.7500000000000
+ PE 0: static_init_model: state vector array    1 is U
+ PE 0: static_init_model: state vector array    2 is V
+ PE 0: static_init_model: state vector array    3 is W
+ PE 0: static_init_model: state vector array    4 is T
+ PE 0: static_init_model: state vector array    5 is PH
+ PE 0: static_init_model: state vector array    6 is MU
+ PE 0: static_init_model: state vector array    7 is QVAPOR
+ PE 0: static_init_model: state vector array    8 is QCLOUD
+ PE 0: static_init_model: state vector array    9 is QRAIN
+ PE 0: static_init_model: state vector array   10 is QICE
+ PE 0: static_init_model: state vector array   11 is QGRAUP
+ PE 0: static_init_model: state vector array   12 is QNICE
+ PE 0: static_init_model: state vector array   13 is QNRAIN
+ PE 0: static_init_model: state vector array   14 is H_DIABATIC
+ PE 0: static_init_model: state vector array   15 is U10
+ PE 0: static_init_model: state vector array   16 is V10
+ PE 0: static_init_model: state vector array   17 is T2
+ PE 0: static_init_model: state vector array   18 is Q2
+ PE 0: static_init_model: state vector array   19 is PSFC
+ PE 0: static_init_model   wrf model size is    143504462
+ PE 0: location_mod: using code with optimized cutoffs
+ PE 0: location_mod: Including vertical separation when computing distances:
+ PE 0: location_mod:        # pascals ~ 1 horiz radian:      700000.00000
+ PE 0: location_mod:         # meters ~ 1 horiz radian:       80000.00000
+ PE 0: location_mod:   # model levels ~ 1 horiz radian:        2666.70000
+ PE 0: location_mod:  # scale heights ~ 1 horiz radian:          10.00000
+ PE 0: quality_control_mod: Will reject obs with Data QC larger than    4
+ PE 0: quality_control_mod: Will reject obs values more than    3.000000 sigma from mean
+ PE 0: assim_tools_init: Selected filter type is Ensemble Adjustment Kalman Filter (EAKF)
+ PE 0: assim_tools_init: The cutoff namelist value is           0.050000
+ PE 0: assim_tools_init: ... cutoff is the localization half-width parameter,
+ PE 0: assim_tools_init: ... so the effective localization radius is           0.100000
+ PE 0:  
+ PE 0: assim_tools_init: Observations with special localization treatment:
+ PE 0: assim_tools_init: (type name, specified cutoff distance, effective localization radius)
+ PE 0: assim_tools_init: RADAR_REFLECTIVITY                        0.003760          0.007520
+ PE 0: assim_tools_init: DOPPLER_RADIAL_VELOCITY                   0.003760          0.007520
+ PE 0: assim_tools_init: RADAR_CLEARAIR_REFLECTIVITY               0.003760          0.007520
+ PE 0: assim_tools_init: all other observation types will use the default cutoff distance
+ PE 0:  
+ PE 0: assim_tools_init: Disabling the close obs caching because specialized localization
+ PE 0: assim_tools_init: distances are enabled.
+ PE 0: assim_tools_init: Using adaptive localization, threshold       2000 obs
+ PE 0: assim_tools_init: Using Sampling Error Correction
+ PE 0: assim_tools_init: Replicating a copy of the ensemble mean on every task
+ PE 0: assim_tools_init: ... uses more memory per task but may run faster if doing vertical
+ PE 0: assim_tools_init: ... coordinate conversion; controlled by namelist item "distribute_mean"
+ PE 0: assim_tools_init: Doing vertical localization, vertical coordinate conversion may be required
+ PE 0: assim_tools_init: ... Converting all state vector verticals to localization coordinate first.
+ PE 0: assim_tools_init: ... Converting all observation verticals to localization coordinate first.
+ PE 0:  filter trace: Filter start
+ Filter start TIME: 2017/09/19 10:50:36
+ PE 0: filter_main: running with an ensemble size of    50
+ PE 0:  filter trace: Before initializing inflation
+ PE 0: filter_main: Prior inflation damping of     0.900000 will be used
+ PE 0:  filter trace: After  initializing inflation
+ PE 0: parse_stages_to_write:  filter will write stage : preassim
+ PE 0: parse_stages_to_write:  filter will write stage : postassim
+ PE 0: parse_stages_to_write:  filter will write stage : output
+ PE 0:  filter trace: Before setting up space for observations
+ Before setting up space for observations TIME: 2017/09/19 10:50:36
+ After  setting up space for observations TIME: 2017/09/19 10:50:40
+ PE 0:  filter trace: After  setting up space for observations
+ PE 0:  filter trace: Before setting up space for ensembles
+ PE 0:  filter trace: After  setting up space for ensembles
+ PE 0:  filter trace: Before reading in ensemble restart files
+ Before reading in ensemble restart files TIME: 2017/09/19 10:50:40
+ PE 0: set_member_file_metadata no file list given for stage "preassim" so using default names
+ PE 0: set_member_file_metadata no file list given for stage "postassim" so using default names
+ PE 0: Prior inflation: mean read from namelist as     1.000000
+ PE 0: Prior inflation: sd read from namelist as     0.600000
+ PE 0: Prior inflation: deterministic, time-constant, spatially-varying, state-space
+ PE 0: Posterior inflation: None
+ PE 0: filter_main: Reading in initial condition/restart data for all ensemble members from file(s)
+ After  reading in ensemble restart files TIME: 2017/09/19 10:54:50
+ PE 0:  filter trace: After  reading in ensemble restart files
+ PE 0:  filter trace: Before initializing output files
+ Before initializing output files TIME: 2017/09/19 10:54:50
+ After  initializing output files TIME: 2017/09/19 10:54:50
+ PE 0:  filter trace: After  initializing output files
+ PE 0:  filter trace: Before trimming obs seq if start/stop time specified
+ PE 0:  filter trace: After  trimming obs seq if start/stop time specified
+ PE 0:  filter trace: Top of main advance time loop
+ PE 0:  
+ PE 0: filter: Main assimilation loop, starting iteration    0
+ PE 0:  filter trace: Before move_ahead checks time of data and next obs
+ PE 0: move_ahead Current model data time            is:  day=  151718 sec= 43200
+ PE 0: move_ahead Current assimilation window starts at:  day=  151718 sec= 39601
+ PE 0: move_ahead Next available observation time    is:  day=  151718 sec= 42300
+ PE 0: move_ahead Current assimilation window ends   at:  day=  151718 sec= 46800
+ PE 0: move_ahead Next available observation time    is:  day=  151718 sec= 42300
+ PE 0: move_ahead Within current assimilation window, model does not need advance.
+ PE 0: move_ahead Next assimilation window contains up to    51459 observations
+ PE 0:  filter trace: After  move_ahead checks time of data and next obs
+ PE 0: filter: Model does not need to run; data already at required time
+ PE 0:  filter trace: Before setup for next group of observations
+ PE 0:  filter trace: Number of observations to be assimilated  51459
+ filter trace: Time of first observation in window day=151718, sec=42300
+ filter trace: Time of last  observation in window day=151718, sec=45840
+ PE 0:  filter trace: After  setup for next group of observations
+ PE 0:  filter trace: Before prior inflation damping and prep
+ PE 0:  filter trace: After  prior inflation damping and prep
+ PE 0:  filter trace: Before computing prior observation values
+ Before computing prior observation values TIME: 2017/09/19 10:55:04
+ After  computing prior observation values TIME: 2017/09/19 11:02:02
+ PE 0:  filter trace: After  computing prior observation values
+ PE 0:  filter trace: Before preassim state space output
+ Before preassim state space output TIME: 2017/09/19 11:02:02
+ After  preassim state space output TIME: 2017/09/19 11:02:29
+ PE 0:  filter trace: After  preassim state space output
+ PE 0:  filter trace: Before observation space diagnostics
+ PE 0:  filter trace: After  observation space diagnostics
+ PE 0: filter: Ready to assimilate up to   51459 observations
+ PE 0:  filter trace: Before observation assimilation
+ Before observation assimilation TIME: 2017/09/19 11:03:59
+=>> PBS: job killed: walltime 1823 exceeded limit 1800
+forrtl: error (78): process killed (SIGTERM)
+Image              PC                Routine            Line        Source             
+filter_cy          0000000000A92C61  Unknown               Unknown  Unknown
+filter_cy          0000000000A90D9B  Unknown               Unknown  Unknown
+filter_cy          0000000000A32924  Unknown               Unknown  Unknown
+filter_cy          0000000000A32736  Unknown               Unknown  Unknown
+filter_cy          00000000009BD589  Unknown               Unknown  Unknown
+filter_cy          00000000009C41EC  Unknown               Unknown  Unknown
+libpthread-2.19.s  00002AAAAAEE3870  Unknown               Unknown  Unknown
+libmpi_mt.so       00002AAAAB55B546  MPI_SGI_progress      Unknown  Unknown
+forrtl: error (78): process killed (SIGTERM)
+Image              PC                Routine            Line        Source             
+filter_cy          0000000000A92C61  Unknown               Unknown  Unknown
+filter_cy          0000000000A90D9B  Unknown               Unknown  Unknown
+filter_cy          0000000000A32924  Unknown               Unknown  Unknown
+filter_cy          0000000000A32736  Unknown               Unknown  Unknown
+filter_cy          00000000009BD589  Unknown               Unknown  Unknown
+filter_cy          00000000009C41EC  Unknown               Unknown  Unknown
+libpthread-2.19.s  00002AAAAAEE3870  Unknown               Unknown  Unknown
+linux-vdso.so.1    00002AAAAAACCAC8  clock_gettime         Unknown  Unknown
+libc-2.19.so       00002AAAABCCAC7D  __clock_gettime       Unknown  Unknown
+libmpi_mt.so       00002AAAAB6319ED  Unknown               Unknown  Unknown
+MPT ERROR: MPI_COMM_WORLD rank 24 has terminated without calling MPI_Finalize()
+	aborting job
