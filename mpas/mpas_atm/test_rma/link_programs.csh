@@ -5,7 +5,15 @@ set DART_DIR = '/glade/p/work/hendric/DART/rma_timing/models/mpas_atm/work'
 
 cd $DART_DIR
 
-csh quickbuild.csh -mpi || exit 1
+module load intel/12.1.5
+
+./mkmf_preprocess        || exit 1
+make
+./preprocess
+./mkmf_filter -mpi       || exit 2
+make
+./mkmf_perfect_model_obs || exit 3
+make
 
 cd $PWD
 
