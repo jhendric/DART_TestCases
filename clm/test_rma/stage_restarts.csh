@@ -18,18 +18,18 @@ foreach file ($CLM_DIR/restarts/*.r.*)
    echo "copying clm_restart :: '$file' to '$dart_out'"
    echo "copying clm_restart :: '$file' to '$clm_out' "
 
-   cp $file $dart_out 
-   cp $file $clm_out 
-   cp $file ../restarts
+   cp $file $dart_out   || exit 1
+   cp $file $clm_out    || exit 2
+   cp $file ../restarts || exit 3
 
    @ n = $n + 1
 
 end
 
-ls -1 $out_stub.*       > restart_files_out.txt
+ls -1 $out_stub.*             > restart_files_out.txt
 ls -1 $CLM_DIR/restarts/*.r.* > restart_files.txt
 
-cp $file clm_restart.nc
+cp $file clm_restart.nc || exit -1
 
 ######################### history files #########################
 set n = 1
@@ -39,17 +39,17 @@ foreach file ($CLM_DIR/restarts/*.h1.*)
    set dart_out = `printf "%s%4.4d%s" $out_stub. $n .nc`
 
    echo "copying clm_history :: '$file' to '$dart_out'"
-   cp $file $dart_out 
-   cp $file ../restarts
+   cp $file $dart_out   || exit 4
+   cp $file ../restarts || exit 5
 
    @ n = $n + 1
 
 end
 
-ls -1 $out_stub.*     > history_files_out.txt
+ls -1 $out_stub.*              > history_files_out.txt
 ls -1 $CLM_DIR/restarts/*.h1.* > history_files.txt
 
-cp $file clm_history.nc
+cp $file clm_history.nc || exit -2
 
 ######################### history vector files #########################
 
@@ -60,17 +60,17 @@ foreach file ($CLM_DIR/restarts/*.h2.*)
    set dart_out = `printf "%s%4.4d%s" $out_stub. $n .nc`
 
    echo "copying clm_vectory_history file :: '$file' to '$dart_out'"
-   cp $file $dart_out 
-   cp $file ../restarts
+   cp $file $dart_out   || exit 6
+   cp $file ../restarts || exit 7
  
    @ n = $n + 1
 
 end
 
-ls -1 $out_stub.*     > vector_history_files_out.txt
+ls -1 $out_stub.*              > vector_history_files_out.txt
 ls -1 $CLM_DIR/restarts/*.h2.* > vector_history_files.txt
 
-cp $file clm_vector_history.nc
+cp $file clm_vector_history.nc || exit -3
 
 chmod 666 *.nc
 

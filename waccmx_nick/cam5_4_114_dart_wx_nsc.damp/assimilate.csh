@@ -9,6 +9,43 @@
 # This block is an attempt to localize all the machine-specific
 # changes to this script such that the same script can be used
 # on multiple platforms. This will help us maintain the script.
+#
+# DART software - Copyright UCAR. This open source software is provided
+# by UCAR, "as is", without charge, subject to all terms of use at
+# http://www.image.ucar.edu/DAReS/DART/DART_download
+#
+# DART $Id: run_filter.csh 11626 2017-05-11 17:27:50Z nancy@ucar.edu $
+#
+# Script to assimilate observations using DART and the POP ocean model.
+# This presumes two directories exists that contain all the required bits
+# for POP and for DART.
+#
+#=============================================================================
+#BSUB -J waccmx_nickp:64:16
+#BSUB -o waccmx_nickp:64:16.%J.log
+#BSUB -e waccmx_nickp:64:16.%J.err
+#BSUB -q small 
+#BSUB -n 64    
+#BSUB -R "span[ptile=16]"
+#BSUB -P P86850054 
+#BSUB -W 0:10
+#=============================================================================
+#PBS -N waccmx_nickp:2:36:36
+#PBS -A P86850054
+#PBS -l walltime=00:10:00
+#PBS -q regular
+#PBS -j oe
+#PBS -m abe
+#PBS -M hendric@ucar.edu
+#PBS -l select=2:ncpus=36:mpiprocs=36
+#=============================================================================
+
+### Set TMPDIR as recommended
+mkdir -p /glade/scratch/hendric/temp
+setenv TMPDIR  /glade/scratch/hendric/temp
+setenv TEMPDIR /glade/scratch/hendric/temp
+setenv TEMP    /glade/scratch/hendric/temp
+setenv TMP     /glade/scratch/hendric/temp
 
 echo "`date` -- BEGIN CAM_ASSIMILATE"
 
@@ -18,59 +55,65 @@ set nonomatch       # suppress "rm" warnings if wildcard does not match anything
 # The VERBOSE options are useful for debugging though
 # some systems don't like the -v option to any of the following
 #echo "`hostname`"
-switch ("`hostname`")
-   case ys*:
-      # NCAR "yellowstone"
+#switch ("`hostname`")
+   # case ys*:
+   #    # NCAR "yellowstone"
+   #    alias ls ls
+   #    set   MOVE = 'mv -fv'
+   #    set   COPY = 'cp -fv --preserve=timestamps'
+   #    set   LINK = 'ln -fvs'
+   #    set   LS   = 'ls'
+   #    set REMOVE = 'rm -fr'
+   #    set TASKS_PER_NODE = `echo $LSB_SUB_RES_REQ | sed -ne '/ptile/s#.*\[ptile=\([0-9][0-9]*\)]#\1#p'`
+   #    setenv MP_DEBUG_NOTIMEOUT yes
+
+   #    set BASEOBSDIR = /glade/p/hao/nickp/dart_obs/saber_data/nsc_waccmx_dart/obs_seq_6hr_allobs/
+   #    set  LAUNCHCMD = mpirun.lsf
+   # breaksw
+
+   #case default:
+      echo "HOSTNAME :: `hostname`"
+
       alias ls ls
       set   MOVE = 'mv -fv'
       set   COPY = 'cp -fv --preserve=timestamps'
       set   LINK = 'ln -fvs'
       set   LS   = 'ls'
-      set REMOVE = 'rm -fr'
-      set TASKS_PER_NODE = `echo $LSB_SUB_RES_REQ | sed -ne '/ptile/s#.*\[ptile=\([0-9][0-9]*\)]#\1#p'`
+      set REMOVE = 'rm -rf'
+      set    LAUNCHCMD = 'mpiexec_mpt dplace '
+      # set    TASKS_PER_NODE = `echo run_mpt.csh | sed -ne '/ptile/s#.*\[ptile=\([0-9][0-9]*\)]#\1#p'`
       setenv MP_DEBUG_NOTIMEOUT yes
-
       set BASEOBSDIR = /glade/p/hao/nickp/dart_obs/saber_data/nsc_waccmx_dart/obs_seq_6hr_allobs/
-      set  LAUNCHCMD = mpirun.lsf
-   breaksw
+      set    COMPILER = 'i17'
+      set    MPI      = 'mpt'
+   #breaksw
+    
+   # case linux_system_with_utils_in_other_dirs*:
+   #    # example of pointing this script at a different set of basic commands
+   #    set   MOVE = '/usr/local/bin/mv -fv'
+   #    set   COPY = '/usr/local/bin/cp -fv --preserve=timestamps'
+   #    set   LINK = '/usr/local/bin/ln -fvs'
+   #    set REMOVE = '/usr/local/bin/rm -fr'
 
-   case ch*:
-      alias ls ls
-      set   MOVE = 'mv -fv'
-      set   COPY = 'cp -fv --preserve=timestamps'
-      set   LINK = 'ln -fvs'
-      set   LS   = 'ls'
-      set REMOVE = 'rm -fr'
-      set  LAUNCHCMD = 'mpiexec_mpt dplace '
-      set    TASKS_PER_NODE = `echo $LSB_SUB_RES_REQ | sed -ne '/ptile/s#.*\[ptile=\([0-9][0-9]*\)]#\1#p'`
-      setenv MP_DEBUG_NOTIMEOUT yes
+   #    set BASEOBSDIR = /glade/p/hao/nickp/dart_obs/saber_data/nsc_waccmx_dart/obs_seq_6hr_allobs/
+   #    set LAUNCHCMD  = mpirun.lsf
+   # breaksw
 
-   case linux_system_with_utils_in_other_dirs*:
-      # example of pointing this script at a different set of basic commands
-      set   MOVE = '/usr/local/bin/mv -fv'
-      set   COPY = '/usr/local/bin/cp -fv --preserve=timestamps'
-      set   LINK = '/usr/local/bin/ln -fvs'
-      set REMOVE = '/usr/local/bin/rm -fr'
+   # default:
+   #    # NERSC "hopper"
+   #    set   MOVE = 'mv -fv'
+   #    set   COPY = 'cp -fv --preserve=timestamps'
+   #    set   LINK = 'ln -fvs'
+   #    set REMOVE = 'rm -fr'
 
-      set BASEOBSDIR = BOGUSBASEOBSDIR
-      set LAUNCHCMD  = mpirun.lsf
-   breaksw
+   #    set BASEOBSDIR = BOGUSBASEOBSDIR
+   #    set LAUNCHCMD  = "mpirun -n" 
 
-   default:
-      # NERSC "hopper"
-      set   MOVE = 'mv -fv'
-      set   COPY = 'cp -fv --preserve=timestamps'
-      set   LINK = 'ln -fvs'
-      set REMOVE = 'rm -fr'
-
-      set BASEOBSDIR = BOGUSBASEOBSDIR
-      set LAUNCHCMD  = "aprun -n $NTASKS"
-
-   breaksw
-endsw
+   # breaksw
+#endsw
 
 # In CESM1_4 xmlquery must be executed in $CASEROOT.
-setenv CASEROOT /glade/p/work/nickp/dart/cam5_4_114_dart_wx_nsc.damp
+setenv CASEROOT /glade/scratch/hendric/git_dart/waccmx_nick/cam5_4_114_dart_wx_nsc.damp
 setenv CASE     $CASEROOT:t
 
 cd ${CASEROOT}
@@ -81,6 +124,9 @@ setenv RUNDIR         `./xmlquery RUNDIR      -value`
 setenv archive        `./xmlquery DOUT_S_ROOT -value`
 setenv DATA_ASSIMILATION_CYCLES        `./xmlquery DATA_ASSIMILATION_CYCLES -value`
 # setenv doesn't work as a wordlist.
+
+echo "ensemble_size  CAM_DYCORE  EXEROOT  RUNDIR   archive  DATA_ASSIMILATION_CYCLES       "
+echo $ensemble_size $CAM_DYCORE $EXEROOT $RUNDIR  $archive $DATA_ASSIMILATION_CYCLES        
 
 cd $RUNDIR
 
@@ -118,6 +164,7 @@ if ($#log_list >= 3) then
       echo "Not enough restart sets, even though there are $#log_list cesm.log files"
       exit 14
    endif
+
    # Member restarts to remove
    set rm_date = `echo $re_list[3] | sed -e "s/-/ /g;s/\./ /g;"`
    @ day = $#rm_date - 2
@@ -288,15 +335,15 @@ echo "`date` -- END COPY BLOCK"
 # Since the ensemble manager is not used by cam_to_dart or dart_to_cam,
 # it is OK to set it here and have it used by all routines.
 
-if ($?TASKS_PER_NODE) then
-   if ($#TASKS_PER_NODE > 0) then
-      ${COPY} input.nml input.nml.$$
-      sed -e "s#layout.*#layout = 2#" \
-          -e "s#tasks_per_node.*#tasks_per_node = $TASKS_PER_NODE#" \
-          input.nml.$$ >! input.nml || exit 40
-      ${REMOVE} input.nml.$$
-   endif
-endif
+# if ($?TASKS_PER_NODE) then
+#    if ($#TASKS_PER_NODE > 0) then
+#       ${COPY} input.nml input.nml.$$
+#       sed -e "s#layout.*#layout = 2#" \
+#           -e "s#tasks_per_node.*#tasks_per_node = $TASKS_PER_NODE#" \
+#           input.nml.$$ >! input.nml || exit 40
+#       ${REMOVE} input.nml.$$
+#    endif
+# endif
 
 #=========================================================================
 # Block 2: Stage the files needed for SAMPLING ERROR CORRECTION
@@ -656,6 +703,8 @@ ${LINK} ../$ATM_INITIAL_FILENAME caminput.nc
 ${LINK} ../$ATM_HISTORY_FILENAME cam_phis.nc
 
 echo "`date` -- BEGIN FILTER"
+
+
 ${LAUNCHCMD} ${EXEROOT}/filter || exit -7
 echo "`date` -- END FILTER"
 
