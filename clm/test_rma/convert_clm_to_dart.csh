@@ -25,15 +25,15 @@ foreach clm_rest (`ls clm_restart.*.nc`)
    # clm_restart_filename is specified as 'clm_restart.nc' from the model_mod nml`
    # It is also the input file for clm_to_dart
    echo "copying ::    '$clm_rest'  'clm_restart.nc' for conversion"
-   cp $clm_rest  clm_restart.nc
+   cp $clm_rest  clm_restart.nc     || exit 1
 
    # clm_to_dart_filename is specified in the clm_to_dart namelist as 'clm_missing_r8.nc'
    # This file must exist already before clm_to_dart runs, otherwise it will die.
    echo "making  ::    a template file 'clm_missing_r8.nc'    to stage the conversion"
-   cp $clm_rest  clm_missing_r8.nc 
+   cp $clm_rest  clm_missing_r8.nc  || exit 2
 
    echo "running ::    'clm_to_dart'. Converting '$clm_rest' to '$clm_missing'"
-   ./clm_to_dart >& my_convert_clm.$$.log
+   ./clm_to_dart                    || exit 3
 
    # renaming file to clm_missing_r8.#.nc, so it havs the ensemble number in it
    echo "moving  ::    'clm_missing_r8.nc' to '$clm_missing'"
