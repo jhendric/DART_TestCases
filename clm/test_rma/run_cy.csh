@@ -10,14 +10,14 @@
 ## start at a generic run script for the mpi version.  this should probably
 ## end up in the shell scripts directory - but it is here for now.  nsc.
 ###=============================================================================
-##BSUB -J clm_rma_cy
-##BSUB -o clm_rma_cy.%J.log
-##BSUB -e clm_rma_cy.%J.err
-##BSUB -q small 
-##BSUB -n 64 
-##BSUB -R "span[ptile=16]"
-##BSUB -P P86850054 
-##BSUB -W 0:10
+#BSUB -J clm_rma_cy
+#BSUB -o clm_rma_cy.%J.log
+#BSUB -e clm_rma_cy.%J.err
+#BSUB -q small 
+#BSUB -n 64 
+#BSUB -R "span[ptile=16]"
+#BSUB -P P86850054 
+#BSUB -W 0:10
 ###=============================================================================
 ##PBS -N clm_rma_cy
 ##PBS -A P86850054
@@ -103,8 +103,6 @@ if ($?NCAR_LDFLAGS_MPT) then
 
    setenv MPI_SHEPHERD true
 
-   module load mpt
-   
    set LAUNCHCMD = "mpiexec_mpt dplace -s 1 "
 
 else if ($?NCAR_LDFLAGS_INTEL)
@@ -113,14 +111,10 @@ else if ($?NCAR_LDFLAGS_INTEL)
    setenv TARGET_CPU_LIST "-1"
    setenv MPI_USE_ARRAY false
    
-   module load impi
-   
-   set LAUNCHCMD = 'mpirun ' ./filter
+   set LAUNCHCMD = 'mpirun '
    
 else
    echo " running with openmpi"
-   
-   module load openmpi
    
    set LAUNCHCMD 'mpirun '
 
