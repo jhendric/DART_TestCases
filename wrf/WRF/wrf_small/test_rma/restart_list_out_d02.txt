@@ -1,3 +1,0 @@
-wrf_out_d02.0001.nc
-wrf_out_d02.0002.nc
-wrf_out_d02.0003.nc
