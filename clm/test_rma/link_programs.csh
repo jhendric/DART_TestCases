@@ -7,7 +7,7 @@ cd $DART_DIR
 
 svn update >! log.$$.txt
 
-csh quickbuild.csh -mpi || exit 1
+csh quickbuild.csh -mpi >! build_log.$$.txt || exit 1
 
 cd $PWD
 

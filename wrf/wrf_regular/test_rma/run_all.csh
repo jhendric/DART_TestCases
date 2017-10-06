@@ -1,12 +1,20 @@
 #!/bin/csh
 
+set nodes    = "14"
+set cpus     = "36"
+set mpiprocs = "36"
+
+set hours   = "00"
+set minutes = "10"
+set seconds = "00"
+
 set job_name       = "wrf_regular "
 set account_string = "P86850054 "
 set destination    = "regular"
 set join           = "oe" 
-set resource_list  = "select=14:ncpus=36:mpiprocs=36"
+set resource_list  = "select=$nodes:ncpus=$cpus:mpiprocs=$mpiprocs"
 set user_list      = "hendric@ucar.edu"
-set wall_time      = "walltime=00:50:00"
+set wall_time      = "walltime=$hours:$minutes:$seconds"
 
 module list
 
@@ -36,7 +44,7 @@ while(`ps -p $PID`)
    sleep 1
 end
 
-ln -sf ../../../run_cy.csh .
+ln -sf ../../../run_scripts/run_cy.csh .
 
 echo "--------------------------------------------------------------------------"
 echo "Running filter"

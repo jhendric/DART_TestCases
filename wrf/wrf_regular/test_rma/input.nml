@@ -14,7 +14,7 @@
    output_mean                  = .true.
    output_sd                    = .true.
 
-   ens_size                     = 3,
+   ens_size                     = 50,
    num_groups                   = 1,
    perturb_from_single_instance = .false.,
    perturbation_amplitude       = 0.2,
