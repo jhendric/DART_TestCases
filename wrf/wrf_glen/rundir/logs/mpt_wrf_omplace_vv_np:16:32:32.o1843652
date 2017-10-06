@@ -1,0 +1,792 @@
+*******************************
+ PBS_JOB_ID  '1843652.chadmin1'
+ PBS_JOBNAME 'mpt_wrf_omplace_vv_np:16:32:32'
+ NCPUS       '512'
+ NODES       '16'
+*******************************
+*****************************
+ --- mpiexec_mpt STARTED ----
+*****************************
+
+Currently Loaded Modules:
+  1) ncarenv/1.2           4) netcdf/4.4.1.1   7) peak_memusage/1.1
+  2) intel/17.0.1          5) xxdiff/4.0.1
+  3) ncarcompilers/0.4.1   6) mpt/2.15f
+
+ 
+
+
+omplace information:
+   1 thread, thread model is intel
+   placement file /tmp/omplace.file.hendric.13334:
+    firsttask cpu=0 
+omplace information:
+   1 thread, thread model is intel
+   placement file /tmp/omplace.file.hendric.65549:
+    firsttask cpu=0 
+omplace information:
+   1 thread, thread model is intel
+   placement file /tmp/omplace.file.hendric.65570:
+    firsttask cpu=0 
+omplace information:
+   1 thread, thread model is intel
+   placement file /tmp/omplace.file.hendric.65561:
+omplace information:
+   1 thread, thread model is intel
+   placement file /tmp/omplace.file.hendric.65565:
+    firsttask cpu=0 
+    firsttask cpu=0 
+omplace information:
+   1 thread, thread model is intel
+   placement file /tmp/omplace.file.hendric.65555:
+    firsttask cpu=0 
+omplace information:
+   1 thread, thread model is intel
+   placement file /tmp/omplace.file.hendric.51739:
+    firsttask cpu=0 
+omplace information:
+   1 thread, thread model is intel
+   placement file /tmp/omplace.file.hendric.65573:
+    firsttask cpu=0 
+omplace information:
+   1 thread, thread model is intel
+   placement file /tmp/omplace.file.hendric.70055:
+    firsttask cpu=0 
+omplace information:
+   1 thread, thread model is intel
+   placement file /tmp/omplace.file.hendric.51737:
+    firsttask cpu=0 
+omplace information:
+   1 thread, thread model is intel
+   placement file /tmp/omplace.file.hendric.7867:
+    firsttask cpu=0 
+omplace information:
+   1 thread, thread model is intel
+   placement file /tmp/omplace.file.hendric.65579:
+    firsttask cpu=0 
+omplace information:
+   1 thread, thread model is intel
+   placement file /tmp/omplace.file.hendric.51748:
+    firsttask cpu=0 
+omplace information:
+   1 thread, thread model is intel
+   placement file /tmp/omplace.file.hendric.70043:
+omplace information:
+   1 thread, thread model is intel
+   placement file /tmp/omplace.file.hendric.65569:
+    firsttask cpu=0 
+omplace information:
+   1 thread, thread model is intel
+   placement file /tmp/omplace.file.hendric.7871:
+    firsttask cpu=0 
+    firsttask cpu=0 
+omplace information:
+   1 thread, thread model is intel
+   placement file /tmp/omplace.file.hendric.59865:
+    firsttask cpu=0 
+omplace information:
+   1 thread, thread model is intel
+   placement file /tmp/omplace.file.hendric.51740:
+    firsttask cpu=0 
+omplace information:
+   1 thread, thread model is intel
+   placement file /tmp/omplace.file.hendric.57223:
+    firsttask cpu=0 
+omplace information:
+   1 thread, thread model is intel
+   placement file /tmp/omplace.file.hendric.65562:
+    firsttask cpu=0 
+omplace information:
+   1 thread, thread model is intel
+   placement file /tmp/omplace.file.hendric.70040:
+omplace information:
+   1 thread, thread model is intel
+   placement file /tmp/omplace.file.hendric.7876:
+    firsttask cpu=0 
+omplace information:
+   1 thread, thread model is intel
+   placement file /tmp/omplace.file.hendric.59869:
+    firsttask cpu=0 
+    firsttask cpu=0 
+omplace information:
+   1 thread, thread model is intel
+   placement file /tmp/omplace.file.hendric.51742:
+omplace information:
+   1 thread, thread model is intel
+   placement file /tmp/omplace.file.hendric.57225:
+    firsttask cpu=0 
+    firsttask cpu=0 
+omplace information:
+   1 thread, thread model is intel
+   placement file /tmp/omplace.file.hendric.65559:
+    firsttask cpu=0 
+omplace information:
+   1 thread, thread model is intel
+   placement file /tmp/omplace.file.hendric.70046:
+omplace information:
+   1 thread, thread model is intel
+   placement file /tmp/omplace.file.hendric.59868:
+    firsttask cpu=0 
+    firsttask cpu=0 
+omplace information:
+   1 thread, thread model is intel
+   placement file /tmp/omplace.file.hendric.51754:
+    firsttask cpu=0 
+omplace information:
+   1 thread, thread model is intel
+   placement file /tmp/omplace.file.hendric.57232:
+    firsttask cpu=0 
+omplace information:
+   1 thread, thread model is intel
+   placement file /tmp/omplace.file.hendric.53989:
+    firsttask cpu=0 
+omplace information:
+   1 thread, thread model is intel
+   placement file /tmp/omplace.file.hendric.7870:
+omplace information:
+   1 thread, thread model is intel
+   placement file /tmp/omplace.file.hendric.65577:
+    firsttask cpu=0 
+    firsttask cpu=0 
+omplace information:
+   1 thread, thread model is intel
+   placement file /tmp/omplace.file.hendric.54266:
+omplace information:
+   1 thread, thread model is intel
+   placement file /tmp/omplace.file.hendric.70041:
+    firsttask cpu=0 
+omplace information:
+   1 thread, thread model is intel
+   placement file /tmp/omplace.file.hendric.59888:
+    firsttask cpu=0 
+    firsttask cpu=0 
+omplace information:
+   1 thread, thread model is intel
+   placement file /tmp/omplace.file.hendric.61490:
+    firsttask cpu=0 
+omplace information:
+   1 thread, thread model is intel
+   placement file /tmp/omplace.file.hendric.51746:
+    firsttask cpu=0 
+omplace information:
+   1 thread, thread model is intel
+   placement file /tmp/omplace.file.hendric.57233:
+omplace information:
+   1 thread, thread model is intel
+   placement file /tmp/omplace.file.hendric.53976:
+    firsttask cpu=0 
+omplace information:
+   1 thread, thread model is intel
+   placement file /tmp/omplace.file.hendric.7869:
+    firsttask cpu=0 
+    firsttask cpu=0 
+omplace information:
+   1 thread, thread model is intel
+   placement file /tmp/omplace.file.hendric.65557:
+    firsttask cpu=0 
+omplace information:
+   1 thread, thread model is intel
+   placement file /tmp/omplace.file.hendric.59893:
+    firsttask cpu=0 
+omplace information:
+   1 thread, thread model is intel
+   placement file /tmp/omplace.file.hendric.70039:
+omplace information:
+   1 thread, thread model is intel
+   placement file /tmp/omplace.file.hendric.54267:
+    firsttask cpu=0 
+    firsttask cpu=0 
+omplace information:
+   1 thread, thread model is intel
+   placement file /tmp/omplace.file.hendric.60725:
+omplace information:
+   1 thread, thread model is intel
+   placement file /tmp/omplace.file.hendric.61497:
+    firsttask cpu=0 
+    firsttask cpu=0 
+omplace information:
+   1 thread, thread model is intel
+   placement file /tmp/omplace.file.hendric.60364:
+omplace information:
+   1 thread, thread model is intel
+   placement file /tmp/omplace.file.hendric.51738:
+    firsttask cpu=0 
+    firsttask cpu=0 
+omplace information:
+   1 thread, thread model is intel
+   placement file /tmp/omplace.file.hendric.57240:
+omplace information:
+   1 thread, thread model is intel
+   placement file /tmp/omplace.file.hendric.53986:
+    firsttask cpu=0 
+omplace information:
+   1 thread, thread model is intel
+   placement file /tmp/omplace.file.hendric.7880:
+    firsttask cpu=0 
+    firsttask cpu=0 
+omplace information:
+   1 thread, thread model is intel
+   placement file /tmp/omplace.file.hendric.65564:
+    firsttask cpu=0 
+omplace information:
+   1 thread, thread model is intel
+   placement file /tmp/omplace.file.hendric.59883:
+omplace information:
+   1 thread, thread model is intel
+   placement file /tmp/omplace.file.hendric.70057:
+    firsttask cpu=0 
+omplace information:
+   1 thread, thread model is intel
+   placement file /tmp/omplace.file.hendric.54272:
+    firsttask cpu=0 
+omplace information:
+   1 thread, thread model is intel
+   placement file /tmp/omplace.file.hendric.61502:
+    firsttask cpu=0 
+omplace information:
+   1 thread, thread model is intel
+   placement file /tmp/omplace.file.hendric.60716:
+    firsttask cpu=0 
+omplace information:
+   1 thread, thread model is intel
+   placement file /tmp/omplace.file.hendric.60365:
+    firsttask cpu=0 
+omplace information:
+   1 thread, thread model is intel
+   placement file /tmp/omplace.file.hendric.51750:
+    firsttask cpu=0 
+    firsttask cpu=0 
+omplace information:
+   1 thread, thread model is intel
+   placement file /tmp/omplace.file.hendric.57226:
+omplace information:
+   1 thread, thread model is intel
+   placement file /tmp/omplace.file.hendric.53981:
+    firsttask cpu=0 
+omplace information:
+   1 thread, thread model is intel
+   placement file /tmp/omplace.file.hendric.7866:
+    firsttask cpu=0 
+omplace information:
+   1 thread, thread model is intel
+   placement file /tmp/omplace.file.hendric.53987:
+    firsttask cpu=0 
+omplace information:
+   1 thread, thread model is intel
+   placement file /tmp/omplace.file.hendric.62418:
+omplace information:
+   1 thread, thread model is intel
+   placement file /tmp/omplace.file.hendric.59879:
+    firsttask cpu=0 
+    firsttask cpu=0 
+omplace information:
+   1 thread, thread model is intel
+   placement file /tmp/omplace.file.hendric.54268:
+    firsttask cpu=0 
+omplace information:
+   1 thread, thread model is intel
+   placement file /tmp/omplace.file.hendric.70062:
+    firsttask cpu=0 
+omplace information:
+   1 thread, thread model is intel
+   placement file /tmp/omplace.file.hendric.61492:
+    firsttask cpu=0 
+omplace information:
+   1 thread, thread model is intel
+   placement file /tmp/omplace.file.hendric.60718:
+    firsttask cpu=0 
+    firsttask cpu=0 
+omplace information:
+   1 thread, thread model is intel
+   placement file /tmp/omplace.file.hendric.60369:
+omplace information:
+   1 thread, thread model is intel
+   placement file /tmp/omplace.file.hendric.51741:
+    firsttask cpu=0 
+omplace information:
+   1 thread, thread model is intel
+   placement file /tmp/omplace.file.hendric.53534:
+    firsttask cpu=0 
+omplace information:
+   1 thread, thread model is intel
+   placement file /tmp/omplace.file.hendric.51745:
+    firsttask cpu=0 
+omplace information:
+   1 thread, thread model is intel
+   placement file /tmp/omplace.file.hendric.54570:
+    firsttask cpu=0 
+omplace information:
+   1 thread, thread model is intel
+   placement file /tmp/omplace.file.hendric.62714:
+    firsttask cpu=0 
+omplace information:
+   1 thread, thread model is intel
+   placement file /tmp/omplace.file.hendric.57230:
+    firsttask cpu=0 
+omplace information:
+   1 thread, thread model is intel
+   placement file /tmp/omplace.file.hendric.62708:
+    firsttask cpu=0 
+omplace information:
+   1 thread, thread model is intel
+   placement file /tmp/omplace.file.hendric.7885:
+omplace information:
+   1 thread, thread model is intel
+   placement file /tmp/omplace.file.hendric.53984:
+    firsttask cpu=0 
+    firsttask cpu=0 
+omplace information:
+   1 thread, thread model is intel
+   placement file /tmp/omplace.file.hendric.62420:
+    firsttask cpu=0 
+omplace information:
+   1 thread, thread model is intel
+   placement file /tmp/omplace.file.hendric.59885:
+    firsttask cpu=0 
+omplace information:
+   1 thread, thread model is intel
+   placement file /tmp/omplace.file.hendric.54276:
+    firsttask cpu=0 
+omplace information:
+   1 thread, thread model is intel
+   placement file /tmp/omplace.file.hendric.70067:
+    firsttask cpu=0 
+omplace information:
+   1 thread, thread model is intel
+   placement file /tmp/omplace.file.hendric.61512:
+    firsttask cpu=0 
+omplace information:
+   1 thread, thread model is intel
+   placement file /tmp/omplace.file.hendric.60724:
+    firsttask cpu=0 
+omplace information:
+   1 thread, thread model is intel
+   placement file /tmp/omplace.file.hendric.60376:
+    firsttask cpu=0 
+omplace information:
+   1 thread, thread model is intel
+   placement file /tmp/omplace.file.hendric.13336:
+    firsttask cpu=0 
+omplace information:
+   1 thread, thread model is intel
+   placement file /tmp/omplace.file.hendric.53526:
+    firsttask cpu=0 
+omplace information:
+   1 thread, thread model is intel
+   placement file /tmp/omplace.file.hendric.51752:
+    firsttask cpu=0 
+omplace information:
+   1 thread, thread model is intel
+   placement file /tmp/omplace.file.hendric.54560:
+    firsttask cpu=0 
+omplace information:
+   1 thread, thread model is intel
+   placement file /tmp/omplace.file.hendric.65558:
+    firsttask cpu=0 
+omplace information:
+   1 thread, thread model is intel
+   placement file /tmp/omplace.file.hendric.57245:
+    firsttask cpu=0 
+omplace information:
+   1 thread, thread model is intel
+   placement file /tmp/omplace.file.hendric.62709:
+    firsttask cpu=0 
+omplace information:
+   1 thread, thread model is intel
+   placement file /tmp/omplace.file.hendric.7879:
+    firsttask cpu=0 
+omplace information:
+   1 thread, thread model is intel
+   placement file /tmp/omplace.file.hendric.53990:
+    firsttask cpu=0 
+    firsttask cpu=0 
+omplace information:
+   1 thread, thread model is intel
+   placement file /tmp/omplace.file.hendric.62434:
+omplace information:
+   1 thread, thread model is intel
+   placement file /tmp/omplace.file.hendric.59890:
+    firsttask cpu=0 
+omplace information:
+   1 thread, thread model is intel
+   placement file /tmp/omplace.file.hendric.54275:
+    firsttask cpu=0 
+omplace information:
+   1 thread, thread model is intel
+   placement file /tmp/omplace.file.hendric.70052:
+    firsttask cpu=0 
+omplace information:
+   1 thread, thread model is intel
+   placement file /tmp/omplace.file.hendric.61498:
+    firsttask cpu=0 
+omplace information:
+   1 thread, thread model is intel
+   placement file /tmp/omplace.file.hendric.60719:
+    firsttask cpu=0 
+omplace information:
+   1 thread, thread model is intel
+   placement file /tmp/omplace.file.hendric.60381:
+    firsttask cpu=0 
+omplace information:
+   1 thread, thread model is intel
+   placement file /tmp/omplace.file.hendric.13332:
+    firsttask cpu=0 
+omplace information:
+   1 thread, thread model is intel
+   placement file /tmp/omplace.file.hendric.53528:
+    firsttask cpu=0 
+omplace information:
+   1 thread, thread model is intel
+   placement file /tmp/omplace.file.hendric.51764:
+    firsttask cpu=0 
+omplace information:
+   1 thread, thread model is intel
+   placement file /tmp/omplace.file.hendric.54565:
+    firsttask cpu=0 
+omplace information:
+   1 thread, thread model is intel
+   placement file /tmp/omplace.file.hendric.65566:
+    firsttask cpu=0 
+omplace information:
+   1 thread, thread model is intel
+   placement file /tmp/omplace.file.hendric.57244:
+    firsttask cpu=0 
+omplace information:
+   1 thread, thread model is intel
+   placement file /tmp/omplace.file.hendric.62712:
+    firsttask cpu=0 
+omplace information:
+   1 thread, thread model is intel
+   placement file /tmp/omplace.file.hendric.7893:
+    firsttask cpu=0 
+omplace information:
+   1 thread, thread model is intel
+   placement file /tmp/omplace.file.hendric.53988:
+    firsttask cpu=0 
+omplace information:
+   1 thread, thread model is intel
+   placement file /tmp/omplace.file.hendric.62422:
+    firsttask cpu=0 
+    firsttask cpu=0 
+omplace information:
+   1 thread, thread model is intel
+   placement file /tmp/omplace.file.hendric.59878:
+omplace information:
+   1 thread, thread model is intel
+   placement file /tmp/omplace.file.hendric.54289:
+    firsttask cpu=0 
+omplace information:
+   1 thread, thread model is intel
+   placement file /tmp/omplace.file.hendric.70047:
+    firsttask cpu=0 
+omplace information:
+   1 thread, thread model is intel
+   placement file /tmp/omplace.file.hendric.61499:
+    firsttask cpu=0 
+omplace information:
+   1 thread, thread model is intel
+   placement file /tmp/omplace.file.hendric.60722:
+    firsttask cpu=0 
+omplace information:
+   1 thread, thread model is intel
+   placement file /tmp/omplace.file.hendric.60375:
+    firsttask cpu=0 
+omplace information:
+   1 thread, thread model is intel
+   placement file /tmp/omplace.file.hendric.13341:
+    firsttask cpu=0 
+omplace information:
+   1 thread, thread model is intel
+   placement file /tmp/omplace.file.hendric.53527:
+    firsttask cpu=0 
+omplace information:
+   1 thread, thread model is intel
+   placement file /tmp/omplace.file.hendric.51743:
+    firsttask cpu=0 
+omplace information:
+   1 thread, thread model is intel
+   placement file /tmp/omplace.file.hendric.54564:
+    firsttask cpu=0 
+omplace information:
+   1 thread, thread model is intel
+   placement file /tmp/omplace.file.hendric.65560:
+    firsttask cpu=0 
+omplace information:
+   1 thread, thread model is intel
+   placement file /tmp/omplace.file.hendric.57253:
+    firsttask cpu=0 
+omplace information:
+   1 thread, thread model is intel
+   placement file /tmp/omplace.file.hendric.62717:
+    firsttask cpu=0 
+omplace information:
+   1 thread, thread model is intel
+   placement file /tmp/omplace.file.hendric.7872:
+    firsttask cpu=0 
+omplace information:
+   1 thread, thread model is intel
+   placement file /tmp/omplace.file.hendric.53977:
+    firsttask cpu=0 
+omplace information:
+   1 thread, thread model is intel
+   placement file /tmp/omplace.file.hendric.62423:
+    firsttask cpu=0 
+omplace information:
+   1 thread, thread model is intel
+   placement file /tmp/omplace.file.hendric.59894:
+    firsttask cpu=0 
+omplace information:
+   1 thread, thread model is intel
+   placement file /tmp/omplace.file.hendric.54273:
+    firsttask cpu=0 
+omplace information:
+   1 thread, thread model is intel
+   placement file /tmp/omplace.file.hendric.70050:
+    firsttask cpu=0 
+omplace information:
+   1 thread, thread model is intel
+   placement file /tmp/omplace.file.hendric.61500:
+    firsttask cpu=0 
+omplace information:
+   1 thread, thread model is intel
+   placement file /tmp/omplace.file.hendric.70058:
+    firsttask cpu=0 
+omplace information:
+   1 thread, thread model is intel
+   placement file /tmp/omplace.file.hendric.60367:
+    firsttask cpu=0 
+omplace information:
+   1 thread, thread model is intel
+   placement file /tmp/omplace.file.hendric.53530:
+omplace information:
+   1 thread, thread model is intel
+   placement file /tmp/omplace.file.hendric.51767:
+    firsttask cpu=0 
+omplace information:
+   1 thread, thread model is intel
+   placement file /tmp/omplace.file.hendric.70048:
+    firsttask cpu=0 
+omplace information:
+   1 thread, thread model is intel
+   placement file /tmp/omplace.file.hendric.54573:
+    firsttask cpu=0 
+omplace information:
+   1 thread, thread model is intel
+   placement file /tmp/omplace.file.hendric.65556:
+    firsttask cpu=0 
+    firsttask cpu=0 
+omplace information:
+   1 thread, thread model is intel
+   placement file /tmp/omplace.file.hendric.57254:
+    firsttask cpu=0 
+omplace information:
+   1 thread, thread model is intel
+   placement file /tmp/omplace.file.hendric.62716:
+    firsttask cpu=0 
+omplace information:
+   1 thread, thread model is intel
+   placement file /tmp/omplace.file.hendric.57250:
+    firsttask cpu=0 
+omplace information:
+   1 thread, thread model is intel
+   placement file /tmp/omplace.file.hendric.53979:
+    firsttask cpu=0 
+omplace information:
+   1 thread, thread model is intel
+   placement file /tmp/omplace.file.hendric.62431:
+    firsttask cpu=0 
+omplace information:
+   1 thread, thread model is intel
+   placement file /tmp/omplace.file.hendric.59892:
+    firsttask cpu=0 
+omplace information:
+   1 thread, thread model is intel
+   placement file /tmp/omplace.file.hendric.54277:
+    firsttask cpu=0 
+omplace information:
+   1 thread, thread model is intel
+   placement file /tmp/omplace.file.hendric.60720:
+    firsttask cpu=0 
+omplace information:
+   1 thread, thread model is intel
+   placement file /tmp/omplace.file.hendric.61521:
+    firsttask cpu=0 
+omplace information:
+   1 thread, thread model is intel
+   placement file /tmp/omplace.file.hendric.13337:
+    firsttask cpu=0 
+omplace information:
+   1 thread, thread model is intel
+   placement file /tmp/omplace.file.hendric.60378:
+    firsttask cpu=0 
+omplace information:
+   1 thread, thread model is intel
+   placement file /tmp/omplace.file.hendric.70042:
+    firsttask cpu=0 
+omplace information:
+   1 thread, thread model is intel
+   placement file /tmp/omplace.file.hendric.53529:
+    firsttask cpu=0 
+omplace information:
+   1 thread, thread model is intel
+   placement file /tmp/omplace.file.hendric.51747:
+    firsttask cpu=0 
+omplace information:
+   1 thread, thread model is intel
+   placement file /tmp/omplace.file.hendric.54569:
+    firsttask cpu=0 
+omplace information:
+   1 thread, thread model is intel
+   placement file /tmp/omplace.file.hendric.65550:
+    firsttask cpu=0 
+omplace information:
+   1 thread, thread model is intel
+   placement file /tmp/omplace.file.hendric.7878:
+    firsttask cpu=0 
+omplace information:
+   1 thread, thread model is intel
+   placement file /tmp/omplace.file.hendric.62711:
+    firsttask cpu=0 
+omplace information:
+   1 thread, thread model is intel
+   placement file /tmp/omplace.file.hendric.57239:
+    firsttask cpu=0 
+omplace information:
+   1 thread, thread model is intel
+   placement file /tmp/omplace.file.hendric.53974:
+    firsttask cpu=0 
+omplace information:
+   1 thread, thread model is intel
+   placement file /tmp/omplace.file.hendric.57246:
+    firsttask cpu=0 
+omplace information:
+   1 thread, thread model is intel
+   placement file /tmp/omplace.file.hendric.59874:
+    firsttask cpu=0 
+    firsttask cpu=0 
+omplace information:
+   1 thread, thread model is intel
+   placement file /tmp/omplace.file.hendric.57251:
+omplace information:
+   1 thread, thread model is intel
+   placement file /tmp/omplace.file.hendric.60723:
+omplace information:
+   1 thread, thread model is intel
+   placement file /tmp/omplace.file.hendric.61494:
+    firsttask cpu=0 
+    firsttask cpu=0 
+omplace information:
+   1 thread, thread model is intel
+   placement file /tmp/omplace.file.hendric.13333:
+    firsttask cpu=0 
+omplace information:
+   1 thread, thread model is intel
+   placement file /tmp/omplace.file.hendric.60372:
+    firsttask cpu=0 
+omplace information:
+   1 thread, thread model is intel
+   placement file /tmp/omplace.file.hendric.13347:
+    firsttask cpu=0 
+omplace information:
+   1 thread, thread model is intel
+   placement file /tmp/omplace.file.hendric.53535:
+    firsttask cpu=0 
+omplace information:
+   1 thread, thread model is intel
+   placement file /tmp/omplace.file.hendric.51757:
+    firsttask cpu=0 
+omplace information:
+   1 thread, thread model is intel
+   placement file /tmp/omplace.file.hendric.54575:
+    firsttask cpu=0 
+omplace information:
+   1 thread, thread model is intel
+   placement file /tmp/omplace.file.hendric.65554:
+    firsttask cpu=0 
+omplace information:
+   1 thread, thread model is intel
+   placement file /tmp/omplace.file.hendric.7887:
+    firsttask cpu=0 
+omplace information:
+   1 thread, thread model is intel
+   placement file /tmp/omplace.file.hendric.62739:
+    firsttask cpu=0 
+omplace information:
+   1 thread, thread model is intel
+   placement file /tmp/omplace.file.hendric.62419:
+    firsttask cpu=0 
+omplace information:
+   1 thread, thread model is intel
+   placement file /tmp/omplace.file.hendric.53975:
+    firsttask cpu=0 
+omplace information:
+   1 thread, thread model is intel
+   placement file /tmp/omplace.file.hendric.54271:
+    firsttask cpu=0 
+omplace information:
+   1 thread, thread model is intel
+   placement file /tmp/omplace.file.hendric.59891:
+    firsttask cpu=0 
+omplace information:
+   1 thread, thread model is intel
+   placement file /tmp/omplace.file.hendric.57252:
+    firsttask cpu=0 
+omplace information:
+   1 thread, thread model is intel
+   placement file /tmp/omplace.file.hendric.60731:
+    firsttask cpu=0 
+omplace information:
+   1 thread, thread model is intel
+   placement file /tmp/omplace.file.hendric.61513:
+    firsttask cpu=0 
+omplace information:
+   1 thread, thread model is intel
+   placement file /tmp/omplace.file.hendric.70059:
+    firsttask cpu=0 
+omplace information:
+   1 thread, thread model is intel
+   placement file /tmp/omplace.file.hendric.60374:
+    firsttask cpu=0 
+omplace information:
+   1 thread, thread model is intel
+   placement file /tmp/omplace.file.hendric.13340:
+    firsttask cpu=0 
+omplace information:
+   1 thread, thread model is intel
+   placement file /tmp/omplace.file.hendric.53531:
+    firsttask cpu=0 
+omplace information:
+   1 thread, thread model is intel
+   placement file /tmp/omplace.file.hendric.13339:
+    firsttask cpu=0 
+omplace information:
+   1 thread, thread model is intel
+   placement file /tmp/omplace.file.hendric.54562:
+omplace information:
+   1 thread, thread model is intel
+   placement file /tmp/omplace.file.hendric.65568:
+    firsttask cpu=0 
+    firsttask cpu=0 
+    firsttask cpu=0 
+omplace information:
+   1 thread, thread model is intel
+   placement file /tmp/omplace.file.hendric.7883:
+    firsttask cpu=0 
+omplace information:
+   1 thread, thread model is intel
+   placement file /tmp/omplace.file.hendric.62719:
+omplace information:
+   1 thread, thread model is intel
+   placement file /tmp/omplace.file.hendric.62428:
+    firsttask cpu=0 
+omplace information:
+   1 thread, thread model is intel
+   placement file /tmp/omplace.file.hendric.53985:
+    firsttask cpu=0 
+omplace information:
+   1 thread, thread model is intel
+   placement file /tmp/omplace.file.hendric.54280:
+    firsttask cpu=0 
+omplace information:
+   1 thread, thread model is intel
+   placement file /tmp/omplace.file.hendric.59884:

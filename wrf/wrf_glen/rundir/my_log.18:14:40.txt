@@ -1,0 +1,885 @@
+                        
+ -- STARTING TESTING -- 
+                        
+ This is the date compiled m_d_H_M :: 09_18_14_49
+[1] 45587
+ PE 0: assim_tools_init: Doing vertical localization, vertical coordinate conversion may be required
+ PE 0: assim_tools_init: ... Converting all state vector verticals to localization coordinate first.
+ PE 0: assim_tools_init: ... Converting all observation verticals to localization coordinate first.
+ PE 0:  filter trace: Filter start
+ Filter start TIME: 2017/09/18 14:49:28
+ PE 0: filter_main: running with an ensemble size of    50
+ PE 0:  filter trace: Before initializing inflation
+ PE 0: filter_main: Prior inflation damping of     0.900000 will be used
+ PE 0:  filter trace: After  initializing inflation
+ PE 0: parse_stages_to_write:  filter will write stage : preassim
+
+Due to MODULEPATH changes, the following have been reloaded:
+  1) mpt/2.15f     2) ncarcompilers/0.4.1     3) netcdf/4.4.1.1
+
+The following have been reloaded with a version change:
+  1) intel/17.0.1 => intel/16.0.3
+
+
+Lmod is automatically replacing "mpt/2.15f" with "openmpi/2.1.0".
+
+ 
+ **************************************** 
+ Making with : i16 and openmpi         
+ **************************************** 
+ 
+
+Currently Loaded Modules:
+  1) ncarenv/1.2    3) xxdiff/4.0.1   5) ncarcompilers/0.4.1   7) openmpi/2.1.0
+  2) python/3.6.2   4) intel/16.0.3   6) netcdf/4.4.1.1
+
+ 
+
+ **************** 
+ BUILIDING FILTER 
+ **************** 
+....... Makefile is ready.
+ifort -O -assume buffered_io -I/glade/u/apps/ch/opt/netcdf/4.4.1.1/intel/16.0.3//include  -c	../../../assimilation_code/modules/utilities/types_mod.f90
+ifort -O -assume buffered_io -I/glade/u/apps/ch/opt/netcdf/4.4.1.1/intel/16.0.3//include  -c	../../../assimilation_code/modules/utilities/utilities_mod.f90
+ifort -O -assume buffered_io -I/glade/u/apps/ch/opt/netcdf/4.4.1.1/intel/16.0.3//include  -c	../../../assimilation_code/programs/preprocess/preprocess.f90
+ifort -O -assume buffered_io -I/glade/u/apps/ch/opt/netcdf/4.4.1.1/intel/16.0.3//include  -c	../../../assimilation_code/modules/utilities/time_manager_mod.f90
+ifort -O -assume buffered_io -I/glade/u/apps/ch/opt/netcdf/4.4.1.1/intel/16.0.3//include  -c	../../../assimilation_code/modules/utilities/null_mpi_utilities_mod.f90
+ifort types_mod.o utilities_mod.o preprocess.o null_mpi_utilities_mod.o time_manager_mod.o -o preprocess  -O -assume buffered_io -I/glade/u/apps/ch/opt/netcdf/4.4.1.1/intel/16.0.3//include -L/glade/u/apps/ch/opt/netcdf/4.4.1.1/intel/16.0.3//lib -lnetcdff -lnetcdf
+ Starting program preprocess
+ Initializing the utilities module.
+ Trying to log to unit           10
+ Trying to open file dart_log.out
+ 
+ --------------------------------------
+ Starting ... at YYYY MM DD HH MM SS = 
+                 2017  9 18 14 49 55
+ Program preprocess
+ --------------------------------------
+ 
+ set_nml_output Echo NML values to log file only
+ Trying to open namelist log dart_log.nml
+ Path names of default obs_def and obs_kind modules
+ ../../../observations/forward_operators/DEFAULT_obs_def_mod.F90
+ ../../../assimilation_code/modules/observations/DEFAULT_obs_kind_mod.F90
+ Path names of output obs_def and obs_kind modules
+ ../../../observations/forward_operators/obs_def_mod.f90
+ ../../../assimilation_code/modules/observations/obs_kind_mod.f90
+ INPUT obs_def files follow:
+ ../../../observations/forward_operators/obs_def_reanalysis_bufr_mod.f90
+ ../../../observations/forward_operators/obs_def_radar_mod.f90
+ ../../../observations/forward_operators/obs_def_metar_mod.f90
+ ../../../observations/forward_operators/obs_def_dew_point_mod.f90
+ ../../../observations/forward_operators/obs_def_rel_humidity_mod.f90
+ ../../../observations/forward_operators/obs_def_altimeter_mod.f90
+ ../../../observations/forward_operators/obs_def_gps_mod.f90
+ ../../../observations/forward_operators/obs_def_vortex_mod.f90
+ ../../../observations/forward_operators/obs_def_gts_mod.f90
+ INPUT model files follow:
+ preprocess Finished successfully.
+ 
+ --------------------------------------
+ Finished ... at YYYY MM DD HH MM SS = 
+                 2017  9 18 14 49 55
+ Program preprocess
+ --------------------------------------
+ 
+Making Makefile with MPI
+........................................Using MPI wrappers
+ Makefile is ready.
+mpif90 -O -assume buffered_io -I/glade/u/apps/ch/opt/netcdf/4.4.1.1/intel/16.0.3//include  -c	../../../assimilation_code/modules/utilities/random_seq_mod.f90
+mpif90 -O -assume buffered_io -I/glade/u/apps/ch/opt/netcdf/4.4.1.1/intel/16.0.3//include  -c	../../../assimilation_code/modules/observations/obs_kind_mod.f90
+mpif90 -O -assume buffered_io -I/glade/u/apps/ch/opt/netcdf/4.4.1.1/intel/16.0.3//include  -c	../../../assimilation_code/modules/utilities/mpi_utilities_mod.f90
+mpif90 -O -assume buffered_io -I/glade/u/apps/ch/opt/netcdf/4.4.1.1/intel/16.0.3//include  -c	../../../assimilation_code/modules/utilities/sort_mod.f90
+mpif90 -O -assume buffered_io -I/glade/u/apps/ch/opt/netcdf/4.4.1.1/intel/16.0.3//include  -c	../../../assimilation_code/modules/utilities/ensemble_manager_mod.f90
+mpif90 -O -assume buffered_io -I/glade/u/apps/ch/opt/netcdf/4.4.1.1/intel/16.0.3//include  -c	../../../assimilation_code/location/threed_sphere/location_mod.f90
+mpif90 -O -assume buffered_io -I/glade/u/apps/ch/opt/netcdf/4.4.1.1/intel/16.0.3//include  -c	../../../assimilation_code/modules/assimilation/cov_cutoff_mod.f90
+mpif90 -O -assume buffered_io -I/glade/u/apps/ch/opt/netcdf/4.4.1.1/intel/16.0.3//include  -c	../../../assimilation_code/modules/utilities/netcdf_utilities_mod.f90
+mpif90 -O -assume buffered_io -I/glade/u/apps/ch/opt/netcdf/4.4.1.1/intel/16.0.3//include  -c	../../../assimilation_code/modules/utilities/no_cray_win_mod.f90
+mpif90 -O -assume buffered_io -I/glade/u/apps/ch/opt/netcdf/4.4.1.1/intel/16.0.3//include  -c	../../../assimilation_code/modules/utilities/distributed_state_mod.f90
+mpif90 -O -assume buffered_io -I/glade/u/apps/ch/opt/netcdf/4.4.1.1/intel/16.0.3//include  -c	../../../assimilation_code/modules/io/dart_time_io_mod.f90
+mpif90 -O -assume buffered_io -I/glade/u/apps/ch/opt/netcdf/4.4.1.1/intel/16.0.3//include  -c	../../../models/utilities/default_model_mod.f90
+mpif90 -O -assume buffered_io -I/glade/u/apps/ch/opt/netcdf/4.4.1.1/intel/16.0.3//include  -c	../../../assimilation_code/modules/io/state_structure_mod.f90
+ PE 0: parse_stages_to_write:  filter will write stage : postassim
+ PE 0: parse_stages_to_write:  filter will write stage : output
+ PE 0:  filter trace: Before setting up space for observations
+ Before setting up space for observations TIME: 2017/09/18 14:49:28
+ After  setting up space for observations TIME: 2017/09/18 14:49:29
+ PE 0:  filter trace: After  setting up space for observations
+ PE 0:  filter trace: Before setting up space for ensembles
+ PE 0:  filter trace: After  setting up space for ensembles
+ PE 0:  filter trace: Before reading in ensemble restart files
+ Before reading in ensemble restart files TIME: 2017/09/18 14:49:29
+ PE 0: set_member_file_metadata no file list given for stage "preassim" so using default names
+ PE 0: set_member_file_metadata no file list given for stage "postassim" so using default names
+ PE 0: Prior inflation: mean read from namelist as     1.000000
+ PE 0: Prior inflation: sd read from namelist as     0.600000
+ PE 0: Prior inflation: deterministic, time-constant, spatially-varying, state-space
+ PE 0: Posterior inflation: None
+ PE 0: filter_main: Reading in initial condition/restart data for all ensemble members from file(s)
+ After  reading in ensemble restart files TIME: 2017/09/18 14:50:08
+ PE 0:  filter trace: After  reading in ensemble restart files
+ PE 0:  filter trace: Before initializing output files
+ Before initializing output files TIME: 2017/09/18 14:50:08
+ After  initializing output files TIME: 2017/09/18 14:50:08
+ PE 0:  filter trace: After  initializing output files
+ PE 0:  filter trace: Before trimming obs seq if start/stop time specified
+ PE 0:  filter trace: After  trimming obs seq if start/stop time specified
+ PE 0:  filter trace: Top of main advance time loop
+ PE 0:  
+ PE 0: filter: Main assimilation loop, starting iteration    0
+ PE 0:  filter trace: Before move_ahead checks time of data and next obs
+ PE 0: move_ahead Current model data time            is:  day=  151718 sec= 43200
+ PE 0: move_ahead Current assimilation window starts at:  day=  151718 sec= 39601
+ PE 0: move_ahead Next available observation time    is:  day=  151718 sec= 42300
+ PE 0: move_ahead Current assimilation window ends   at:  day=  151718 sec= 46800
+mpif90 -O -assume buffered_io -I/glade/u/apps/ch/opt/netcdf/4.4.1.1/intel/16.0.3//include  -c	../../../models/wrf/module_map_utils.f90
+mpif90 -O -assume buffered_io -I/glade/u/apps/ch/opt/netcdf/4.4.1.1/intel/16.0.3//include  -c	../../../models/wrf/model_mod.f90
+mpif90 -O -assume buffered_io -I/glade/u/apps/ch/opt/netcdf/4.4.1.1/intel/16.0.3//include  -c	../../../assimilation_code/modules/assimilation/assim_model_mod.f90
+mpif90 -O -assume buffered_io -I/glade/u/apps/ch/opt/netcdf/4.4.1.1/intel/16.0.3//include  -c	../../../assimilation_code/modules/assimilation/adaptive_inflate_mod.f90
+mpif90 -O -assume buffered_io -I/glade/u/apps/ch/opt/netcdf/4.4.1.1/intel/16.0.3//include  -c	../../../assimilation_code/modules/io/io_filenames_mod.f90
+mpif90 -O -assume buffered_io -I/glade/u/apps/ch/opt/netcdf/4.4.1.1/intel/16.0.3//include  -c	../../../assimilation_code/modules/io/direct_netcdf_mod.f90
+mpif90 -O -assume buffered_io -I/glade/u/apps/ch/opt/netcdf/4.4.1.1/intel/16.0.3//include  -c	../../../assimilation_code/modules/io/state_vector_io_mod.f90
+mpif90 -O -assume buffered_io -I/glade/u/apps/ch/opt/netcdf/4.4.1.1/intel/16.0.3//include  -c	../../../observations/forward_operators/obs_def_mod.f90
+mpif90 -O -assume buffered_io -I/glade/u/apps/ch/opt/netcdf/4.4.1.1/intel/16.0.3//include  -c	../../../assimilation_code/modules/observations/obs_sequence_mod.f90
+mpif90 -O -assume buffered_io -I/glade/u/apps/ch/opt/netcdf/4.4.1.1/intel/16.0.3//include  -c	../../../assimilation_code/modules/assimilation/obs_model_mod.f90
+mpif90 -O -assume buffered_io -I/glade/u/apps/ch/opt/netcdf/4.4.1.1/intel/16.0.3//include  -c	../../../assimilation_code/modules/assimilation/quality_control_mod.f90
+mpif90 -O -assume buffered_io -I/glade/u/apps/ch/opt/netcdf/4.4.1.1/intel/16.0.3//include  -c	../../../assimilation_code/modules/assimilation/reg_factor_mod.f90
+../../../assimilation_code/modules/assimilation/reg_factor_mod.f90(143): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+         22 format(4(i7, 1x), e10.4)
+-------------------------------^
+mpif90 -O -assume buffered_io -I/glade/u/apps/ch/opt/netcdf/4.4.1.1/intel/16.0.3//include  -c	../../../assimilation_code/modules/utilities/parse_args_mod.f90
+mpif90 -O -assume buffered_io -I/glade/u/apps/ch/opt/netcdf/4.4.1.1/intel/16.0.3//include  -c	../../../assimilation_code/modules/utilities/obs_impact_mod.f90
+mpif90 -O -assume buffered_io -I/glade/u/apps/ch/opt/netcdf/4.4.1.1/intel/16.0.3//include  -c	../../../assimilation_code/modules/assimilation/sampling_error_correction_mod.f90
+mpif90 -O -assume buffered_io -I/glade/u/apps/ch/opt/netcdf/4.4.1.1/intel/16.0.3//include  -c	../../../assimilation_code/modules/assimilation/assim_tools_mod.f90
+mpif90 -O -assume buffered_io -I/glade/u/apps/ch/opt/netcdf/4.4.1.1/intel/16.0.3//include  -c	../../../assimilation_code/modules/assimilation/smoother_mod.f90
+../../../assimilation_code/modules/assimilation/smoother_mod.f90(479): warning #6843: A dummy argument with an explicit INTENT(OUT) declaration is not given an explicit value.   [TEMP_ENS]
+   temp_ens, ENS_MEAN_COPY, ENS_SD_COPY, POST_INF_COPY, POST_INF_SD_COPY)
+---^
+mpif90 -O -assume buffered_io -I/glade/u/apps/ch/opt/netcdf/4.4.1.1/intel/16.0.3//include  -c	../../../assimilation_code/modules/observations/forward_operator_mod.f90
+mpif90 -O -assume buffered_io -I/glade/u/apps/ch/opt/netcdf/4.4.1.1/intel/16.0.3//include  -c	../../../assimilation_code/modules/assimilation/filter_mod.f90
+mpif90 -O -assume buffered_io -I/glade/u/apps/ch/opt/netcdf/4.4.1.1/intel/16.0.3//include  -c	../../../assimilation_code/programs/filter/filter.f90
+mpif90 -O -assume buffered_io -I/glade/u/apps/ch/opt/netcdf/4.4.1.1/intel/16.0.3//include  -c	../../../assimilation_code/location/utilities/default_location_mod.f90
+mpif90 -O -assume buffered_io -I/glade/u/apps/ch/opt/netcdf/4.4.1.1/intel/16.0.3//include  -c	../../../assimilation_code/location/utilities/location_io_mod.f90
+mpif90 cov_cutoff_mod.o obs_model_mod.o quality_control_mod.o state_structure_mod.o io_filenames_mod.o mpi_utilities_mod.o state_vector_io_mod.o smoother_mod.o assim_model_mod.o filter.o no_cray_win_mod.o module_map_utils.o obs_def_mod.o forward_operator_mod.o utilities_mod.o filter_mod.o dart_time_io_mod.o default_location_mod.o location_mod.o types_mod.o assim_tools_mod.o sampling_error_correction_mod.o time_manager_mod.o parse_args_mod.o default_model_mod.o random_seq_mod.o obs_sequence_mod.o obs_impact_mod.o sort_mod.o adaptive_inflate_mod.o ensemble_manager_mod.o direct_netcdf_mod.o distributed_state_mod.o reg_factor_mod.o obs_kind_mod.o model_mod.o location_io_mod.o netcdf_utilities_mod.o -o filter  -O -assume buffered_io -I/glade/u/apps/ch/opt/netcdf/4.4.1.1/intel/16.0.3//include -L/glade/u/apps/ch/opt/netcdf/4.4.1.1/intel/16.0.3//lib -lnetcdff -lnetcdf
+ ********************* 
+ LINKING FILTER 'filter_i16_openmpi__09_18_14_49'
+ ********************* 
+ ***************************************** 
+ Running with : 'i16' and 'openmpi'     
+ ***************************************** 
+ 
+
+Currently Loaded Modules:
+  1) ncarenv/1.2    3) xxdiff/4.0.1   5) ncarcompilers/0.4.1   7) openmpi/2.1.0
+  2) python/3.6.2   4) intel/16.0.3   6) netcdf/4.4.1.1
+
+ 
+
+1809663.chadmin1
+ 
+ --------------------------------------
+ Starting ... at YYYY MM DD HH MM SS = 
+                 2017  9 18 14 53 58
+ Program Filter
+ --------------------------------------
+ 
+ set_nml_output Echo NML values to log file only
+ 
+ DEBUG FROM: initialize_utilities  ..  digits12 is            8
+ DEBUG FROM: initialize_utilities ...  r8       is            8
+ DEBUG FROM: initialize_utilities ...  r4       is            4
+ DEBUG FROM: initialize_utilities  ..  integer  is            4
+ DEBUG FROM: initialize_utilities ...  i8       is            8
+ DEBUG FROM: initialize_utilities ...  i4       is            4
+ PE 0: initialize_mpi_utilities:  Running with          992 MPI processes.
+ Assimilate_these_obs_types
+ RADIOSONDE_TEMPERATURE
+ RADIOSONDE_U_WIND_COMPONENT
+ RADIOSONDE_V_WIND_COMPONENT
+ RADIOSONDE_SPECIFIC_HUMIDITY
+ RADIOSONDE_SURFACE_ALTIMETER
+ ACARS_U_WIND_COMPONENT
+ ACARS_V_WIND_COMPONENT
+ ACARS_TEMPERATURE
+ ACARS_DEWPOINT
+ SAT_U_WIND_COMPONENT
+ SAT_V_WIND_COMPONENT
+ GPSRO_REFRACTIVITY
+ PROFILER_U_WIND_COMPONENT
+ PROFILER_V_WIND_COMPONENT
+ METAR_U_10_METER_WIND
+ METAR_V_10_METER_WIND
+ METAR_TEMPERATURE_2_METER
+ METAR_DEWPOINT_2_METER
+ METAR_ALTIMETER
+ MARINE_SFC_U_WIND_COMPONENT
+ MARINE_SFC_V_WIND_COMPONENT
+ MARINE_SFC_TEMPERATURE
+ MARINE_SFC_ALTIMETER
+ MARINE_SFC_DEWPOINT
+ RADAR_REFLECTIVITY
+ DOPPLER_RADIAL_VELOCITY
+ RADAR_CLEARAIR_REFLECTIVITY
+ Evaluate_these_obs_types
+ LAND_SFC_TEMPERATURE
+ LAND_SFC_U_WIND_COMPONENT
+ LAND_SFC_V_WIND_COMPONENT
+ LAND_SFC_ALTIMETER
+ LAND_SFC_DEWPOINT
+ Use the precomputed Prior Forward Operators for these obs types
+ PE 0:   dt from wrfinput_d0X file is:    75.0000000000000
+ PE 0: static_init_model: state vector array    1 is U
+ PE 0: static_init_model: state vector array    2 is V
+ PE 0: static_init_model: state vector array    3 is W
+ PE 0: static_init_model: state vector array    4 is T
+ PE 0: static_init_model: state vector array    5 is PH
+ PE 0: static_init_model: state vector array    6 is MU
+ PE 0: static_init_model: state vector array    7 is QVAPOR
+ PE 0: static_init_model: state vector array    8 is QCLOUD
+ PE 0: static_init_model: state vector array    9 is QRAIN
+ PE 0: static_init_model: state vector array   10 is QICE
+ PE 0: static_init_model: state vector array   11 is QGRAUP
+ PE 0: static_init_model: state vector array   12 is QNICE
+ PE 0: static_init_model: state vector array   13 is QNRAIN
+ PE 0: static_init_model: state vector array   14 is H_DIABATIC
+ PE 0: static_init_model: state vector array   15 is U10
+ PE 0: static_init_model: state vector array   16 is V10
+ PE 0: static_init_model: state vector array   17 is T2
+ PE 0: static_init_model: state vector array   18 is Q2
+ PE 0: static_init_model: state vector array   19 is PSFC
+ PE 0:   dt from wrfinput_d0X file is:    18.7500000000000
+ PE 0: static_init_model: state vector array    1 is U
+ PE 0: static_init_model: state vector array    2 is V
+ PE 0: static_init_model: state vector array    3 is W
+ PE 0: static_init_model: state vector array    4 is T
+ PE 0: static_init_model: state vector array    5 is PH
+ PE 0: static_init_model: state vector array    6 is MU
+ PE 0: static_init_model: state vector array    7 is QVAPOR
+ PE 0: static_init_model: state vector array    8 is QCLOUD
+ PE 0: static_init_model: state vector array    9 is QRAIN
+ PE 0: static_init_model: state vector array   10 is QICE
+ PE 0: static_init_model: state vector array   11 is QGRAUP
+ PE 0: static_init_model: state vector array   12 is QNICE
+ PE 0: static_init_model: state vector array   13 is QNRAIN
+ PE 0: static_init_model: state vector array   14 is H_DIABATIC
+ PE 0: static_init_model: state vector array   15 is U10
+ PE 0: static_init_model: state vector array   16 is V10
+ PE 0: static_init_model: state vector array   17 is T2
+ PE 0: static_init_model: state vector array   18 is Q2
+ PE 0: static_init_model: state vector array   19 is PSFC
+ PE 0: static_init_model   wrf model size is    143504462
+ PE 0: location_mod: using code with optimized cutoffs
+ PE 0: location_mod: Including vertical separation when computing distances:
+ PE 0: location_mod:        # pascals ~ 1 horiz radian:      700000.00000
+ PE 0: location_mod:         # meters ~ 1 horiz radian:       80000.00000
+ PE 0: location_mod:   # model levels ~ 1 horiz radian:        2666.70000
+ PE 0: location_mod:  # scale heights ~ 1 horiz radian:          10.00000
+ PE 0: quality_control_mod: Will reject obs with Data QC larger than    4
+ PE 0: quality_control_mod: Will reject obs values more than    3.000000 sigma from mean
+ PE 0: assim_tools_init: Selected filter type is Ensemble Adjustment Kalman Filter (EAKF)
+ PE 0: assim_tools_init: The cutoff namelist value is           0.050000
+ PE 0: assim_tools_init: ... cutoff is the localization half-width parameter,
+ PE 0: assim_tools_init: ... so the effective localization radius is           0.100000
+ PE 0:  
+ PE 0: assim_tools_init: Observations with special localization treatment:
+ PE 0: assim_tools_init: (type name, specified cutoff distance, effective localization radius)
+ PE 0: assim_tools_init: RADAR_REFLECTIVITY                        0.003760          0.007520
+ PE 0: assim_tools_init: DOPPLER_RADIAL_VELOCITY                   0.003760          0.007520
+ PE 0: assim_tools_init: RADAR_CLEARAIR_REFLECTIVITY               0.003760          0.007520
+ PE 0: assim_tools_init: all other observation types will use the default cutoff distance
+ PE 0:  
+ PE 0: assim_tools_init: Disabling the close obs caching because specialized localization
+ PE 0: assim_tools_init: distances are enabled.
+ PE 0: assim_tools_init: Using adaptive localization, threshold       2000 obs
+ PE 0: assim_tools_init: Using Sampling Error Correction
+ PE 0: assim_tools_init: Replicating a copy of the ensemble mean on every task
+ PE 0: assim_tools_init: ... uses more memory per task but may run faster if doing vertical
+ PE 0: assim_tools_init: ... coordinate conversion; controlled by namelist item "distribute_mean"
+ PE 0: assim_tools_init: Doing vertical localization, vertical coordinate conversion may be required
+ PE 0: assim_tools_init: ... Converting all state vector verticals to localization coordinate first.
+ PE 0: assim_tools_init: ... Converting all observation verticals to localization coordinate first.
+ PE 0:  filter trace: Filter start
+ Filter start TIME: 2017/09/18 14:54:01
+ PE 0: filter_main: running with an ensemble size of    50
+ PE 0:  filter trace: Before initializing inflation
+ PE 0: filter_main: Prior inflation damping of     0.900000 will be used
+ PE 0:  filter trace: After  initializing inflation
+ PE 0: parse_stages_to_write:  filter will write stage : preassim
+ PE 0: parse_stages_to_write:  filter will write stage : postassim
+ PE 0: parse_stages_to_write:  filter will write stage : output
+ PE 0:  filter trace: Before setting up space for observations
+ Before setting up space for observations TIME: 2017/09/18 14:54:01
+ After  setting up space for observations TIME: 2017/09/18 14:54:03
+ PE 0:  filter trace: After  setting up space for observations
+ PE 0:  filter trace: Before setting up space for ensembles
+ PE 0:  filter trace: After  setting up space for ensembles
+ PE 0:  filter trace: Before reading in ensemble restart files
+ Before reading in ensemble restart files TIME: 2017/09/18 14:54:03
+ PE 0: set_member_file_metadata no file list given for stage "preassim" so using default names
+ PE 0: set_member_file_metadata no file list given for stage "postassim" so using default names
+ PE 0: Prior inflation: mean read from namelist as     1.000000
+ PE 0: Prior inflation: sd read from namelist as     0.600000
+ PE 0: Prior inflation: deterministic, time-constant, spatially-varying, state-space
+ PE 0: Posterior inflation: None
+ PE 0: filter_main: Reading in initial condition/restart data for all ensemble members from file(s)
+ After  reading in ensemble restart files TIME: 2017/09/18 14:54:41
+ PE 0:  filter trace: After  reading in ensemble restart files
+ PE 0:  filter trace: Before initializing output files
+ Before initializing output files TIME: 2017/09/18 14:54:41
+ After  initializing output files TIME: 2017/09/18 14:54:41
+ PE 0:  filter trace: After  initializing output files
+ PE 0:  filter trace: Before trimming obs seq if start/stop time specified
+ PE 0:  filter trace: After  trimming obs seq if start/stop time specified
+ PE 0:  filter trace: Top of main advance time loop
+ PE 0:  
+ PE 0: filter: Main assimilation loop, starting iteration    0
+ PE 0:  filter trace: Before move_ahead checks time of data and next obs
+ PE 0: move_ahead Current model data time            is:  day=  151718 sec= 43200
+ PE 0: move_ahead Current assimilation window starts at:  day=  151718 sec= 39601
+ PE 0: move_ahead Next available observation time    is:  day=  151718 sec= 42300
+ PE 0: move_ahead Current assimilation window ends   at:  day=  151718 sec= 46800
+ PE 0: move_ahead Next available observation time    is:  day=  151718 sec= 42300
+ PE 0: move_ahead Within current assimilation window, model does not need advance.
+ PE 0: move_ahead Next assimilation window contains up to    51459 observations
+ PE 0:  filter trace: After  move_ahead checks time of data and next obs
+ PE 0: filter: Model does not need to run; data already at required time
+ PE 0:  filter trace: Before setup for next group of observations
+ PE 0:  filter trace: Number of observations to be assimilated  51459
+ filter trace: Time of first observation in window day=151718, sec=42300
+ filter trace: Time of last  observation in window day=151718, sec=45840
+ PE 0:  filter trace: After  setup for next group of observations
+ PE 0:  filter trace: Before prior inflation damping and prep
+ PE 0:  filter trace: After  prior inflation damping and prep
+ PE 0:  filter trace: Before computing prior observation values
+ Before computing prior observation values TIME: 2017/09/18 14:54:41
+ After  computing prior observation values TIME: 2017/09/18 14:54:59
+ PE 0:  filter trace: After  computing prior observation values
+ PE 0:  filter trace: Before preassim state space output
+ Before preassim state space output TIME: 2017/09/18 14:54:59
+ After  preassim state space output TIME: 2017/09/18 14:55:03
+ PE 0:  filter trace: After  preassim state space output
+ PE 0:  filter trace: Before observation space diagnostics
+ PE 0:  filter trace: After  observation space diagnostics
+ PE 0: filter: Ready to assimilate up to   51459 observations
+ PE 0:  filter trace: Before observation assimilation
+ Before observation assimilation TIME: 2017/09/18 14:55:07
+ PE 0: comp_cov_factor: Standard Gaspari Cohn localization selected
+Processing observation      1000  of    51459 TIME: 2017/09/18 14:55:17
+Processing observation      2000  of    51459 TIME: 2017/09/18 14:55:22
+Processing observation      3000  of    51459 TIME: 2017/09/18 14:55:31
+Processing observation      4000  of    51459 TIME: 2017/09/18 14:55:35
+Processing observation      5000  of    51459 TIME: 2017/09/18 14:55:38
+Processing observation      6000  of    51459 TIME: 2017/09/18 14:55:47
+Processing observation      7000  of    51459 TIME: 2017/09/18 14:55:57
+Processing observation      8000  of    51459 TIME: 2017/09/18 14:56:01
+Processing observation      9000  of    51459 TIME: 2017/09/18 14:56:03
+Processing observation     10000  of    51459 TIME: 2017/09/18 14:56:08
+Processing observation     11000  of    51459 TIME: 2017/09/18 14:56:14
+Processing observation     12000  of    51459 TIME: 2017/09/18 14:56:20
+Processing observation     13000  of    51459 TIME: 2017/09/18 14:56:26
+Processing observation     14000  of    51459 TIME: 2017/09/18 14:56:32
+Processing observation     15000  of    51459 TIME: 2017/09/18 14:56:38
+Processing observation     16000  of    51459 TIME: 2017/09/18 14:56:44
+Processing observation     17000  of    51459 TIME: 2017/09/18 14:56:49
+Processing observation     18000  of    51459 TIME: 2017/09/18 14:56:55
+Processing observation     19000  of    51459 TIME: 2017/09/18 14:57:01
+Processing observation     20000  of    51459 TIME: 2017/09/18 14:57:07
+Processing observation     21000  of    51459 TIME: 2017/09/18 14:57:13
+Processing observation     22000  of    51459 TIME: 2017/09/18 14:57:19
+Processing observation     23000  of    51459 TIME: 2017/09/18 14:57:26
+Processing observation     24000  of    51459 TIME: 2017/09/18 14:57:32
+Processing observation     25000  of    51459 TIME: 2017/09/18 14:57:38
+Processing observation     26000  of    51459 TIME: 2017/09/18 14:57:45
+Processing observation     27000  of    51459 TIME: 2017/09/18 14:57:51
+Processing observation     28000  of    51459 TIME: 2017/09/18 14:57:58
+Processing observation     29000  of    51459 TIME: 2017/09/18 14:58:04
+Processing observation     30000  of    51459 TIME: 2017/09/18 14:58:10
+Processing observation     31000  of    51459 TIME: 2017/09/18 14:58:15
+Processing observation     32000  of    51459 TIME: 2017/09/18 14:58:21
+Processing observation     33000  of    51459 TIME: 2017/09/18 14:58:27
+Processing observation     34000  of    51459 TIME: 2017/09/18 14:58:31
+Processing observation     35000  of    51459 TIME: 2017/09/18 14:58:33
+Processing observation     36000  of    51459 TIME: 2017/09/18 14:58:35
+Processing observation     37000  of    51459 TIME: 2017/09/18 14:58:39
+Processing observation     38000  of    51459 TIME: 2017/09/18 14:58:45
+Processing observation     39000  of    51459 TIME: 2017/09/18 14:58:48
+Processing observation     40000  of    51459 TIME: 2017/09/18 14:58:50
+Processing observation     41000  of    51459 TIME: 2017/09/18 14:58:56
+Processing observation     42000  of    51459 TIME: 2017/09/18 14:59:08
+Processing observation     43000  of    51459 TIME: 2017/09/18 14:59:14
+Processing observation     44000  of    51459 TIME: 2017/09/18 14:59:15
+Processing observation     45000  of    51459 TIME: 2017/09/18 14:59:18
+Processing observation     46000  of    51459 TIME: 2017/09/18 14:59:24
+Processing observation     47000  of    51459 TIME: 2017/09/18 14:59:27
+Processing observation     48000  of    51459 TIME: 2017/09/18 14:59:32
+Processing observation     49000  of    51459 TIME: 2017/09/18 14:59:44
+Processing observation     50000  of    51459 TIME: 2017/09/18 14:59:50
+Processing observation     51000  of    51459 TIME: 2017/09/18 14:59:52
+ PE 0: filter_assim: Processed   51459 total observations
+ After  observation assimilation TIME: 2017/09/18 14:59:54
+ PE 0:  filter trace: After  observation assimilation
+ PE 0:  filter trace: Before postassim state space output
+ Before postassim state space output TIME: 2017/09/18 14:59:54
+ After  postassim state space output TIME: 2017/09/18 14:59:58
+ PE 0:  filter trace: After  postassim state space output
+ PE 0:  filter trace: Before computing posterior observation values
+ Before computing posterior observation values TIME: 2017/09/18 14:59:58
+ After  computing posterior observation values TIME: 2017/09/18 15:00:02
+ PE 0:  filter trace: After  computing posterior observation values
+ PE 0:  filter trace: Before posterior obs space diagnostics
+ PE 0:  filter trace: After  posterior obs space diagnostics
+ PE 0:  filter trace: Near bottom of main loop, cleaning up obs space
+ PE 0:  filter trace: Bottom of main advance time loop
+ PE 0:  filter trace: Top of main advance time loop
+ PE 0:  
+ PE 0: filter: Main assimilation loop, starting iteration    1
+ PE 0:  filter trace: Before move_ahead checks time of data and next obs
+ PE 0:  filter trace: After  move_ahead checks time of data and next obs
+ PE 0: filter: No more obs to assimilate, exiting main loop
+ PE 0: filter: End of main filter assimilation loop, starting cleanup
+ PE 0:  filter trace: Before state space output
+ Before state space output TIME: 2017/09/18 15:00:03
+ After  state space output TIME: 2017/09/18 15:00:11
+ PE 0:  filter trace: After  state space output
+ PE 0:  filter trace: Before writing output sequence file
+ PE 0: write_obs_seq  opening formatted observation sequence file "obs_seq.final"
+ PE 0: write_obs_seq  closed observation sequence file "obs_seq.final"
+ PE 0:  filter trace: After  writing output sequence file
+ PE 0:  filter trace: Before end_model call
+ PE 0:  filter trace: After  end_model call
+ PE 0:  filter trace: Before ensemble and obs memory cleanup
+ PE 0:  filter trace: After  ensemble and obs memory cleanup
+ PE 0:  filter trace: Filter done
+ Filter done TIME: 2017/09/18 15:00:19
+ FINISHED filter.
+ 
+ 
+ --------------------------------------
+ Finished ... at YYYY MM DD HH MM SS = 
+                 2017  9 18 15  0 19
+ Program Filter
+ --------------------------------------
+ 
+ 
+ ******************************************************* 
+ Finished Running test with : 'i16' and 'openmpi'     
+ ******************************************************  
+
+Due to MODULEPATH changes, the following have been reloaded:
+  1) ncarcompilers/0.4.1     2) netcdf/4.4.1.1
+
+The following have been reloaded with a version change:
+  1) intel/16.0.3 => intel/17.0.1     2) openmpi/2.1.0 => openmpi/2.0.2
+
+ 
+ **************************************** 
+ Making with : i17 and openmpi         
+ **************************************** 
+ 
+
+Currently Loaded Modules:
+  1) ncarenv/1.2    3) xxdiff/4.0.1   5) ncarcompilers/0.4.1   7) openmpi/2.0.2
+  2) python/3.6.2   4) intel/17.0.1   6) netcdf/4.4.1.1
+
+ 
+
+ **************** 
+ BUILIDING FILTER 
+ **************** 
+....... Makefile is ready.
+ifort -O -assume buffered_io -I/glade/u/apps/ch/opt/netcdf/4.4.1.1/intel/17.0.1/include  -c	../../../assimilation_code/modules/utilities/types_mod.f90
+ifort -O -assume buffered_io -I/glade/u/apps/ch/opt/netcdf/4.4.1.1/intel/17.0.1/include  -c	../../../assimilation_code/modules/utilities/utilities_mod.f90
+ifort -O -assume buffered_io -I/glade/u/apps/ch/opt/netcdf/4.4.1.1/intel/17.0.1/include  -c	../../../assimilation_code/modules/utilities/time_manager_mod.f90
+ifort -O -assume buffered_io -I/glade/u/apps/ch/opt/netcdf/4.4.1.1/intel/17.0.1/include  -c	../../../assimilation_code/programs/preprocess/preprocess.f90
+ifort -O -assume buffered_io -I/glade/u/apps/ch/opt/netcdf/4.4.1.1/intel/17.0.1/include  -c	../../../assimilation_code/modules/utilities/null_mpi_utilities_mod.f90
+ifort time_manager_mod.o preprocess.o null_mpi_utilities_mod.o types_mod.o utilities_mod.o -o preprocess  -O -assume buffered_io -I/glade/u/apps/ch/opt/netcdf/4.4.1.1/intel/17.0.1/include -L/glade/u/apps/ch/opt/netcdf/4.4.1.1/intel/17.0.1/lib -lnetcdff -lnetcdf
+ Starting program preprocess
+ Initializing the utilities module.
+ Trying to log to unit           10
+ Trying to open file dart_log.out
+ 
+ --------------------------------------
+ Starting ... at YYYY MM DD HH MM SS = 
+                 2017  9 18 15  0 44
+ Program preprocess
+ --------------------------------------
+ 
+ set_nml_output Echo NML values to log file only
+ Trying to open namelist log dart_log.nml
+ Path names of default obs_def and obs_kind modules
+ ../../../observations/forward_operators/DEFAULT_obs_def_mod.F90
+ ../../../assimilation_code/modules/observations/DEFAULT_obs_kind_mod.F90
+ Path names of output obs_def and obs_kind modules
+ ../../../observations/forward_operators/obs_def_mod.f90
+ ../../../assimilation_code/modules/observations/obs_kind_mod.f90
+ INPUT obs_def files follow:
+ ../../../observations/forward_operators/obs_def_reanalysis_bufr_mod.f90
+ ../../../observations/forward_operators/obs_def_radar_mod.f90
+ ../../../observations/forward_operators/obs_def_metar_mod.f90
+ ../../../observations/forward_operators/obs_def_dew_point_mod.f90
+ ../../../observations/forward_operators/obs_def_rel_humidity_mod.f90
+ ../../../observations/forward_operators/obs_def_altimeter_mod.f90
+ ../../../observations/forward_operators/obs_def_gps_mod.f90
+ ../../../observations/forward_operators/obs_def_vortex_mod.f90
+ ../../../observations/forward_operators/obs_def_gts_mod.f90
+ INPUT model files follow:
+ preprocess Finished successfully.
+ 
+ --------------------------------------
+ Finished ... at YYYY MM DD HH MM SS = 
+                 2017  9 18 15  0 44
+ Program preprocess
+ --------------------------------------
+ 
+Making Makefile with MPI
+........................................Using MPI wrappers
+ Makefile is ready.
+mpif90 -O -assume buffered_io -I/glade/u/apps/ch/opt/netcdf/4.4.1.1/intel/17.0.1/include  -c	../../../assimilation_code/modules/utilities/mpi_utilities_mod.f90
+mpif90 -O -assume buffered_io -I/glade/u/apps/ch/opt/netcdf/4.4.1.1/intel/17.0.1/include  -c	../../../assimilation_code/modules/utilities/sort_mod.f90
+mpif90 -O -assume buffered_io -I/glade/u/apps/ch/opt/netcdf/4.4.1.1/intel/17.0.1/include  -c	../../../assimilation_code/modules/utilities/ensemble_manager_mod.f90
+mpif90 -O -assume buffered_io -I/glade/u/apps/ch/opt/netcdf/4.4.1.1/intel/17.0.1/include  -c	../../../assimilation_code/modules/utilities/no_cray_win_mod.f90
+mpif90 -O -assume buffered_io -I/glade/u/apps/ch/opt/netcdf/4.4.1.1/intel/17.0.1/include  -c	../../../assimilation_code/modules/utilities/distributed_state_mod.f90
+mpif90 -O -assume buffered_io -I/glade/u/apps/ch/opt/netcdf/4.4.1.1/intel/17.0.1/include  -c	../../../assimilation_code/modules/observations/obs_kind_mod.f90
+mpif90 -O -assume buffered_io -I/glade/u/apps/ch/opt/netcdf/4.4.1.1/intel/17.0.1/include  -c	../../../assimilation_code/modules/io/state_structure_mod.f90
+mpif90 -O -assume buffered_io -I/glade/u/apps/ch/opt/netcdf/4.4.1.1/intel/17.0.1/include  -c	../../../assimilation_code/modules/io/io_filenames_mod.f90
+mpif90 -O -assume buffered_io -I/glade/u/apps/ch/opt/netcdf/4.4.1.1/intel/17.0.1/include  -c	../../../assimilation_code/modules/utilities/random_seq_mod.f90
+mpif90 -O -assume buffered_io -I/glade/u/apps/ch/opt/netcdf/4.4.1.1/intel/17.0.1/include  -c	../../../assimilation_code/location/threed_sphere/location_mod.f90
+mpif90 -O -assume buffered_io -I/glade/u/apps/ch/opt/netcdf/4.4.1.1/intel/17.0.1/include  -c	../../../assimilation_code/modules/utilities/netcdf_utilities_mod.f90
+mpif90 -O -assume buffered_io -I/glade/u/apps/ch/opt/netcdf/4.4.1.1/intel/17.0.1/include  -c	../../../assimilation_code/modules/io/dart_time_io_mod.f90
+mpif90 -O -assume buffered_io -I/glade/u/apps/ch/opt/netcdf/4.4.1.1/intel/17.0.1/include  -c	../../../models/utilities/default_model_mod.f90
+mpif90 -O -assume buffered_io -I/glade/u/apps/ch/opt/netcdf/4.4.1.1/intel/17.0.1/include  -c	../../../models/wrf/module_map_utils.f90
+mpif90 -O -assume buffered_io -I/glade/u/apps/ch/opt/netcdf/4.4.1.1/intel/17.0.1/include  -c	../../../models/wrf/model_mod.f90
+mpif90 -O -assume buffered_io -I/glade/u/apps/ch/opt/netcdf/4.4.1.1/intel/17.0.1/include  -c	../../../assimilation_code/modules/assimilation/assim_model_mod.f90
+mpif90 -O -assume buffered_io -I/glade/u/apps/ch/opt/netcdf/4.4.1.1/intel/17.0.1/include  -c	../../../assimilation_code/modules/io/direct_netcdf_mod.f90
+mpif90 -O -assume buffered_io -I/glade/u/apps/ch/opt/netcdf/4.4.1.1/intel/17.0.1/include  -c	../../../assimilation_code/modules/utilities/parse_args_mod.f90
+mpif90 -O -assume buffered_io -I/glade/u/apps/ch/opt/netcdf/4.4.1.1/intel/17.0.1/include  -c	../../../observations/forward_operators/obs_def_mod.f90
+mpif90 -O -assume buffered_io -I/glade/u/apps/ch/opt/netcdf/4.4.1.1/intel/17.0.1/include  -c	../../../assimilation_code/modules/observations/obs_sequence_mod.f90
+mpif90 -O -assume buffered_io -I/glade/u/apps/ch/opt/netcdf/4.4.1.1/intel/17.0.1/include  -c	../../../assimilation_code/modules/assimilation/cov_cutoff_mod.f90
+mpif90 -O -assume buffered_io -I/glade/u/apps/ch/opt/netcdf/4.4.1.1/intel/17.0.1/include  -c	../../../assimilation_code/modules/assimilation/reg_factor_mod.f90
+../../../assimilation_code/modules/assimilation/reg_factor_mod.f90(143): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+         22 format(4(i7, 1x), e10.4)
+-------------------------------^
+mpif90 -O -assume buffered_io -I/glade/u/apps/ch/opt/netcdf/4.4.1.1/intel/17.0.1/include  -c	../../../assimilation_code/modules/utilities/obs_impact_mod.f90
+mpif90 -O -assume buffered_io -I/glade/u/apps/ch/opt/netcdf/4.4.1.1/intel/17.0.1/include  -c	../../../assimilation_code/modules/assimilation/sampling_error_correction_mod.f90
+mpif90 -O -assume buffered_io -I/glade/u/apps/ch/opt/netcdf/4.4.1.1/intel/17.0.1/include  -c	../../../assimilation_code/modules/assimilation/adaptive_inflate_mod.f90
+mpif90 -O -assume buffered_io -I/glade/u/apps/ch/opt/netcdf/4.4.1.1/intel/17.0.1/include  -c	../../../assimilation_code/modules/assimilation/quality_control_mod.f90
+mpif90 -O -assume buffered_io -I/glade/u/apps/ch/opt/netcdf/4.4.1.1/intel/17.0.1/include  -c	../../../assimilation_code/modules/assimilation/assim_tools_mod.f90
+mpif90 -O -assume buffered_io -I/glade/u/apps/ch/opt/netcdf/4.4.1.1/intel/17.0.1/include  -c	../../../assimilation_code/modules/io/state_vector_io_mod.f90
+mpif90 -O -assume buffered_io -I/glade/u/apps/ch/opt/netcdf/4.4.1.1/intel/17.0.1/include  -c	../../../assimilation_code/modules/assimilation/obs_model_mod.f90
+mpif90 -O -assume buffered_io -I/glade/u/apps/ch/opt/netcdf/4.4.1.1/intel/17.0.1/include  -c	../../../assimilation_code/modules/assimilation/smoother_mod.f90
+../../../assimilation_code/modules/assimilation/smoother_mod.f90(479): warning #6843: A dummy argument with an explicit INTENT(OUT) declaration is not given an explicit value.   [TEMP_ENS]
+   temp_ens, ENS_MEAN_COPY, ENS_SD_COPY, POST_INF_COPY, POST_INF_SD_COPY)
+---^
+mpif90 -O -assume buffered_io -I/glade/u/apps/ch/opt/netcdf/4.4.1.1/intel/17.0.1/include  -c	../../../assimilation_code/modules/observations/forward_operator_mod.f90
+mpif90 -O -assume buffered_io -I/glade/u/apps/ch/opt/netcdf/4.4.1.1/intel/17.0.1/include  -c	../../../assimilation_code/modules/assimilation/filter_mod.f90
+mpif90 -O -assume buffered_io -I/glade/u/apps/ch/opt/netcdf/4.4.1.1/intel/17.0.1/include  -c	../../../assimilation_code/programs/filter/filter.f90
+mpif90 -O -assume buffered_io -I/glade/u/apps/ch/opt/netcdf/4.4.1.1/intel/17.0.1/include  -c	../../../assimilation_code/location/utilities/location_io_mod.f90
+mpif90 -O -assume buffered_io -I/glade/u/apps/ch/opt/netcdf/4.4.1.1/intel/17.0.1/include  -c	../../../assimilation_code/location/utilities/default_location_mod.f90
+mpif90 utilities_mod.o distributed_state_mod.o types_mod.o direct_netcdf_mod.o location_mod.o state_structure_mod.o parse_args_mod.o obs_sequence_mod.o dart_time_io_mod.o time_manager_mod.o random_seq_mod.o filter.o smoother_mod.o netcdf_utilities_mod.o filter_mod.o quality_control_mod.o forward_operator_mod.o state_vector_io_mod.o no_cray_win_mod.o assim_model_mod.o module_map_utils.o model_mod.o default_model_mod.o reg_factor_mod.o sampling_error_correction_mod.o io_filenames_mod.o obs_impact_mod.o obs_model_mod.o cov_cutoff_mod.o location_io_mod.o default_location_mod.o assim_tools_mod.o obs_kind_mod.o ensemble_manager_mod.o adaptive_inflate_mod.o obs_def_mod.o mpi_utilities_mod.o sort_mod.o -o filter  -O -assume buffered_io -I/glade/u/apps/ch/opt/netcdf/4.4.1.1/intel/17.0.1/include -L/glade/u/apps/ch/opt/netcdf/4.4.1.1/intel/17.0.1/lib -lnetcdff -lnetcdf
+ ********************* 
+ LINKING FILTER 'filter_i17_openmpi__09_18_14_49'
+ ********************* 
+ ***************************************** 
+ Running with : 'i17' and 'openmpi'     
+ ***************************************** 
+ 
+
+Currently Loaded Modules:
+  1) ncarenv/1.2    3) xxdiff/4.0.1   5) ncarcompilers/0.4.1   7) openmpi/2.0.2
+  2) python/3.6.2   4) intel/17.0.1   6) netcdf/4.4.1.1
+
+ 
+
+1809764.chadmin1
+ 
+ --------------------------------------
+ Starting ... at YYYY MM DD HH MM SS = 
+                 2017  9 18 15  1 50
+ Program Filter
+ --------------------------------------
+ 
+ set_nml_output Echo NML values to log file only
+ 
+ DEBUG FROM: initialize_utilities  ..  digits12 is            8
+ DEBUG FROM: initialize_utilities ...  r8       is            8
+ DEBUG FROM: initialize_utilities ...  r4       is            4
+ DEBUG FROM: initialize_utilities  ..  integer  is            4
+ DEBUG FROM: initialize_utilities ...  i8       is            8
+ DEBUG FROM: initialize_utilities ...  i4       is            4
+ PE 0: initialize_mpi_utilities:  Running with          992  MPI processes.
+ Assimilate_these_obs_types
+ RADIOSONDE_TEMPERATURE
+ RADIOSONDE_U_WIND_COMPONENT
+ RADIOSONDE_V_WIND_COMPONENT
+ RADIOSONDE_SPECIFIC_HUMIDITY
+ RADIOSONDE_SURFACE_ALTIMETER
+ ACARS_U_WIND_COMPONENT
+ ACARS_V_WIND_COMPONENT
+ ACARS_TEMPERATURE
+ ACARS_DEWPOINT
+ SAT_U_WIND_COMPONENT
+ SAT_V_WIND_COMPONENT
+ GPSRO_REFRACTIVITY
+ PROFILER_U_WIND_COMPONENT
+ PROFILER_V_WIND_COMPONENT
+ METAR_U_10_METER_WIND
+ METAR_V_10_METER_WIND
+ METAR_TEMPERATURE_2_METER
+ METAR_DEWPOINT_2_METER
+ METAR_ALTIMETER
+ MARINE_SFC_U_WIND_COMPONENT
+ MARINE_SFC_V_WIND_COMPONENT
+ MARINE_SFC_TEMPERATURE
+ MARINE_SFC_ALTIMETER
+ MARINE_SFC_DEWPOINT
+ RADAR_REFLECTIVITY
+ DOPPLER_RADIAL_VELOCITY
+ RADAR_CLEARAIR_REFLECTIVITY
+ Evaluate_these_obs_types
+ LAND_SFC_TEMPERATURE
+ LAND_SFC_U_WIND_COMPONENT
+ LAND_SFC_V_WIND_COMPONENT
+ LAND_SFC_ALTIMETER
+ LAND_SFC_DEWPOINT
+ Use the precomputed Prior Forward Operators for these obs types
+ PE 0:   dt from wrfinput_d0X file is:    75.0000000000000
+ PE 0: static_init_model: state vector array    1 is U
+ PE 0: static_init_model: state vector array    2 is V
+ PE 0: static_init_model: state vector array    3 is W
+ PE 0: static_init_model: state vector array    4 is T
+ PE 0: static_init_model: state vector array    5 is PH
+ PE 0: static_init_model: state vector array    6 is MU
+ PE 0: static_init_model: state vector array    7 is QVAPOR
+ PE 0: static_init_model: state vector array    8 is QCLOUD
+ PE 0: static_init_model: state vector array    9 is QRAIN
+ PE 0: static_init_model: state vector array   10 is QICE
+ PE 0: static_init_model: state vector array   11 is QGRAUP
+ PE 0: static_init_model: state vector array   12 is QNICE
+ PE 0: static_init_model: state vector array   13 is QNRAIN
+ PE 0: static_init_model: state vector array   14 is H_DIABATIC
+ PE 0: static_init_model: state vector array   15 is U10
+ PE 0: static_init_model: state vector array   16 is V10
+ PE 0: static_init_model: state vector array   17 is T2
+ PE 0: static_init_model: state vector array   18 is Q2
+ PE 0: static_init_model: state vector array   19 is PSFC
+ PE 0:   dt from wrfinput_d0X file is:    18.7500000000000
+ PE 0: static_init_model: state vector array    1 is U
+ PE 0: static_init_model: state vector array    2 is V
+ PE 0: static_init_model: state vector array    3 is W
+ PE 0: static_init_model: state vector array    4 is T
+ PE 0: static_init_model: state vector array    5 is PH
+ PE 0: static_init_model: state vector array    6 is MU
+ PE 0: static_init_model: state vector array    7 is QVAPOR
+ PE 0: static_init_model: state vector array    8 is QCLOUD
+ PE 0: static_init_model: state vector array    9 is QRAIN
+ PE 0: static_init_model: state vector array   10 is QICE
+ PE 0: static_init_model: state vector array   11 is QGRAUP
+ PE 0: static_init_model: state vector array   12 is QNICE
+ PE 0: static_init_model: state vector array   13 is QNRAIN
+ PE 0: static_init_model: state vector array   14 is H_DIABATIC
+ PE 0: static_init_model: state vector array   15 is U10
+ PE 0: static_init_model: state vector array   16 is V10
+ PE 0: static_init_model: state vector array   17 is T2
+ PE 0: static_init_model: state vector array   18 is Q2
+ PE 0: static_init_model: state vector array   19 is PSFC
+ PE 0: static_init_model   wrf model size is    143504462
+ PE 0: location_mod: using code with optimized cutoffs
+ PE 0: location_mod: Including vertical separation when computing distances:
+ PE 0: location_mod:        # pascals ~ 1 horiz radian:      700000.00000
+ PE 0: location_mod:         # meters ~ 1 horiz radian:       80000.00000
+ PE 0: location_mod:   # model levels ~ 1 horiz radian:        2666.70000
+ PE 0: location_mod:  # scale heights ~ 1 horiz radian:          10.00000
+ PE 0: quality_control_mod: Will reject obs with Data QC larger than    4
+ PE 0: quality_control_mod: Will reject obs values more than    3.000000 sigma from mean
+ PE 0: assim_tools_init: Selected filter type is Ensemble Adjustment Kalman Filter (EAKF)
+ PE 0: assim_tools_init: The cutoff namelist value is           0.050000
+ PE 0: assim_tools_init: ... cutoff is the localization half-width parameter,
+ PE 0: assim_tools_init: ... so the effective localization radius is           0.100000
+ PE 0:  
+ PE 0: assim_tools_init: Observations with special localization treatment:
+ PE 0: assim_tools_init: (type name, specified cutoff distance, effective localization radius)
+ PE 0: assim_tools_init: RADAR_REFLECTIVITY                        0.003760          0.007520
+ PE 0: assim_tools_init: DOPPLER_RADIAL_VELOCITY                   0.003760          0.007520
+ PE 0: assim_tools_init: RADAR_CLEARAIR_REFLECTIVITY               0.003760          0.007520
+ PE 0: assim_tools_init: all other observation types will use the default cutoff distance
+ PE 0:  
+ PE 0: assim_tools_init: Disabling the close obs caching because specialized localization
+ PE 0: assim_tools_init: distances are enabled.
+ PE 0: assim_tools_init: Using adaptive localization, threshold       2000 obs
+ PE 0: assim_tools_init: Using Sampling Error Correction
+ PE 0: assim_tools_init: Replicating a copy of the ensemble mean on every task
+ PE 0: assim_tools_init: ... uses more memory per task but may run faster if doing vertical
+ PE 0: assim_tools_init: ... coordinate conversion; controlled by namelist item "distribute_mean"
+ PE 0: assim_tools_init: Doing vertical localization, vertical coordinate conversion may be required
+ PE 0: assim_tools_init: ... Converting all state vector verticals to localization coordinate first.
+ PE 0: assim_tools_init: ... Converting all observation verticals to localization coordinate first.
+ PE 0:  filter trace: Filter start
+ Filter start TIME: 2017/09/18 15:01:54
+ PE 0: filter_main: running with an ensemble size of    50
+ PE 0:  filter trace: Before initializing inflation
+ PE 0: filter_main: Prior inflation damping of     0.900000 will be used
+ PE 0:  filter trace: After  initializing inflation
+ PE 0: parse_stages_to_write:  filter will write stage : preassim
+ PE 0: parse_stages_to_write:  filter will write stage : postassim
+ PE 0: parse_stages_to_write:  filter will write stage : output
+ PE 0:  filter trace: Before setting up space for observations
+ Before setting up space for observations TIME: 2017/09/18 15:01:54
+ After  setting up space for observations TIME: 2017/09/18 15:01:56
+ PE 0:  filter trace: After  setting up space for observations
+ PE 0:  filter trace: Before setting up space for ensembles
+ PE 0:  filter trace: After  setting up space for ensembles
+ PE 0:  filter trace: Before reading in ensemble restart files
+ Before reading in ensemble restart files TIME: 2017/09/18 15:01:56
+ PE 0: set_member_file_metadata no file list given for stage "preassim" so using default names
+ PE 0: set_member_file_metadata no file list given for stage "postassim" so using default names
+ PE 0: Prior inflation: mean read from namelist as     1.000000
+ PE 0: Prior inflation: sd read from namelist as     0.600000
+ PE 0: Prior inflation: deterministic, time-constant, spatially-varying, state-space
+ PE 0: Posterior inflation: None
+ PE 0: filter_main: Reading in initial condition/restart data for all ensemble members from file(s)
+ After  reading in ensemble restart files TIME: 2017/09/18 15:02:32
+ PE 0:  filter trace: After  reading in ensemble restart files
+ PE 0:  filter trace: Before initializing output files
+ Before initializing output files TIME: 2017/09/18 15:02:32
+ After  initializing output files TIME: 2017/09/18 15:02:32
+ PE 0:  filter trace: After  initializing output files
+ PE 0:  filter trace: Before trimming obs seq if start/stop time specified
+ PE 0:  filter trace: After  trimming obs seq if start/stop time specified
+ PE 0:  filter trace: Top of main advance time loop
+ PE 0:  
+ PE 0: filter: Main assimilation loop, starting iteration    0
+ PE 0:  filter trace: Before move_ahead checks time of data and next obs
+ PE 0: move_ahead Current model data time            is:  day=  151718 sec= 43200
+ PE 0: move_ahead Current assimilation window starts at:  day=  151718 sec= 39601
+ PE 0: move_ahead Next available observation time    is:  day=  151718 sec= 42300
+ PE 0: move_ahead Current assimilation window ends   at:  day=  151718 sec= 46800
+ PE 0: move_ahead Next available observation time    is:  day=  151718 sec= 42300
+ PE 0: move_ahead Within current assimilation window, model does not need advance.
+ PE 0: move_ahead Next assimilation window contains up to    51459 observations
+ PE 0:  filter trace: After  move_ahead checks time of data and next obs
+ PE 0: filter: Model does not need to run; data already at required time
+ PE 0:  filter trace: Before setup for next group of observations
+ PE 0:  filter trace: Number of observations to be assimilated  51459
+ filter trace: Time of first observation in window day=151718, sec=42300
+ filter trace: Time of last  observation in window day=151718, sec=45840
+ PE 0:  filter trace: After  setup for next group of observations
+ PE 0:  filter trace: Before prior inflation damping and prep
+ PE 0:  filter trace: After  prior inflation damping and prep
+ PE 0:  filter trace: Before computing prior observation values
+ Before computing prior observation values TIME: 2017/09/18 15:02:32
+ After  computing prior observation values TIME: 2017/09/18 15:02:50
+ PE 0:  filter trace: After  computing prior observation values
+ PE 0:  filter trace: Before preassim state space output
+ Before preassim state space output TIME: 2017/09/18 15:02:50
+ After  preassim state space output TIME: 2017/09/18 15:02:54
+ PE 0:  filter trace: After  preassim state space output
+ PE 0:  filter trace: Before observation space diagnostics
+ PE 0:  filter trace: After  observation space diagnostics
+ PE 0: filter: Ready to assimilate up to   51459 observations
+ PE 0:  filter trace: Before observation assimilation
+ Before observation assimilation TIME: 2017/09/18 15:02:58
+ PE 0: comp_cov_factor: Standard Gaspari Cohn localization selected
+Processing observation      1000  of    51459 TIME: 2017/09/18 15:03:09
+Processing observation      2000  of    51459 TIME: 2017/09/18 15:03:13
+Processing observation      3000  of    51459 TIME: 2017/09/18 15:03:24
+Processing observation      4000  of    51459 TIME: 2017/09/18 15:03:28
+Processing observation      5000  of    51459 TIME: 2017/09/18 15:03:31
+Processing observation      6000  of    51459 TIME: 2017/09/18 15:03:42
+Processing observation      7000  of    51459 TIME: 2017/09/18 15:03:53
+Processing observation      8000  of    51459 TIME: 2017/09/18 15:03:58
+Processing observation      9000  of    51459 TIME: 2017/09/18 15:04:00
+Processing observation     10000  of    51459 TIME: 2017/09/18 15:04:06
+Processing observation     11000  of    51459 TIME: 2017/09/18 15:04:12
+Processing observation     12000  of    51459 TIME: 2017/09/18 15:04:19
+Processing observation     13000  of    51459 TIME: 2017/09/18 15:04:26
+Processing observation     14000  of    51459 TIME: 2017/09/18 15:04:32
+Processing observation     15000  of    51459 TIME: 2017/09/18 15:04:39
+Processing observation     16000  of    51459 TIME: 2017/09/18 15:04:46
+Processing observation     17000  of    51459 TIME: 2017/09/18 15:04:52
+Processing observation     18000  of    51459 TIME: 2017/09/18 15:04:59
+Processing observation     19000  of    51459 TIME: 2017/09/18 15:05:05
+Processing observation     20000  of    51459 TIME: 2017/09/18 15:05:12
+Processing observation     21000  of    51459 TIME: 2017/09/18 15:05:19
+Processing observation     22000  of    51459 TIME: 2017/09/18 15:05:26
+Processing observation     23000  of    51459 TIME: 2017/09/18 15:05:33
+Processing observation     24000  of    51459 TIME: 2017/09/18 15:05:40
+Processing observation     25000  of    51459 TIME: 2017/09/18 15:05:47
+Processing observation     26000  of    51459 TIME: 2017/09/18 15:05:54
+Processing observation     27000  of    51459 TIME: 2017/09/18 15:06:01
+Processing observation     28000  of    51459 TIME: 2017/09/18 15:06:09
+Processing observation     29000  of    51459 TIME: 2017/09/18 15:06:16
+Processing observation     30000  of    51459 TIME: 2017/09/18 15:06:23
+Processing observation     31000  of    51459 TIME: 2017/09/18 15:06:29
+Processing observation     32000  of    51459 TIME: 2017/09/18 15:06:35
+Processing observation     33000  of    51459 TIME: 2017/09/18 15:06:41
+Processing observation     34000  of    51459 TIME: 2017/09/18 15:06:46
+Processing observation     35000  of    51459 TIME: 2017/09/18 15:06:48
+Processing observation     36000  of    51459 TIME: 2017/09/18 15:06:50
+Processing observation     37000  of    51459 TIME: 2017/09/18 15:06:55
+Processing observation     38000  of    51459 TIME: 2017/09/18 15:07:01
+Processing observation     39000  of    51459 TIME: 2017/09/18 15:07:04
+Processing observation     40000  of    51459 TIME: 2017/09/18 15:07:07
+Processing observation     41000  of    51459 TIME: 2017/09/18 15:07:13
+Processing observation     42000  of    51459 TIME: 2017/09/18 15:07:26
+Processing observation     43000  of    51459 TIME: 2017/09/18 15:07:33
+Processing observation     44000  of    51459 TIME: 2017/09/18 15:07:35
+Processing observation     45000  of    51459 TIME: 2017/09/18 15:07:37
+Processing observation     46000  of    51459 TIME: 2017/09/18 15:07:44
+Processing observation     47000  of    51459 TIME: 2017/09/18 15:07:47
+Processing observation     48000  of    51459 TIME: 2017/09/18 15:07:53
+Processing observation     49000  of    51459 TIME: 2017/09/18 15:08:06
+Processing observation     50000  of    51459 TIME: 2017/09/18 15:08:13
+Processing observation     51000  of    51459 TIME: 2017/09/18 15:08:15
+ PE 0: filter_assim: Processed   51459 total observations
+ After  observation assimilation TIME: 2017/09/18 15:08:17
+ PE 0:  filter trace: After  observation assimilation
+ PE 0:  filter trace: Before postassim state space output
+ Before postassim state space output TIME: 2017/09/18 15:08:17
+ After  postassim state space output TIME: 2017/09/18 15:08:21
+ PE 0:  filter trace: After  postassim state space output
+ PE 0:  filter trace: Before computing posterior observation values
+ Before computing posterior observation values TIME: 2017/09/18 15:08:21
+ After  computing posterior observation values TIME: 2017/09/18 15:08:25
+ PE 0:  filter trace: After  computing posterior observation values
+ PE 0:  filter trace: Before posterior obs space diagnostics
+ PE 0:  filter trace: After  posterior obs space diagnostics
+ PE 0:  filter trace: Near bottom of main loop, cleaning up obs space
+ PE 0:  filter trace: Bottom of main advance time loop
+ PE 0:  filter trace: Top of main advance time loop
+ PE 0:  
+ PE 0: filter: Main assimilation loop, starting iteration    1
+ PE 0:  filter trace: Before move_ahead checks time of data and next obs
+ PE 0:  filter trace: After  move_ahead checks time of data and next obs
+ PE 0: filter: No more obs to assimilate, exiting main loop
+ PE 0: filter: End of main filter assimilation loop, starting cleanup
+ PE 0:  filter trace: Before state space output
+ Before state space output TIME: 2017/09/18 15:08:27
+ After  state space output TIME: 2017/09/18 15:08:36
+ PE 0:  filter trace: After  state space output
+ PE 0:  filter trace: Before writing output sequence file
+ PE 0: write_obs_seq  opening formatted observation sequence file "obs_seq.final"
+ PE 0: write_obs_seq  closed observation sequence file "obs_seq.final"
+ PE 0:  filter trace: After  writing output sequence file
+ PE 0:  filter trace: Before end_model call
+ PE 0:  filter trace: After  end_model call
+ PE 0:  filter trace: Before ensemble and obs memory cleanup
+ PE 0:  filter trace: After  ensemble and obs memory cleanup
+ PE 0:  filter trace: Filter done
+ Filter done TIME: 2017/09/18 15:08:42
+ FINISHED filter.
+ 
+ 
+ --------------------------------------
+ Finished ... at YYYY MM DD HH MM SS = 
+                 2017  9 18 15  8 42
+ Program Filter
+ --------------------------------------
+ 
+ 
+ ******************************************************* 
+ Finished Running test with : 'i17' and 'openmpi'     
+ ******************************************************  
+[1]  + Terminated                    tail -f dart_log.out
+                        
+ -- FINISHED TESTING -- 
+                        
