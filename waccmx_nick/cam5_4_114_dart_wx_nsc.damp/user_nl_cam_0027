@@ -1,0 +1,33 @@
+ inithist      = 'ENDOFRUN'
+ ncdata        = 'cam_initial_0027.nc'
+ empty_htapes  = .true. 
+ fincl1        = 'PHIS:I' 
+  fincl2        = 'PS', 'Z3', 'T', 'U', 'V', 'OMEGA', 'DPIE_NE','WACCM_WI','WACCM_UI','WACCM_VI','ElecColDens' 
+  fincl3		= 'BR', 'BRCL', 'BRO', 'BRONO2', 'CCL4', 'CF2CLBR', 'CF3BR', 'CFC11', 
+      'CFC113', 'CFC12', 'CH2O', 'CH3BR', 'CH3CCL3', 'CH3CL', 'CH3O2', 'CH3OOH', 'CH4', 'CL',
+      'CL2', 'CL2O2', 'CLDHGH', 'CLDLOW', 'CLDMED', 'CLDTOT', 'CLO', 'CLONO2', 'CLOUD', 'CO',
+      'CO2', 'DTCOND', 'DTV', 'DUV', 'DVV', 'EKGW', 'FLNS', 'FLNSC', 'FLNT', 'FLNTC',
+      'FSDS', 'FSNS', 'FSNSC', 'FSNT', 'FSNTC', 'H', 'H2', 'H2O', 'H2O2', 'HBR',
+      'HCFC22', 'HCL', 'HNO3', 'HO2', 'HO2NO2', 'HOBR', 'HOCL', 'HORZ', 'LANDFRAC', 'LHFLX',
+      'N', 'N2O', 'N2O5', 'NO', 'NO2', 'NO3', 'O', 'O1D', 'O2', 'O3',
+      'OCLO', 'OCNFRAC', 'OH', 'OMEGA', 'PHIS', 'PRECC', 'PRECL', 'PS', 'Q', 'QFLX',
+      'RELHUM', 'SHFLX', 'SOLIN', 'SWCF', 
+      'PSL', 'HNO3_STS', 'HNO3_NAT', 'HNO3_GAS', 'NO_Aircraft', 'NO_Lightning',
+      'SAD_ICE', 'SAD_LNAT', 'SAD_SULFC', 'T', 'TREFHT', 'TTGW', 'U',
+      'UTGWORO', 'UTGWSPEC', 'V', 'VERT', 'VTGWORO', 'VTGWSPEC', 'Z3', 'O2_1S', 'O2_1D', 'NOX',
+      'NOY', 'CLOX', 'CLOY', 'BROX', 'BROY', 'TCLY', 'TOTH', 'UIONTEND', 'VIONTEND',
+      'DTCORE', 'CLDLIQ', 'CLDICE', 'CONCLD', 'FRONTGF:I', 'BUTGWSPEC', 'BTAUE', 'BTAUW', 'BTAUN', 'BTAUS',
+      'TAUE', 'TAUW', 'TAUN', 'TAUS', 'TAUGWX', 'TAUGWY', 'TAUX', 'TAUY', 'SNOWHLND', 'SNOWHICE',
+      'ICEFRAC', 'FSDSC', 'SFNO', 'SFCO', 'SFCH2O', 'CFC11STAR', 'TROPP_FD', 'TElec', 'TIon', 'Op', 'Op2D',
+      'O2p', 'Np', 'NOp', 'N2p', 'e', 'KVH', 'KVM', 'KVT', 'EKGW',
+      'WACCM_UI', 'WACCM_VI', 'WACCM_WI', 'POTEN', 'SIGMAHAL','SIGMAPED' 
+  fincl4	= 'PHIS', 'PS', 'PSL', 'Z3', 'QSUM','QO3', 'QCO2', 'QNO', 'QO3P', 'QHC2S', 'QRL_TOT', 'QRS', 'QCP', 'QTHERMAL', 'QRS_TOT',
+       'QJOULE', 'QRS_AUR', 'QRS_CO2NIR', 'QRS_EUV', 'SolIonRate_Tot','QPERT','QRL','QRLNLTE','Qbkgndtot'
+  fincl5	= 'MSKtem', 'PS', 'PSL', 'VTHzm', 'UVzm', 'UWzm', 'Uzm', 'Vzm', 'THzm','Wzm', 'PHIS'
+   solar_parms_file       = '/glade/p/cesm/wawg/marsh/inputdata/wasolar/waxsolar_3hr_c161205.nc' 
+  nhtfrq        = -6,-1,-6,-6,-6,-6 
+  mfilt         = 1,6,1,1,1 
+  avgflag_pertape = 'A',  'I',  'I', 'I', 'I' 
+ qbo_cyclic = .false.
+ qbo_use_forcing = .false.
+ fv_div24del2flag = 42

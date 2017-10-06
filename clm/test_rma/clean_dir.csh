@@ -1,6 +1,7 @@
 #!/bin/tcsh
 
-rm *.nc *.txt *.log dart_log.*
+mv *.o[0-9]* *.log *.err logs
 
-unlink filter
-unlink perfect_model_obs
+rm rf *.nc *.txt dart_log.*
+
+find . -type l -exec unlink {} \;

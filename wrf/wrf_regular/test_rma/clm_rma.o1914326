@@ -1,0 +1,672 @@
+*******************************
+ running with PBS
+*******************************
+ PBS_JOB_ID  '1914326.chadmin1'
+ PBS_JOBNAME 'clm_rma'
+ NCPUS       '72'
+ NODES       '2'
+*******************************
+*************************
+ --- filter Started -----
+*************************
+ running with mpt
+
+Currently Loaded Modules:
+  1) ncarenv/1.2           4) mpt/2.15f        7) peak_memusage/1.1
+  2) intel/17.0.1          5) netcdf/4.4.1.1
+  3) ncarcompilers/0.4.1   6) xxdiff/4.0.1
+
+ 
+
+
+Running: ./filter; sleep 1  - Please wait...
+ Starting program Filter
+ Initializing the utilities module.
+ Trying to log to unit           10
+ Trying to open file dart_log.out
+ 
+ --------------------------------------
+ Starting ... at YYYY MM DD HH MM SS = 
+                 2017 10  2 11 27 10
+ Program Filter
+ --------------------------------------
+ 
+ set_nml_output Echo NML values to log file only
+ Trying to open namelist log dart_log.nml
+ PE 0: initialize_mpi_utilities:  Running with           72  MPI processes.
+ ERROR FROM:
+  task id:           51
+  routine: check_namelist_read
+  message:  INVALID NAMELIST ENTRY:    output_state_vector = .false., in namelist model_nml
+  
+  source file: $URL: https://svn-dares-dart.cgd.ucar.edu/DART/branches/rma_trunk/assimilation_code/modules/utilities/utilities_mod.f90 $
+  file revision: $Revision: 11841 $
+  revision date: $Date: 2017-07-20 17:07:59 -0600 (Thu, 20 Jul 2017) $
+MPT ERROR: Rank 51(g:51) is aborting with error code 99.
+	Process ID: 63436, Host: r1i0n8, Program: /glade/p/work/hendric/DART/rma_timing/models/wrf/work/filter
+	MPT Version: SGI MPT 2.15  12/18/16 02:58:06
+
+MPT: --------stack traceback-------
+ ERROR FROM:
+  task id:            0
+  routine: check_namelist_read
+  message:  INVALID NAMELIST ENTRY:    output_state_vector = .false., in namelist model_nml
+  
+  source file: $URL: https://svn-dares-dart.cgd.ucar.edu/DART/branches/rma_trunk/assimilation_code/modules/utilities/utilities_mod.f90 $
+ ERROR FROM:
+  file revision: $Revision: 11841 $
+  revision date: $Date: 2017-07-20 17:07:59 -0600 (Thu, 20 Jul 2017) $
+MPT ERROR: Rank 0(g:0) is aborting with error code 99.
+	Process ID: 31291, Host: r1i0n1, Program: /glade/p/work/hendric/DART/rma_timing/models/wrf/work/filter
+	MPT Version: SGI MPT 2.15  12/18/16 02:58:06
+
+MPT: --------stack traceback-------
+ ERROR FROM:
+  task id:           69
+  routine: check_namelist_read
+  message:  INVALID NAMELIST ENTRY:    output_state_vector = .false., in namelist model_nml
+  
+  source file: $URL: https://svn-dares-dart.cgd.ucar.edu/DART/branches/rma_trunk/assimilation_code/modules/utilities/utilities_mod.f90 $
+  task id:           32
+  routine: check_namelist_read
+  message:  INVALID NAMELIST ENTRY:    output_state_vector = .false., in namelist model_nml
+  
+  source file: $URL: https://svn-dares-dart.cgd.ucar.edu/DART/branches/rma_trunk/assimilation_code/modules/utilities/utilities_mod.f90 $
+ ERROR FROM:
+ ERROR FROM:
+  task id:           71
+  routine: check_namelist_read
+  message:  INVALID NAMELIST ENTRY:    output_state_vector = .false., in namelist model_nml
+  
+  source file: $URL: https://svn-dares-dart.cgd.ucar.edu/DART/branches/rma_trunk/assimilation_code/modules/utilities/utilities_mod.f90 $
+  file revision: $Revision: 11841 $
+  revision date: $Date: 2017-07-20 17:07:59 -0600 (Thu, 20 Jul 2017) $
+  file revision: $Revision: 11841 $
+  revision date: $Date: 2017-07-20 17:07:59 -0600 (Thu, 20 Jul 2017) $
+  task id:           48
+  routine: check_namelist_read
+  message:  INVALID NAMELIST ENTRY:    output_state_vector = .false., in namelist model_nml
+  
+  source file: $URL: https://svn-dares-dart.cgd.ucar.edu/DART/branches/rma_trunk/assimilation_code/modules/utilities/utilities_mod.f90 $
+ ERROR FROM:
+  file revision: $Revision: 11841 $
+  revision date: $Date: 2017-07-20 17:07:59 -0600 (Thu, 20 Jul 2017) $
+ ERROR FROM:
+  task id:           63
+  routine: check_namelist_read
+  message:  INVALID NAMELIST ENTRY:    output_state_vector = .false., in namelist model_nml
+  
+  source file: $URL: https://svn-dares-dart.cgd.ucar.edu/DART/branches/rma_trunk/assimilation_code/modules/utilities/utilities_mod.f90 $
+  task id:           49
+  routine: check_namelist_read
+  message:  INVALID NAMELIST ENTRY:    output_state_vector = .false., in namelist model_nml
+ ERROR FROM:
+ ERROR FROM:
+ ERROR FROM:
+  task id:           42
+  routine: check_namelist_read
+  message:  INVALID NAMELIST ENTRY:    output_state_vector = .false., in namelist model_nml
+  
+  source file: $URL: https://svn-dares-dart.cgd.ucar.edu/DART/branches/rma_trunk/assimilation_code/modules/utilities/utilities_mod.f90 $
+  file revision: $Revision: 11841 $
+  revision date: $Date: 2017-07-20 17:07:59 -0600 (Thu, 20 Jul 2017) $
+ ERROR FROM:
+  file revision: $Revision: 11841 $
+  revision date: $Date: 2017-07-20 17:07:59 -0600 (Thu, 20 Jul 2017) $
+ ERROR FROM:
+ ERROR FROM:
+  task id:           46
+  routine: check_namelist_read
+  message:  INVALID NAMELIST ENTRY:    output_state_vector = .false., in namelist model_nml
+  
+  source file: $URL: https://svn-dares-dart.cgd.ucar.edu/DART/branches/rma_trunk/assimilation_code/modules/utilities/utilities_mod.f90 $
+  task id:           12
+  routine: check_namelist_read
+  message:  INVALID NAMELIST ENTRY:    output_state_vector = .false., in namelist model_nml
+  task id:            6
+  routine: check_namelist_read
+  message:  INVALID NAMELIST ENTRY:    output_state_vector = .false., in namelist model_nml
+ ERROR FROM:
+ ERROR FROM:
+ ERROR FROM:
+  
+  source file: $URL: https://svn-dares-dart.cgd.ucar.edu/DART/branches/rma_trunk/assimilation_code/modules/utilities/utilities_mod.f90 $
+  task id:           50
+  routine: check_namelist_read
+  message:  INVALID NAMELIST ENTRY:    output_state_vector = .false., in namelist model_nml
+  
+  source file: $URL: https://svn-dares-dart.cgd.ucar.edu/DART/branches/rma_trunk/assimilation_code/modules/utilities/utilities_mod.f90 $
+  task id:           21
+  routine: check_namelist_read
+  message:  INVALID NAMELIST ENTRY:    output_state_vector = .false., in namelist model_nml
+  file revision: $Revision: 11841 $
+  revision date: $Date: 2017-07-20 17:07:59 -0600 (Thu, 20 Jul 2017) $
+  file revision: $Revision: 11841 $
+  revision date: $Date: 2017-07-20 17:07:59 -0600 (Thu, 20 Jul 2017) $
+  
+  source file: $URL: https://svn-dares-dart.cgd.ucar.edu/DART/branches/rma_trunk/assimilation_code/modules/utilities/utilities_mod.f90 $
+  file revision: $Revision: 11841 $
+  revision date: $Date: 2017-07-20 17:07:59 -0600 (Thu, 20 Jul 2017) $
+ ERROR FROM:
+ ERROR FROM:
+  
+  source file: $URL: https://svn-dares-dart.cgd.ucar.edu/DART/branches/rma_trunk/assimilation_code/modules/utilities/utilities_mod.f90 $
+  task id:           52
+  routine: check_namelist_read
+  message:  INVALID NAMELIST ENTRY:    output_state_vector = .false., in namelist model_nml
+ ERROR FROM:
+ ERROR FROM:
+  task id:           59
+  routine: check_namelist_read
+  message:  INVALID NAMELIST ENTRY:    output_state_vector = .false., in namelist model_nml
+ ERROR FROM:
+ ERROR FROM:
+  task id:           70
+  routine: check_namelist_read
+  message:  INVALID NAMELIST ENTRY:    output_state_vector = .false., in namelist model_nml
+  
+  source file: $URL: https://svn-dares-dart.cgd.ucar.edu/DART/branches/rma_trunk/assimilation_code/modules/utilities/utilities_mod.f90 $
+ ERROR FROM:
+ ERROR FROM:
+  task id:           66
+  routine: check_namelist_read
+  message:  INVALID NAMELIST ENTRY:    output_state_vector = .false., in namelist model_nml
+  file revision: $Revision: 11841 $
+  revision date: $Date: 2017-07-20 17:07:59 -0600 (Thu, 20 Jul 2017) $
+  
+  source file: $URL: https://svn-dares-dart.cgd.ucar.edu/DART/branches/rma_trunk/assimilation_code/modules/utilities/utilities_mod.f90 $
+  task id:           61
+  routine: check_namelist_read
+  message:  INVALID NAMELIST ENTRY:    output_state_vector = .false., in namelist model_nml
+  task id:           65
+  routine: check_namelist_read
+  message:  INVALID NAMELIST ENTRY:    output_state_vector = .false., in namelist model_nml
+  
+  source file: $URL: https://svn-dares-dart.cgd.ucar.edu/DART/branches/rma_trunk/assimilation_code/modules/utilities/utilities_mod.f90 $
+  task id:           47
+  routine: check_namelist_read
+  message:  INVALID NAMELIST ENTRY:    output_state_vector = .false., in namelist model_nml
+  task id:           62
+  routine: check_namelist_read
+  message:  INVALID NAMELIST ENTRY:    output_state_vector = .false., in namelist model_nml
+  file revision: $Revision: 11841 $
+  revision date: $Date: 2017-07-20 17:07:59 -0600 (Thu, 20 Jul 2017) $
+  
+  source file: $URL: https://svn-dares-dart.cgd.ucar.edu/DART/branches/rma_trunk/assimilation_code/modules/utilities/utilities_mod.f90 $
+ ERROR FROM:
+  
+  source file: $URL: https://svn-dares-dart.cgd.ucar.edu/DART/branches/rma_trunk/assimilation_code/modules/utilities/utilities_mod.f90 $
+  
+  source file: $URL: https://svn-dares-dart.cgd.ucar.edu/DART/branches/rma_trunk/assimilation_code/modules/utilities/utilities_mod.f90 $
+  task id:           25
+  routine: check_namelist_read
+  message:  INVALID NAMELIST ENTRY:    output_state_vector = .false., in namelist model_nml
+ ERROR FROM:
+  
+  source file: $URL: https://svn-dares-dart.cgd.ucar.edu/DART/branches/rma_trunk/assimilation_code/modules/utilities/utilities_mod.f90 $
+  file revision: $Revision: 11841 $
+  revision date: $Date: 2017-07-20 17:07:59 -0600 (Thu, 20 Jul 2017) $
+  
+  source file: $URL: https://svn-dares-dart.cgd.ucar.edu/DART/branches/rma_trunk/assimilation_code/modules/utilities/utilities_mod.f90 $
+  file revision: $Revision: 11841 $
+  revision date: $Date: 2017-07-20 17:07:59 -0600 (Thu, 20 Jul 2017) $
+  
+  source file: $URL: https://svn-dares-dart.cgd.ucar.edu/DART/branches/rma_trunk/assimilation_code/modules/utilities/utilities_mod.f90 $
+  task id:           45
+  routine: check_namelist_read
+  message:  INVALID NAMELIST ENTRY:    output_state_vector = .false., in namelist model_nml
+ ERROR FROM:
+ ERROR FROM:
+  file revision: $Revision: 11841 $
+  revision date: $Date: 2017-07-20 17:07:59 -0600 (Thu, 20 Jul 2017) $
+  task id:           20
+  routine: check_namelist_read
+  message:  INVALID NAMELIST ENTRY:    output_state_vector = .false., in namelist model_nml
+  file revision: $Revision: 11841 $
+  revision date: $Date: 2017-07-20 17:07:59 -0600 (Thu, 20 Jul 2017) $
+  
+  source file: $URL: https://svn-dares-dart.cgd.ucar.edu/DART/branches/rma_trunk/assimilation_code/modules/utilities/utilities_mod.f90 $
+  file revision: $Revision: 11841 $
+  revision date: $Date: 2017-07-20 17:07:59 -0600 (Thu, 20 Jul 2017) $
+  file revision: $Revision: 11841 $
+  revision date: $Date: 2017-07-20 17:07:59 -0600 (Thu, 20 Jul 2017) $
+  
+  source file: $URL: https://svn-dares-dart.cgd.ucar.edu/DART/branches/rma_trunk/assimilation_code/modules/utilities/utilities_mod.f90 $
+ ERROR FROM:
+ ERROR FROM:
+  task id:           56
+  routine: check_namelist_read
+  message:  INVALID NAMELIST ENTRY:    output_state_vector = .false., in namelist model_nml
+  file revision: $Revision: 11841 $
+  revision date: $Date: 2017-07-20 17:07:59 -0600 (Thu, 20 Jul 2017) $
+ ERROR FROM:
+ ERROR FROM:
+  task id:            5
+  routine: check_namelist_read
+  message:  INVALID NAMELIST ENTRY:    output_state_vector = .false., in namelist model_nml
+ ERROR FROM:
+  file revision: $Revision: 11841 $
+  revision date: $Date: 2017-07-20 17:07:59 -0600 (Thu, 20 Jul 2017) $
+  task id:           10
+  routine: check_namelist_read
+  message:  INVALID NAMELIST ENTRY:    output_state_vector = .false., in namelist model_nml
+  
+  source file: $URL: https://svn-dares-dart.cgd.ucar.edu/DART/branches/rma_trunk/assimilation_code/modules/utilities/utilities_mod.f90 $
+ ERROR FROM:
+ ERROR FROM:
+  
+  source file: $URL: https://svn-dares-dart.cgd.ucar.edu/DART/branches/rma_trunk/assimilation_code/modules/utilities/utilities_mod.f90 $
+  task id:           44
+  routine: check_namelist_read
+  message:  INVALID NAMELIST ENTRY:    output_state_vector = .false., in namelist model_nml
+  file revision: $Revision: 11841 $
+  revision date: $Date: 2017-07-20 17:07:59 -0600 (Thu, 20 Jul 2017) $
+  file revision: $Revision: 11841 $
+  revision date: $Date: 2017-07-20 17:07:59 -0600 (Thu, 20 Jul 2017) $
+  
+  source file: $URL: https://svn-dares-dart.cgd.ucar.edu/DART/branches/rma_trunk/assimilation_code/modules/utilities/utilities_mod.f90 $
+  task id:           40
+  routine: check_namelist_read
+  message:  INVALID NAMELIST ENTRY:    output_state_vector = .false., in namelist model_nml
+  file revision: $Revision: 11841 $
+  revision date: $Date: 2017-07-20 17:07:59 -0600 (Thu, 20 Jul 2017) $
+ ERROR FROM:
+  file revision: $Revision: 11841 $
+  revision date: $Date: 2017-07-20 17:07:59 -0600 (Thu, 20 Jul 2017) $
+ ERROR FROM:
+ ERROR FROM:
+  task id:           26
+  routine: check_namelist_read
+  message:  INVALID NAMELIST ENTRY:    output_state_vector = .false., in namelist model_nml
+ ERROR FROM:
+  
+  source file: $URL: https://svn-dares-dart.cgd.ucar.edu/DART/branches/rma_trunk/assimilation_code/modules/utilities/utilities_mod.f90 $
+  file revision: $Revision: 11841 $
+  revision date: $Date: 2017-07-20 17:07:59 -0600 (Thu, 20 Jul 2017) $
+  task id:           37
+  routine: check_namelist_read
+  message:  INVALID NAMELIST ENTRY:    output_state_vector = .false., in namelist model_nml
+ ERROR FROM:
+ ERROR FROM:
+  
+  source file: $URL: https://svn-dares-dart.cgd.ucar.edu/DART/branches/rma_trunk/assimilation_code/modules/utilities/utilities_mod.f90 $
+  file revision: $Revision: 11841 $
+  revision date: $Date: 2017-07-20 17:07:59 -0600 (Thu, 20 Jul 2017) $
+ ERROR FROM:
+  task id:           64
+  routine: check_namelist_read
+  message:  INVALID NAMELIST ENTRY:    output_state_vector = .false., in namelist model_nml
+ ERROR FROM:
+  task id:           55
+  routine: check_namelist_read
+  message:  INVALID NAMELIST ENTRY:    output_state_vector = .false., in namelist model_nml
+  task id:           28
+  routine: check_namelist_read
+  message:  INVALID NAMELIST ENTRY:    output_state_vector = .false., in namelist model_nml
+  
+  source file: $URL: https://svn-dares-dart.cgd.ucar.edu/DART/branches/rma_trunk/assimilation_code/modules/utilities/utilities_mod.f90 $
+  
+  source file: $URL: https://svn-dares-dart.cgd.ucar.edu/DART/branches/rma_trunk/assimilation_code/modules/utilities/utilities_mod.f90 $
+  file revision: $Revision: 11841 $
+  revision date: $Date: 2017-07-20 17:07:59 -0600 (Thu, 20 Jul 2017) $
+  
+  source file: $URL: https://svn-dares-dart.cgd.ucar.edu/DART/branches/rma_trunk/assimilation_code/modules/utilities/utilities_mod.f90 $
+  task id:           31
+  routine: check_namelist_read
+  message:  INVALID NAMELIST ENTRY:    output_state_vector = .false., in namelist model_nml
+  file revision: $Revision: 11841 $
+  revision date: $Date: 2017-07-20 17:07:59 -0600 (Thu, 20 Jul 2017) $
+  file revision: $Revision: 11841 $
+  revision date: $Date: 2017-07-20 17:07:59 -0600 (Thu, 20 Jul 2017) $
+  task id:           54
+  routine: check_namelist_read
+  message:  INVALID NAMELIST ENTRY:    output_state_vector = .false., in namelist model_nml
+ ERROR FROM:
+  
+  source file: $URL: https://svn-dares-dart.cgd.ucar.edu/DART/branches/rma_trunk/assimilation_code/modules/utilities/utilities_mod.f90 $
+  task id:           23
+  routine: check_namelist_read
+  message:  INVALID NAMELIST ENTRY:    output_state_vector = .false., in namelist model_nml
+  task id:           41
+  routine: check_namelist_read
+  message:  INVALID NAMELIST ENTRY:    output_state_vector = .false., in namelist model_nml
+ ERROR FROM:
+ ERROR FROM:
+ ERROR FROM:
+ ERROR FROM:
+  task id:           34
+  routine: check_namelist_read
+  message:  INVALID NAMELIST ENTRY:    output_state_vector = .false., in namelist model_nml
+  file revision: $Revision: 11841 $
+  revision date: $Date: 2017-07-20 17:07:59 -0600 (Thu, 20 Jul 2017) $
+  task id:           43
+  routine: check_namelist_read
+  message:  INVALID NAMELIST ENTRY:    output_state_vector = .false., in namelist model_nml
+  file revision: $Revision: 11841 $
+  revision date: $Date: 2017-07-20 17:07:59 -0600 (Thu, 20 Jul 2017) $
+  task id:           68
+  routine: check_namelist_read
+  message:  INVALID NAMELIST ENTRY:    output_state_vector = .false., in namelist model_nml
+  
+  source file: $URL: https://svn-dares-dart.cgd.ucar.edu/DART/branches/rma_trunk/assimilation_code/modules/utilities/utilities_mod.f90 $
+  task id:           53
+  routine: check_namelist_read
+  message:  INVALID NAMELIST ENTRY:    output_state_vector = .false., in namelist model_nml
+  
+  source file: $URL: https://svn-dares-dart.cgd.ucar.edu/DART/branches/rma_trunk/assimilation_code/modules/utilities/utilities_mod.f90 $
+  
+  source file: $URL: https://svn-dares-dart.cgd.ucar.edu/DART/branches/rma_trunk/assimilation_code/modules/utilities/utilities_mod.f90 $
+  file revision: $Revision: 11841 $
+  revision date: $Date: 2017-07-20 17:07:59 -0600 (Thu, 20 Jul 2017) $
+  task id:           60
+  routine: check_namelist_read
+  message:  INVALID NAMELIST ENTRY:    output_state_vector = .false., in namelist model_nml
+  file revision: $Revision: 11841 $
+  revision date: $Date: 2017-07-20 17:07:59 -0600 (Thu, 20 Jul 2017) $
+  
+  source file: $URL: https://svn-dares-dart.cgd.ucar.edu/DART/branches/rma_trunk/assimilation_code/modules/utilities/utilities_mod.f90 $
+  file revision: $Revision: 11841 $
+  revision date: $Date: 2017-07-20 17:07:59 -0600 (Thu, 20 Jul 2017) $
+  file revision: $Revision: 11841 $
+  revision date: $Date: 2017-07-20 17:07:59 -0600 (Thu, 20 Jul 2017) $
+  file revision: $Revision: 11841 $
+  revision date: $Date: 2017-07-20 17:07:59 -0600 (Thu, 20 Jul 2017) $
+  task id:           58
+  routine: check_namelist_read
+  message:  INVALID NAMELIST ENTRY:    output_state_vector = .false., in namelist model_nml
+  
+  source file: $URL: https://svn-dares-dart.cgd.ucar.edu/DART/branches/rma_trunk/assimilation_code/modules/utilities/utilities_mod.f90 $
+  
+  source file: $URL: https://svn-dares-dart.cgd.ucar.edu/DART/branches/rma_trunk/assimilation_code/modules/utilities/utilities_mod.f90 $
+  
+  source file: $URL: https://svn-dares-dart.cgd.ucar.edu/DART/branches/rma_trunk/assimilation_code/modules/utilities/utilities_mod.f90 $
+  file revision: $Revision: 11841 $
+  revision date: $Date: 2017-07-20 17:07:59 -0600 (Thu, 20 Jul 2017) $
+  task id:           18
+  routine: check_namelist_read
+  message:  INVALID NAMELIST ENTRY:    output_state_vector = .false., in namelist model_nml
+  
+  source file: $URL: https://svn-dares-dart.cgd.ucar.edu/DART/branches/rma_trunk/assimilation_code/modules/utilities/utilities_mod.f90 $
+  task id:           36
+  routine: check_namelist_read
+  message:  INVALID NAMELIST ENTRY:    output_state_vector = .false., in namelist model_nml
+  
+  source file: $URL: https://svn-dares-dart.cgd.ucar.edu/DART/branches/rma_trunk/assimilation_code/modules/utilities/utilities_mod.f90 $
+  
+  source file: $URL: https://svn-dares-dart.cgd.ucar.edu/DART/branches/rma_trunk/assimilation_code/modules/utilities/utilities_mod.f90 $
+  file revision: $Revision: 11841 $
+  revision date: $Date: 2017-07-20 17:07:59 -0600 (Thu, 20 Jul 2017) $
+  
+  source file: $URL: https://svn-dares-dart.cgd.ucar.edu/DART/branches/rma_trunk/assimilation_code/modules/utilities/utilities_mod.f90 $
+ ERROR FROM:
+  task id:           39
+  routine: check_namelist_read
+  message:  INVALID NAMELIST ENTRY:    output_state_vector = .false., in namelist model_nml
+  file revision: $Revision: 11841 $
+  revision date: $Date: 2017-07-20 17:07:59 -0600 (Thu, 20 Jul 2017) $
+  
+  source file: $URL: https://svn-dares-dart.cgd.ucar.edu/DART/branches/rma_trunk/assimilation_code/modules/utilities/utilities_mod.f90 $
+ ERROR FROM:
+  
+  source file: $URL: https://svn-dares-dart.cgd.ucar.edu/DART/branches/rma_trunk/assimilation_code/modules/utilities/utilities_mod.f90 $
+  file revision: $Revision: 11841 $
+  revision date: $Date: 2017-07-20 17:07:59 -0600 (Thu, 20 Jul 2017) $
+  file revision: $Revision: 11841 $
+  revision date: $Date: 2017-07-20 17:07:59 -0600 (Thu, 20 Jul 2017) $
+  task id:           38
+  routine: check_namelist_read
+  message:  INVALID NAMELIST ENTRY:    output_state_vector = .false., in namelist model_nml
+  file revision: $Revision: 11841 $
+  revision date: $Date: 2017-07-20 17:07:59 -0600 (Thu, 20 Jul 2017) $
+  file revision: $Revision: 11841 $
+  revision date: $Date: 2017-07-20 17:07:59 -0600 (Thu, 20 Jul 2017) $
+  file revision: $Revision: 11841 $
+  revision date: $Date: 2017-07-20 17:07:59 -0600 (Thu, 20 Jul 2017) $
+  file revision: $Revision: 11841 $
+  revision date: $Date: 2017-07-20 17:07:59 -0600 (Thu, 20 Jul 2017) $
+ ERROR FROM:
+  task id:           67
+  routine: check_namelist_read
+  message:  INVALID NAMELIST ENTRY:    output_state_vector = .false., in namelist model_nml
+  
+  source file: $URL: https://svn-dares-dart.cgd.ucar.edu/DART/branches/rma_trunk/assimilation_code/modules/utilities/utilities_mod.f90 $
+ ERROR FROM:
+  task id:           57
+  routine: check_namelist_read
+  message:  INVALID NAMELIST ENTRY:    output_state_vector = .false., in namelist model_nml
+  
+  source file: $URL: https://svn-dares-dart.cgd.ucar.edu/DART/branches/rma_trunk/assimilation_code/modules/utilities/utilities_mod.f90 $
+  file revision: $Revision: 11841 $
+  revision date: $Date: 2017-07-20 17:07:59 -0600 (Thu, 20 Jul 2017) $
+  
+  source file: $URL: https://svn-dares-dart.cgd.ucar.edu/DART/branches/rma_trunk/assimilation_code/modules/utilities/utilities_mod.f90 $
+  file revision: $Revision: 11841 $
+  revision date: $Date: 2017-07-20 17:07:59 -0600 (Thu, 20 Jul 2017) $
+  file revision: $Revision: 11841 $
+  revision date: $Date: 2017-07-20 17:07:59 -0600 (Thu, 20 Jul 2017) $
+ ERROR FROM:
+  task id:           19
+  routine: check_namelist_read
+  message:  INVALID NAMELIST ENTRY:    output_state_vector = .false., in namelist model_nml
+  
+  source file: $URL: https://svn-dares-dart.cgd.ucar.edu/DART/branches/rma_trunk/assimilation_code/modules/utilities/utilities_mod.f90 $
+ ERROR FROM:
+  file revision: $Revision: 11841 $
+  revision date: $Date: 2017-07-20 17:07:59 -0600 (Thu, 20 Jul 2017) $
+  
+  source file: $URL: https://svn-dares-dart.cgd.ucar.edu/DART/branches/rma_trunk/assimilation_code/modules/utilities/utilities_mod.f90 $
+ ERROR FROM:
+ ERROR FROM:
+  file revision: $Revision: 11841 $
+  revision date: $Date: 2017-07-20 17:07:59 -0600 (Thu, 20 Jul 2017) $
+  task id:            2
+  routine: check_namelist_read
+  message:  INVALID NAMELIST ENTRY:    output_state_vector = .false., in namelist model_nml
+  task id:            4
+  routine: check_namelist_read
+  message:  INVALID NAMELIST ENTRY:    output_state_vector = .false., in namelist model_nml
+  task id:           22
+  routine: check_namelist_read
+  message:  INVALID NAMELIST ENTRY:    output_state_vector = .false., in namelist model_nml
+  
+  source file: $URL: https://svn-dares-dart.cgd.ucar.edu/DART/branches/rma_trunk/assimilation_code/modules/utilities/utilities_mod.f90 $
+  
+  source file: $URL: https://svn-dares-dart.cgd.ucar.edu/DART/branches/rma_trunk/assimilation_code/modules/utilities/utilities_mod.f90 $
+  file revision: $Revision: 11841 $
+  revision date: $Date: 2017-07-20 17:07:59 -0600 (Thu, 20 Jul 2017) $
+ ERROR FROM:
+  file revision: $Revision: 11841 $
+  revision date: $Date: 2017-07-20 17:07:59 -0600 (Thu, 20 Jul 2017) $
+ ERROR FROM:
+ ERROR FROM:
+  task id:           16
+  routine: check_namelist_read
+  message:  INVALID NAMELIST ENTRY:    output_state_vector = .false., in namelist model_nml
+ ERROR FROM:
+  task id:            3
+  routine: check_namelist_read
+  message:  INVALID NAMELIST ENTRY:    output_state_vector = .false., in namelist model_nml
+  file revision: $Revision: 11841 $
+  revision date: $Date: 2017-07-20 17:07:59 -0600 (Thu, 20 Jul 2017) $
+  task id:           33
+  routine: check_namelist_read
+  message:  INVALID NAMELIST ENTRY:    output_state_vector = .false., in namelist model_nml
+ ERROR FROM:
+  task id:           15
+  routine: check_namelist_read
+  message:  INVALID NAMELIST ENTRY:    output_state_vector = .false., in namelist model_nml
+  
+  source file: $URL: https://svn-dares-dart.cgd.ucar.edu/DART/branches/rma_trunk/assimilation_code/modules/utilities/utilities_mod.f90 $
+  
+  source file: $URL: https://svn-dares-dart.cgd.ucar.edu/DART/branches/rma_trunk/assimilation_code/modules/utilities/utilities_mod.f90 $
+ ERROR FROM:
+  task id:           30
+  routine: check_namelist_read
+  message:  INVALID NAMELIST ENTRY:    output_state_vector = .false., in namelist model_nml
+  
+  source file: $URL: https://svn-dares-dart.cgd.ucar.edu/DART/branches/rma_trunk/assimilation_code/modules/utilities/utilities_mod.f90 $
+  
+  source file: $URL: https://svn-dares-dart.cgd.ucar.edu/DART/branches/rma_trunk/assimilation_code/modules/utilities/utilities_mod.f90 $
+  task id:           35
+  routine: check_namelist_read
+  message:  INVALID NAMELIST ENTRY:    output_state_vector = .false., in namelist model_nml
+  file revision: $Revision: 11841 $
+  revision date: $Date: 2017-07-20 17:07:59 -0600 (Thu, 20 Jul 2017) $
+ ERROR FROM:
+ ERROR FROM:
+  
+  source file: $URL: https://svn-dares-dart.cgd.ucar.edu/DART/branches/rma_trunk/assimilation_code/modules/utilities/utilities_mod.f90 $
+ ERROR FROM:
+  
+  source file: $URL: https://svn-dares-dart.cgd.ucar.edu/DART/branches/rma_trunk/assimilation_code/modules/utilities/utilities_mod.f90 $
+  task id:           11
+  routine: check_namelist_read
+  message:  INVALID NAMELIST ENTRY:    output_state_vector = .false., in namelist model_nml
+  
+  source file: $URL: https://svn-dares-dart.cgd.ucar.edu/DART/branches/rma_trunk/assimilation_code/modules/utilities/utilities_mod.f90 $
+  task id:           17
+  routine: check_namelist_read
+  message:  INVALID NAMELIST ENTRY:    output_state_vector = .false., in namelist model_nml
+  
+  source file: $URL: https://svn-dares-dart.cgd.ucar.edu/DART/branches/rma_trunk/assimilation_code/modules/utilities/utilities_mod.f90 $
+  file revision: $Revision: 11841 $
+  revision date: $Date: 2017-07-20 17:07:59 -0600 (Thu, 20 Jul 2017) $
+ ERROR FROM:
+  task id:            8
+  routine: check_namelist_read
+  message:  INVALID NAMELIST ENTRY:    output_state_vector = .false., in namelist model_nml
+  task id:           29
+  routine: check_namelist_read
+  message:  INVALID NAMELIST ENTRY:    output_state_vector = .false., in namelist model_nml
+  
+  source file: $URL: https://svn-dares-dart.cgd.ucar.edu/DART/branches/rma_trunk/assimilation_code/modules/utilities/utilities_mod.f90 $
+  task id:           13
+  routine: check_namelist_read
+  message:  INVALID NAMELIST ENTRY:    output_state_vector = .false., in namelist model_nml
+  
+  source file: $URL: https://svn-dares-dart.cgd.ucar.edu/DART/branches/rma_trunk/assimilation_code/modules/utilities/utilities_mod.f90 $
+  file revision: $Revision: 11841 $
+  revision date: $Date: 2017-07-20 17:07:59 -0600 (Thu, 20 Jul 2017) $
+ ERROR FROM:
+  file revision: $Revision: 11841 $
+  revision date: $Date: 2017-07-20 17:07:59 -0600 (Thu, 20 Jul 2017) $
+  task id:           24
+  routine: check_namelist_read
+  message:  INVALID NAMELIST ENTRY:    output_state_vector = .false., in namelist model_nml
+  file revision: $Revision: 11841 $
+  revision date: $Date: 2017-07-20 17:07:59 -0600 (Thu, 20 Jul 2017) $
+  file revision: $Revision: 11841 $
+  revision date: $Date: 2017-07-20 17:07:59 -0600 (Thu, 20 Jul 2017) $
+  file revision: $Revision: 11841 $
+  revision date: $Date: 2017-07-20 17:07:59 -0600 (Thu, 20 Jul 2017) $
+  file revision: $Revision: 11841 $
+  revision date: $Date: 2017-07-20 17:07:59 -0600 (Thu, 20 Jul 2017) $
+  file revision: $Revision: 11841 $
+  revision date: $Date: 2017-07-20 17:07:59 -0600 (Thu, 20 Jul 2017) $
+  
+  source file: $URL: https://svn-dares-dart.cgd.ucar.edu/DART/branches/rma_trunk/assimilation_code/modules/utilities/utilities_mod.f90 $
+  
+  source file: $URL: https://svn-dares-dart.cgd.ucar.edu/DART/branches/rma_trunk/assimilation_code/modules/utilities/utilities_mod.f90 $
+  file revision: $Revision: 11841 $
+  revision date: $Date: 2017-07-20 17:07:59 -0600 (Thu, 20 Jul 2017) $
+  
+  source file: $URL: https://svn-dares-dart.cgd.ucar.edu/DART/branches/rma_trunk/assimilation_code/modules/utilities/utilities_mod.f90 $
+  task id:           14
+  routine: check_namelist_read
+  message:  INVALID NAMELIST ENTRY:    output_state_vector = .false., in namelist model_nml
+  file revision: $Revision: 11841 $
+  revision date: $Date: 2017-07-20 17:07:59 -0600 (Thu, 20 Jul 2017) $
+  
+  source file: $URL: https://svn-dares-dart.cgd.ucar.edu/DART/branches/rma_trunk/assimilation_code/modules/utilities/utilities_mod.f90 $
+  file revision: $Revision: 11841 $
+  revision date: $Date: 2017-07-20 17:07:59 -0600 (Thu, 20 Jul 2017) $
+  file revision: $Revision: 11841 $
+  revision date: $Date: 2017-07-20 17:07:59 -0600 (Thu, 20 Jul 2017) $
+  
+  source file: $URL: https://svn-dares-dart.cgd.ucar.edu/DART/branches/rma_trunk/assimilation_code/modules/utilities/utilities_mod.f90 $
+  file revision: $Revision: 11841 $
+  revision date: $Date: 2017-07-20 17:07:59 -0600 (Thu, 20 Jul 2017) $
+ ERROR FROM:
+  task id:            7
+  routine: check_namelist_read
+  message:  INVALID NAMELIST ENTRY:    output_state_vector = .false., in namelist model_nml
+ ERROR FROM:
+  task id:            9
+  routine: check_namelist_read
+  message:  INVALID NAMELIST ENTRY:    output_state_vector = .false., in namelist model_nml
+  file revision: $Revision: 11841 $
+  revision date: $Date: 2017-07-20 17:07:59 -0600 (Thu, 20 Jul 2017) $
+  
+  source file: $URL: https://svn-dares-dart.cgd.ucar.edu/DART/branches/rma_trunk/assimilation_code/modules/utilities/utilities_mod.f90 $
+ ERROR FROM:
+  task id:            1
+  routine: check_namelist_read
+  message:  INVALID NAMELIST ENTRY:    output_state_vector = .false., in namelist model_nml
+  
+  source file: $URL: https://svn-dares-dart.cgd.ucar.edu/DART/branches/rma_trunk/assimilation_code/modules/utilities/utilities_mod.f90 $
+  
+  source file: $URL: https://svn-dares-dart.cgd.ucar.edu/DART/branches/rma_trunk/assimilation_code/modules/utilities/utilities_mod.f90 $
+  file revision: $Revision: 11841 $
+  revision date: $Date: 2017-07-20 17:07:59 -0600 (Thu, 20 Jul 2017) $
+  file revision: $Revision: 11841 $
+  revision date: $Date: 2017-07-20 17:07:59 -0600 (Thu, 20 Jul 2017) $
+  file revision: $Revision: 11841 $
+  revision date: $Date: 2017-07-20 17:07:59 -0600 (Thu, 20 Jul 2017) $
+ ERROR FROM:
+  task id:           27
+  routine: check_namelist_read
+  message:  INVALID NAMELIST ENTRY:    output_state_vector = .false., in namelist model_nml
+  
+  source file: $URL: https://svn-dares-dart.cgd.ucar.edu/DART/branches/rma_trunk/assimilation_code/modules/utilities/utilities_mod.f90 $
+  file revision: $Revision: 11841 $
+  revision date: $Date: 2017-07-20 17:07:59 -0600 (Thu, 20 Jul 2017) $
+MPT: Attaching to program: /proc/63436/exe, process 63436
+MPT: Try: zypper install -C "debuginfo(build-id)=5409c48fdb15e90649c1407e444fbe31d6dc8ec1"
+MPT: (no debugging symbols found)...done.
+MPT: [Thread debugging using libthread_db enabled]
+MPT: Using host libthread_db library "/glade/u/apps/ch/os/lib64/libthread_db.so.1".
+MPT: Try: zypper install -C "debuginfo(build-id)=3d290be00d48b823d3b71df2249e80d881bc473d"
+MPT: (no debugging symbols found)...done.
+MPT: Try: zypper install -C "debuginfo(build-id)=e97cfdb062d6f0c41073f2109a7605d0ae991c03"
+MPT: (no debugging symbols found)...done.
+MPT: Try: zypper install -C "debuginfo(build-id)=f43d7754940a14ffe3d9bd8fc9472ffbbfead544"
+MPT: (no debugging symbols found)...done.
+MPT: Try: zypper install -C "debuginfo(build-id)=0ea764119690f32c98faae9a63a73f35ed8b1099"
+MPT: (no debugging symbols found)...done.
+MPT: Try: zypper install -C "debuginfo(build-id)=15916519d9dbaea26ec88427460b4cedb9c0a6ab"
+MPT: (no debugging symbols found)...done.
+MPT: Try: zypper install -C "debuginfo(build-id)=79264652a62453da222372a430cd9351d4bbcbde"
+MPT: (no debugging symbols found)...done.
+MPT: Try: zypper install -C "debuginfo(build-id)=68682e9ac223d269cbecb94315fcec5e16b32bfb"
+MPT: (no debugging symbols found)...done.
+MPT: 0x00002aaaaaee341c in waitpid () from /glade/u/apps/ch/os/lib64/libpthread.so.0
+MPT: Missing separate debuginfos, use: zypper install glibc-debuginfo-2.19-35.1.x86_64
+MPT: (gdb) #0  0x00002aaaaaee341c in waitpid ()
+MPT:    from /glade/u/apps/ch/os/lib64/libpthread.so.0
+MPT: #1  0x00002aaaab6105d6 in mpi_sgi_system (
+MPT: #2  MPI_SGI_stacktraceback (
+MPT:     header=header@entry=0x7fffffff3950 "MPT ERROR: Rank 51(g:51) is aborting with error code 99.\n\tProcess ID: 63436, Host: r1i0n8, Program: /glade/p/work/hendric/DART/rma_timing/models/wrf/work/filter\n\tMPT Version: SGI MPT 2.15  12/18/16 02"...) at sig.c:339
+MPT: #3  0x00002aaaab563d6f in print_traceback (ecode=ecode@entry=99) at abort.c:227
+MPT: #4  0x00002aaaab563fda in PMPI_Abort (comm=<optimized out>, errorcode=99)
+MPT:     at abort.c:66
+MPT: #5  0x00002aaaab56428d in pmpi_abort__ ()
+MPT:    from /opt/sgi/mpt/mpt-2.15/lib/libmpi.so
+MPT: #6  0x00000000005aa40c in exit_all_ ()
+MPT: #7  0x000000000059907f in utilities_mod_mp_error_handler_ ()
+MPT: #8  0x000000000058f3fd in utilities_mod_mp_check_namelist_read_ ()
+MPT: #9  0x0000000000475e21 in model_mod_mp_static_init_model_ ()
+MPT: #10 0x0000000000513e0a in filter_mod_mp_filter_main_ ()
+MPT: #11 0x000000000047ba9c in MAIN__ ()
+MPT: #12 0x000000000040491e in main ()
+MPT: (gdb) A debugging session is active.
+MPT: 
+MPT: 	Inferior 1 [process 63436] will be detached.
+MPT: 
+MPT: Quit anyway? (y or n) [answered Y; input not from terminal]
+MPT: Detaching from program: /proc/63436/exe, process 63436
+Used memory in task 71/36: 30.70MiB (+0.63MiB overhead). ExitStatus: 0. Signal: 0
+MPT ERROR: MPI_COMM_WORLD rank 71 has terminated without calling MPI_Finalize()
+	aborting job
+*************************
+ --- filter Finished ----
+*************************

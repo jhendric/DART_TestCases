@@ -1,0 +1,1699 @@
+Mon Sep 25 17:37:50 MDT 2017 -- BEGIN CAM_ASSIMILATE
+LSB_SUB_RES_REQ: Undefined variable.
+ls -d ../Hide*
+ls -d ../Hide*
+ls: cannot access ../Hide*: No such file or directory
+if ( $status == 0 ) then
+if ( 2 == 0 ) then
+
+
+set log_list = `ls -t cesm.log.*`
+set log_list = `ls -t cesm.log.*`
+ls -t cesm.log.*
+ls: cannot access cesm.log.*: No such file or directory
+echo "log_list is $log_list"
+echo log_list is 
+log_list is 
+
+
+
+
+
+
+if ( $#log_list > = 3 ) then
+if ( 0 > = 3 ) then
+unset echo
+unset echo
+
+
+
+
+
+
+
+
+
+set FILE = `head -n 1 rpointer.atm_0001`
+set FILE = $FILE:r
+set ATM_DATE_EXT = `echo $FILE:e`
+set ATM_DATE = `echo $FILE:e | sed -e "s#-# #g"`
+set ATM_YEAR = `echo $ATM_DATE[1] | bc`
+set ATM_MONTH = `echo $ATM_DATE[2] | bc`
+set ATM_DAY = `echo $ATM_DATE[3] | bc`
+set ATM_SECONDS = `echo $ATM_DATE[4] | bc`
+set ATM_HOUR = `echo $ATM_DATE[4] / 3600 | bc`
+
+echo "valid time of model is $ATM_YEAR $ATM_MONTH $ATM_DAY $ATM_SECONDS (seconds)"
+valid time of model is 2010 9 18 43200 (seconds)
+echo "valid time of model is $ATM_YEAR $ATM_MONTH $ATM_DAY $ATM_HOUR (hours)"
+valid time of model is 2010 9 18 12 (hours)
+
+
+
+
+
+set temp_dir = assimilate_cam
+echo "temp_dir is $temp_dir"
+temp_dir is assimilate_cam
+
+if ( -d $temp_dir ) then
+${REMOVE} $temp_dir/*
+else
+cd $temp_dir
+
+
+
+
+
+
+
+
+set YYYYMM = `printf %04d%02d                ${ATM_YEAR} ${ATM_MONTH}`
+if ( ! -d ${BASEOBSDIR}/${YYYYMM}_6H ) then
+
+
+
+set OBSFNAME = `printf obs_seq_allobs_%04d%02d%02d%02d.biasfix ${ATM_YEAR} ${ATM_MONTH} ${ATM_DAY} ${ATM_HOUR}`
+
+set OBS_FILE = ${BASEOBSDIR}/${YYYYMM}_6H/${OBSFNAME}
+
+echo "OBS_FILE = $OBS_FILE"
+OBS_FILE = /glade/p/hao/nickp/dart_obs/saber_data/nsc_waccmx_dart/obs_seq_6hr_allobs//201009_6H/obs_seq_allobs_2010091812.biasfix
+
+if ( -e ${OBS_FILE} ) then
+${LINK} ${OBS_FILE} obs_seq.out
+‘obs_seq.out’ -> ‘/glade/p/hao/nickp/dart_obs/saber_data/nsc_waccmx_dart/obs_seq_6hr_allobs//201009_6H/obs_seq_allobs_2010091812.biasfix’
+else
+
+
+
+
+
+echo "`date` -- BEGIN COPY BLOCK"
+Mon Sep 25 17:37:53 MDT 2017 -- BEGIN COPY BLOCK
+
+if ( -e ${CASEROOT}/input.nml ) then
+
+sed -e "/#/d;/^!/d;/^[ ]*!/d" ${CASEROOT}/input.nml > ! input.nml || exit 39
+else
+
+echo "`date` -- END COPY BLOCK"
+Mon Sep 25 17:37:53 MDT 2017 -- END COPY BLOCK
+
+
+
+
+
+if ( $?TASKS_PER_NODE ) then
+if ( $#TASKS_PER_NODE > 0 ) then
+endif
+
+
+
+
+
+
+
+
+
+
+
+
+set MYSTRING = `grep 'sampling_error_correction' input.nml`
+set MYSTRING = `echo $MYSTRING | sed -e "s#[=,'\.]# #g"`
+set MYSTRING = `echo $MYSTRING | sed -e 's#"# #g'`
+set SECSTRING = `echo $MYSTRING[2] | tr '[:upper:]' '[:lower:]'`
+
+if ( $SECSTRING == true ) then
+
+echo "Sampling Error Correction not requested for this assimilation."
+Sampling Error Correction not requested for this assimilation.
+endif
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+set MYSTRING = `grep 'inf_flavor' input.nml`
+set MYSTRING = `echo $MYSTRING | sed -e "s#[=,'\.]# #g"`
+set PRIOR_INF = $MYSTRING[2]
+set POSTE_INF = $MYSTRING[3]
+
+set MYSTRING = `grep 'inf_initial_from_restart' input.nml`
+set MYSTRING = `echo $MYSTRING | sed -e "s#[=,'\.]# #g"`
+set PRIOR_TF = `echo $MYSTRING[2] | tr '[:upper:]' '[:lower:]'`
+set POSTE_TF = `echo $MYSTRING[3] | tr '[:upper:]' '[:lower:]'`
+
+
+
+set MYSTRING = `grep 'inf_in_file_name' input.nml`
+set MYSTRING = `echo $MYSTRING | sed -e "s#[=,'\.]# #g"`
+set MYSTRING = `echo $MYSTRING | sed -e 's#"# #g'`
+set PRIOR_INF_IFNAME = $MYSTRING[2]
+set POSTE_INF_IFNAME = $MYSTRING[3]
+
+set MYSTRING = `grep 'inf_out_file_name' input.nml`
+set MYSTRING = `echo $MYSTRING | sed -e "s#[=,'\.]# #g"`
+set MYSTRING = `echo $MYSTRING | sed -e 's#"# #g'`
+set PRIOR_INF_OFNAME = $MYSTRING[2]
+set POSTE_INF_OFNAME = $MYSTRING[3]
+
+set MYSTRING = `grep 'inf_diag_file_name' input.nml`
+set MYSTRING = `echo $MYSTRING | sed -e "s#[=,'\.]# #g"`
+set MYSTRING = `echo $MYSTRING | sed -e 's#"# #g'`
+set PRIOR_INF_DIAG = $MYSTRING[2]
+set POSTE_INF_DIAG = $MYSTRING[3]
+
+
+
+if ( $PRIOR_INF > 0 ) then
+
+if ( $PRIOR_TF == false ) then
+if ( -e ../cam_inflation_cookie ) then
+
+
+( ls -rt1 ../cam_${PRIOR_INF_OFNAME}.* | tail -n 1 > ! latestfile ) > & /dev/null
+set nfiles = `cat latestfile | wc -l`
+
+
+if ( $nfiles > 0 ) then
+set latest = `cat latestfile`
+${LINK} $latest ${PRIOR_INF_IFNAME}
+‘prior_inflate_ics’ -> ‘../cam_prior_inflate_restart.2010-09-18-00000’
+else
+
+endif
+else
+
+
+
+if ( $POSTE_INF > 0 ) then
+
+echo "Posterior Inflation       not requested for this assimilation."
+Posterior Inflation       not requested for this assimilation.
+endif
+
+
+${REMOVE} ../cam_inflation_cookie
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+echo "`date` -- BEGIN CAM-TO-DART"
+Mon Sep 25 17:37:53 MDT 2017 -- BEGIN CAM-TO-DART
+
+
+
+
+
+
+
+
+if ( $CAM_DYCORE == 'se' || $CAM_DYCORE == 'homme' ) then
+
+set member = 1
+while ( ${member} < = ${ensemble_size} )
+
+
+
+
+set MYTEMPDIR = member_${member}
+mkdir -p $MYTEMPDIR
+cd $MYTEMPDIR
+
+
+$REMOVE output.${member}.cam_to_dart
+
+set ATM_INITIAL_FILENAME = `printf ${CASE}.cam_%04d.i.${ATM_DATE_EXT}.nc  ${member}`
+set ATM_HISTORY_FILENAME = `printf ${CASE}.cam_%04d.h0.${ATM_DATE_EXT}.nc ${member}`
+set DART_IC_FILENAME = `printf filter_ics.%04d     ${member}`
+set DART_RESTART_FILE = `printf filter_restart.%04d ${member}`
+
+sed -e "s#dart_ics#../${DART_IC_FILENAME}#" -e "s#dart_restart#../${DART_RESTART_FILE}#" < ../input.nml > ! input.nml || exit 41
+
+${LINK} ../../$ATM_INITIAL_FILENAME caminput.nc
+‘caminput.nc’ -> ‘../../cam5_4_114_dart_wx_nsc.damp.cam_0001.i.2010-09-18-43200.nc’
+${LINK} ../../$ATM_HISTORY_FILENAME cam_phis.nc
+‘cam_phis.nc’ -> ‘../../cam5_4_114_dart_wx_nsc.damp.cam_0001.h0.2010-09-18-43200.nc’
+
+if ( $CAM_DYCORE == 'se' ) then
+
+echo "starting cam_to_dart for member ${member} at "`date`
+starting cam_to_dart for member 1 at Mon Sep 25 17:37:53 MDT 2017
+
+${EXEROOT}/cam_to_dart > ! output.${member}.cam_to_dart
+
+cd ..
+
+@ member++
+end
+while ( ${member} < = ${ensemble_size} )
+
+
+
+
+set MYTEMPDIR = member_${member}
+mkdir -p $MYTEMPDIR
+cd $MYTEMPDIR
+
+
+$REMOVE output.${member}.cam_to_dart
+
+set ATM_INITIAL_FILENAME = `printf ${CASE}.cam_%04d.i.${ATM_DATE_EXT}.nc  ${member}`
+set ATM_HISTORY_FILENAME = `printf ${CASE}.cam_%04d.h0.${ATM_DATE_EXT}.nc ${member}`
+set DART_IC_FILENAME = `printf filter_ics.%04d     ${member}`
+set DART_RESTART_FILE = `printf filter_restart.%04d ${member}`
+
+sed -e "s#dart_ics#../${DART_IC_FILENAME}#" -e "s#dart_restart#../${DART_RESTART_FILE}#" < ../input.nml > ! input.nml || exit 41
+
+${LINK} ../../$ATM_INITIAL_FILENAME caminput.nc
+‘caminput.nc’ -> ‘../../cam5_4_114_dart_wx_nsc.damp.cam_0002.i.2010-09-18-43200.nc’
+${LINK} ../../$ATM_HISTORY_FILENAME cam_phis.nc
+‘cam_phis.nc’ -> ‘../../cam5_4_114_dart_wx_nsc.damp.cam_0002.h0.2010-09-18-43200.nc’
+
+if ( $CAM_DYCORE == 'se' ) then
+
+echo "starting cam_to_dart for member ${member} at "`date`
+starting cam_to_dart for member 2 at Mon Sep 25 17:37:53 MDT 2017
+
+${EXEROOT}/cam_to_dart > ! output.${member}.cam_to_dart
+
+cd ..
+
+@ member++
+end
+while ( ${member} < = ${ensemble_size} )
+
+
+
+
+set MYTEMPDIR = member_${member}
+mkdir -p $MYTEMPDIR
+cd $MYTEMPDIR
+
+
+$REMOVE output.${member}.cam_to_dart
+
+set ATM_INITIAL_FILENAME = `printf ${CASE}.cam_%04d.i.${ATM_DATE_EXT}.nc  ${member}`
+set ATM_HISTORY_FILENAME = `printf ${CASE}.cam_%04d.h0.${ATM_DATE_EXT}.nc ${member}`
+set DART_IC_FILENAME = `printf filter_ics.%04d     ${member}`
+set DART_RESTART_FILE = `printf filter_restart.%04d ${member}`
+
+sed -e "s#dart_ics#../${DART_IC_FILENAME}#" -e "s#dart_restart#../${DART_RESTART_FILE}#" < ../input.nml > ! input.nml || exit 41
+
+${LINK} ../../$ATM_INITIAL_FILENAME caminput.nc
+‘caminput.nc’ -> ‘../../cam5_4_114_dart_wx_nsc.damp.cam_0003.i.2010-09-18-43200.nc’
+${LINK} ../../$ATM_HISTORY_FILENAME cam_phis.nc
+‘cam_phis.nc’ -> ‘../../cam5_4_114_dart_wx_nsc.damp.cam_0003.h0.2010-09-18-43200.nc’
+
+if ( $CAM_DYCORE == 'se' ) then
+
+echo "starting cam_to_dart for member ${member} at "`date`
+starting cam_to_dart for member 3 at Mon Sep 25 17:37:53 MDT 2017
+
+${EXEROOT}/cam_to_dart > ! output.${member}.cam_to_dart
+
+cd ..
+
+@ member++
+end
+while ( ${member} < = ${ensemble_size} )
+
+
+
+
+set MYTEMPDIR = member_${member}
+mkdir -p $MYTEMPDIR
+cd $MYTEMPDIR
+
+
+$REMOVE output.${member}.cam_to_dart
+
+set ATM_INITIAL_FILENAME = `printf ${CASE}.cam_%04d.i.${ATM_DATE_EXT}.nc  ${member}`
+set ATM_HISTORY_FILENAME = `printf ${CASE}.cam_%04d.h0.${ATM_DATE_EXT}.nc ${member}`
+set DART_IC_FILENAME = `printf filter_ics.%04d     ${member}`
+set DART_RESTART_FILE = `printf filter_restart.%04d ${member}`
+
+sed -e "s#dart_ics#../${DART_IC_FILENAME}#" -e "s#dart_restart#../${DART_RESTART_FILE}#" < ../input.nml > ! input.nml || exit 41
+
+${LINK} ../../$ATM_INITIAL_FILENAME caminput.nc
+‘caminput.nc’ -> ‘../../cam5_4_114_dart_wx_nsc.damp.cam_0004.i.2010-09-18-43200.nc’
+${LINK} ../../$ATM_HISTORY_FILENAME cam_phis.nc
+‘cam_phis.nc’ -> ‘../../cam5_4_114_dart_wx_nsc.damp.cam_0004.h0.2010-09-18-43200.nc’
+
+if ( $CAM_DYCORE == 'se' ) then
+
+echo "starting cam_to_dart for member ${member} at "`date`
+starting cam_to_dart for member 4 at Mon Sep 25 17:37:53 MDT 2017
+
+${EXEROOT}/cam_to_dart > ! output.${member}.cam_to_dart
+
+cd ..
+
+@ member++
+end
+while ( ${member} < = ${ensemble_size} )
+
+
+
+
+set MYTEMPDIR = member_${member}
+mkdir -p $MYTEMPDIR
+cd $MYTEMPDIR
+
+
+$REMOVE output.${member}.cam_to_dart
+
+set ATM_INITIAL_FILENAME = `printf ${CASE}.cam_%04d.i.${ATM_DATE_EXT}.nc  ${member}`
+set ATM_HISTORY_FILENAME = `printf ${CASE}.cam_%04d.h0.${ATM_DATE_EXT}.nc ${member}`
+set DART_IC_FILENAME = `printf filter_ics.%04d     ${member}`
+set DART_RESTART_FILE = `printf filter_restart.%04d ${member}`
+
+sed -e "s#dart_ics#../${DART_IC_FILENAME}#" -e "s#dart_restart#../${DART_RESTART_FILE}#" < ../input.nml > ! input.nml || exit 41
+
+${LINK} ../../$ATM_INITIAL_FILENAME caminput.nc
+‘caminput.nc’ -> ‘../../cam5_4_114_dart_wx_nsc.damp.cam_0005.i.2010-09-18-43200.nc’
+${LINK} ../../$ATM_HISTORY_FILENAME cam_phis.nc
+‘cam_phis.nc’ -> ‘../../cam5_4_114_dart_wx_nsc.damp.cam_0005.h0.2010-09-18-43200.nc’
+
+if ( $CAM_DYCORE == 'se' ) then
+
+echo "starting cam_to_dart for member ${member} at "`date`
+starting cam_to_dart for member 5 at Mon Sep 25 17:37:53 MDT 2017
+
+${EXEROOT}/cam_to_dart > ! output.${member}.cam_to_dart
+
+cd ..
+
+@ member++
+end
+while ( ${member} < = ${ensemble_size} )
+
+
+
+
+set MYTEMPDIR = member_${member}
+mkdir -p $MYTEMPDIR
+cd $MYTEMPDIR
+
+
+$REMOVE output.${member}.cam_to_dart
+
+set ATM_INITIAL_FILENAME = `printf ${CASE}.cam_%04d.i.${ATM_DATE_EXT}.nc  ${member}`
+set ATM_HISTORY_FILENAME = `printf ${CASE}.cam_%04d.h0.${ATM_DATE_EXT}.nc ${member}`
+set DART_IC_FILENAME = `printf filter_ics.%04d     ${member}`
+set DART_RESTART_FILE = `printf filter_restart.%04d ${member}`
+
+sed -e "s#dart_ics#../${DART_IC_FILENAME}#" -e "s#dart_restart#../${DART_RESTART_FILE}#" < ../input.nml > ! input.nml || exit 41
+
+${LINK} ../../$ATM_INITIAL_FILENAME caminput.nc
+‘caminput.nc’ -> ‘../../cam5_4_114_dart_wx_nsc.damp.cam_0006.i.2010-09-18-43200.nc’
+${LINK} ../../$ATM_HISTORY_FILENAME cam_phis.nc
+‘cam_phis.nc’ -> ‘../../cam5_4_114_dart_wx_nsc.damp.cam_0006.h0.2010-09-18-43200.nc’
+
+if ( $CAM_DYCORE == 'se' ) then
+
+echo "starting cam_to_dart for member ${member} at "`date`
+starting cam_to_dart for member 6 at Mon Sep 25 17:37:53 MDT 2017
+
+${EXEROOT}/cam_to_dart > ! output.${member}.cam_to_dart
+
+cd ..
+
+@ member++
+end
+while ( ${member} < = ${ensemble_size} )
+
+
+
+
+set MYTEMPDIR = member_${member}
+mkdir -p $MYTEMPDIR
+cd $MYTEMPDIR
+
+
+$REMOVE output.${member}.cam_to_dart
+
+set ATM_INITIAL_FILENAME = `printf ${CASE}.cam_%04d.i.${ATM_DATE_EXT}.nc  ${member}`
+set ATM_HISTORY_FILENAME = `printf ${CASE}.cam_%04d.h0.${ATM_DATE_EXT}.nc ${member}`
+set DART_IC_FILENAME = `printf filter_ics.%04d     ${member}`
+set DART_RESTART_FILE = `printf filter_restart.%04d ${member}`
+
+sed -e "s#dart_ics#../${DART_IC_FILENAME}#" -e "s#dart_restart#../${DART_RESTART_FILE}#" < ../input.nml > ! input.nml || exit 41
+
+${LINK} ../../$ATM_INITIAL_FILENAME caminput.nc
+‘caminput.nc’ -> ‘../../cam5_4_114_dart_wx_nsc.damp.cam_0007.i.2010-09-18-43200.nc’
+${LINK} ../../$ATM_HISTORY_FILENAME cam_phis.nc
+‘cam_phis.nc’ -> ‘../../cam5_4_114_dart_wx_nsc.damp.cam_0007.h0.2010-09-18-43200.nc’
+
+if ( $CAM_DYCORE == 'se' ) then
+
+echo "starting cam_to_dart for member ${member} at "`date`
+starting cam_to_dart for member 7 at Mon Sep 25 17:37:53 MDT 2017
+
+${EXEROOT}/cam_to_dart > ! output.${member}.cam_to_dart
+
+cd ..
+
+@ member++
+end
+while ( ${member} < = ${ensemble_size} )
+
+
+
+
+set MYTEMPDIR = member_${member}
+mkdir -p $MYTEMPDIR
+cd $MYTEMPDIR
+
+
+$REMOVE output.${member}.cam_to_dart
+
+set ATM_INITIAL_FILENAME = `printf ${CASE}.cam_%04d.i.${ATM_DATE_EXT}.nc  ${member}`
+set ATM_HISTORY_FILENAME = `printf ${CASE}.cam_%04d.h0.${ATM_DATE_EXT}.nc ${member}`
+set DART_IC_FILENAME = `printf filter_ics.%04d     ${member}`
+set DART_RESTART_FILE = `printf filter_restart.%04d ${member}`
+
+sed -e "s#dart_ics#../${DART_IC_FILENAME}#" -e "s#dart_restart#../${DART_RESTART_FILE}#" < ../input.nml > ! input.nml || exit 41
+
+${LINK} ../../$ATM_INITIAL_FILENAME caminput.nc
+‘caminput.nc’ -> ‘../../cam5_4_114_dart_wx_nsc.damp.cam_0008.i.2010-09-18-43200.nc’
+${LINK} ../../$ATM_HISTORY_FILENAME cam_phis.nc
+‘cam_phis.nc’ -> ‘../../cam5_4_114_dart_wx_nsc.damp.cam_0008.h0.2010-09-18-43200.nc’
+
+if ( $CAM_DYCORE == 'se' ) then
+
+echo "starting cam_to_dart for member ${member} at "`date`
+starting cam_to_dart for member 8 at Mon Sep 25 17:37:53 MDT 2017
+
+${EXEROOT}/cam_to_dart > ! output.${member}.cam_to_dart
+
+cd ..
+
+@ member++
+end
+while ( ${member} < = ${ensemble_size} )
+
+
+
+
+set MYTEMPDIR = member_${member}
+mkdir -p $MYTEMPDIR
+cd $MYTEMPDIR
+
+
+$REMOVE output.${member}.cam_to_dart
+
+set ATM_INITIAL_FILENAME = `printf ${CASE}.cam_%04d.i.${ATM_DATE_EXT}.nc  ${member}`
+set ATM_HISTORY_FILENAME = `printf ${CASE}.cam_%04d.h0.${ATM_DATE_EXT}.nc ${member}`
+set DART_IC_FILENAME = `printf filter_ics.%04d     ${member}`
+set DART_RESTART_FILE = `printf filter_restart.%04d ${member}`
+
+sed -e "s#dart_ics#../${DART_IC_FILENAME}#" -e "s#dart_restart#../${DART_RESTART_FILE}#" < ../input.nml > ! input.nml || exit 41
+
+${LINK} ../../$ATM_INITIAL_FILENAME caminput.nc
+‘caminput.nc’ -> ‘../../cam5_4_114_dart_wx_nsc.damp.cam_0009.i.2010-09-18-43200.nc’
+${LINK} ../../$ATM_HISTORY_FILENAME cam_phis.nc
+‘cam_phis.nc’ -> ‘../../cam5_4_114_dart_wx_nsc.damp.cam_0009.h0.2010-09-18-43200.nc’
+
+if ( $CAM_DYCORE == 'se' ) then
+
+echo "starting cam_to_dart for member ${member} at "`date`
+starting cam_to_dart for member 9 at Mon Sep 25 17:37:53 MDT 2017
+
+${EXEROOT}/cam_to_dart > ! output.${member}.cam_to_dart
+
+cd ..
+
+@ member++
+end
+while ( ${member} < = ${ensemble_size} )
+
+
+
+
+set MYTEMPDIR = member_${member}
+mkdir -p $MYTEMPDIR
+cd $MYTEMPDIR
+
+
+$REMOVE output.${member}.cam_to_dart
+
+set ATM_INITIAL_FILENAME = `printf ${CASE}.cam_%04d.i.${ATM_DATE_EXT}.nc  ${member}`
+set ATM_HISTORY_FILENAME = `printf ${CASE}.cam_%04d.h0.${ATM_DATE_EXT}.nc ${member}`
+set DART_IC_FILENAME = `printf filter_ics.%04d     ${member}`
+set DART_RESTART_FILE = `printf filter_restart.%04d ${member}`
+
+sed -e "s#dart_ics#../${DART_IC_FILENAME}#" -e "s#dart_restart#../${DART_RESTART_FILE}#" < ../input.nml > ! input.nml || exit 41
+
+${LINK} ../../$ATM_INITIAL_FILENAME caminput.nc
+‘caminput.nc’ -> ‘../../cam5_4_114_dart_wx_nsc.damp.cam_0010.i.2010-09-18-43200.nc’
+${LINK} ../../$ATM_HISTORY_FILENAME cam_phis.nc
+‘cam_phis.nc’ -> ‘../../cam5_4_114_dart_wx_nsc.damp.cam_0010.h0.2010-09-18-43200.nc’
+
+if ( $CAM_DYCORE == 'se' ) then
+
+echo "starting cam_to_dart for member ${member} at "`date`
+starting cam_to_dart for member 10 at Mon Sep 25 17:37:53 MDT 2017
+
+${EXEROOT}/cam_to_dart > ! output.${member}.cam_to_dart
+
+cd ..
+
+@ member++
+end
+while ( ${member} < = ${ensemble_size} )
+
+
+
+
+set MYTEMPDIR = member_${member}
+mkdir -p $MYTEMPDIR
+cd $MYTEMPDIR
+
+
+$REMOVE output.${member}.cam_to_dart
+
+set ATM_INITIAL_FILENAME = `printf ${CASE}.cam_%04d.i.${ATM_DATE_EXT}.nc  ${member}`
+set ATM_HISTORY_FILENAME = `printf ${CASE}.cam_%04d.h0.${ATM_DATE_EXT}.nc ${member}`
+set DART_IC_FILENAME = `printf filter_ics.%04d     ${member}`
+set DART_RESTART_FILE = `printf filter_restart.%04d ${member}`
+
+sed -e "s#dart_ics#../${DART_IC_FILENAME}#" -e "s#dart_restart#../${DART_RESTART_FILE}#" < ../input.nml > ! input.nml || exit 41
+
+${LINK} ../../$ATM_INITIAL_FILENAME caminput.nc
+‘caminput.nc’ -> ‘../../cam5_4_114_dart_wx_nsc.damp.cam_0011.i.2010-09-18-43200.nc’
+${LINK} ../../$ATM_HISTORY_FILENAME cam_phis.nc
+‘cam_phis.nc’ -> ‘../../cam5_4_114_dart_wx_nsc.damp.cam_0011.h0.2010-09-18-43200.nc’
+
+if ( $CAM_DYCORE == 'se' ) then
+
+echo "starting cam_to_dart for member ${member} at "`date`
+starting cam_to_dart for member 11 at Mon Sep 25 17:37:53 MDT 2017
+
+${EXEROOT}/cam_to_dart > ! output.${member}.cam_to_dart
+
+cd ..
+
+@ member++
+end
+while ( ${member} < = ${ensemble_size} )
+
+
+
+
+set MYTEMPDIR = member_${member}
+mkdir -p $MYTEMPDIR
+cd $MYTEMPDIR
+
+
+$REMOVE output.${member}.cam_to_dart
+
+set ATM_INITIAL_FILENAME = `printf ${CASE}.cam_%04d.i.${ATM_DATE_EXT}.nc  ${member}`
+set ATM_HISTORY_FILENAME = `printf ${CASE}.cam_%04d.h0.${ATM_DATE_EXT}.nc ${member}`
+set DART_IC_FILENAME = `printf filter_ics.%04d     ${member}`
+set DART_RESTART_FILE = `printf filter_restart.%04d ${member}`
+
+sed -e "s#dart_ics#../${DART_IC_FILENAME}#" -e "s#dart_restart#../${DART_RESTART_FILE}#" < ../input.nml > ! input.nml || exit 41
+
+${LINK} ../../$ATM_INITIAL_FILENAME caminput.nc
+‘caminput.nc’ -> ‘../../cam5_4_114_dart_wx_nsc.damp.cam_0012.i.2010-09-18-43200.nc’
+${LINK} ../../$ATM_HISTORY_FILENAME cam_phis.nc
+‘cam_phis.nc’ -> ‘../../cam5_4_114_dart_wx_nsc.damp.cam_0012.h0.2010-09-18-43200.nc’
+
+if ( $CAM_DYCORE == 'se' ) then
+
+echo "starting cam_to_dart for member ${member} at "`date`
+starting cam_to_dart for member 12 at Mon Sep 25 17:37:53 MDT 2017
+
+${EXEROOT}/cam_to_dart > ! output.${member}.cam_to_dart
+
+cd ..
+
+@ member++
+end
+while ( ${member} < = ${ensemble_size} )
+
+
+
+
+set MYTEMPDIR = member_${member}
+mkdir -p $MYTEMPDIR
+cd $MYTEMPDIR
+
+
+$REMOVE output.${member}.cam_to_dart
+
+set ATM_INITIAL_FILENAME = `printf ${CASE}.cam_%04d.i.${ATM_DATE_EXT}.nc  ${member}`
+set ATM_HISTORY_FILENAME = `printf ${CASE}.cam_%04d.h0.${ATM_DATE_EXT}.nc ${member}`
+set DART_IC_FILENAME = `printf filter_ics.%04d     ${member}`
+set DART_RESTART_FILE = `printf filter_restart.%04d ${member}`
+
+sed -e "s#dart_ics#../${DART_IC_FILENAME}#" -e "s#dart_restart#../${DART_RESTART_FILE}#" < ../input.nml > ! input.nml || exit 41
+
+${LINK} ../../$ATM_INITIAL_FILENAME caminput.nc
+‘caminput.nc’ -> ‘../../cam5_4_114_dart_wx_nsc.damp.cam_0013.i.2010-09-18-43200.nc’
+${LINK} ../../$ATM_HISTORY_FILENAME cam_phis.nc
+‘cam_phis.nc’ -> ‘../../cam5_4_114_dart_wx_nsc.damp.cam_0013.h0.2010-09-18-43200.nc’
+
+if ( $CAM_DYCORE == 'se' ) then
+
+echo "starting cam_to_dart for member ${member} at "`date`
+starting cam_to_dart for member 13 at Mon Sep 25 17:37:53 MDT 2017
+
+${EXEROOT}/cam_to_dart > ! output.${member}.cam_to_dart
+
+cd ..
+
+@ member++
+end
+while ( ${member} < = ${ensemble_size} )
+
+
+
+
+set MYTEMPDIR = member_${member}
+mkdir -p $MYTEMPDIR
+cd $MYTEMPDIR
+
+
+$REMOVE output.${member}.cam_to_dart
+
+set ATM_INITIAL_FILENAME = `printf ${CASE}.cam_%04d.i.${ATM_DATE_EXT}.nc  ${member}`
+set ATM_HISTORY_FILENAME = `printf ${CASE}.cam_%04d.h0.${ATM_DATE_EXT}.nc ${member}`
+set DART_IC_FILENAME = `printf filter_ics.%04d     ${member}`
+set DART_RESTART_FILE = `printf filter_restart.%04d ${member}`
+
+sed -e "s#dart_ics#../${DART_IC_FILENAME}#" -e "s#dart_restart#../${DART_RESTART_FILE}#" < ../input.nml > ! input.nml || exit 41
+
+${LINK} ../../$ATM_INITIAL_FILENAME caminput.nc
+‘caminput.nc’ -> ‘../../cam5_4_114_dart_wx_nsc.damp.cam_0014.i.2010-09-18-43200.nc’
+${LINK} ../../$ATM_HISTORY_FILENAME cam_phis.nc
+‘cam_phis.nc’ -> ‘../../cam5_4_114_dart_wx_nsc.damp.cam_0014.h0.2010-09-18-43200.nc’
+
+if ( $CAM_DYCORE == 'se' ) then
+
+echo "starting cam_to_dart for member ${member} at "`date`
+starting cam_to_dart for member 14 at Mon Sep 25 17:37:53 MDT 2017
+
+${EXEROOT}/cam_to_dart > ! output.${member}.cam_to_dart
+
+cd ..
+
+@ member++
+end
+while ( ${member} < = ${ensemble_size} )
+
+
+
+
+set MYTEMPDIR = member_${member}
+mkdir -p $MYTEMPDIR
+cd $MYTEMPDIR
+
+
+$REMOVE output.${member}.cam_to_dart
+
+set ATM_INITIAL_FILENAME = `printf ${CASE}.cam_%04d.i.${ATM_DATE_EXT}.nc  ${member}`
+set ATM_HISTORY_FILENAME = `printf ${CASE}.cam_%04d.h0.${ATM_DATE_EXT}.nc ${member}`
+set DART_IC_FILENAME = `printf filter_ics.%04d     ${member}`
+set DART_RESTART_FILE = `printf filter_restart.%04d ${member}`
+
+sed -e "s#dart_ics#../${DART_IC_FILENAME}#" -e "s#dart_restart#../${DART_RESTART_FILE}#" < ../input.nml > ! input.nml || exit 41
+
+${LINK} ../../$ATM_INITIAL_FILENAME caminput.nc
+‘caminput.nc’ -> ‘../../cam5_4_114_dart_wx_nsc.damp.cam_0015.i.2010-09-18-43200.nc’
+${LINK} ../../$ATM_HISTORY_FILENAME cam_phis.nc
+‘cam_phis.nc’ -> ‘../../cam5_4_114_dart_wx_nsc.damp.cam_0015.h0.2010-09-18-43200.nc’
+
+if ( $CAM_DYCORE == 'se' ) then
+
+echo "starting cam_to_dart for member ${member} at "`date`
+starting cam_to_dart for member 15 at Mon Sep 25 17:37:53 MDT 2017
+
+${EXEROOT}/cam_to_dart > ! output.${member}.cam_to_dart
+
+cd ..
+
+@ member++
+end
+while ( ${member} < = ${ensemble_size} )
+
+
+
+
+set MYTEMPDIR = member_${member}
+mkdir -p $MYTEMPDIR
+cd $MYTEMPDIR
+
+
+$REMOVE output.${member}.cam_to_dart
+
+set ATM_INITIAL_FILENAME = `printf ${CASE}.cam_%04d.i.${ATM_DATE_EXT}.nc  ${member}`
+set ATM_HISTORY_FILENAME = `printf ${CASE}.cam_%04d.h0.${ATM_DATE_EXT}.nc ${member}`
+set DART_IC_FILENAME = `printf filter_ics.%04d     ${member}`
+set DART_RESTART_FILE = `printf filter_restart.%04d ${member}`
+
+sed -e "s#dart_ics#../${DART_IC_FILENAME}#" -e "s#dart_restart#../${DART_RESTART_FILE}#" < ../input.nml > ! input.nml || exit 41
+
+${LINK} ../../$ATM_INITIAL_FILENAME caminput.nc
+‘caminput.nc’ -> ‘../../cam5_4_114_dart_wx_nsc.damp.cam_0016.i.2010-09-18-43200.nc’
+${LINK} ../../$ATM_HISTORY_FILENAME cam_phis.nc
+‘cam_phis.nc’ -> ‘../../cam5_4_114_dart_wx_nsc.damp.cam_0016.h0.2010-09-18-43200.nc’
+
+if ( $CAM_DYCORE == 'se' ) then
+
+echo "starting cam_to_dart for member ${member} at "`date`
+starting cam_to_dart for member 16 at Mon Sep 25 17:37:53 MDT 2017
+
+${EXEROOT}/cam_to_dart > ! output.${member}.cam_to_dart
+
+cd ..
+
+@ member++
+end
+while ( ${member} < = ${ensemble_size} )
+
+
+
+
+set MYTEMPDIR = member_${member}
+mkdir -p $MYTEMPDIR
+cd $MYTEMPDIR
+
+
+$REMOVE output.${member}.cam_to_dart
+
+set ATM_INITIAL_FILENAME = `printf ${CASE}.cam_%04d.i.${ATM_DATE_EXT}.nc  ${member}`
+set ATM_HISTORY_FILENAME = `printf ${CASE}.cam_%04d.h0.${ATM_DATE_EXT}.nc ${member}`
+set DART_IC_FILENAME = `printf filter_ics.%04d     ${member}`
+set DART_RESTART_FILE = `printf filter_restart.%04d ${member}`
+
+sed -e "s#dart_ics#../${DART_IC_FILENAME}#" -e "s#dart_restart#../${DART_RESTART_FILE}#" < ../input.nml > ! input.nml || exit 41
+
+${LINK} ../../$ATM_INITIAL_FILENAME caminput.nc
+‘caminput.nc’ -> ‘../../cam5_4_114_dart_wx_nsc.damp.cam_0017.i.2010-09-18-43200.nc’
+${LINK} ../../$ATM_HISTORY_FILENAME cam_phis.nc
+‘cam_phis.nc’ -> ‘../../cam5_4_114_dart_wx_nsc.damp.cam_0017.h0.2010-09-18-43200.nc’
+
+if ( $CAM_DYCORE == 'se' ) then
+
+echo "starting cam_to_dart for member ${member} at "`date`
+starting cam_to_dart for member 17 at Mon Sep 25 17:37:54 MDT 2017
+
+${EXEROOT}/cam_to_dart > ! output.${member}.cam_to_dart
+
+cd ..
+
+@ member++
+end
+while ( ${member} < = ${ensemble_size} )
+
+
+
+
+set MYTEMPDIR = member_${member}
+mkdir -p $MYTEMPDIR
+cd $MYTEMPDIR
+
+
+$REMOVE output.${member}.cam_to_dart
+
+set ATM_INITIAL_FILENAME = `printf ${CASE}.cam_%04d.i.${ATM_DATE_EXT}.nc  ${member}`
+set ATM_HISTORY_FILENAME = `printf ${CASE}.cam_%04d.h0.${ATM_DATE_EXT}.nc ${member}`
+set DART_IC_FILENAME = `printf filter_ics.%04d     ${member}`
+set DART_RESTART_FILE = `printf filter_restart.%04d ${member}`
+
+sed -e "s#dart_ics#../${DART_IC_FILENAME}#" -e "s#dart_restart#../${DART_RESTART_FILE}#" < ../input.nml > ! input.nml || exit 41
+
+${LINK} ../../$ATM_INITIAL_FILENAME caminput.nc
+‘caminput.nc’ -> ‘../../cam5_4_114_dart_wx_nsc.damp.cam_0018.i.2010-09-18-43200.nc’
+${LINK} ../../$ATM_HISTORY_FILENAME cam_phis.nc
+‘cam_phis.nc’ -> ‘../../cam5_4_114_dart_wx_nsc.damp.cam_0018.h0.2010-09-18-43200.nc’
+
+if ( $CAM_DYCORE == 'se' ) then
+
+echo "starting cam_to_dart for member ${member} at "`date`
+starting cam_to_dart for member 18 at Mon Sep 25 17:37:54 MDT 2017
+
+${EXEROOT}/cam_to_dart > ! output.${member}.cam_to_dart
+
+cd ..
+
+@ member++
+end
+while ( ${member} < = ${ensemble_size} )
+
+
+
+
+set MYTEMPDIR = member_${member}
+mkdir -p $MYTEMPDIR
+cd $MYTEMPDIR
+
+
+$REMOVE output.${member}.cam_to_dart
+
+set ATM_INITIAL_FILENAME = `printf ${CASE}.cam_%04d.i.${ATM_DATE_EXT}.nc  ${member}`
+set ATM_HISTORY_FILENAME = `printf ${CASE}.cam_%04d.h0.${ATM_DATE_EXT}.nc ${member}`
+set DART_IC_FILENAME = `printf filter_ics.%04d     ${member}`
+set DART_RESTART_FILE = `printf filter_restart.%04d ${member}`
+
+sed -e "s#dart_ics#../${DART_IC_FILENAME}#" -e "s#dart_restart#../${DART_RESTART_FILE}#" < ../input.nml > ! input.nml || exit 41
+
+${LINK} ../../$ATM_INITIAL_FILENAME caminput.nc
+‘caminput.nc’ -> ‘../../cam5_4_114_dart_wx_nsc.damp.cam_0019.i.2010-09-18-43200.nc’
+${LINK} ../../$ATM_HISTORY_FILENAME cam_phis.nc
+‘cam_phis.nc’ -> ‘../../cam5_4_114_dart_wx_nsc.damp.cam_0019.h0.2010-09-18-43200.nc’
+
+if ( $CAM_DYCORE == 'se' ) then
+
+echo "starting cam_to_dart for member ${member} at "`date`
+starting cam_to_dart for member 19 at Mon Sep 25 17:37:54 MDT 2017
+
+${EXEROOT}/cam_to_dart > ! output.${member}.cam_to_dart
+
+cd ..
+
+@ member++
+end
+while ( ${member} < = ${ensemble_size} )
+
+
+
+
+set MYTEMPDIR = member_${member}
+mkdir -p $MYTEMPDIR
+cd $MYTEMPDIR
+
+
+$REMOVE output.${member}.cam_to_dart
+
+set ATM_INITIAL_FILENAME = `printf ${CASE}.cam_%04d.i.${ATM_DATE_EXT}.nc  ${member}`
+set ATM_HISTORY_FILENAME = `printf ${CASE}.cam_%04d.h0.${ATM_DATE_EXT}.nc ${member}`
+set DART_IC_FILENAME = `printf filter_ics.%04d     ${member}`
+set DART_RESTART_FILE = `printf filter_restart.%04d ${member}`
+
+sed -e "s#dart_ics#../${DART_IC_FILENAME}#" -e "s#dart_restart#../${DART_RESTART_FILE}#" < ../input.nml > ! input.nml || exit 41
+
+${LINK} ../../$ATM_INITIAL_FILENAME caminput.nc
+‘caminput.nc’ -> ‘../../cam5_4_114_dart_wx_nsc.damp.cam_0020.i.2010-09-18-43200.nc’
+${LINK} ../../$ATM_HISTORY_FILENAME cam_phis.nc
+‘cam_phis.nc’ -> ‘../../cam5_4_114_dart_wx_nsc.damp.cam_0020.h0.2010-09-18-43200.nc’
+
+if ( $CAM_DYCORE == 'se' ) then
+
+echo "starting cam_to_dart for member ${member} at "`date`
+starting cam_to_dart for member 20 at Mon Sep 25 17:37:54 MDT 2017
+
+${EXEROOT}/cam_to_dart > ! output.${member}.cam_to_dart
+
+cd ..
+
+@ member++
+end
+while ( ${member} < = ${ensemble_size} )
+
+
+
+
+set MYTEMPDIR = member_${member}
+mkdir -p $MYTEMPDIR
+cd $MYTEMPDIR
+
+
+$REMOVE output.${member}.cam_to_dart
+
+set ATM_INITIAL_FILENAME = `printf ${CASE}.cam_%04d.i.${ATM_DATE_EXT}.nc  ${member}`
+set ATM_HISTORY_FILENAME = `printf ${CASE}.cam_%04d.h0.${ATM_DATE_EXT}.nc ${member}`
+set DART_IC_FILENAME = `printf filter_ics.%04d     ${member}`
+set DART_RESTART_FILE = `printf filter_restart.%04d ${member}`
+
+sed -e "s#dart_ics#../${DART_IC_FILENAME}#" -e "s#dart_restart#../${DART_RESTART_FILE}#" < ../input.nml > ! input.nml || exit 41
+
+${LINK} ../../$ATM_INITIAL_FILENAME caminput.nc
+‘caminput.nc’ -> ‘../../cam5_4_114_dart_wx_nsc.damp.cam_0021.i.2010-09-18-43200.nc’
+${LINK} ../../$ATM_HISTORY_FILENAME cam_phis.nc
+‘cam_phis.nc’ -> ‘../../cam5_4_114_dart_wx_nsc.damp.cam_0021.h0.2010-09-18-43200.nc’
+
+if ( $CAM_DYCORE == 'se' ) then
+
+echo "starting cam_to_dart for member ${member} at "`date`
+starting cam_to_dart for member 21 at Mon Sep 25 17:37:54 MDT 2017
+
+${EXEROOT}/cam_to_dart > ! output.${member}.cam_to_dart
+
+cd ..
+
+@ member++
+end
+while ( ${member} < = ${ensemble_size} )
+
+
+
+
+set MYTEMPDIR = member_${member}
+mkdir -p $MYTEMPDIR
+cd $MYTEMPDIR
+
+
+$REMOVE output.${member}.cam_to_dart
+
+set ATM_INITIAL_FILENAME = `printf ${CASE}.cam_%04d.i.${ATM_DATE_EXT}.nc  ${member}`
+set ATM_HISTORY_FILENAME = `printf ${CASE}.cam_%04d.h0.${ATM_DATE_EXT}.nc ${member}`
+set DART_IC_FILENAME = `printf filter_ics.%04d     ${member}`
+set DART_RESTART_FILE = `printf filter_restart.%04d ${member}`
+
+sed -e "s#dart_ics#../${DART_IC_FILENAME}#" -e "s#dart_restart#../${DART_RESTART_FILE}#" < ../input.nml > ! input.nml || exit 41
+
+${LINK} ../../$ATM_INITIAL_FILENAME caminput.nc
+‘caminput.nc’ -> ‘../../cam5_4_114_dart_wx_nsc.damp.cam_0022.i.2010-09-18-43200.nc’
+${LINK} ../../$ATM_HISTORY_FILENAME cam_phis.nc
+‘cam_phis.nc’ -> ‘../../cam5_4_114_dart_wx_nsc.damp.cam_0022.h0.2010-09-18-43200.nc’
+
+if ( $CAM_DYCORE == 'se' ) then
+
+echo "starting cam_to_dart for member ${member} at "`date`
+starting cam_to_dart for member 22 at Mon Sep 25 17:37:54 MDT 2017
+
+${EXEROOT}/cam_to_dart > ! output.${member}.cam_to_dart
+
+cd ..
+
+@ member++
+end
+while ( ${member} < = ${ensemble_size} )
+
+
+
+
+set MYTEMPDIR = member_${member}
+mkdir -p $MYTEMPDIR
+cd $MYTEMPDIR
+
+
+$REMOVE output.${member}.cam_to_dart
+
+set ATM_INITIAL_FILENAME = `printf ${CASE}.cam_%04d.i.${ATM_DATE_EXT}.nc  ${member}`
+set ATM_HISTORY_FILENAME = `printf ${CASE}.cam_%04d.h0.${ATM_DATE_EXT}.nc ${member}`
+set DART_IC_FILENAME = `printf filter_ics.%04d     ${member}`
+set DART_RESTART_FILE = `printf filter_restart.%04d ${member}`
+
+sed -e "s#dart_ics#../${DART_IC_FILENAME}#" -e "s#dart_restart#../${DART_RESTART_FILE}#" < ../input.nml > ! input.nml || exit 41
+
+${LINK} ../../$ATM_INITIAL_FILENAME caminput.nc
+‘caminput.nc’ -> ‘../../cam5_4_114_dart_wx_nsc.damp.cam_0023.i.2010-09-18-43200.nc’
+${LINK} ../../$ATM_HISTORY_FILENAME cam_phis.nc
+‘cam_phis.nc’ -> ‘../../cam5_4_114_dart_wx_nsc.damp.cam_0023.h0.2010-09-18-43200.nc’
+
+if ( $CAM_DYCORE == 'se' ) then
+
+echo "starting cam_to_dart for member ${member} at "`date`
+starting cam_to_dart for member 23 at Mon Sep 25 17:37:54 MDT 2017
+
+${EXEROOT}/cam_to_dart > ! output.${member}.cam_to_dart
+
+cd ..
+
+@ member++
+end
+while ( ${member} < = ${ensemble_size} )
+
+
+
+
+set MYTEMPDIR = member_${member}
+mkdir -p $MYTEMPDIR
+cd $MYTEMPDIR
+
+
+$REMOVE output.${member}.cam_to_dart
+
+set ATM_INITIAL_FILENAME = `printf ${CASE}.cam_%04d.i.${ATM_DATE_EXT}.nc  ${member}`
+set ATM_HISTORY_FILENAME = `printf ${CASE}.cam_%04d.h0.${ATM_DATE_EXT}.nc ${member}`
+set DART_IC_FILENAME = `printf filter_ics.%04d     ${member}`
+set DART_RESTART_FILE = `printf filter_restart.%04d ${member}`
+
+sed -e "s#dart_ics#../${DART_IC_FILENAME}#" -e "s#dart_restart#../${DART_RESTART_FILE}#" < ../input.nml > ! input.nml || exit 41
+
+${LINK} ../../$ATM_INITIAL_FILENAME caminput.nc
+‘caminput.nc’ -> ‘../../cam5_4_114_dart_wx_nsc.damp.cam_0024.i.2010-09-18-43200.nc’
+${LINK} ../../$ATM_HISTORY_FILENAME cam_phis.nc
+‘cam_phis.nc’ -> ‘../../cam5_4_114_dart_wx_nsc.damp.cam_0024.h0.2010-09-18-43200.nc’
+
+if ( $CAM_DYCORE == 'se' ) then
+
+echo "starting cam_to_dart for member ${member} at "`date`
+starting cam_to_dart for member 24 at Mon Sep 25 17:37:54 MDT 2017
+
+${EXEROOT}/cam_to_dart > ! output.${member}.cam_to_dart
+
+cd ..
+
+@ member++
+end
+while ( ${member} < = ${ensemble_size} )
+
+
+
+
+set MYTEMPDIR = member_${member}
+mkdir -p $MYTEMPDIR
+cd $MYTEMPDIR
+
+
+$REMOVE output.${member}.cam_to_dart
+
+set ATM_INITIAL_FILENAME = `printf ${CASE}.cam_%04d.i.${ATM_DATE_EXT}.nc  ${member}`
+set ATM_HISTORY_FILENAME = `printf ${CASE}.cam_%04d.h0.${ATM_DATE_EXT}.nc ${member}`
+set DART_IC_FILENAME = `printf filter_ics.%04d     ${member}`
+set DART_RESTART_FILE = `printf filter_restart.%04d ${member}`
+
+sed -e "s#dart_ics#../${DART_IC_FILENAME}#" -e "s#dart_restart#../${DART_RESTART_FILE}#" < ../input.nml > ! input.nml || exit 41
+
+${LINK} ../../$ATM_INITIAL_FILENAME caminput.nc
+‘caminput.nc’ -> ‘../../cam5_4_114_dart_wx_nsc.damp.cam_0025.i.2010-09-18-43200.nc’
+${LINK} ../../$ATM_HISTORY_FILENAME cam_phis.nc
+‘cam_phis.nc’ -> ‘../../cam5_4_114_dart_wx_nsc.damp.cam_0025.h0.2010-09-18-43200.nc’
+
+if ( $CAM_DYCORE == 'se' ) then
+
+echo "starting cam_to_dart for member ${member} at "`date`
+starting cam_to_dart for member 25 at Mon Sep 25 17:37:54 MDT 2017
+
+${EXEROOT}/cam_to_dart > ! output.${member}.cam_to_dart
+
+cd ..
+
+@ member++
+end
+while ( ${member} < = ${ensemble_size} )
+
+
+
+
+set MYTEMPDIR = member_${member}
+mkdir -p $MYTEMPDIR
+cd $MYTEMPDIR
+
+
+$REMOVE output.${member}.cam_to_dart
+
+set ATM_INITIAL_FILENAME = `printf ${CASE}.cam_%04d.i.${ATM_DATE_EXT}.nc  ${member}`
+set ATM_HISTORY_FILENAME = `printf ${CASE}.cam_%04d.h0.${ATM_DATE_EXT}.nc ${member}`
+set DART_IC_FILENAME = `printf filter_ics.%04d     ${member}`
+set DART_RESTART_FILE = `printf filter_restart.%04d ${member}`
+
+sed -e "s#dart_ics#../${DART_IC_FILENAME}#" -e "s#dart_restart#../${DART_RESTART_FILE}#" < ../input.nml > ! input.nml || exit 41
+
+${LINK} ../../$ATM_INITIAL_FILENAME caminput.nc
+‘caminput.nc’ -> ‘../../cam5_4_114_dart_wx_nsc.damp.cam_0026.i.2010-09-18-43200.nc’
+${LINK} ../../$ATM_HISTORY_FILENAME cam_phis.nc
+‘cam_phis.nc’ -> ‘../../cam5_4_114_dart_wx_nsc.damp.cam_0026.h0.2010-09-18-43200.nc’
+
+if ( $CAM_DYCORE == 'se' ) then
+
+echo "starting cam_to_dart for member ${member} at "`date`
+starting cam_to_dart for member 26 at Mon Sep 25 17:37:54 MDT 2017
+
+${EXEROOT}/cam_to_dart > ! output.${member}.cam_to_dart
+
+cd ..
+
+@ member++
+end
+while ( ${member} < = ${ensemble_size} )
+
+
+
+
+set MYTEMPDIR = member_${member}
+mkdir -p $MYTEMPDIR
+cd $MYTEMPDIR
+
+
+$REMOVE output.${member}.cam_to_dart
+
+set ATM_INITIAL_FILENAME = `printf ${CASE}.cam_%04d.i.${ATM_DATE_EXT}.nc  ${member}`
+set ATM_HISTORY_FILENAME = `printf ${CASE}.cam_%04d.h0.${ATM_DATE_EXT}.nc ${member}`
+set DART_IC_FILENAME = `printf filter_ics.%04d     ${member}`
+set DART_RESTART_FILE = `printf filter_restart.%04d ${member}`
+
+sed -e "s#dart_ics#../${DART_IC_FILENAME}#" -e "s#dart_restart#../${DART_RESTART_FILE}#" < ../input.nml > ! input.nml || exit 41
+
+${LINK} ../../$ATM_INITIAL_FILENAME caminput.nc
+‘caminput.nc’ -> ‘../../cam5_4_114_dart_wx_nsc.damp.cam_0027.i.2010-09-18-43200.nc’
+${LINK} ../../$ATM_HISTORY_FILENAME cam_phis.nc
+‘cam_phis.nc’ -> ‘../../cam5_4_114_dart_wx_nsc.damp.cam_0027.h0.2010-09-18-43200.nc’
+
+if ( $CAM_DYCORE == 'se' ) then
+
+echo "starting cam_to_dart for member ${member} at "`date`
+starting cam_to_dart for member 27 at Mon Sep 25 17:37:54 MDT 2017
+
+${EXEROOT}/cam_to_dart > ! output.${member}.cam_to_dart
+
+cd ..
+
+@ member++
+end
+while ( ${member} < = ${ensemble_size} )
+
+
+
+
+set MYTEMPDIR = member_${member}
+mkdir -p $MYTEMPDIR
+cd $MYTEMPDIR
+
+
+$REMOVE output.${member}.cam_to_dart
+
+set ATM_INITIAL_FILENAME = `printf ${CASE}.cam_%04d.i.${ATM_DATE_EXT}.nc  ${member}`
+set ATM_HISTORY_FILENAME = `printf ${CASE}.cam_%04d.h0.${ATM_DATE_EXT}.nc ${member}`
+set DART_IC_FILENAME = `printf filter_ics.%04d     ${member}`
+set DART_RESTART_FILE = `printf filter_restart.%04d ${member}`
+
+sed -e "s#dart_ics#../${DART_IC_FILENAME}#" -e "s#dart_restart#../${DART_RESTART_FILE}#" < ../input.nml > ! input.nml || exit 41
+
+${LINK} ../../$ATM_INITIAL_FILENAME caminput.nc
+‘caminput.nc’ -> ‘../../cam5_4_114_dart_wx_nsc.damp.cam_0028.i.2010-09-18-43200.nc’
+${LINK} ../../$ATM_HISTORY_FILENAME cam_phis.nc
+‘cam_phis.nc’ -> ‘../../cam5_4_114_dart_wx_nsc.damp.cam_0028.h0.2010-09-18-43200.nc’
+
+if ( $CAM_DYCORE == 'se' ) then
+
+echo "starting cam_to_dart for member ${member} at "`date`
+starting cam_to_dart for member 28 at Mon Sep 25 17:37:54 MDT 2017
+
+${EXEROOT}/cam_to_dart > ! output.${member}.cam_to_dart
+
+cd ..
+
+@ member++
+end
+while ( ${member} < = ${ensemble_size} )
+
+
+
+
+set MYTEMPDIR = member_${member}
+mkdir -p $MYTEMPDIR
+cd $MYTEMPDIR
+
+
+$REMOVE output.${member}.cam_to_dart
+
+set ATM_INITIAL_FILENAME = `printf ${CASE}.cam_%04d.i.${ATM_DATE_EXT}.nc  ${member}`
+set ATM_HISTORY_FILENAME = `printf ${CASE}.cam_%04d.h0.${ATM_DATE_EXT}.nc ${member}`
+set DART_IC_FILENAME = `printf filter_ics.%04d     ${member}`
+set DART_RESTART_FILE = `printf filter_restart.%04d ${member}`
+
+sed -e "s#dart_ics#../${DART_IC_FILENAME}#" -e "s#dart_restart#../${DART_RESTART_FILE}#" < ../input.nml > ! input.nml || exit 41
+
+${LINK} ../../$ATM_INITIAL_FILENAME caminput.nc
+‘caminput.nc’ -> ‘../../cam5_4_114_dart_wx_nsc.damp.cam_0029.i.2010-09-18-43200.nc’
+${LINK} ../../$ATM_HISTORY_FILENAME cam_phis.nc
+‘cam_phis.nc’ -> ‘../../cam5_4_114_dart_wx_nsc.damp.cam_0029.h0.2010-09-18-43200.nc’
+
+if ( $CAM_DYCORE == 'se' ) then
+
+echo "starting cam_to_dart for member ${member} at "`date`
+starting cam_to_dart for member 29 at Mon Sep 25 17:37:54 MDT 2017
+
+${EXEROOT}/cam_to_dart > ! output.${member}.cam_to_dart
+
+cd ..
+
+@ member++
+end
+while ( ${member} < = ${ensemble_size} )
+
+
+
+
+set MYTEMPDIR = member_${member}
+mkdir -p $MYTEMPDIR
+cd $MYTEMPDIR
+
+
+$REMOVE output.${member}.cam_to_dart
+
+set ATM_INITIAL_FILENAME = `printf ${CASE}.cam_%04d.i.${ATM_DATE_EXT}.nc  ${member}`
+set ATM_HISTORY_FILENAME = `printf ${CASE}.cam_%04d.h0.${ATM_DATE_EXT}.nc ${member}`
+set DART_IC_FILENAME = `printf filter_ics.%04d     ${member}`
+set DART_RESTART_FILE = `printf filter_restart.%04d ${member}`
+
+sed -e "s#dart_ics#../${DART_IC_FILENAME}#" -e "s#dart_restart#../${DART_RESTART_FILE}#" < ../input.nml > ! input.nml || exit 41
+
+${LINK} ../../$ATM_INITIAL_FILENAME caminput.nc
+‘caminput.nc’ -> ‘../../cam5_4_114_dart_wx_nsc.damp.cam_0030.i.2010-09-18-43200.nc’
+${LINK} ../../$ATM_HISTORY_FILENAME cam_phis.nc
+‘cam_phis.nc’ -> ‘../../cam5_4_114_dart_wx_nsc.damp.cam_0030.h0.2010-09-18-43200.nc’
+
+if ( $CAM_DYCORE == 'se' ) then
+
+echo "starting cam_to_dart for member ${member} at "`date`
+starting cam_to_dart for member 30 at Mon Sep 25 17:37:54 MDT 2017
+
+${EXEROOT}/cam_to_dart > ! output.${member}.cam_to_dart
+
+cd ..
+
+@ member++
+end
+while ( ${member} < = ${ensemble_size} )
+
+
+
+
+set MYTEMPDIR = member_${member}
+mkdir -p $MYTEMPDIR
+cd $MYTEMPDIR
+
+
+$REMOVE output.${member}.cam_to_dart
+
+set ATM_INITIAL_FILENAME = `printf ${CASE}.cam_%04d.i.${ATM_DATE_EXT}.nc  ${member}`
+set ATM_HISTORY_FILENAME = `printf ${CASE}.cam_%04d.h0.${ATM_DATE_EXT}.nc ${member}`
+set DART_IC_FILENAME = `printf filter_ics.%04d     ${member}`
+set DART_RESTART_FILE = `printf filter_restart.%04d ${member}`
+
+sed -e "s#dart_ics#../${DART_IC_FILENAME}#" -e "s#dart_restart#../${DART_RESTART_FILE}#" < ../input.nml > ! input.nml || exit 41
+
+${LINK} ../../$ATM_INITIAL_FILENAME caminput.nc
+‘caminput.nc’ -> ‘../../cam5_4_114_dart_wx_nsc.damp.cam_0031.i.2010-09-18-43200.nc’
+${LINK} ../../$ATM_HISTORY_FILENAME cam_phis.nc
+‘cam_phis.nc’ -> ‘../../cam5_4_114_dart_wx_nsc.damp.cam_0031.h0.2010-09-18-43200.nc’
+
+if ( $CAM_DYCORE == 'se' ) then
+
+echo "starting cam_to_dart for member ${member} at "`date`
+starting cam_to_dart for member 31 at Mon Sep 25 17:37:54 MDT 2017
+
+${EXEROOT}/cam_to_dart > ! output.${member}.cam_to_dart
+
+cd ..
+
+@ member++
+end
+while ( ${member} < = ${ensemble_size} )
+
+
+
+
+set MYTEMPDIR = member_${member}
+mkdir -p $MYTEMPDIR
+cd $MYTEMPDIR
+
+
+$REMOVE output.${member}.cam_to_dart
+
+set ATM_INITIAL_FILENAME = `printf ${CASE}.cam_%04d.i.${ATM_DATE_EXT}.nc  ${member}`
+set ATM_HISTORY_FILENAME = `printf ${CASE}.cam_%04d.h0.${ATM_DATE_EXT}.nc ${member}`
+set DART_IC_FILENAME = `printf filter_ics.%04d     ${member}`
+set DART_RESTART_FILE = `printf filter_restart.%04d ${member}`
+
+sed -e "s#dart_ics#../${DART_IC_FILENAME}#" -e "s#dart_restart#../${DART_RESTART_FILE}#" < ../input.nml > ! input.nml || exit 41
+
+${LINK} ../../$ATM_INITIAL_FILENAME caminput.nc
+‘caminput.nc’ -> ‘../../cam5_4_114_dart_wx_nsc.damp.cam_0032.i.2010-09-18-43200.nc’
+${LINK} ../../$ATM_HISTORY_FILENAME cam_phis.nc
+‘cam_phis.nc’ -> ‘../../cam5_4_114_dart_wx_nsc.damp.cam_0032.h0.2010-09-18-43200.nc’
+
+if ( $CAM_DYCORE == 'se' ) then
+
+echo "starting cam_to_dart for member ${member} at "`date`
+starting cam_to_dart for member 32 at Mon Sep 25 17:37:54 MDT 2017
+
+${EXEROOT}/cam_to_dart > ! output.${member}.cam_to_dart
+
+cd ..
+
+@ member++
+end
+while ( ${member} < = ${ensemble_size} )
+
+
+
+
+set MYTEMPDIR = member_${member}
+mkdir -p $MYTEMPDIR
+cd $MYTEMPDIR
+
+
+$REMOVE output.${member}.cam_to_dart
+
+set ATM_INITIAL_FILENAME = `printf ${CASE}.cam_%04d.i.${ATM_DATE_EXT}.nc  ${member}`
+set ATM_HISTORY_FILENAME = `printf ${CASE}.cam_%04d.h0.${ATM_DATE_EXT}.nc ${member}`
+set DART_IC_FILENAME = `printf filter_ics.%04d     ${member}`
+set DART_RESTART_FILE = `printf filter_restart.%04d ${member}`
+
+sed -e "s#dart_ics#../${DART_IC_FILENAME}#" -e "s#dart_restart#../${DART_RESTART_FILE}#" < ../input.nml > ! input.nml || exit 41
+
+${LINK} ../../$ATM_INITIAL_FILENAME caminput.nc
+‘caminput.nc’ -> ‘../../cam5_4_114_dart_wx_nsc.damp.cam_0033.i.2010-09-18-43200.nc’
+${LINK} ../../$ATM_HISTORY_FILENAME cam_phis.nc
+‘cam_phis.nc’ -> ‘../../cam5_4_114_dart_wx_nsc.damp.cam_0033.h0.2010-09-18-43200.nc’
+
+if ( $CAM_DYCORE == 'se' ) then
+
+echo "starting cam_to_dart for member ${member} at "`date`
+starting cam_to_dart for member 33 at Mon Sep 25 17:37:54 MDT 2017
+
+${EXEROOT}/cam_to_dart > ! output.${member}.cam_to_dart
+
+cd ..
+
+@ member++
+end
+while ( ${member} < = ${ensemble_size} )
+
+
+
+
+set MYTEMPDIR = member_${member}
+mkdir -p $MYTEMPDIR
+cd $MYTEMPDIR
+
+
+$REMOVE output.${member}.cam_to_dart
+
+set ATM_INITIAL_FILENAME = `printf ${CASE}.cam_%04d.i.${ATM_DATE_EXT}.nc  ${member}`
+set ATM_HISTORY_FILENAME = `printf ${CASE}.cam_%04d.h0.${ATM_DATE_EXT}.nc ${member}`
+set DART_IC_FILENAME = `printf filter_ics.%04d     ${member}`
+set DART_RESTART_FILE = `printf filter_restart.%04d ${member}`
+
+sed -e "s#dart_ics#../${DART_IC_FILENAME}#" -e "s#dart_restart#../${DART_RESTART_FILE}#" < ../input.nml > ! input.nml || exit 41
+
+${LINK} ../../$ATM_INITIAL_FILENAME caminput.nc
+‘caminput.nc’ -> ‘../../cam5_4_114_dart_wx_nsc.damp.cam_0034.i.2010-09-18-43200.nc’
+${LINK} ../../$ATM_HISTORY_FILENAME cam_phis.nc
+‘cam_phis.nc’ -> ‘../../cam5_4_114_dart_wx_nsc.damp.cam_0034.h0.2010-09-18-43200.nc’
+
+if ( $CAM_DYCORE == 'se' ) then
+
+echo "starting cam_to_dart for member ${member} at "`date`
+starting cam_to_dart for member 34 at Mon Sep 25 17:37:54 MDT 2017
+
+${EXEROOT}/cam_to_dart > ! output.${member}.cam_to_dart
+
+cd ..
+
+@ member++
+end
+while ( ${member} < = ${ensemble_size} )
+
+
+
+
+set MYTEMPDIR = member_${member}
+mkdir -p $MYTEMPDIR
+cd $MYTEMPDIR
+
+
+$REMOVE output.${member}.cam_to_dart
+
+set ATM_INITIAL_FILENAME = `printf ${CASE}.cam_%04d.i.${ATM_DATE_EXT}.nc  ${member}`
+set ATM_HISTORY_FILENAME = `printf ${CASE}.cam_%04d.h0.${ATM_DATE_EXT}.nc ${member}`
+set DART_IC_FILENAME = `printf filter_ics.%04d     ${member}`
+set DART_RESTART_FILE = `printf filter_restart.%04d ${member}`
+
+sed -e "s#dart_ics#../${DART_IC_FILENAME}#" -e "s#dart_restart#../${DART_RESTART_FILE}#" < ../input.nml > ! input.nml || exit 41
+
+${LINK} ../../$ATM_INITIAL_FILENAME caminput.nc
+‘caminput.nc’ -> ‘../../cam5_4_114_dart_wx_nsc.damp.cam_0035.i.2010-09-18-43200.nc’
+${LINK} ../../$ATM_HISTORY_FILENAME cam_phis.nc
+‘cam_phis.nc’ -> ‘../../cam5_4_114_dart_wx_nsc.damp.cam_0035.h0.2010-09-18-43200.nc’
+
+if ( $CAM_DYCORE == 'se' ) then
+
+echo "starting cam_to_dart for member ${member} at "`date`
+starting cam_to_dart for member 35 at Mon Sep 25 17:37:54 MDT 2017
+
+${EXEROOT}/cam_to_dart > ! output.${member}.cam_to_dart
+
+cd ..
+
+@ member++
+end
+while ( ${member} < = ${ensemble_size} )
+
+
+
+
+set MYTEMPDIR = member_${member}
+mkdir -p $MYTEMPDIR
+cd $MYTEMPDIR
+
+
+$REMOVE output.${member}.cam_to_dart
+
+set ATM_INITIAL_FILENAME = `printf ${CASE}.cam_%04d.i.${ATM_DATE_EXT}.nc  ${member}`
+set ATM_HISTORY_FILENAME = `printf ${CASE}.cam_%04d.h0.${ATM_DATE_EXT}.nc ${member}`
+set DART_IC_FILENAME = `printf filter_ics.%04d     ${member}`
+set DART_RESTART_FILE = `printf filter_restart.%04d ${member}`
+
+sed -e "s#dart_ics#../${DART_IC_FILENAME}#" -e "s#dart_restart#../${DART_RESTART_FILE}#" < ../input.nml > ! input.nml || exit 41
+
+${LINK} ../../$ATM_INITIAL_FILENAME caminput.nc
+‘caminput.nc’ -> ‘../../cam5_4_114_dart_wx_nsc.damp.cam_0036.i.2010-09-18-43200.nc’
+${LINK} ../../$ATM_HISTORY_FILENAME cam_phis.nc
+‘cam_phis.nc’ -> ‘../../cam5_4_114_dart_wx_nsc.damp.cam_0036.h0.2010-09-18-43200.nc’
+
+if ( $CAM_DYCORE == 'se' ) then
+
+echo "starting cam_to_dart for member ${member} at "`date`
+starting cam_to_dart for member 36 at Mon Sep 25 17:37:54 MDT 2017
+
+${EXEROOT}/cam_to_dart > ! output.${member}.cam_to_dart
+
+cd ..
+
+@ member++
+end
+while ( ${member} < = ${ensemble_size} )
+
+
+
+
+set MYTEMPDIR = member_${member}
+mkdir -p $MYTEMPDIR
+cd $MYTEMPDIR
+
+
+$REMOVE output.${member}.cam_to_dart
+
+set ATM_INITIAL_FILENAME = `printf ${CASE}.cam_%04d.i.${ATM_DATE_EXT}.nc  ${member}`
+set ATM_HISTORY_FILENAME = `printf ${CASE}.cam_%04d.h0.${ATM_DATE_EXT}.nc ${member}`
+set DART_IC_FILENAME = `printf filter_ics.%04d     ${member}`
+set DART_RESTART_FILE = `printf filter_restart.%04d ${member}`
+
+sed -e "s#dart_ics#../${DART_IC_FILENAME}#" -e "s#dart_restart#../${DART_RESTART_FILE}#" < ../input.nml > ! input.nml || exit 41
+
+${LINK} ../../$ATM_INITIAL_FILENAME caminput.nc
+‘caminput.nc’ -> ‘../../cam5_4_114_dart_wx_nsc.damp.cam_0037.i.2010-09-18-43200.nc’
+${LINK} ../../$ATM_HISTORY_FILENAME cam_phis.nc
+‘cam_phis.nc’ -> ‘../../cam5_4_114_dart_wx_nsc.damp.cam_0037.h0.2010-09-18-43200.nc’
+
+if ( $CAM_DYCORE == 'se' ) then
+
+echo "starting cam_to_dart for member ${member} at "`date`
+starting cam_to_dart for member 37 at Mon Sep 25 17:37:54 MDT 2017
+
+${EXEROOT}/cam_to_dart > ! output.${member}.cam_to_dart
+
+cd ..
+
+@ member++
+end
+while ( ${member} < = ${ensemble_size} )
+
+
+
+
+set MYTEMPDIR = member_${member}
+mkdir -p $MYTEMPDIR
+cd $MYTEMPDIR
+
+
+$REMOVE output.${member}.cam_to_dart
+
+set ATM_INITIAL_FILENAME = `printf ${CASE}.cam_%04d.i.${ATM_DATE_EXT}.nc  ${member}`
+set ATM_HISTORY_FILENAME = `printf ${CASE}.cam_%04d.h0.${ATM_DATE_EXT}.nc ${member}`
+set DART_IC_FILENAME = `printf filter_ics.%04d     ${member}`
+set DART_RESTART_FILE = `printf filter_restart.%04d ${member}`
+
+sed -e "s#dart_ics#../${DART_IC_FILENAME}#" -e "s#dart_restart#../${DART_RESTART_FILE}#" < ../input.nml > ! input.nml || exit 41
+
+${LINK} ../../$ATM_INITIAL_FILENAME caminput.nc
+‘caminput.nc’ -> ‘../../cam5_4_114_dart_wx_nsc.damp.cam_0038.i.2010-09-18-43200.nc’
+${LINK} ../../$ATM_HISTORY_FILENAME cam_phis.nc
+‘cam_phis.nc’ -> ‘../../cam5_4_114_dart_wx_nsc.damp.cam_0038.h0.2010-09-18-43200.nc’
+
+if ( $CAM_DYCORE == 'se' ) then
+
+echo "starting cam_to_dart for member ${member} at "`date`
+starting cam_to_dart for member 38 at Mon Sep 25 17:37:54 MDT 2017
+
+${EXEROOT}/cam_to_dart > ! output.${member}.cam_to_dart
+
+cd ..
+
+@ member++
+end
+while ( ${member} < = ${ensemble_size} )
+
+
+
+
+set MYTEMPDIR = member_${member}
+mkdir -p $MYTEMPDIR
+cd $MYTEMPDIR
+
+
+$REMOVE output.${member}.cam_to_dart
+
+set ATM_INITIAL_FILENAME = `printf ${CASE}.cam_%04d.i.${ATM_DATE_EXT}.nc  ${member}`
+set ATM_HISTORY_FILENAME = `printf ${CASE}.cam_%04d.h0.${ATM_DATE_EXT}.nc ${member}`
+set DART_IC_FILENAME = `printf filter_ics.%04d     ${member}`
+set DART_RESTART_FILE = `printf filter_restart.%04d ${member}`
+
+sed -e "s#dart_ics#../${DART_IC_FILENAME}#" -e "s#dart_restart#../${DART_RESTART_FILE}#" < ../input.nml > ! input.nml || exit 41
+
+${LINK} ../../$ATM_INITIAL_FILENAME caminput.nc
+‘caminput.nc’ -> ‘../../cam5_4_114_dart_wx_nsc.damp.cam_0039.i.2010-09-18-43200.nc’
+${LINK} ../../$ATM_HISTORY_FILENAME cam_phis.nc
+‘cam_phis.nc’ -> ‘../../cam5_4_114_dart_wx_nsc.damp.cam_0039.h0.2010-09-18-43200.nc’
+
+if ( $CAM_DYCORE == 'se' ) then
+
+echo "starting cam_to_dart for member ${member} at "`date`
+starting cam_to_dart for member 39 at Mon Sep 25 17:37:54 MDT 2017
+
+${EXEROOT}/cam_to_dart > ! output.${member}.cam_to_dart
+
+cd ..
+
+@ member++
+end
+while ( ${member} < = ${ensemble_size} )
+
+
+
+
+set MYTEMPDIR = member_${member}
+mkdir -p $MYTEMPDIR
+cd $MYTEMPDIR
+
+
+$REMOVE output.${member}.cam_to_dart
+
+set ATM_INITIAL_FILENAME = `printf ${CASE}.cam_%04d.i.${ATM_DATE_EXT}.nc  ${member}`
+set ATM_HISTORY_FILENAME = `printf ${CASE}.cam_%04d.h0.${ATM_DATE_EXT}.nc ${member}`
+set DART_IC_FILENAME = `printf filter_ics.%04d     ${member}`
+set DART_RESTART_FILE = `printf filter_restart.%04d ${member}`
+
+sed -e "s#dart_ics#../${DART_IC_FILENAME}#" -e "s#dart_restart#../${DART_RESTART_FILE}#" < ../input.nml > ! input.nml || exit 41
+
+${LINK} ../../$ATM_INITIAL_FILENAME caminput.nc
+‘caminput.nc’ -> ‘../../cam5_4_114_dart_wx_nsc.damp.cam_0040.i.2010-09-18-43200.nc’
+${LINK} ../../$ATM_HISTORY_FILENAME cam_phis.nc
+‘cam_phis.nc’ -> ‘../../cam5_4_114_dart_wx_nsc.damp.cam_0040.h0.2010-09-18-43200.nc’
+
+if ( $CAM_DYCORE == 'se' ) then
+
+echo "starting cam_to_dart for member ${member} at "`date`
+starting cam_to_dart for member 40 at Mon Sep 25 17:37:54 MDT 2017
+
+${EXEROOT}/cam_to_dart > ! output.${member}.cam_to_dart
+
+cd ..
+
+@ member++
+end
+while ( ${member} < = ${ensemble_size} )
+
+wait
+sleep 10
+
+set nsuccess = `fgrep 'Finished ... at YYYY' member*/output.[0-9]*.cam_to_dart | wc -l`
+if ( ${nsuccess} != ${ensemble_size} ) then
+echo "ERROR ... DART died in 'cam_to_dart' ... ERROR"
+ERROR ... DART died in 'cam_to_dart' ... ERROR
+echo "ERROR ... DART died in 'cam_to_dart' ... ERROR"
+ERROR ... DART died in 'cam_to_dart' ... ERROR
+exit -6

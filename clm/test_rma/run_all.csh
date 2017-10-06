@@ -1,35 +1,87 @@
 #!/bin/csh
 
-#BSUB -J clm_rma
-#BSUB -o clm_rma.%J.log
-#BSUB -e clm_rma.%J.err
-#BSUB -q small 
-#BSUB -n 64 
-#BSUB -R "span[ptile=16]"
-#BSUB -P P86850054 
-#BSUB -W 0:10
+set job_name       = "clm_rma "
+set account_string = "P86850054 "
+set destination    = "regular"
+set join           = "oe" 
+set resource_list  = "select=2:ncpus=36:mpiprocs=36"
+set user_list      = "hendric@ucar.edu"
+set wall_time      = "walltime=00:10:00"
 
-echo "--------------------------------------------------------------------------"
-echo "Linking CLM files "
-echo "--------------------------------------------------------------------------"
+# module list
+# 
+# echo "--------------------------------------------------------------------------"
+# echo "Linking CLM files "
+# echo "--------------------------------------------------------------------------"
+# 
+# csh link_programs.csh          || exit 1
+# 
+# echo "--------------------------------------------------------------------------"
+# echo "Staging CLM files "
+# echo "--------------------------------------------------------------------------"
+# 
+# csh stage_restarts.csh         || exit 2
+# set PID=$!
+# while(`ps -p $PID`)
+#    sleep 1
+# end
+# 
+# echo "--------------------------------------------------------------------------"
+# echo "Converting CLM files to DART files "
+# echo "--------------------------------------------------------------------------"
+# 
+# csh convert_clm_to_dart.csh    || exit 3
+# set PID=$!
+# while(`ps -p $PID`)
+#    sleep 1
+# end
+# 
+# echo "--------------------------------------------------------------------------"
+# echo "Running filter"
+# echo "--------------------------------------------------------------------------"
 
-csh link_programs.csh
+if     (`hostname | grep ch` != "") then
+qsub -W block=true -N clm_rma  -A P86850054  -q regular -j oe -m 'abe' -M hendric@ucar.edu -l walltime=00:10:00 -l select=2:ncpus=36:mpiprocs=36 run_cy.csh
+   echo "qsub -W block=true "
+   echo "     -N $job_name "
+   echo "     -A $account_string "
+   echo "     -q $destination "
+   echo "     -j $join "
+   echo "     -m 'abe' "
+   echo "     -M $user_list "
+   echo "     -l $wall_time"
+   echo "     -l $resource_list run_cy.csh"
 
-csh stage_restarts.csh
+   echo " running on cheyenne "
 
-echo "--------------------------------------------------------------------------"
-echo "Converting CLM files to DART files "
-echo "--------------------------------------------------------------------------"
+   qsub -W block=true \
+        -N $job_name \
+        -A $account_string \
+        -q $destination \
+        -j $join \
+        -m "abe" \
+        -M $user_list \
+        -l $wall_time
+        -l $resource_list run_cy.csh
 
-csh convert_clm_to_dart.csh
+else if (`hostname | grep ye`!= "") then
+   echo " running on yellowstone "
+else 
+   echo " running on interactive "
+endif
 
-echo "--------------------------------------------------------------------------"
-echo "Running filter"
-echo "--------------------------------------------------------------------------"
+#cp ../../run_scripts/run_cy.csh .
 
-time mpirun.lsf ./filter
+# if      ($?LS_SUBCWD) then 
+#    bsub -k < run_cy.csh           || exit 4
+# else if ($?PBS_NODE_FILE) then 
+#    qsub -W block=true run_cy.csh  || exit 5
+# else
+#    csh run_cy.csh                 || exit 6
+# endif
 
-echo "--------------------------------------------------------------------------"
+
+echo "--- -----------------------------------------------------------------------"
 echo "Finished running filter"
 echo "--------------------------------------------------------------------------"
 
@@ -37,6 +89,6 @@ echo "--------------------------------------------------------------------------
 echo "Converting DART files to CLM files "
 echo "--------------------------------------------------------------------------"
 
-csh  convert_dart_to_clm.csh
+# csh  convert_dart_to_clm.csh   || exit 7
 
 exit 0
