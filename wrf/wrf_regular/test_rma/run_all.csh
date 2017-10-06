@@ -8,37 +8,39 @@ set resource_list  = "select=14:ncpus=36:mpiprocs=36"
 set user_list      = "hendric@ucar.edu"
 set wall_time      = "walltime=00:50:00"
 
-# module list
-# 
-# echo "--------------------------------------------------------------------------"
-# echo "Linking CLM files "
-# echo "--------------------------------------------------------------------------"
-# 
-# csh link_programs.csh          || exit 1
-# 
-# echo "--------------------------------------------------------------------------"
-# echo "Staging CLM files "
-# echo "--------------------------------------------------------------------------"
-# 
-# csh stage_restarts.csh         || exit 2
-# set PID=$!
-# while(`ps -p $PID`)
-#    sleep 1
-# end
-# 
-# echo "--------------------------------------------------------------------------"
-# echo "Converting CLM files to DART files "
-# echo "--------------------------------------------------------------------------"
-# 
-# csh convert_clm_to_dart.csh    || exit 3
-# set PID=$!
-# while(`ps -p $PID`)
-#    sleep 1
-# end
-# 
-# echo "--------------------------------------------------------------------------"
-# echo "Running filter"
-# echo "--------------------------------------------------------------------------"
+module list
+
+echo "--------------------------------------------------------------------------"
+echo "Linking CLM files "
+echo "--------------------------------------------------------------------------"
+
+csh link_programs.csh          || exit 1
+
+echo "--------------------------------------------------------------------------"
+echo "Staging CLM files "
+echo "--------------------------------------------------------------------------"
+
+csh stage_restarts.csh         || exit 2
+set PID=$!
+while(`ps -p $PID`)
+   sleep 1
+end
+
+echo "--------------------------------------------------------------------------"
+echo "Converting CLM files to DART files "
+echo "--------------------------------------------------------------------------"
+
+csh convert_clm_to_dart.csh    || exit 3
+set PID=$!
+while(`ps -p $PID`)
+   sleep 1
+end
+
+ln -sf ../../../run_cy.csh .
+
+echo "--------------------------------------------------------------------------"
+echo "Running filter"
+echo "--------------------------------------------------------------------------"
 
 if     (`hostname | grep ch` != "") then
    echo "qsub -W block=true "
@@ -65,6 +67,7 @@ if     (`hostname | grep ch` != "") then
 
 else if (`hostname | grep ye`!= "") then
    echo " running on yellowstone "
+   echo " exiting for now "
 else 
    echo " running on interactive "
 endif
