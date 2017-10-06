@@ -1,0 +1,784 @@
+
+Currently Loaded Modules:
+  1) ncarenv/1.2    3) ncarcompilers/0.4.1   5) netcdf/4.4.1.1
+  2) intel/17.0.1   4) mpt/2.15f             6) xxdiff/4.0.1
+
+ 
+
+--------------------------------------------------------------------------
+Linking CLM files 
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+Staging CLM files 
+--------------------------------------------------------------------------
+##########################################################################
+# Staging Files 
+##########################################################################
+copying clm_restart :: '/glade/p/image/DART_test_cases/clm/clm_new/restarts/clm4_121_hybrid_test.clm2_0001.r.2004-01-05-00000.nc' to 'clm_restart_out.0001.nc'
+copying clm_restart :: '/glade/p/image/DART_test_cases/clm/clm_new/restarts/clm4_121_hybrid_test.clm2_0001.r.2004-01-05-00000.nc' to 'clm_restart.0001.nc' 
+copying clm_restart :: '/glade/p/image/DART_test_cases/clm/clm_new/restarts/clm4_121_hybrid_test.clm2_0002.r.2004-01-05-00000.nc' to 'clm_restart_out.0002.nc'
+copying clm_restart :: '/glade/p/image/DART_test_cases/clm/clm_new/restarts/clm4_121_hybrid_test.clm2_0002.r.2004-01-05-00000.nc' to 'clm_restart.0002.nc' 
+copying clm_restart :: '/glade/p/image/DART_test_cases/clm/clm_new/restarts/clm4_121_hybrid_test.clm2_0003.r.2004-01-05-00000.nc' to 'clm_restart_out.0003.nc'
+copying clm_restart :: '/glade/p/image/DART_test_cases/clm/clm_new/restarts/clm4_121_hybrid_test.clm2_0003.r.2004-01-05-00000.nc' to 'clm_restart.0003.nc' 
+copying clm_history :: '/glade/p/image/DART_test_cases/clm/clm_new/restarts/clm4_121_hybrid_test.clm2_0001.h1.2004-01-05-00000.nc' to 'clm_history_out.0001.nc'
+copying clm_history :: '/glade/p/image/DART_test_cases/clm/clm_new/restarts/clm4_121_hybrid_test.clm2_0002.h1.2004-01-05-00000.nc' to 'clm_history_out.0002.nc'
+copying clm_history :: '/glade/p/image/DART_test_cases/clm/clm_new/restarts/clm4_121_hybrid_test.clm2_0003.h1.2004-01-05-00000.nc' to 'clm_history_out.0003.nc'
+copying clm_vectory_history file :: '/glade/p/image/DART_test_cases/clm/clm_new/restarts/clm4_121_hybrid_test.clm2_0001.h2.2004-01-05-00000.nc' to 'clm_vector_history_out.0001.nc'
+copying clm_vectory_history file :: '/glade/p/image/DART_test_cases/clm/clm_new/restarts/clm4_121_hybrid_test.clm2_0002.h2.2004-01-05-00000.nc' to 'clm_vector_history_out.0002.nc'
+copying clm_vectory_history file :: '/glade/p/image/DART_test_cases/clm/clm_new/restarts/clm4_121_hybrid_test.clm2_0003.h2.2004-01-05-00000.nc' to 'clm_vector_history_out.0003.nc'
+copying tower_history files :: '/glade/p/image/DART_test_cases/clm/clm_new/tower_history_files/clm4_121_hybrid_test.clm2_0001.h1.2004-01-01-00000.nc' to 'clm_vector_history_out.0003.nc'
+copying tower_history files :: '/glade/p/image/DART_test_cases/clm/clm_new/tower_history_files/clm4_121_hybrid_test.clm2_0001.h1.2004-01-02-00000.nc' to 'clm_vector_history_out.0003.nc'
+copying tower_history files :: '/glade/p/image/DART_test_cases/clm/clm_new/tower_history_files/clm4_121_hybrid_test.clm2_0001.h1.2004-01-03-00000.nc' to 'clm_vector_history_out.0003.nc'
+copying tower_history files :: '/glade/p/image/DART_test_cases/clm/clm_new/tower_history_files/clm4_121_hybrid_test.clm2_0001.h1.2004-01-04-00000.nc' to 'clm_vector_history_out.0003.nc'
+copying tower_history files :: '/glade/p/image/DART_test_cases/clm/clm_new/tower_history_files/clm4_121_hybrid_test.clm2_0001.h1.2004-01-05-00000.nc' to 'clm_vector_history_out.0003.nc'
+copying tower_history files :: '/glade/p/image/DART_test_cases/clm/clm_new/tower_history_files/clm4_121_hybrid_test.clm2_0002.h1.2004-01-01-00000.nc' to 'clm_vector_history_out.0003.nc'
+copying tower_history files :: '/glade/p/image/DART_test_cases/clm/clm_new/tower_history_files/clm4_121_hybrid_test.clm2_0002.h1.2004-01-02-00000.nc' to 'clm_vector_history_out.0003.nc'
+copying tower_history files :: '/glade/p/image/DART_test_cases/clm/clm_new/tower_history_files/clm4_121_hybrid_test.clm2_0002.h1.2004-01-03-00000.nc' to 'clm_vector_history_out.0003.nc'
+copying tower_history files :: '/glade/p/image/DART_test_cases/clm/clm_new/tower_history_files/clm4_121_hybrid_test.clm2_0002.h1.2004-01-04-00000.nc' to 'clm_vector_history_out.0003.nc'
+copying tower_history files :: '/glade/p/image/DART_test_cases/clm/clm_new/tower_history_files/clm4_121_hybrid_test.clm2_0002.h1.2004-01-05-00000.nc' to 'clm_vector_history_out.0003.nc'
+copying tower_history files :: '/glade/p/image/DART_test_cases/clm/clm_new/tower_history_files/clm4_121_hybrid_test.clm2_0003.h1.2004-01-01-00000.nc' to 'clm_vector_history_out.0003.nc'
+copying tower_history files :: '/glade/p/image/DART_test_cases/clm/clm_new/tower_history_files/clm4_121_hybrid_test.clm2_0003.h1.2004-01-02-00000.nc' to 'clm_vector_history_out.0003.nc'
+copying tower_history files :: '/glade/p/image/DART_test_cases/clm/clm_new/tower_history_files/clm4_121_hybrid_test.clm2_0003.h1.2004-01-03-00000.nc' to 'clm_vector_history_out.0003.nc'
+copying tower_history files :: '/glade/p/image/DART_test_cases/clm/clm_new/tower_history_files/clm4_121_hybrid_test.clm2_0003.h1.2004-01-04-00000.nc' to 'clm_vector_history_out.0003.nc'
+copying tower_history files :: '/glade/p/image/DART_test_cases/clm/clm_new/tower_history_files/clm4_121_hybrid_test.clm2_0003.h1.2004-01-05-00000.nc' to 'clm_vector_history_out.0003.nc'
+copying tower_history files :: '/glade/p/image/DART_test_cases/clm/clm_new/tower_history_files/clm4_121_hybrid_test.clm2_0004.h1.2004-01-04-00000.nc' to 'clm_vector_history_out.0003.nc'
+copying tower_history files :: '/glade/p/image/DART_test_cases/clm/clm_new/tower_history_files/clm4_121_hybrid_test.clm2_0005.h1.2004-01-04-00000.nc' to 'clm_vector_history_out.0003.nc'
+copying tower_history files :: '/glade/p/image/DART_test_cases/clm/clm_new/tower_history_files/clm4_121_hybrid_test.clm2_0006.h1.2004-01-04-00000.nc' to 'clm_vector_history_out.0003.nc'
+copying tower_history files :: '/glade/p/image/DART_test_cases/clm/clm_new/tower_history_files/clm4_121_hybrid_test.clm2_0007.h1.2004-01-04-00000.nc' to 'clm_vector_history_out.0003.nc'
+copying tower_history files :: '/glade/p/image/DART_test_cases/clm/clm_new/tower_history_files/clm4_121_hybrid_test.clm2_0008.h1.2004-01-04-00000.nc' to 'clm_vector_history_out.0003.nc'
+copying tower_history files :: '/glade/p/image/DART_test_cases/clm/clm_new/tower_history_files/clm4_121_hybrid_test.clm2_0009.h1.2004-01-04-00000.nc' to 'clm_vector_history_out.0003.nc'
+copying tower_history files :: '/glade/p/image/DART_test_cases/clm/clm_new/tower_history_files/clm4_121_hybrid_test.clm2_0010.h1.2004-01-04-00000.nc' to 'clm_vector_history_out.0003.nc'
+##########################################################################
+# Finished Staging Files 
+##########################################################################
+--------------------------------------------------------------------------
+Converting CLM files to DART files 
+--------------------------------------------------------------------------
+**************************************************************************
+ Converting clm_restart.0001.nc to clm_missing_r8.0001.nc
+**************************************************************************
+copying ::    'clm_restart.0001.nc'  'clm_restart.nc' for conversion
+making  ::    a template file 'clm_missing_r8.nc'    to stage the conversion
+running ::    'clm_to_dart'. Converting 'clm_restart.0001.nc' to 'clm_missing_r8.0001.nc'
+ Starting program clm_to_dart
+ Initializing the utilities module.
+ Trying to log to unit           10
+ Trying to open file dart_log.out
+ 
+ --------------------------------------
+ Starting ... at YYYY MM DD HH MM SS = 
+                 2017  9 28 17 39 34
+ Program clm_to_dart
+ --------------------------------------
+ 
+ set_nml_output Echo NML values to log file only
+ Trying to open namelist log dart_log.nml
+ static_init_model  assimilation period is            2  days         3600  seconds
+ get_var_1d  lon: replacing _FillValue   9.9999996E+35  with   -888888.000000000
+ get_var_1d  lon: replacing missing_value   9.9999996E+35  with   -888888.000000000
+ get_var_1d  lat: replacing _FillValue   9.9999996E+35  with   -888888.000000000
+ get_var_1d  lat: replacing missing_value   9.9999996E+35  with   -888888.000000000
+ get_var_2d  area: replacing _FillValue   9.9999996E+35  with   -888888.000000000
+ get_var_2d  area: replacing missing_value   9.9999996E+35  with   -888888.000000000
+ get_var_2d  landfrac: replacing _FillValue   9.9999996E+35  with   -888888.000000000
+ get_var_2d  landfrac: replacing missing_value   9.9999996E+35  with   -888888.000000000
+ ------------------------------------------------------
+ 
+ 
+ -------------- ASSIMILATE_THESE_OBS_TYPES --------------
+ TOWER_NETC_ECO_EXCHANGE
+ TOWER_LATENT_HEAT_FLUX
+ TOWER_SENSIBLE_HEAT_FLUX
+ MODIS_SNOWCOVER_FRAC
+ COSMOS_NEUTRON_INTENSITY
+ -------------- EVALUATE_THESE_OBS_TYPES --------------
+ ------------------------------------------------------
+ 
+ ---------- USE_PRECOMPUTED_FO_OBS_TYPES --------------
+ ------------------------------------------------------
+ 
+time in restart file clm_restart.nc day=147196, sec=0
+date in restart file clm_restart.nc 2004 Jan 05 00:00:00
+clm_to_dart:clm  model date 2004 Jan 05 00:00:00
+clm_to_dart:DART model time day=147196, sec=0
+ 
+ --------------------------------------
+ Finished ... at YYYY MM DD HH MM SS = 
+                 2017  9 28 17 39 35
+ Program clm_to_dart
+ --------------------------------------
+ 
+moving  ::    'clm_missing_r8.nc' to 'clm_missing_r8.0001.nc'
+**************************************************************************
+ Finished converting clm_restart.0001.nc 
+**************************************************************************
+**************************************************************************
+ Converting clm_restart.0002.nc to clm_missing_r8.0002.nc
+**************************************************************************
+copying ::    'clm_restart.0002.nc'  'clm_restart.nc' for conversion
+making  ::    a template file 'clm_missing_r8.nc'    to stage the conversion
+running ::    'clm_to_dart'. Converting 'clm_restart.0002.nc' to 'clm_missing_r8.0002.nc'
+ Starting program clm_to_dart
+ Initializing the utilities module.
+ Trying to log to unit           10
+ Trying to open file dart_log.out
+ 
+ --------------------------------------
+ Starting ... at YYYY MM DD HH MM SS = 
+                 2017  9 28 17 39 36
+ Program clm_to_dart
+ --------------------------------------
+ 
+ set_nml_output Echo NML values to log file only
+ Trying to open namelist log dart_log.nml
+ static_init_model  assimilation period is            2  days         3600  seconds
+ get_var_1d  lon: replacing _FillValue   9.9999996E+35  with   -888888.000000000
+ get_var_1d  lon: replacing missing_value   9.9999996E+35  with   -888888.000000000
+ get_var_1d  lat: replacing _FillValue   9.9999996E+35  with   -888888.000000000
+ get_var_1d  lat: replacing missing_value   9.9999996E+35  with   -888888.000000000
+ get_var_2d  area: replacing _FillValue   9.9999996E+35  with   -888888.000000000
+ get_var_2d  area: replacing missing_value   9.9999996E+35  with   -888888.000000000
+ get_var_2d  landfrac: replacing _FillValue   9.9999996E+35  with   -888888.000000000
+ get_var_2d  landfrac: replacing missing_value   9.9999996E+35  with   -888888.000000000
+ ------------------------------------------------------
+ 
+ 
+ -------------- ASSIMILATE_THESE_OBS_TYPES --------------
+ TOWER_NETC_ECO_EXCHANGE
+ TOWER_LATENT_HEAT_FLUX
+ TOWER_SENSIBLE_HEAT_FLUX
+ MODIS_SNOWCOVER_FRAC
+ COSMOS_NEUTRON_INTENSITY
+ -------------- EVALUATE_THESE_OBS_TYPES --------------
+ ------------------------------------------------------
+ 
+ ---------- USE_PRECOMPUTED_FO_OBS_TYPES --------------
+ ------------------------------------------------------
+ 
+time in restart file clm_restart.nc day=147196, sec=0
+date in restart file clm_restart.nc 2004 Jan 05 00:00:00
+clm_to_dart:clm  model date 2004 Jan 05 00:00:00
+clm_to_dart:DART model time day=147196, sec=0
+ 
+ --------------------------------------
+ Finished ... at YYYY MM DD HH MM SS = 
+                 2017  9 28 17 39 36
+ Program clm_to_dart
+ --------------------------------------
+ 
+moving  ::    'clm_missing_r8.nc' to 'clm_missing_r8.0002.nc'
+**************************************************************************
+ Finished converting clm_restart.0002.nc 
+**************************************************************************
+**************************************************************************
+ Converting clm_restart.0003.nc to clm_missing_r8.0003.nc
+**************************************************************************
+copying ::    'clm_restart.0003.nc'  'clm_restart.nc' for conversion
+making  ::    a template file 'clm_missing_r8.nc'    to stage the conversion
+running ::    'clm_to_dart'. Converting 'clm_restart.0003.nc' to 'clm_missing_r8.0003.nc'
+ Starting program clm_to_dart
+ Initializing the utilities module.
+ Trying to log to unit           10
+ Trying to open file dart_log.out
+ 
+ --------------------------------------
+ Starting ... at YYYY MM DD HH MM SS = 
+                 2017  9 28 17 39 37
+ Program clm_to_dart
+ --------------------------------------
+ 
+ set_nml_output Echo NML values to log file only
+ Trying to open namelist log dart_log.nml
+ static_init_model  assimilation period is            2  days         3600  seconds
+ get_var_1d  lon: replacing _FillValue   9.9999996E+35  with   -888888.000000000
+ get_var_1d  lon: replacing missing_value   9.9999996E+35  with   -888888.000000000
+ get_var_1d  lat: replacing _FillValue   9.9999996E+35  with   -888888.000000000
+ get_var_1d  lat: replacing missing_value   9.9999996E+35  with   -888888.000000000
+ get_var_2d  area: replacing _FillValue   9.9999996E+35  with   -888888.000000000
+ get_var_2d  area: replacing missing_value   9.9999996E+35  with   -888888.000000000
+ get_var_2d  landfrac: replacing _FillValue   9.9999996E+35  with   -888888.000000000
+ get_var_2d  landfrac: replacing missing_value   9.9999996E+35  with   -888888.000000000
+ ------------------------------------------------------
+ 
+ 
+ -------------- ASSIMILATE_THESE_OBS_TYPES --------------
+ TOWER_NETC_ECO_EXCHANGE
+ TOWER_LATENT_HEAT_FLUX
+ TOWER_SENSIBLE_HEAT_FLUX
+ MODIS_SNOWCOVER_FRAC
+ COSMOS_NEUTRON_INTENSITY
+ -------------- EVALUATE_THESE_OBS_TYPES --------------
+ ------------------------------------------------------
+ 
+ ---------- USE_PRECOMPUTED_FO_OBS_TYPES --------------
+ ------------------------------------------------------
+ 
+time in restart file clm_restart.nc day=147196, sec=0
+date in restart file clm_restart.nc 2004 Jan 05 00:00:00
+clm_to_dart:clm  model date 2004 Jan 05 00:00:00
+clm_to_dart:DART model time day=147196, sec=0
+ 
+ --------------------------------------
+ Finished ... at YYYY MM DD HH MM SS = 
+                 2017  9 28 17 39 37
+ Program clm_to_dart
+ --------------------------------------
+ 
+moving  ::    'clm_missing_r8.nc' to 'clm_missing_r8.0003.nc'
+**************************************************************************
+ Finished converting clm_restart.0003.nc 
+**************************************************************************
+making  ::   restart_file_list for input to filter 'restart_files.txt'
+contents of restart_files.txt files :: 
+clm_missing_r8.0001.nc
+clm_missing_r8.0002.nc
+clm_missing_r8.0003.nc
+--------------------------------------------------------------------------
+Running filter
+--------------------------------------------------------------------------
+*******************************
+ running with PBS
+*******************************
+ PBS_JOB_ID  '1892277.chadmin1'
+ PBS_JOBNAME 'clm_rma_cy'
+ NCPUS       '72'
+ NODES       '2'
+*******************************
+*************************
+ --- filter Started -----
+*************************
+ running with mpt
+
+Currently Loaded Modules:
+  1) ncarenv/1.2           4) netcdf/4.4.1.1      7) mpt/2.15f
+  2) intel/17.0.1          5) xxdiff/4.0.1
+  3) ncarcompilers/0.4.1   6) peak_memusage/1.1
+
+ 
+
+
+Running: ./filter; sleep 1  - Please wait...
+ Starting program Filter
+ Initializing the utilities module.
+ Trying to log to unit           10
+ Trying to open file dart_log.out
+ 
+ --------------------------------------
+ Starting ... at YYYY MM DD HH MM SS = 
+                 2017  9 28 17 39 43
+ Program Filter
+ --------------------------------------
+ 
+ set_nml_output Echo NML values to log file only
+ Trying to open namelist log dart_log.nml
+ PE 0: initialize_mpi_utilities:  Running with           72  MPI processes.
+ PE 0: static_init_model  assimilation period is            2  days         3600  seconds
+ PE 0: get_var_1d  lon: replacing _FillValue   9.9999996E+35  with   -888888.000000000
+ PE 0: get_var_1d  lon: replacing missing_value   9.9999996E+35  with   -888888.000000000
+ PE 0: get_var_1d  lat: replacing _FillValue   9.9999996E+35  with   -888888.000000000
+ PE 0: get_var_1d  lat: replacing missing_value   9.9999996E+35  with   -888888.000000000
+ PE 0: get_var_2d  area: replacing _FillValue   9.9999996E+35  with   -888888.000000000
+ PE 0: get_var_2d  area: replacing missing_value   9.9999996E+35  with   -888888.000000000
+ PE 0: get_var_2d  landfrac: replacing _FillValue   9.9999996E+35  with   -888888.000000000
+ PE 0: get_var_2d  landfrac: replacing missing_value   9.9999996E+35  with   -888888.000000000
+ ------------------------------------------------------
+ 
+ 
+ -------------- ASSIMILATE_THESE_OBS_TYPES --------------
+ TOWER_NETC_ECO_EXCHANGE
+ TOWER_LATENT_HEAT_FLUX
+ TOWER_SENSIBLE_HEAT_FLUX
+ MODIS_SNOWCOVER_FRAC
+ COSMOS_NEUTRON_INTENSITY
+ -------------- EVALUATE_THESE_OBS_TYPES --------------
+ ------------------------------------------------------
+ 
+ ---------- USE_PRECOMPUTED_FO_OBS_TYPES --------------
+ ------------------------------------------------------
+ 
+ PE 0: quality_control_mod: Will reject obs with Data QC larger than    1
+ PE 0: quality_control_mod: Will reject obs values more than    3.000000 sigma from mean
+ PE 0: location_mod: using code with optimized cutoffs
+ PE 0: location_mod: Ignoring vertical separation when computing distances; horizontal distances only
+ PE 0: assim_tools_init: Selected filter type is Ensemble Adjustment Kalman Filter (EAKF)
+ PE 0: assim_tools_init: The cutoff namelist value is           0.050000
+ PE 0: assim_tools_init: ... cutoff is the localization half-width parameter,
+ PE 0: assim_tools_init: ... so the effective localization radius is           0.100000
+ PE 0: assim_tools_init: Replicating a copy of the ensemble mean on every task
+ PE 0: assim_tools_init: ... uses more memory per task but may run faster if doing vertical
+ PE 0: assim_tools_init: ... coordinate conversion; controlled by namelist item "distribute_mean"
+ PE 0: assim_tools_init: Not doing vertical localization, no vertical coordinate conversion required
+ PE 0:  filter trace: Filter start
+ Filter start TIME: 2017/09/28 17:39:50
+ PE 0: filter_main: running with an ensemble size of     3
+ PE 0:  filter trace: Before initializing inflation
+ PE 0:  filter trace: After  initializing inflation
+ PE 0: parse_stages_to_write:  filter will write stage : preassim
+ PE 0: parse_stages_to_write:  filter will write stage : postassim
+ PE 0: parse_stages_to_write:  filter will write stage : analysis
+ PE 0: parse_stages_to_write:  filter will write stage : forecast
+ PE 0: parse_stages_to_write:  filter will write stage : output
+ PE 0:  filter trace: Before setting up space for observations
+ Before setting up space for observations TIME: 2017/09/28 17:39:50
+ After  setting up space for observations TIME: 2017/09/28 17:39:50
+ PE 0:  filter trace: After  setting up space for observations
+ PE 0:  filter trace: Before setting up space for ensembles
+ PE 0:  filter trace: After  setting up space for ensembles
+ PE 0:  filter trace: Before reading in ensemble restart files
+ Before reading in ensemble restart files TIME: 2017/09/28 17:39:50
+ PE 0: set_member_file_metadata no file list given for stage "forecast" so using default names
+ PE 0: set_member_file_metadata no file list given for stage "preassim" so using default names
+ PE 0: set_member_file_metadata no file list given for stage "postassim" so using default names
+ PE 0: set_member_file_metadata no file list given for stage "analysis" so using default names
+ PE 0: Prior inflation: None
+ PE 0: Posterior inflation: None
+ PE 0: filter_main: Reading in initial condition/restart data for all ensemble members from file(s)
+ After  reading in ensemble restart files TIME: 2017/09/28 17:39:50
+ PE 0:  filter trace: After  reading in ensemble restart files
+ PE 0:  filter trace: Before initializing output files
+ Before initializing output files TIME: 2017/09/28 17:39:50
+ After  initializing output files TIME: 2017/09/28 17:39:50
+ PE 0:  filter trace: After  initializing output files
+ PE 0:  filter trace: Before trimming obs seq if start/stop time specified
+ PE 0:  filter trace: After  trimming obs seq if start/stop time specified
+ PE 0:  filter trace: Top of main advance time loop
+ PE 0:  
+ PE 0: filter: Main assimilation loop, starting iteration    0
+ PE 0:  filter trace: Before move_ahead checks time of data and next obs
+ PE 0: move_ahead Current model data time            is:  day=  147196 sec=     0
+ PE 0: move_ahead Current assimilation window starts at:  day=  147194 sec= 84601
+ PE 0: move_ahead Next available observation time    is:  day=  147195 sec=     0
+ PE 0: move_ahead Current assimilation window ends   at:  day=  147197 sec=  1800
+ PE 0: move_ahead Next available observation time    is:  day=  147195 sec=     0
+ PE 0: move_ahead Within current assimilation window, model does not need advance.
+ PE 0: move_ahead Next assimilation window contains up to     1000 observations
+ PE 0:  filter trace: After  move_ahead checks time of data and next obs
+ PE 0: filter: Model does not need to run; data already at required time
+ PE 0:  filter trace: Before setup for next group of observations
+ PE 0:  filter trace: Number of observations to be assimilated   1000
+ filter trace: Time of first observation in window day=147195, sec=0
+ filter trace: Time of last  observation in window day=147196, sec=0
+ PE 0:  filter trace: After  setup for next group of observations
+ PE 0:  filter trace: Before forecast state space output
+ Before forecast state space output TIME: 2017/09/28 17:39:50
+ After  forecast state space output TIME: 2017/09/28 17:39:50
+ PE 0:  filter trace: After  forecast state space output
+ PE 0:  filter trace: Before computing prior observation values
+ Before computing prior observation values TIME: 2017/09/28 17:39:50
+ After  computing prior observation values TIME: 2017/09/28 17:39:51
+ PE 0:  filter trace: After  computing prior observation values
+ PE 0:  filter trace: Before preassim state space output
+ Before preassim state space output TIME: 2017/09/28 17:39:51
+ After  preassim state space output TIME: 2017/09/28 17:39:51
+ PE 0:  filter trace: After  preassim state space output
+ PE 0:  filter trace: Before observation space diagnostics
+ PE 0:  filter trace: After  observation space diagnostics
+ PE 0: filter: Ready to assimilate up to    1000 observations
+ PE 0:  filter trace: Before observation assimilation
+ Before observation assimilation TIME: 2017/09/28 17:39:51
+ PE 0: locations_mod Location module statistics:
+ PE 0: locations_mod  Total boxes (nlon * nlat):      2556
+ PE 0: locations_mod  Total items to put in boxes:     69288
+ PE 0: locations_mod  Percent boxes with 1+ items:   54.62
+ PE 0: locations_mod  Average #items per non-empty box:        49.63
+ PE 0: locations_mod  Largest #items in one box:       210
+ PE 0: locations_mod Location module statistics:
+ PE 0: locations_mod  Total boxes (nlon * nlat):      2556
+ PE 0: locations_mod  Total items to put in boxes:        14
+ PE 0: locations_mod  Percent boxes with 1+ items:    0.12
+ PE 0: locations_mod  Average #items per non-empty box:         4.67
+ PE 0: locations_mod  Largest #items in one box:        12
+ PE 0: comp_cov_factor: Standard Gaspari Cohn localization selected
+Processing observation      1000  of     1000 TIME: 2017/09/28 17:39:52
+ PE 0: filter_assim: Processed    1000 total observations
+ Total number of calls made    to get_close_obs for obs/states:             750
+ Total number of calls avoided to get_close_obs for obs/states:             758
+ Percent saved:    50.2652519893899     
+ After  observation assimilation TIME: 2017/09/28 17:39:52
+ PE 0:  filter trace: After  observation assimilation
+ PE 0:  filter trace: Before postassim state space output
+ Before postassim state space output TIME: 2017/09/28 17:39:52
+ After  postassim state space output TIME: 2017/09/28 17:39:52
+ PE 0:  filter trace: After  postassim state space output
+ PE 0:  filter trace: Before computing posterior observation values
+ Before computing posterior observation values TIME: 2017/09/28 17:39:52
+ After  computing posterior observation values TIME: 2017/09/28 17:39:53
+ PE 0:  filter trace: After  computing posterior observation values
+ PE 0:  filter trace: Before posterior obs space diagnostics
+ PE 0:  filter trace: After  posterior obs space diagnostics
+ PE 0:  filter trace: Before analysis state space output
+ Before analysis state space output TIME: 2017/09/28 17:39:53
+ After  analysis state space output TIME: 2017/09/28 17:39:53
+ PE 0:  filter trace: After  analysis state space output
+ PE 0:  filter trace: Near bottom of main loop, cleaning up obs space
+ PE 0:  filter trace: Bottom of main advance time loop
+ PE 0:  filter trace: Top of main advance time loop
+ PE 0:  
+ PE 0: filter: Main assimilation loop, starting iteration    1
+ PE 0:  filter trace: Before move_ahead checks time of data and next obs
+ PE 0:  filter trace: After  move_ahead checks time of data and next obs
+ PE 0: filter: No more obs to assimilate, exiting main loop
+ PE 0: filter: End of main filter assimilation loop, starting cleanup
+ PE 0:  filter trace: Before state space output
+ Before state space output TIME: 2017/09/28 17:39:53
+ After  state space output TIME: 2017/09/28 17:39:53
+ PE 0:  filter trace: After  state space output
+ PE 0:  filter trace: Before writing output sequence file
+ PE 0: write_obs_seq  opening formatted observation sequence file "obs_seq.final"
+ PE    16: create_and_open_state_output:  Creating output file preassim_member_0003_d01.nc
+ PE    28: create_and_open_state_output:  Creating output file analysis_sd_d01.nc
+ PE    15: create_and_open_state_output:  Creating output file preassim_member_0002_d01.nc
+ PE    11: create_and_open_state_output:  Creating output file forecast_member_0003_d01.nc
+ PE    14: create_and_open_state_output:  Creating output file preassim_member_0001_d01.nc
+ PE     4: create_and_open_state_output:  Creating output file output_sd_d01.nc
+ PE    20: create_and_open_state_output:  Creating output file postassim_member_0002_d01.nc
+ PE    10: create_and_open_state_output:  Creating output file forecast_member_0002_d01.nc
+ PE    17: create_and_open_state_output:  Creating output file preassim_mean_d01.nc
+ PE    25: create_and_open_state_output:  Creating output file analysis_member_0002_d01.nc
+ PE     9: create_and_open_state_output:  Creating output file forecast_member_0001_d01.nc
+ PE    22: create_and_open_state_output:  Creating output file postassim_mean_d01.nc
+ PE    26: create_and_open_state_output:  Creating output file analysis_member_0003_d01.nc
+ PE    27: create_and_open_state_output:  Creating output file analysis_mean_d01.nc
+ PE    18: create_and_open_state_output:  Creating output file preassim_sd_d01.nc
+ PE    13: create_and_open_state_output:  Creating output file forecast_sd_d01.nc
+ PE 0: write_obs_seq  closed observation sequence file "obs_seq.final"
+ PE 0:  filter trace: After  writing output sequence file
+ PE    21: create_and_open_state_output:  Creating output file postassim_member_0003_d01.nc
+ PE 0:  filter trace: Before writing all state restart files at end
+ Before writing all state restart files at end TIME: 2017/09/28 17:39:53
+ PE    12: create_and_open_state_output:  Creating output file forecast_mean_d01.nc
+ PE    19: create_and_open_state_output:  Creating output file postassim_member_0001_d01.nc
+ PE    24: create_and_open_state_output:  Creating output file analysis_member_0001_d01.nc
+ PE     3: create_and_open_state_output:  Creating output file output_mean_d01.nc
+ PE    23: create_and_open_state_output:  Creating output file postassim_sd_d01.nc
+ PE     1: clamp_variable  H2OSNO lower bound   0.000000000000000E+000  min value   -1.24326111878766
+ PE     2: clamp_variable  H2OSNO lower bound   0.000000000000000E+000  min value  -0.264046978878850
+ PE     0: clamp_variable  H2OSNO lower bound   0.000000000000000E+000  min value  -0.181361823729245
+ PE     3: clamp_variable  H2OSOI_LIQ lower bound   0.000000000000000E+000  min value  -8.019061964123315E-002
+ PE     3: clamp_variable  H2OSOI_ICE lower bound   0.000000000000000E+000  min value   -1.50348674399327
+ PE     2: clamp_variable  H2OSOI_LIQ lower bound   0.000000000000000E+000  min value  -0.289764112829884
+ PE     1: clamp_variable  H2OSOI_LIQ lower bound   0.000000000000000E+000  min value  -0.187879288114091
+ PE     0: clamp_variable  H2OSOI_LIQ lower bound   0.000000000000000E+000  min value  -0.258112636679500
+ PE     2: clamp_variable  H2OSOI_ICE lower bound   0.000000000000000E+000  min value   -2.86728906323726
+ PE     3: clamp_variable  frootc lower bound   0.000000000000000E+000  min value   -23.6113552783298
+ PE     3: clamp_variable  leafc lower bound   0.000000000000000E+000  min value   -11.8057845083961
+ PE     3: clamp_variable  leafn lower bound   0.000000000000000E+000  min value  -0.472231380335804
+ PE     1: clamp_variable  H2OSOI_ICE lower bound   0.000000000000000E+000  min value   -4.24996041221566
+ PE     2: clamp_variable  frootc lower bound   0.000000000000000E+000  min value   -54.4339700952801
+ PE     3: create_and_open_state_output:  Creating output file output_mean_d02.nc
+ PE     9: create_and_open_state_output:  Creating output file forecast_member_0001_d02.nc
+ PE    10: create_and_open_state_output:  Creating output file forecast_member_0002_d02.nc
+ PE     0: clamp_variable  H2OSOI_ICE lower bound   0.000000000000000E+000  min value   -2.50997980248683
+ PE     2: clamp_variable  leafc lower bound   0.000000000000000E+000  min value   -27.2172314255573
+ PE     2: clamp_variable  leafn lower bound   0.000000000000000E+000  min value   -1.08868925702219
+ PE    16: create_and_open_state_output:  Creating output file preassim_member_0003_d02.nc
+ PE    13: create_and_open_state_output:  Creating output file forecast_sd_d02.nc
+ PE    15: create_and_open_state_output:  Creating output file preassim_member_0002_d02.nc
+ PE    25: create_and_open_state_output:  Creating output file analysis_member_0002_d02.nc
+ PE    12: create_and_open_state_output:  Creating output file forecast_mean_d02.nc
+ PE    14: create_and_open_state_output:  Creating output file preassim_member_0001_d02.nc
+ PE    26: create_and_open_state_output:  Creating output file analysis_member_0003_d02.nc
+ PE    28: create_and_open_state_output:  Creating output file analysis_sd_d02.nc
+ PE     4: create_and_open_state_output:  Creating output file output_sd_d02.nc
+ PE    20: create_and_open_state_output:  Creating output file postassim_member_0002_d02.nc
+ PE    18: create_and_open_state_output:  Creating output file preassim_sd_d02.nc
+ PE    22: create_and_open_state_output:  Creating output file postassim_mean_d02.nc
+ PE    23: create_and_open_state_output:  Creating output file postassim_sd_d02.nc
+ PE    21: create_and_open_state_output:  Creating output file postassim_member_0003_d02.nc
+ PE    27: create_and_open_state_output:  Creating output file analysis_mean_d02.nc
+ PE    24: create_and_open_state_output:  Creating output file analysis_member_0001_d02.nc
+ PE    11: create_and_open_state_output:  Creating output file forecast_member_0003_d02.nc
+ PE    19: create_and_open_state_output:  Creating output file postassim_member_0001_d02.nc
+ PE    17: create_and_open_state_output:  Creating output file preassim_mean_d02.nc
+ PE     1: clamp_variable  frootc lower bound   0.000000000000000E+000  min value   -2.66955107904062
+ PE     0: clamp_variable  frootc lower bound   0.000000000000000E+000  min value   -48.8392597564886
+ PE     1: clamp_variable  leafc lower bound   0.000000000000000E+000  min value   -2.66955108915314
+ PE     1: clamp_variable  leafn lower bound   0.000000000000000E+000  min value  -0.106782043566116
+ PE     0: clamp_variable  leafc lower bound   0.000000000000000E+000  min value   -24.4198509334985
+ PE     0: clamp_variable  leafn lower bound   0.000000000000000E+000  min value  -0.976794037339854
+ PE     3: create_and_open_state_output:  Creating output file output_mean_d03.nc
+ PE     4: create_and_open_state_output:  Creating output file output_sd_d03.nc
+ PE    10: create_and_open_state_output:  Creating output file forecast_member_0002_d03.nc
+ PE     9: create_and_open_state_output:  Creating output file forecast_member_0001_d03.nc
+ PE    12: create_and_open_state_output:  Creating output file forecast_mean_d03.nc
+ PE    15: create_and_open_state_output:  Creating output file preassim_member_0002_d03.nc
+ PE    18: create_and_open_state_output:  Creating output file preassim_sd_d03.nc
+ PE    13: create_and_open_state_output:  Creating output file forecast_sd_d03.nc
+ PE    26: create_and_open_state_output:  Creating output file analysis_member_0003_d03.nc
+ PE    21: create_and_open_state_output:  Creating output file postassim_member_0003_d03.nc
+ PE    25: create_and_open_state_output:  Creating output file analysis_member_0002_d03.nc
+ PE    23: create_and_open_state_output:  Creating output file postassim_sd_d03.nc
+ PE    11: create_and_open_state_output:  Creating output file forecast_member_0003_d03.nc
+ PE    20: create_and_open_state_output:  Creating output file postassim_member_0002_d03.nc
+ PE    22: create_and_open_state_output:  Creating output file postassim_mean_d03.nc
+ PE    19: create_and_open_state_output:  Creating output file postassim_member_0001_d03.nc
+ PE    27: create_and_open_state_output:  Creating output file analysis_mean_d03.nc
+ PE    24: create_and_open_state_output:  Creating output file analysis_member_0001_d03.nc
+ PE    14: create_and_open_state_output:  Creating output file preassim_member_0001_d03.nc
+ PE    28: create_and_open_state_output:  Creating output file analysis_sd_d03.nc
+ PE    17: create_and_open_state_output:  Creating output file preassim_mean_d03.nc
+ PE    16: create_and_open_state_output:  Creating output file preassim_member_0003_d03.nc
+ After  writing all state restart files at end TIME: 2017/09/28 17:39:54
+ PE 0:  filter trace: After  writing all state restart files at end
+ PE 0:  filter trace: Before end_model call
+ PE 0:  filter trace: After  end_model call
+ PE 0:  filter trace: Before ensemble and obs memory cleanup
+ PE 0:  filter trace: After  ensemble and obs memory cleanup
+ PE 0:  filter trace: Filter done
+ Filter done TIME: 2017/09/28 17:39:54
+ 
+ --------------------------------------
+ Finished ... at YYYY MM DD HH MM SS = 
+                 2017  9 28 17 39 54
+ Program Filter
+ --------------------------------------
+ 
+Used memory in task 3/36: 339.65MiB (+0.63MiB overhead). ExitStatus: 0. Signal: 0
+Used memory in task 4/36: 258.72MiB (+0.63MiB overhead). ExitStatus: 0. Signal: 0
+Used memory in task 27/36: 339.23MiB (+0.63MiB overhead). ExitStatus: 0. Signal: 0
+Used memory in task 16/36: 339.50MiB (+0.63MiB overhead). ExitStatus: 0. Signal: 0
+Used memory in task 23/36: 339.28MiB (+0.63MiB overhead). ExitStatus: 0. Signal: 0
+Used memory in task 11/36: 258.40MiB (+0.63MiB overhead). ExitStatus: 0. Signal: 0
+Used memory in task 21/36: 339.38MiB (+0.63MiB overhead). ExitStatus: 0. Signal: 0
+Used memory in task 43/36: 316.11MiB (+0.63MiB overhead). ExitStatus: 0. Signal: 0
+Used memory in task 36/36: 245.51MiB (+0.63MiB overhead). ExitStatus: 0. Signal: 0
+Used memory in task 38/36: 316.27MiB (+0.63MiB overhead). ExitStatus: 0. Signal: 0
+Used memory in task 52/36: 316.23MiB (+0.63MiB overhead). ExitStatus: 0. Signal: 0
+Used memory in task 37/36: 235.42MiB (+0.63MiB overhead). ExitStatus: 0. Signal: 0
+Used memory in task 17/36: 339.50MiB (+0.63MiB overhead). ExitStatus: 0. Signal: 0
+Used memory in task 0/36: 272.23MiB (+0.63MiB overhead). ExitStatus: 0. Signal: 0
+Used memory in task 50/36: 316.23MiB (+0.63MiB overhead). ExitStatus: 0. Signal: 0
+Used memory in task 68/36: 316.24MiB (+0.63MiB overhead). ExitStatus: 0. Signal: 0
+Used memory in task 65/36: 235.33MiB (+0.63MiB overhead). ExitStatus: 0. Signal: 0
+Used memory in task 42/36: 316.25MiB (+0.63MiB overhead). ExitStatus: 0. Signal: 0
+Used memory in task 33/36: 317.60MiB (+0.63MiB overhead). ExitStatus: 0. Signal: 0
+Used memory in task 12/36: 258.43MiB (+0.63MiB overhead). ExitStatus: 0. Signal: 0
+Used memory in task 31/36: 317.49MiB (+0.63MiB overhead). ExitStatus: 0. Signal: 0
+Used memory in task 19/36: 258.55MiB (+0.63MiB overhead). ExitStatus: 0. Signal: 0
+Used memory in task 9/36: 339.45MiB (+0.63MiB overhead). ExitStatus: 0. Signal: 0
+Used memory in task 5/36: 317.79MiB (+0.63MiB overhead). ExitStatus: 0. Signal: 0
+Used memory in task 15/36: 339.48MiB (+0.63MiB overhead). ExitStatus: 0. Signal: 0
+Used memory in task 24/36: 339.26MiB (+0.63MiB overhead). ExitStatus: 0. Signal: 0
+Used memory in task 1/36: 266.36MiB (+0.63MiB overhead). ExitStatus: 0. Signal: 0
+Used memory in task 32/36: 317.61MiB (+0.63MiB overhead). ExitStatus: 0. Signal: 0
+Used memory in task 35/36: 317.47MiB (+0.63MiB overhead). ExitStatus: 0. Signal: 0
+Used memory in task 13/36: 339.22MiB (+0.63MiB overhead). ExitStatus: 0. Signal: 0
+Used memory in task 26/36: 339.27MiB (+0.63MiB overhead). ExitStatus: 0. Signal: 0
+Used memory in task 54/36: 235.39MiB (+0.63MiB overhead). ExitStatus: 0. Signal: 0
+Used memory in task 2/36: 368.23MiB (+0.63MiB overhead). ExitStatus: 0. Signal: 0
+Used memory in task 34/36: 317.50MiB (+0.63MiB overhead). ExitStatus: 0. Signal: 0
+Used memory in task 22/36: 258.43MiB (+0.63MiB overhead). ExitStatus: 0. Signal: 0
+Used memory in task 28/36: 339.26MiB (+0.63MiB overhead). ExitStatus: 0. Signal: 0
+Used memory in task 20/36: 339.39MiB (+0.63MiB overhead). ExitStatus: 0. Signal: 0
+Used memory in task 14/36: 339.41MiB (+0.63MiB overhead). ExitStatus: 0. Signal: 0
+Used memory in task 6/36: 317.79MiB (+0.63MiB overhead). ExitStatus: 0. Signal: 0
+Used memory in task 30/36: 236.67MiB (+0.63MiB overhead). ExitStatus: 0. Signal: 0
+Used memory in task 8/36: 317.67MiB (+0.63MiB overhead). ExitStatus: 0. Signal: 0
+Used memory in task 10/36: 339.13MiB (+0.63MiB overhead). ExitStatus: 0. Signal: 0
+Used memory in task 7/36: 317.66MiB (+0.63MiB overhead). ExitStatus: 0. Signal: 0
+Used memory in task 25/36: 339.26MiB (+0.63MiB overhead). ExitStatus: 0. Signal: 0
+Used memory in task 29/36: 236.66MiB (+0.63MiB overhead). ExitStatus: 0. Signal: 0
+Used memory in task 18/36: 258.56MiB (+0.63MiB overhead). ExitStatus: 0. Signal: 0
+Used memory in task 40/36: 235.44MiB (+0.63MiB overhead). ExitStatus: 0. Signal: 0
+Used memory in task 51/36: 316.14MiB (+0.63MiB overhead). ExitStatus: 0. Signal: 0
+Used memory in task 60/36: 316.21MiB (+0.63MiB overhead). ExitStatus: 0. Signal: 0
+Used memory in task 64/36: 316.18MiB (+0.63MiB overhead). ExitStatus: 0. Signal: 0
+Used memory in task 41/36: 316.23MiB (+0.63MiB overhead). ExitStatus: 0. Signal: 0
+Used memory in task 66/36: 235.34MiB (+0.63MiB overhead). ExitStatus: 0. Signal: 0
+Used memory in task 57/36: 316.19MiB (+0.63MiB overhead). ExitStatus: 0. Signal: 0
+Used memory in task 49/36: 316.21MiB (+0.63MiB overhead). ExitStatus: 0. Signal: 0
+Used memory in task 56/36: 316.24MiB (+0.63MiB overhead). ExitStatus: 0. Signal: 0
+Used memory in task 53/36: 316.21MiB (+0.63MiB overhead). ExitStatus: 0. Signal: 0
+Used memory in task 63/36: 316.11MiB (+0.63MiB overhead). ExitStatus: 0. Signal: 0
+Used memory in task 39/36: 316.19MiB (+0.63MiB overhead). ExitStatus: 0. Signal: 0
+Used memory in task 58/36: 235.38MiB (+0.63MiB overhead). ExitStatus: 0. Signal: 0
+Used memory in task 45/36: 316.20MiB (+0.63MiB overhead). ExitStatus: 0. Signal: 0
+Used memory in task 62/36: 316.18MiB (+0.63MiB overhead). ExitStatus: 0. Signal: 0
+Used memory in task 70/36: 316.20MiB (+0.63MiB overhead). ExitStatus: 0. Signal: 0
+Used memory in task 48/36: 235.39MiB (+0.63MiB overhead). ExitStatus: 0. Signal: 0
+Used memory in task 61/36: 316.19MiB (+0.63MiB overhead). ExitStatus: 0. Signal: 0
+Used memory in task 71/36: 316.10MiB (+0.63MiB overhead). ExitStatus: 0. Signal: 0
+Used memory in task 55/36: 235.29MiB (+0.63MiB overhead). ExitStatus: 0. Signal: 0
+Used memory in task 59/36: 316.14MiB (+0.63MiB overhead). ExitStatus: 0. Signal: 0
+Used memory in task 44/36: 316.24MiB (+0.63MiB overhead). ExitStatus: 0. Signal: 0
+Used memory in task 47/36: 235.28MiB (+0.63MiB overhead). ExitStatus: 0. Signal: 0
+Used memory in task 67/36: 316.13MiB (+0.63MiB overhead). ExitStatus: 0. Signal: 0
+Used memory in task 69/36: 316.19MiB (+0.63MiB overhead). ExitStatus: 0. Signal: 0
+Used memory in task 46/36: 316.21MiB (+0.63MiB overhead). ExitStatus: 0. Signal: 0
+*************************
+ --- filter Finished ----
+*************************
+--- -----------------------------------------------------------------------
+Finished running filter
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+Converting DART files to CLM files 
+--------------------------------------------------------------------------
+**************************************************************************
+ Updating clm_restart.0001.nc with clm_restart.0001.nc data.
+**************************************************************************
+ Starting program dart_to_clm
+ Initializing the utilities module.
+ Trying to log to unit           10
+ Trying to open file dart_log.out
+ 
+ --------------------------------------
+ Starting ... at YYYY MM DD HH MM SS = 
+                 2017  9 28 17 39 56
+ Program dart_to_clm
+ --------------------------------------
+ 
+ set_nml_output Echo NML values to log file only
+ Trying to open namelist log dart_log.nml
+ static_init_model  assimilation period is            2  days         3600  seconds
+ get_var_1d  lon: replacing _FillValue   9.9999996E+35  with   -888888.000000000
+ get_var_1d  lon: replacing missing_value   9.9999996E+35  with   -888888.000000000
+ get_var_1d  lat: replacing _FillValue   9.9999996E+35  with   -888888.000000000
+ get_var_1d  lat: replacing missing_value   9.9999996E+35  with   -888888.000000000
+ get_var_2d  area: replacing _FillValue   9.9999996E+35  with   -888888.000000000
+ get_var_2d  area: replacing missing_value   9.9999996E+35  with   -888888.000000000
+ get_var_2d  landfrac: replacing _FillValue   9.9999996E+35  with   -888888.000000000
+ get_var_2d  landfrac: replacing missing_value   9.9999996E+35  with   -888888.000000000
+ ------------------------------------------------------
+ 
+ 
+ -------------- ASSIMILATE_THESE_OBS_TYPES --------------
+ TOWER_NETC_ECO_EXCHANGE
+ TOWER_LATENT_HEAT_FLUX
+ TOWER_SENSIBLE_HEAT_FLUX
+ MODIS_SNOWCOVER_FRAC
+ COSMOS_NEUTRON_INTENSITY
+ -------------- EVALUATE_THESE_OBS_TYPES --------------
+ ------------------------------------------------------
+ 
+ ---------- USE_PRECOMPUTED_FO_OBS_TYPES --------------
+ ------------------------------------------------------
+ 
+ 
+dart_to_clm:converting DART file model_restart.nc to clm restart file clm_restart.nc
+time of restart file "clm_restart.nc" day=147196, sec=0
+date of restart file "clm_restart.nc" 2004 Jan 05 00:00:00
+dart_to_clm:clm  model date 2004 Jan 05 00:00:00
+dart_to_clm:DART model time day=147196, sec=0
+ 
+ --------------------------------------
+ Finished ... at YYYY MM DD HH MM SS = 
+                 2017  9 28 17 39 56
+ Program dart_to_clm
+ --------------------------------------
+ 
+**************************************************************************
+ Finished updating 'clm_restart.0001.nc'
+**************************************************************************
+**************************************************************************
+ Updating clm_restart.0002.nc with clm_restart.0002.nc data.
+**************************************************************************
+ Starting program dart_to_clm
+ Initializing the utilities module.
+ Trying to log to unit           10
+ Trying to open file dart_log.out
+ 
+ --------------------------------------
+ Starting ... at YYYY MM DD HH MM SS = 
+                 2017  9 28 17 39 57
+ Program dart_to_clm
+ --------------------------------------
+ 
+ set_nml_output Echo NML values to log file only
+ Trying to open namelist log dart_log.nml
+ static_init_model  assimilation period is            2  days         3600  seconds
+ get_var_1d  lon: replacing _FillValue   9.9999996E+35  with   -888888.000000000
+ get_var_1d  lon: replacing missing_value   9.9999996E+35  with   -888888.000000000
+ get_var_1d  lat: replacing _FillValue   9.9999996E+35  with   -888888.000000000
+ get_var_1d  lat: replacing missing_value   9.9999996E+35  with   -888888.000000000
+ get_var_2d  area: replacing _FillValue   9.9999996E+35  with   -888888.000000000
+ get_var_2d  area: replacing missing_value   9.9999996E+35  with   -888888.000000000
+ get_var_2d  landfrac: replacing _FillValue   9.9999996E+35  with   -888888.000000000
+ get_var_2d  landfrac: replacing missing_value   9.9999996E+35  with   -888888.000000000
+ ------------------------------------------------------
+ 
+ 
+ -------------- ASSIMILATE_THESE_OBS_TYPES --------------
+ TOWER_NETC_ECO_EXCHANGE
+ TOWER_LATENT_HEAT_FLUX
+ TOWER_SENSIBLE_HEAT_FLUX
+ MODIS_SNOWCOVER_FRAC
+ COSMOS_NEUTRON_INTENSITY
+ -------------- EVALUATE_THESE_OBS_TYPES --------------
+ ------------------------------------------------------
+ 
+ ---------- USE_PRECOMPUTED_FO_OBS_TYPES --------------
+ ------------------------------------------------------
+ 
+ 
+dart_to_clm:converting DART file model_restart.nc to clm restart file clm_restart.nc
+time of restart file "clm_restart.nc" day=147196, sec=0
+date of restart file "clm_restart.nc" 2004 Jan 05 00:00:00
+dart_to_clm:clm  model date 2004 Jan 05 00:00:00
+dart_to_clm:DART model time day=147196, sec=0
+ 
+ --------------------------------------
+ Finished ... at YYYY MM DD HH MM SS = 
+                 2017  9 28 17 39 57
+ Program dart_to_clm
+ --------------------------------------
+ 
+**************************************************************************
+ Finished updating 'clm_restart.0002.nc'
+**************************************************************************
+**************************************************************************
+ Updating clm_restart.0003.nc with clm_restart.0003.nc data.
+**************************************************************************
+ Starting program dart_to_clm
+ Initializing the utilities module.
+ Trying to log to unit           10
+ Trying to open file dart_log.out
+ 
+ --------------------------------------
+ Starting ... at YYYY MM DD HH MM SS = 
+                 2017  9 28 17 39 57
+ Program dart_to_clm
+ --------------------------------------
+ 
+ set_nml_output Echo NML values to log file only
+ Trying to open namelist log dart_log.nml
+ static_init_model  assimilation period is            2  days         3600  seconds
+ get_var_1d  lon: replacing _FillValue   9.9999996E+35  with   -888888.000000000
+ get_var_1d  lon: replacing missing_value   9.9999996E+35  with   -888888.000000000
+ get_var_1d  lat: replacing _FillValue   9.9999996E+35  with   -888888.000000000
+ get_var_1d  lat: replacing missing_value   9.9999996E+35  with   -888888.000000000
+ get_var_2d  area: replacing _FillValue   9.9999996E+35  with   -888888.000000000
+ get_var_2d  area: replacing missing_value   9.9999996E+35  with   -888888.000000000
+ get_var_2d  landfrac: replacing _FillValue   9.9999996E+35  with   -888888.000000000
+ get_var_2d  landfrac: replacing missing_value   9.9999996E+35  with   -888888.000000000
+ ------------------------------------------------------
+ 
+ 
+ -------------- ASSIMILATE_THESE_OBS_TYPES --------------
+ TOWER_NETC_ECO_EXCHANGE
+ TOWER_LATENT_HEAT_FLUX
+ TOWER_SENSIBLE_HEAT_FLUX
+ MODIS_SNOWCOVER_FRAC
+ COSMOS_NEUTRON_INTENSITY
+ -------------- EVALUATE_THESE_OBS_TYPES --------------
+ ------------------------------------------------------
+ 
+ ---------- USE_PRECOMPUTED_FO_OBS_TYPES --------------
+ ------------------------------------------------------
+ 
+ 
+dart_to_clm:converting DART file model_restart.nc to clm restart file clm_restart.nc
+time of restart file "clm_restart.nc" day=147196, sec=0
+date of restart file "clm_restart.nc" 2004 Jan 05 00:00:00
+dart_to_clm:clm  model date 2004 Jan 05 00:00:00
+dart_to_clm:DART model time day=147196, sec=0
+ 
+ --------------------------------------
+ Finished ... at YYYY MM DD HH MM SS = 
+                 2017  9 28 17 39 57
+ Program dart_to_clm
+ --------------------------------------
+ 
+**************************************************************************
+ Finished updating 'clm_restart.0003.nc'
+**************************************************************************

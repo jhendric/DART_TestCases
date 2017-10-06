@@ -22,7 +22,7 @@ source /glade/u/apps/ch/opt/Lmod/7.3.14/lmod/7.3.14/init/tcsh
 echo "*******************************"
 echo " PBS_JOB_ID  '$PBS_JOBID'"
 echo " PBS_JOBNAME '$PBS_JOBNAME'"
-echo " NCPUS       '$NCPUS'"
+echo " NCPUS       '`cat  $PBS_NODEFILE | wc -l`'"
 echo " NODES       '`uniq $PBS_NODEFILE | wc -l`'"
 echo "*******************************"
 

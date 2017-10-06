@@ -1,0 +1,219 @@
+#!/bin/csh -f
+# This script can be used to help restart an experiment from any previous step.
+# The appropriate files are copied to the RUN directory.
+#
+# Before running this script:
+#  1) be sure CONTINUE_RUN is set correctly in the env_run.xml file in
+#     your CASEROOT directory.
+#     CONTINUE_RUN=FALSE => you are starting over at the initial time.
+#     CONTINUE_RUN=TRUE  => you are starting from a previous step but not
+#                           the very first one.
+#  2) be sure 'restart_time' is set to the day and time that you want to
+#     restart from if not the initial time.
+
+set restart_time = 2010-08-13-00000
+
+# get the settings for this case from the CESM environment
+cd /glade/p/work/nickp/dart/cam5_4_114_dart_wx_nsc.damp
+# NMP get RUNDIR from xml query since ccsm_getenv no longer exists
+#source ./Tools/ccsm_getenv || exit -2
+setenv RUNDIR       `./xmlquery RUNDIR       -value`
+setenv CONTINUE_RUN `./xmlquery CONTINUE_RUN -value`
+setenv DOUT_S `./xmlquery DOUT_S -value`
+setenv DOUT_S_ROOT `./xmlquery DOUT_S_ROOT -value`
+cd ${RUNDIR}
+
+
+echo 'Copying the required CESM files to the run directory to rerun'
+echo 'a previous step.  CONTINUE_RUN from env_run.xml is' ${CONTINUE_RUN}
+if ( ${CONTINUE_RUN} == TRUE ) then
+  echo 'so files for some later step than the initial one will be restaged.'
+  echo "Date to reset files to is: ${restart_time}"
+else
+  echo 'so files for the initial step of this experiment will be restaged.'
+  echo "Date to reset files to is: 2008-10-10-00000"
+endif
+echo ''
+
+if ( ${CONTINUE_RUN} == TRUE ) then
+
+   #----------------------------------------------------------------------
+   # This block copies over a set of restart files from any previous step of
+   # the experiment that is NOT the initial step.
+   # After running this script resubmit the job to rerun.
+   #----------------------------------------------------------------------
+
+   echo "Staging restart files for run date/time: " ${restart_time}
+
+   #  The short term archiver is on, so the files we want should be in one
+   #  of the short term archive 'rest' restart directories.  This assumes
+   #  the long term archiver has NOT copied these files to the HPSS yet.
+
+   if (  ${DOUT_S} == TRUE ) then
+
+      # The restarts should be in the short term archive directory.  See
+      # www.cesm.ucar.edu/models/cesm1.2/cesm/doc/usersguide1_2/x1565.html#running_ccsm_restarts
+      # for more help and information.
+
+      set RESTARTDIR = ${DOUT_S_ROOT}/rest/${restart_time}
+
+      if ( ! -d ${RESTARTDIR} ) then
+
+         echo "restart file directory not found: "
+         echo " ${RESTARTDIR}"
+         echo "If the long-term archiver is on, you may have to restore this directory first."
+         echo "You can also check for either a .sta or a .sta2 hidden subdirectory in"
+         echo "${DOUT_S_ROOT}"
+         echo "which may contain the 'rest' directory you need,"
+         echo "and then modify RESTARTDIR in this script."
+         exit -1
+
+      endif
+
+      /bin/cp -fv --preserve=timestamps ${RESTARTDIR}/* . || exit -1
+      # The short term archiver is off, which leaves all the restart files
+      # in the run directory.  The rpointer files must still be updated to
+      # point to the files with the right day/time.
+
+      @ inst=1
+      while ($inst <= 40)
+
+         set inst_string = `printf _%04d $inst`
+
+         echo "cam5_4_114_dart_wx_nsc.damp.clm2${inst_string}.r.${restart_time}.nc" >! rpointer.lnd${inst_string}
+         echo "cam5_4_114_dart_wx_nsc.damp.cice${inst_string}.r.${restart_time}.nc" >! rpointer.ice${inst_string}
+         echo "cam5_4_114_dart_wx_nsc.damp.cam${inst_string}.r.${restart_time}.nc"  >! rpointer.atm${inst_string}
+
+         @ inst ++
+      end
+
+      # There are no instance numbers in these filenames.
+      echo "cam5_4_114_dart_wx_nsc.damp.cpl.r.${restart_time}.nc"     >! rpointer.drv
+      echo "cam5_4_114_dart_wx_nsc.damp.docn.r.${restart_time}.nc"    >! rpointer.ocn
+      echo "cam5_4_114_dart_wx_nsc.damp.docn.rs1.${restart_time}.bin" >> rpointer.ocn
+
+   else
+
+      # The short term archiver is off, which leaves all the restart files
+      # in the run directory.  The rpointer files must still be updated to
+      # point to the files with the right day/time.
+
+      @ inst=1
+      while ($inst <= 40)
+
+         set inst_string = `printf _%04d $inst`
+
+         echo "cam5_4_114_dart_wx_nsc.damp.clm2${inst_string}.r.${restart_time}.nc" >! rpointer.lnd${inst_string}
+         echo "cam5_4_114_dart_wx_nsc.damp.cice${inst_string}.r.${restart_time}.nc" >! rpointer.ice${inst_string}
+         echo "cam5_4_114_dart_wx_nsc.damp.cam${inst_string}.r.${restart_time}.nc"  >! rpointer.atm${inst_string}
+
+         @ inst ++
+      end
+
+      # There are no instance numbers in these filenames.
+      echo "cam5_4_114_dart_wx_nsc.damp.cpl.r.${restart_time}.nc"     >! rpointer.drv
+      echo "cam5_4_114_dart_wx_nsc.damp.docn.r.${restart_time}.nc"    >! rpointer.ocn
+      echo "cam5_4_114_dart_wx_nsc.damp.docn.rs1.${restart_time}.bin" >> rpointer.ocn
+
+   endif
+
+   # Relink the CAM initial files back to the hardwired names set in the namelist
+
+   @ inst=1
+   while ($inst <= 40)
+      set inst_string = `printf _%04d $inst`
+      /bin/ln -fvs cam5_4_114_dart_wx_nsc.damp.cam${inst_string}.i.${restart_time}.nc cam_initial${inst_string}.nc
+      @ inst ++
+   end
+
+   echo "All files reset to rerun experiment step for time " $restart_time
+
+else     # CONTINUE_RUN == FALSE
+
+   #----------------------------------------------------------------------
+   # This block links the right files to rerun the initial (very first)
+   # step of an experiment.  The names and locations are set during the
+   # building of the case; to change them rebuild the case.
+   # After running this script resubmit the job to rerun.
+   #----------------------------------------------------------------------
+
+#   @ inst=1
+#   while ($inst <= 40)
+#
+#      set inst_string = `printf _%04d $inst`
+#
+#      echo "Staging initial files for instance $inst of 40"
+#
+#      /bin/ln -fvs /glade/p/hao/nickp/archive/cam5_4_114_dart_wx_nsc/rest/2008-10-10-00000/cam5_4_114_dart_wx_nsc.clm2${inst_string}.r.2008-10-10-00000.nc  .
+#      /bin/ln -fvs /glade/p/hao/nickp/archive/cam5_4_114_dart_wx_nsc/rest/2008-10-10-00000/cam5_4_114_dart_wx_nsc.cice${inst_string}.r.2008-10-10-00000.nc  .
+#      /bin/ln -fvs /glade/p/hao/nickp/archive/cam5_4_114_dart_wx_nsc/rest/2008-10-10-00000/cam5_4_114_dart_wx_nsc.cam${inst_string}.i.2008-10-10-00000.nc   cam_initial${inst_string}.nc
+
+      # If you are using the river runoff model, you must specify an initial file here
+      # /bin/ln -fvs /glade/p/hao/nickp/archive/cam5_4_114_dart_wx_nsc/rest/2008-10-10-00000/cam5_4_114_dart_wx_nsc.rtm${inst_string}.r.2008-10-10-00000.nc .
+
+   #   @ inst ++
+   #end
+
+      set RESTARTDIR = /glade/p/hao/nickp/archive/cam5_4_114_dart_wx_nsc/rest/${restart_time}
+
+      if ( ! -d ${RESTARTDIR} ) then
+
+         echo "restart file directory not found: "
+         echo " ${RESTARTDIR}"
+         echo "If the long-term archiver is on, you may have to restore this directory first."
+         echo "You can also check for either a .sta or a .sta2 hidden subdirectory in"
+         echo "${DOUT_S_ROOT}"
+         echo "which may contain the 'rest' directory you need,"
+         echo "and then modify RESTARTDIR in this script."
+         exit -1
+
+      endif
+
+      /bin/cp -fv --preserve=timestamps ${RESTARTDIR}/* . #|| exit -1
+      # The short term archiver is off, which leaves all the restart files
+      # in the run directory.  The rpointer files must still be updated to
+      # point to the files with the right day/time.
+
+      @ inst=1
+      while ($inst <= 40)
+
+         set inst_string = `printf _%04d $inst`
+         echo "cam5_4_114_dart_wx_nsc.damp.clm2${inst_string}.r.${restart_time}.nc" >! rpointer.lnd${inst_string}
+         echo "cam5_4_114_dart_wx_nsc.damp.cice${inst_string}.r.${restart_time}.nc" >! rpointer.ice${inst_string}
+         echo "cam5_4_114_dart_wx_nsc.damp.cam${inst_string}.r.${restart_time}.nc"  >! rpointer.atm${inst_string}
+
+         /bin/ln -fvs  cam5_4_114_dart_wx_nsc.cam${inst_string}.h0.2008-10-10-00000.nc cam5_4_114_dart_wx_nsc.damp.cam${inst_string}.h0.2008-10-10-00000.nc  
+         /bin/ln -fvs  cam5_4_114_dart_wx_nsc.cam${inst_string}.h1.2008-10-10-00000.nc cam5_4_114_dart_wx_nsc.damp.cam${inst_string}.h1.2008-10-10-00000.nc  
+         /bin/ln -fvs  cam5_4_114_dart_wx_nsc.cam${inst_string}.h2.2008-10-10-00000.nc cam5_4_114_dart_wx_nsc.damp.cam${inst_string}.h2.2008-10-10-00000.nc  
+         /bin/ln -fvs  cam5_4_114_dart_wx_nsc.cam${inst_string}.h3.2008-10-10-00000.nc cam5_4_114_dart_wx_nsc.damp.cam${inst_string}.h3.2008-10-10-00000.nc  
+         /bin/ln -fvs  cam5_4_114_dart_wx_nsc.cam${inst_string}.h4.2008-10-10-00000.nc cam5_4_114_dart_wx_nsc.damp.cam${inst_string}.h4.2008-10-10-00000.nc  
+         /bin/ln -fvs  cam5_4_114_dart_wx_nsc.cam${inst_string}.i.2008-10-10-00000.nc cam5_4_114_dart_wx_nsc.damp.cam${inst_string}.i.2008-10-10-00000.nc  
+         /bin/ln -fvs  cam5_4_114_dart_wx_nsc.cam${inst_string}.r.2008-10-10-00000.nc cam5_4_114_dart_wx_nsc.damp.cam${inst_string}.r.2008-10-10-00000.nc  
+         /bin/ln -fvs  cam5_4_114_dart_wx_nsc.cam${inst_string}.rs.2008-10-10-00000.nc cam5_4_114_dart_wx_nsc.damp.cam${inst_string}.rs.2008-10-10-00000.nc  
+
+         /bin/ln -fvs  cam5_4_114_dart_wx_nsc.cice${inst_string}.r.2008-10-10-00000.nc cam5_4_114_dart_wx_nsc.damp.cice${inst_string}.r.2008-10-10-00000.nc  
+
+         /bin/ln -fvs  cam5_4_114_dart_wx_nsc.clm2${inst_string}.r.2008-10-10-00000.nc cam5_4_114_dart_wx_nsc.damp.clm2${inst_string}.r.2008-10-10-00000.nc  
+         /bin/ln -fvs  cam5_4_114_dart_wx_nsc.clm2${inst_string}.rh0.2008-10-10-00000.nc cam5_4_114_dart_wx_nsc.damp.clm2${inst_string}.rh0.2008-10-10-00000.nc  
+         /bin/ln -fvs  cam5_4_114_dart_wx_nsc.clm2${inst_string}.h0.2008-10-10-00000.nc cam5_4_114_dart_wx_nsc.damp.clm2${inst_string}.h0.2008-10-10-00000.nc  
+        
+         @ inst ++
+      end
+
+      # There are no instance numbers in these filenames.
+      echo "cam5_4_114_dart_wx_nsc.damp.cpl.r.${restart_time}.nc"     >! rpointer.drv
+      echo "cam5_4_114_dart_wx_nsc.damp.docn.r.${restart_time}.nc"    >! rpointer.ocn
+      echo "cam5_4_114_dart_wx_nsc.damp.docn.rs1.${restart_time}.bin" >> rpointer.ocn
+
+   @ inst=1
+   while ($inst <= 40)
+      set inst_string = `printf _%04d $inst`
+      /bin/ln -fvs cam5_4_114_dart_wx_nsc.damp.cam${inst_string}.i.${restart_time}.nc cam_initial${inst_string}.nc
+      @ inst ++
+   end
+
+   echo "All files set to run the FIRST experiment step at time" 2008-10-10-00000
+
+endif
+exit 0
+
