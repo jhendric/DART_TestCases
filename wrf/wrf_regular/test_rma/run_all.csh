@@ -5,40 +5,33 @@ set cpus     = "36"
 set mpiprocs = "36"
 
 set hours   = "00"
-set minutes = "10"
+set minutes = "30"
 set seconds = "00"
 
 set job_name       = "wrf_regular "
 set account_string = "P86850054 "
 set destination    = "regular"
 set join           = "oe" 
-set resource_list  = "select=$nodes:ncpus=$cpus:mpiprocs=$mpiprocs"
+set resource_list  = "select=${nodes}:ncpus=${cpus}:mpiprocs=${mpiprocs}"
 set user_list      = "hendric@ucar.edu"
-set wall_time      = "walltime=$hours:$minutes:$seconds"
+set wall_time      = "walltime=${hours}:${minutes}:${seconds}"
 
 module list
 
 echo "--------------------------------------------------------------------------"
-echo "Linking CLM files "
+echo "Linking WRF files "
 echo "--------------------------------------------------------------------------"
 
 csh link_programs.csh          || exit 1
-
-echo "--------------------------------------------------------------------------"
-echo "Staging CLM files "
-echo "--------------------------------------------------------------------------"
-
-csh stage_restarts.csh         || exit 2
-set PID=$!
 while(`ps -p $PID`)
    sleep 1
 end
 
 echo "--------------------------------------------------------------------------"
-echo "Converting CLM files to DART files "
+echo "Staging WRF files "
 echo "--------------------------------------------------------------------------"
 
-csh convert_clm_to_dart.csh    || exit 3
+csh stage_restarts.csh         || exit 2
 set PID=$!
 while(`ps -p $PID`)
    sleep 1
@@ -91,7 +84,7 @@ endif
 # endif
 
 
-echo "--- -----------------------------------------------------------------------"
+echo "---------------------------------------------------------------------------"
 echo "Finished running filter"
 echo "--------------------------------------------------------------------------"
 
