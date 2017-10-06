@@ -1,0 +1,25 @@
+
+Currently Loaded Modules:
+  1) ncarenv/1.2    3) ncarcompilers/0.4.1   5) netcdf/4.4.1.1
+  2) intel/17.0.1   4) mpt/2.15f             6) xxdiff/4.0.1
+
+ 
+
+--------------------------------------------------------------------------
+Linking CLM files 
+--------------------------------------------------------------------------
+rm: No match.
+ls: No match.
+
+---------------------------------------------------
+CLM build number 1 is preprocess
+....... Makefile is ready.
+ifort -O -assume buffered_io -I/glade/u/apps/ch/opt/netcdf/4.4.1.1/intel/17.0.1/include  -c	../../../assimilation_code/modules/utilities/types_mod.f90
+ifort -O -assume buffered_io -I/glade/u/apps/ch/opt/netcdf/4.4.1.1/intel/17.0.1/include  -c	../../../assimilation_code/modules/utilities/utilities_mod.f90
+ifort -O -assume buffered_io -I/glade/u/apps/ch/opt/netcdf/4.4.1.1/intel/17.0.1/include  -c	../../../assimilation_code/modules/utilities/time_manager_mod.f90
+ifort -O -assume buffered_io -I/glade/u/apps/ch/opt/netcdf/4.4.1.1/intel/17.0.1/include  -c	../../../assimilation_code/modules/utilities/null_mpi_utilities_mod.f90
+ifort -O -assume buffered_io -I/glade/u/apps/ch/opt/netcdf/4.4.1.1/intel/17.0.1/include  -c	../../../assimilation_code/programs/preprocess/preprocess.f90
+ifort null_mpi_utilities_mod.o time_manager_mod.o types_mod.o preprocess.o utilities_mod.o -o preprocess  -O -assume buffered_io -I/glade/u/apps/ch/opt/netcdf/4.4.1.1/intel/17.0.1/include -L/glade/u/apps/ch/opt/netcdf/4.4.1.1/intel/17.0.1/lib -lnetcdff -lnetcdf
+ld: cannot find /usr/lib64/libpthread_nonshared.a
+Makefile:45: recipe for target 'preprocess' failed
+make: *** [preprocess] Error 1
