@@ -1,0 +1,3093 @@
+*******************************
+ PBS_JOB_ID  '1843287.chadmin1'
+ PBS_JOBNAME 'mpt_wrf_omplace_vv_np:16:32:32'
+ NCPUS       '512'
+ NODES       '16'
+*******************************
+*****************************
+ --- mpiexec_mpt STARTED ----
+*****************************
+
+Currently Loaded Modules:
+  1) ncarenv/1.2           4) netcdf/4.4.1.1   7) peak_memusage/1.1
+  2) intel/17.0.1          5) xxdiff/4.0.1
+  3) ncarcompilers/0.4.1   6) mpt/2.15f
+
+ 
+
+
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+omplace: unrecognized option -np
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+omplace: unrecognized option -np
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+omplace: unrecognized option -np
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+omplace: unrecognized option -np
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+omplace: unrecognized option -np
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+omplace: unrecognized option -np
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+omplace: unrecognized option -np
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+omplace: unrecognized option -np
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+omplace: unrecognized option -np
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+Usage: 
+    mpiexec_mpt -np numproc \
+        omplace [-b cpu] [-c cpulist] [-nt numthreads] \
+        [-r replicate] [-s skip] [-tm none|intel|open64|pthreads] \
+        [-v] [-vv] prog [args ...]
+*****************************
+ --- mpiexec_mpt FINISHED ---
+*****************************

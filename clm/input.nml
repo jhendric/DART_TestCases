@@ -25,23 +25,23 @@
 &filter_nml
    async                    = 0
    adv_ens_command          = "no_advance_script"
-   ens_size                 = 10
-   obs_sequence_in_name     = "obs_seq.out"
+   ens_size                 = 3
+   obs_sequence_in_name     = "obs_seq.1000obs"
    obs_sequence_out_name    = "obs_seq.final"
    input_state_file_list    = "restart_files.txt"
                               "history_files.txt"
-                              "vector_history_files.txt"
+                              "history_vector_files.txt"
    output_state_file_list   = "restart_files_out.txt"
                               "history_files_out.txt" 
-                              "vector_history_files_out.txt"
+                              "history_vector_files_out.txt"
    init_time_days           = -1
    init_time_seconds        = -1
    first_obs_days           = -1
    first_obs_seconds        = -1
    last_obs_days            = -1
    last_obs_seconds         = -1
-   num_output_state_members = 10  
-   num_output_obs_members   = 10 
+   num_output_state_members = 3
+   num_output_obs_members   = 3
    output_interval          = 1
    num_groups               = 1
    output_forward_op_errors = .false.
@@ -49,7 +49,7 @@
    trace_execution          = .true.
    silence                  = .false.
    
-   stages_to_write          = 'preassim', 'postassim', 'analysis', 'forecast' 'output'
+   stages_to_write          = 'preassim', 'output'
    output_members           = .true.
    output_mean              = .true.
    output_sd                = .true.
@@ -65,8 +65,6 @@
    inf_lower_bound             = 1.0,                     1.0
    inf_upper_bound             = 1000.0,               1000.0
    inf_sd_lower_bound          = 0.6,                     0.6
-
-   allow_missing_clm           = .true.
    /
 
 
@@ -83,6 +81,7 @@
 &assim_tools_nml
    filter_kind                     = 1
    cutoff                          = 0.05
+   allow_missing_in_clm            = .true.
    sort_obs_inc                    = .false.
    spread_restoration              = .false.
    sampling_error_correction       = .false.
@@ -92,6 +91,64 @@
    print_every_nth_obs             = 1000
    lanai_bitwise                   = .true.
    /
+
+
+&ensemble_manager_nml
+   layout                  = 1
+   tasks_per_node          = 1
+   /
+
+
+&cov_cutoff_nml
+   select_localization = 1
+   /
+
+
+&reg_factor_nml
+   select_regression    = 1
+   input_reg_file       = "time_mean_reg"
+   save_reg_diagnostics = .false.
+   reg_diagnostics_file = "reg_diagnostics"
+   /
+
+
+&obs_sequence_nml
+   write_binary_obs_sequence = .false.
+   /
+
+
+&preprocess_nml
+    input_obs_kind_mod_file = '../../../obs_kind/DEFAULT_obs_kind_mod.F90'
+   output_obs_kind_mod_file = '../../../obs_kind/obs_kind_mod.f90'
+     input_obs_def_mod_file = '../../../observations/forward_operators/DEFAULT_obs_def_mod.F90'
+    output_obs_def_mod_file = '../../../observations/forward_operators/obs_def_mod.f90'
+   input_files              = '../../../observations/forward_operators/obs_def_tower_mod.f90',
+                              '../../../observations/forward_operators/obs_def_COSMOS_mod.f90'
+   /
+
+# hist_nhtfrq should be negative (hours) ... same context as in
+# the CLM namelist for the .h1. files.
+&obs_def_tower_nml
+   casename    = 'tower_history_files/clm4_121_hybrid_test'
+   hist_nhtfrq = -24
+   debug       = .false.
+   /
+
+
+&obs_kind_nml
+   assimilate_these_obs_types = 'TOWER_NETC_ECO_EXCHANGE',
+                                'TOWER_LATENT_HEAT_FLUX',
+                                'TOWER_SENSIBLE_HEAT_FLUX',
+                                'MODIS_SNOWCOVER_FRAC',
+                                'COSMOS_NEUTRON_INTENSITY'
+   evaluate_these_obs_types   = 'null'
+   /
+
+
+&assim_model_nml
+   netCDF_large_file_support  = .true.
+   /
+
 
 # Each variable must have 6 entries.
 # 1: variable name
@@ -133,25 +190,6 @@
                     'TBOT',        'QTY_TEMPERATURE',            'NA',  'NA', 'vector'  , 'NO_COPY_BACK'
    /
 
-   assimilate_these_obs_types = 'TOWER_NETC_ECO_EXCHANGE', 
-                                'TOWER_LATENT_HEAT_FLUX',
-                                'TOWER_SENSIBLE_HEAT_FLUX',
-                                'MODIS_SNOWCOVER_FRAC',
-                                'COSMOS_NEUTRON_INTENSITY'
-                                
-   evaluate_these_obs_types   = 'null'                             
-
-&obs_kind_nml
-   assimilate_these_obs_types = 'TOWER_NETC_ECO_EXCHANGE', 
-                                'TOWER_LATENT_HEAT_FLUX',
-                                'TOWER_SENSIBLE_HEAT_FLUX',
-                                'MODIS_SNOWCOVER_FRAC',
-                                'COSMOS_NEUTRON_INTENSITY'
-
-   evaluate_these_obs_types   = 'null', 
-                                
-   /
-
 &compare_states_nml
    debug                   = .false.
    fail_on_missing_field   = .false.
@@ -160,65 +198,8 @@
    /
 
 &clm_to_dart_nml
-   clm_to_dart_output_file = 'clm_missing_r8.nc'
+   clm_to_dart_output_file  = 'dart_ics'
    /
-
-# modified restart file
-# dart_to_clm is reading clm_restart_filename for original values
-&dart_to_clm_nml
-   dart_to_clm_input_file  = 'model_restart.nc'
-   /
-
-&ensemble_manager_nml
-   layout                  = 1
-   tasks_per_node          = 1
-   /
-
-
-&cov_cutoff_nml
-   select_localization = 1
-   /
-
-
-&reg_factor_nml
-   select_regression    = 1
-   input_reg_file       = "time_mean_reg"
-   save_reg_diagnostics = .false.
-   reg_diagnostics_file = "reg_diagnostics"
-   /
-
-
-&obs_sequence_nml
-   write_binary_obs_sequence = .false.
-   /
-
-
-&preprocess_nml
-    input_obs_kind_mod_file = '../../../obs_kind/DEFAULT_obs_kind_mod.F90'
-   output_obs_kind_mod_file = '../../../obs_kind/obs_kind_mod.f90'
-     input_obs_def_mod_file = '../../../observations/forward_operators/DEFAULT_obs_def_mod.F90'
-    output_obs_def_mod_file = '../../../observations/forward_operators/obs_def_mod.f90'
-   input_files              = '../../../observations/forward_operators/obs_def_tower_mod.f90',
-                              '../../../observations/forward_operators/obs_def_COSMOS_mod.f90'
-   /
-
-# hist_nhtfrq should be negative (hours) ... same context as in
-# the CLM namelist for the .h1. files.
-&obs_def_tower_nml
-   casename    = '../tower_history_files/clm4_121_hybrid_test'
-   hist_nhtfrq = -24
-   debug       = .false.
-   /
-
-
-
-
-
-&assim_model_nml
-   netCDF_large_file_support  = .true.
-   /
-
-
 
 &location_nml
    horiz_dist_only             = .true.

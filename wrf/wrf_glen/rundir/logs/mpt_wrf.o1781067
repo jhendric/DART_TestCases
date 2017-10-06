@@ -1,0 +1,1029 @@
+*******************************
+ PBS_JOB_ID  '1781067.chadmin1'
+ PBS_JOBNAME 'mpt_wrf'
+*******************************
+*****************************
+ --- mpiexec_mpt STARTED ----
+*****************************
+
+Currently Loaded Modules:
+  1) ncarenv/1.2    3) intel/16.0.3          5) netcdf/4.4.1.1
+  2) xxdiff/4.0.1   4) ncarcompilers/0.4.1   6) mpt/2.15f
+
+ Starting program Filter
+ Initializing the utilities module.
+ Trying to log to unit           10
+ Trying to open file dart_log.out
+ 
+ --------------------------------------
+ Starting ... at YYYY MM DD HH MM SS = 
+                 2017  9 14 13 35 56
+ Program Filter
+ --------------------------------------
+ 
+ set_nml_output Echo NML values to log file only
+ Trying to open namelist log dart_log.nml
+ 
+ DEBUG FROM: initialize_utilities  ..  digits12 is            8
+ DEBUG FROM: initialize_utilities ...  r8       is            8
+ DEBUG FROM: initialize_utilities ...  r4       is            4
+ DEBUG FROM: initialize_utilities  ..  integer  is            4
+ DEBUG FROM: initialize_utilities ...  i8       is            8
+ DEBUG FROM: initialize_utilities ...  i4       is            4
+ PE 0: initialize_mpi_utilities:  Running with          512 MPI processes.
+ ------------------------------------------------------
+ 
+ 
+ -------------- ASSIMILATE_THESE_OBS_TYPES --------------
+ RADIOSONDE_TEMPERATURE
+ RADIOSONDE_U_WIND_COMPONENT
+ RADIOSONDE_V_WIND_COMPONENT
+ RADIOSONDE_SPECIFIC_HUMIDITY
+ RADIOSONDE_SURFACE_ALTIMETER
+ ACARS_U_WIND_COMPONENT
+ ACARS_V_WIND_COMPONENT
+ ACARS_TEMPERATURE
+ ACARS_DEWPOINT
+ SAT_U_WIND_COMPONENT
+ SAT_V_WIND_COMPONENT
+ GPSRO_REFRACTIVITY
+ PROFILER_U_WIND_COMPONENT
+ PROFILER_V_WIND_COMPONENT
+ METAR_U_10_METER_WIND
+ METAR_V_10_METER_WIND
+ METAR_TEMPERATURE_2_METER
+ METAR_DEWPOINT_2_METER
+ METAR_ALTIMETER
+ MARINE_SFC_U_WIND_COMPONENT
+ MARINE_SFC_V_WIND_COMPONENT
+ MARINE_SFC_TEMPERATURE
+ MARINE_SFC_ALTIMETER
+ MARINE_SFC_DEWPOINT
+ RADAR_REFLECTIVITY
+ DOPPLER_RADIAL_VELOCITY
+ RADAR_CLEARAIR_REFLECTIVITY
+ -------------- EVALUATE_THESE_OBS_TYPES --------------
+ LAND_SFC_TEMPERATURE
+ LAND_SFC_U_WIND_COMPONENT
+ LAND_SFC_V_WIND_COMPONENT
+ LAND_SFC_ALTIMETER
+ LAND_SFC_DEWPOINT
+ ------------------------------------------------------
+ 
+ ---------- USE_PRECOMPUTED_FO_OBS_TYPES --------------
+ ------------------------------------------------------
+ 
+ ******************
+ **  DOMAIN # 1  **
+ ******************
+ PE 0:   dt from wrfinput_d0X file is:    75.0000000000000
+ PE 0: static_init_model: state vector array    1 is U
+ PE 0: static_init_model: state vector array    2 is V
+ PE 0: static_init_model: state vector array    3 is W
+ PE 0: static_init_model: state vector array    4 is T
+ PE 0: static_init_model: state vector array    5 is PH
+ PE 0: static_init_model: state vector array    6 is MU
+ PE 0: static_init_model: state vector array    7 is QVAPOR
+ PE 0: static_init_model: state vector array    8 is QCLOUD
+ PE 0: static_init_model: state vector array    9 is QRAIN
+ PE 0: static_init_model: state vector array   10 is QICE
+ PE 0: static_init_model: state vector array   11 is QGRAUP
+ PE 0: static_init_model: state vector array   12 is QNICE
+ PE 0: static_init_model: state vector array   13 is QNRAIN
+ PE 0: static_init_model: state vector array   14 is H_DIABATIC
+ PE 0: static_init_model: state vector array   15 is U10
+ PE 0: static_init_model: state vector array   16 is V10
+ PE 0: static_init_model: state vector array   17 is T2
+ PE 0: static_init_model: state vector array   18 is Q2
+ PE 0: static_init_model: state vector array   19 is PSFC
+ ******************
+ **  DOMAIN # 2  **
+ ******************
+ PE 0:   dt from wrfinput_d0X file is:    18.7500000000000
+ PE 0: static_init_model: state vector array    1 is U
+ PE 0: static_init_model: state vector array    2 is V
+ PE 0: static_init_model: state vector array    3 is W
+ PE 0: static_init_model: state vector array    4 is T
+ PE 0: static_init_model: state vector array    5 is PH
+ PE 0: static_init_model: state vector array    6 is MU
+ PE 0: static_init_model: state vector array    7 is QVAPOR
+ PE 0: static_init_model: state vector array    8 is QCLOUD
+ PE 0: static_init_model: state vector array    9 is QRAIN
+ PE 0: static_init_model: state vector array   10 is QICE
+ PE 0: static_init_model: state vector array   11 is QGRAUP
+ PE 0: static_init_model: state vector array   12 is QNICE
+ PE 0: static_init_model: state vector array   13 is QNRAIN
+ PE 0: static_init_model: state vector array   14 is H_DIABATIC
+ PE 0: static_init_model: state vector array   15 is U10
+ PE 0: static_init_model: state vector array   16 is V10
+ PE 0: static_init_model: state vector array   17 is T2
+ PE 0: static_init_model: state vector array   18 is Q2
+ PE 0: static_init_model: state vector array   19 is PSFC
+ PE 0: static_init_model   wrf model size is    143504462
+ PE 0: location_mod: using code with optimized cutoffs
+ PE 0: location_mod: Including vertical separation when computing distances:
+ PE 0: location_mod:        # pascals ~ 1 horiz radian:      700000.00000
+ PE 0: location_mod:         # meters ~ 1 horiz radian:       80000.00000
+ PE 0: location_mod:   # model levels ~ 1 horiz radian:        2666.70000
+ PE 0: location_mod:  # scale heights ~ 1 horiz radian:          10.00000
+ PE 0: quality_control_mod: Will reject obs with Data QC larger than    4
+ PE 0: quality_control_mod: Will reject obs values more than    3.000000 sigma from mean
+ PE 0: assim_tools_init: Selected filter type is Ensemble Adjustment Kalman Filter (EAKF)
+ PE 0: assim_tools_init: The cutoff namelist value is           0.050000
+ PE 0: assim_tools_init: ... cutoff is the localization half-width parameter,
+ PE 0: assim_tools_init: ... so the effective localization radius is           0.100000
+ PE 0:  
+ PE 0: assim_tools_init: Observations with special localization treatment:
+ PE 0: assim_tools_init: (type name, specified cutoff distance, effective localization radius)
+ PE 0: assim_tools_init: RADAR_REFLECTIVITY                        0.003760          0.007520
+ PE 0: assim_tools_init: DOPPLER_RADIAL_VELOCITY                   0.003760          0.007520
+ PE 0: assim_tools_init: RADAR_CLEARAIR_REFLECTIVITY               0.003760          0.007520
+ PE 0: assim_tools_init: all other observation types will use the default cutoff distance
+ PE 0:  
+ PE 0: assim_tools_init: Disabling the close obs caching because specialized localization
+ PE 0: assim_tools_init: distances are enabled.
+ PE 0: assim_tools_init: Using adaptive localization, threshold       2000 obs
+ PE 0: assim_tools_init: Using Sampling Error Correction
+ PE 0: assim_tools_init: Replicating a copy of the ensemble mean on every task
+ PE 0: assim_tools_init: ... uses more memory per task but may run faster if doing vertical
+ PE 0: assim_tools_init: ... coordinate conversion; controlled by namelist item "distribute_mean"
+ PE 0: assim_tools_init: Doing vertical localization, vertical coordinate conversion may be required
+ PE 0: assim_tools_init: ... Converting all state vector verticals to localization coordinate first.
+ PE 0: assim_tools_init: ... Converting all observation verticals to localization coordinate first.
+ PE 0:  filter trace: Filter start
+ Filter start TIME: 2017/09/14 13:35:57
+ PE 0: filter_main: running with an ensemble size of    50
+ PE 0:  filter trace: Before initializing inflation
+ PE 0: filter_main: Prior inflation damping of     0.900000 will be used
+ PE 0:  filter trace: After  initializing inflation
+ PE 0: parse_stages_to_write:  filter will write stage : preassim
+ PE 0: parse_stages_to_write:  filter will write stage : postassim
+ PE 0: parse_stages_to_write:  filter will write stage : output
+ PE 0:  filter trace: Before setting up space for observations
+ Before setting up space for observations TIME: 2017/09/14 13:35:57
+ After  setting up space for observations TIME: 2017/09/14 13:35:58
+ PE 0:  filter trace: After  setting up space for observations
+ PE 0:  filter trace: Before setting up space for ensembles
+ PE 0:  filter trace: After  setting up space for ensembles
+ PE 0:  filter trace: Before reading in ensemble restart files
+ Before reading in ensemble restart files TIME: 2017/09/14 13:35:58
+ PE 0: set_member_file_metadata no file list given for stage "preassim" so using default names
+ PE 0: set_member_file_metadata no file list given for stage "postassim" so using default names
+ PE 0: Prior inflation: mean read from namelist as     1.000000
+ PE 0: Prior inflation: sd read from namelist as     0.600000
+ PE 0: Prior inflation: deterministic, time-constant, spatially-varying, state-space
+ PE 0: Posterior inflation: None
+ PE 0: filter_main: Reading in initial condition/restart data for all ensemble members from file(s)
+ After  reading in ensemble restart files TIME: 2017/09/14 13:36:14
+ PE 0:  filter trace: After  reading in ensemble restart files
+ PE 0:  filter trace: Before initializing output files
+ Before initializing output files TIME: 2017/09/14 13:36:14
+ After  initializing output files TIME: 2017/09/14 13:36:14
+ PE 0:  filter trace: After  initializing output files
+ PE 0:  filter trace: Before trimming obs seq if start/stop time specified
+ PE 0:  filter trace: After  trimming obs seq if start/stop time specified
+ PE 0:  filter trace: Top of main advance time loop
+ PE 0:  
+ PE 0: filter: Main assimilation loop, starting iteration    0
+ PE 0:  filter trace: Before move_ahead checks time of data and next obs
+ PE 0: move_ahead Current model data time            is:  day=  151718 sec= 43200
+ PE 0: move_ahead Current assimilation window starts at:  day=  151718 sec= 39601
+ PE 0: move_ahead Next available observation time    is:  day=  151718 sec= 42300
+ PE 0: move_ahead Current assimilation window ends   at:  day=  151718 sec= 46800
+ PE 0: move_ahead Next available observation time    is:  day=  151718 sec= 42300
+ PE 0: move_ahead Within current assimilation window, model does not need advance.
+ PE 0: move_ahead Next assimilation window contains up to    51459 observations
+ PE 0:  filter trace: After  move_ahead checks time of data and next obs
+ PE 0: filter: Model does not need to run; data already at required time
+ PE 0:  filter trace: Before setup for next group of observations
+ PE 0:  filter trace: Number of observations to be assimilated  51459
+ filter trace: Time of first observation in window day=151718, sec=42300
+ filter trace: Time of last  observation in window day=151718, sec=45840
+ PE 0:  filter trace: After  setup for next group of observations
+ PE 0:  filter trace: Before prior inflation damping and prep
+ PE 0:  filter trace: After  prior inflation damping and prep
+ PE 0:  filter trace: Before computing prior observation values
+ Before computing prior observation values TIME: 2017/09/14 13:36:19
+ After  computing prior observation values TIME: 2017/09/14 13:36:22
+ PE 0:  filter trace: After  computing prior observation values
+ PE 0:  filter trace: Before preassim state space output
+ Before preassim state space output TIME: 2017/09/14 13:36:22
+ After  preassim state space output TIME: 2017/09/14 13:36:25
+ PE 0:  filter trace: After  preassim state space output
+ PE 0:  filter trace: Before observation space diagnostics
+ PE 0:  filter trace: After  observation space diagnostics
+ PE 0: filter: Ready to assimilate up to   51459 observations
+ PE 0:  filter trace: Before observation assimilation
+ Before observation assimilation TIME: 2017/09/14 13:36:28
+ PE 0: comp_cov_factor: Standard Gaspari Cohn localization selected
+Processing observation      1000  of    51459 TIME: 2017/09/14 13:36:44
+Processing observation      2000  of    51459 TIME: 2017/09/14 13:36:54
+Processing observation      3000  of    51459 TIME: 2017/09/14 13:37:15
+Processing observation      4000  of    51459 TIME: 2017/09/14 13:37:23
+Processing observation      5000  of    51459 TIME: 2017/09/14 13:37:30
+Processing observation      6000  of    51459 TIME: 2017/09/14 13:37:50
+Processing observation      7000  of    51459 TIME: 2017/09/14 13:38:11
+Processing observation      8000  of    51459 TIME: 2017/09/14 13:38:21
+Processing observation      9000  of    51459 TIME: 2017/09/14 13:38:27
+Processing observation     10000  of    51459 TIME: 2017/09/14 13:38:38
+Processing observation     11000  of    51459 TIME: 2017/09/14 13:38:51
+Processing observation     12000  of    51459 TIME: 2017/09/14 13:39:04
+Processing observation     13000  of    51459 TIME: 2017/09/14 13:39:17
+Processing observation     14000  of    51459 TIME: 2017/09/14 13:39:30
+Processing observation     15000  of    51459 TIME: 2017/09/14 13:39:43
+Processing observation     16000  of    51459 TIME: 2017/09/14 13:39:56
+Processing observation     17000  of    51459 TIME: 2017/09/14 13:40:08
+Processing observation     18000  of    51459 TIME: 2017/09/14 13:40:21
+Processing observation     19000  of    51459 TIME: 2017/09/14 13:40:34
+Processing observation     20000  of    51459 TIME: 2017/09/14 13:40:47
+Processing observation     21000  of    51459 TIME: 2017/09/14 13:41:01
+Processing observation     22000  of    51459 TIME: 2017/09/14 13:41:14
+Processing observation     23000  of    51459 TIME: 2017/09/14 13:41:29
+Processing observation     24000  of    51459 TIME: 2017/09/14 13:41:42
+Processing observation     25000  of    51459 TIME: 2017/09/14 13:41:55
+Processing observation     26000  of    51459 TIME: 2017/09/14 13:42:09
+Processing observation     27000  of    51459 TIME: 2017/09/14 13:42:23
+Processing observation     28000  of    51459 TIME: 2017/09/14 13:42:37
+Processing observation     29000  of    51459 TIME: 2017/09/14 13:42:51
+Processing observation     30000  of    51459 TIME: 2017/09/14 13:43:04
+Processing observation     31000  of    51459 TIME: 2017/09/14 13:43:15
+Processing observation     32000  of    51459 TIME: 2017/09/14 13:43:27
+Processing observation     33000  of    51459 TIME: 2017/09/14 13:43:39
+Processing observation     34000  of    51459 TIME: 2017/09/14 13:43:49
+Processing observation     35000  of    51459 TIME: 2017/09/14 13:43:54
+Processing observation     36000  of    51459 TIME: 2017/09/14 13:43:59
+Processing observation     37000  of    51459 TIME: 2017/09/14 13:44:09
+Processing observation     38000  of    51459 TIME: 2017/09/14 13:44:21
+Processing observation     39000  of    51459 TIME: 2017/09/14 13:44:27
+Processing observation     40000  of    51459 TIME: 2017/09/14 13:44:33
+Processing observation     41000  of    51459 TIME: 2017/09/14 13:44:46
+Processing observation     42000  of    51459 TIME: 2017/09/14 13:45:10
+Processing observation     43000  of    51459 TIME: 2017/09/14 13:45:23
+Processing observation     44000  of    51459 TIME: 2017/09/14 13:45:27
+Processing observation     45000  of    51459 TIME: 2017/09/14 13:45:33
+Processing observation     46000  of    51459 TIME: 2017/09/14 13:45:46
+Processing observation     47000  of    51459 TIME: 2017/09/14 13:45:53
+Processing observation     48000  of    51459 TIME: 2017/09/14 13:46:05
+Processing observation     49000  of    51459 TIME: 2017/09/14 13:46:30
+Processing observation     50000  of    51459 TIME: 2017/09/14 13:46:43
+Processing observation     51000  of    51459 TIME: 2017/09/14 13:46:47
+ PE 0: filter_assim: Processed   51459 total observations
+ After  observation assimilation TIME: 2017/09/14 13:46:51
+ PE 0:  filter trace: After  observation assimilation
+ PE 0:  filter trace: Before postassim state space output
+ Before postassim state space output TIME: 2017/09/14 13:46:51
+ After  postassim state space output TIME: 2017/09/14 13:46:53
+ PE 0:  filter trace: After  postassim state space output
+ PE 0:  filter trace: Before computing posterior observation values
+ Before computing posterior observation values TIME: 2017/09/14 13:46:53
+ After  computing posterior observation values TIME: 2017/09/14 13:47:03
+ PE 0:  filter trace: After  computing posterior observation values
+ PE 0:  filter trace: Before posterior obs space diagnostics
+ PE 0:  filter trace: After  posterior obs space diagnostics
+ PE 0:  filter trace: Near bottom of main loop, cleaning up obs space
+ PE 0:  filter trace: Bottom of main advance time loop
+ PE 0:  filter trace: Top of main advance time loop
+ PE 0:  
+ PE 0: filter: Main assimilation loop, starting iteration    1
+ PE 0:  filter trace: Before move_ahead checks time of data and next obs
+ PE 0:  filter trace: After  move_ahead checks time of data and next obs
+ PE 0: filter: No more obs to assimilate, exiting main loop
+ PE 0: filter: End of main filter assimilation loop, starting cleanup
+ PE 0:  filter trace: Before state space output
+ Before state space output TIME: 2017/09/14 13:47:03
+ PE   320: clamp_variable  QVAPOR lower bound   0.000000000000000E+000 min value  -1.000445238614829E-003
+ PE     1: clamp_variable  QVAPOR lower bound   0.000000000000000E+000 min value  -1.115328812229057E-003
+ PE   208: clamp_variable  QVAPOR lower bound   0.000000000000000E+000 min value  -5.566631878361906E-004
+ PE   496: clamp_variable  QVAPOR lower bound   0.000000000000000E+000 min value  -8.310782163030137E-004
+ PE   240: clamp_variable  QVAPOR lower bound   0.000000000000000E+000 min value  -5.034196777508158E-004
+ PE   160: clamp_variable  QVAPOR lower bound   0.000000000000000E+000 min value  -8.364210048204772E-004
+ PE   256: clamp_variable  QVAPOR lower bound   0.000000000000000E+000 min value  -1.061683065653155E-003
+ PE   464: clamp_variable  QVAPOR lower bound   0.000000000000000E+000 min value  -1.526879521641061E-003
+ PE   272: clamp_variable  QVAPOR lower bound   0.000000000000000E+000 min value  -1.507224420767046E-003
+ PE   480: clamp_variable  QVAPOR lower bound   0.000000000000000E+000 min value  -1.019953753855978E-003
+ PE   400: clamp_variable  QVAPOR lower bound   0.000000000000000E+000 min value  -1.222397407853159E-003
+ PE    97: clamp_variable  QVAPOR lower bound   0.000000000000000E+000 min value  -1.873018373473765E-003
+ PE    64: clamp_variable  QVAPOR lower bound   0.000000000000000E+000 min value  -1.195339515191036E-003
+ PE   224: clamp_variable  QVAPOR lower bound   0.000000000000000E+000 min value  -5.920153806490971E-004
+ PE   192: clamp_variable  QVAPOR lower bound   0.000000000000000E+000 min value  -5.594530344812889E-004
+ PE   144: clamp_variable  QVAPOR lower bound   0.000000000000000E+000 min value  -9.555250880190797E-004
+ PE    81: clamp_variable  QVAPOR lower bound   0.000000000000000E+000 min value  -1.223752072888382E-003
+ PE    16: clamp_variable  QVAPOR lower bound   0.000000000000000E+000 min value  -2.584695175755769E-004
+ PE   448: clamp_variable  QVAPOR lower bound   0.000000000000000E+000 min value  -1.184721826575696E-003
+ PE   304: clamp_variable  QVAPOR lower bound   0.000000000000000E+000 min value  -1.497653306843716E-003
+ PE   289: clamp_variable  QVAPOR lower bound   0.000000000000000E+000 min value  -2.028978863910540E-004
+ PE   112: clamp_variable  QVAPOR lower bound   0.000000000000000E+000 min value  -1.807519751751375E-003
+ PE    17: clamp_variable  QVAPOR lower bound   0.000000000000000E+000 min value  -1.600425997967249E-003
+ PE   257: clamp_variable  QVAPOR lower bound   0.000000000000000E+000 min value  -1.436228980310261E-003
+ PE   496: clamp_variable  QCLOUD lower bound   0.000000000000000E+000 min value  -4.275622054572024E-004
+ PE    32: clamp_variable  QVAPOR lower bound   0.000000000000000E+000 min value  -1.301469897679195E-003
+ PE   432: clamp_variable  QVAPOR lower bound   0.000000000000000E+000 min value  -1.303526226640788E-003
+ PE   336: clamp_variable  QVAPOR lower bound   0.000000000000000E+000 min value  -1.047014267654554E-003
+ PE     1: clamp_variable  QCLOUD lower bound   0.000000000000000E+000 min value  -5.187155200291143E-004
+ PE   225: clamp_variable  QVAPOR lower bound   0.000000000000000E+000 min value  -8.301532237915884E-004
+ PE   177: clamp_variable  QVAPOR lower bound   0.000000000000000E+000 min value  -1.419984364880226E-003
+ PE    96: clamp_variable  QVAPOR lower bound   0.000000000000000E+000 min value  -6.216202515351015E-004
+ PE    48: clamp_variable  QVAPOR lower bound   0.000000000000000E+000 min value  -1.220516845514164E-003
+ PE   208: clamp_variable  QCLOUD lower bound   0.000000000000000E+000 min value  -7.457451893609384E-004
+ PE   193: clamp_variable  QVAPOR lower bound   0.000000000000000E+000 min value  -4.730227707016749E-004
+ PE   240: clamp_variable  QCLOUD lower bound   0.000000000000000E+000 min value  -5.175399265710132E-004
+ PE   176: clamp_variable  QVAPOR lower bound   0.000000000000000E+000 min value  -4.569329545034839E-004
+ PE     0: clamp_variable  QVAPOR lower bound   0.000000000000000E+000 min value  -1.022409996949136E-003
+ PE   496: clamp_variable  QRAIN lower bound   0.000000000000000E+000 min value  -4.923960787248840E-004
+ PE   272: clamp_variable  QCLOUD lower bound   0.000000000000000E+000 min value  -4.311208010346700E-004
+ PE   368: clamp_variable  QVAPOR lower bound   0.000000000000000E+000 min value  -9.088969215866811E-004
+ PE    80: clamp_variable  QVAPOR lower bound   0.000000000000000E+000 min value  -1.672745781545555E-003
+ PE    65: clamp_variable  QVAPOR lower bound   0.000000000000000E+000 min value  -8.367494622656859E-004
+ PE   160: clamp_variable  QCLOUD lower bound   0.000000000000000E+000 min value  -7.035653028265086E-004
+ PE   256: clamp_variable  QCLOUD lower bound   0.000000000000000E+000 min value  -7.215743043822373E-004
+ PE   288: clamp_variable  QVAPOR lower bound   0.000000000000000E+000 min value  -4.837993144503155E-004
+ PE   209: clamp_variable  QVAPOR lower bound   0.000000000000000E+000 min value  -6.343414562593842E-004
+ PE    97: clamp_variable  QCLOUD lower bound   0.000000000000000E+000 min value  -3.842251935527813E-004
+ PE   464: clamp_variable  QCLOUD lower bound   0.000000000000000E+000 min value  -8.091004898384472E-004
+ PE   352: clamp_variable  QVAPOR lower bound   0.000000000000000E+000 min value  -5.084260124726423E-004
+ PE   129: clamp_variable  QVAPOR lower bound   0.000000000000000E+000 min value  -1.207357719281282E-003
+ PE   480: clamp_variable  QCLOUD lower bound   0.000000000000000E+000 min value  -6.586666528394312E-004
+ PE    81: clamp_variable  QCLOUD lower bound   0.000000000000000E+000 min value  -3.831279857388566E-004
+ PE    49: clamp_variable  QVAPOR lower bound   0.000000000000000E+000 min value  -9.450788493268192E-004
+ PE   161: clamp_variable  QVAPOR lower bound   0.000000000000000E+000 min value  -1.517150536240577E-003
+ PE   400: clamp_variable  QCLOUD lower bound   0.000000000000000E+000 min value  -5.821327706821984E-004
+ PE   113: clamp_variable  QVAPOR lower bound   0.000000000000000E+000 min value  -6.912747630849481E-004
+ PE    64: clamp_variable  QCLOUD lower bound   0.000000000000000E+000 min value  -6.685944218058169E-004
+ PE   273: clamp_variable  QVAPOR lower bound   0.000000000000000E+000 min value  -5.655443210216484E-004
+ PE    16: clamp_variable  QCLOUD lower bound   0.000000000000000E+000 min value  -6.867576047677849E-004
+ PE   289: clamp_variable  QCLOUD lower bound   0.000000000000000E+000 min value  -5.312107563005738E-004
+ PE   128: clamp_variable  QVAPOR lower bound   0.000000000000000E+000 min value  -6.753308698534966E-004
+ PE   112: clamp_variable  QCLOUD lower bound   0.000000000000000E+000 min value  -8.031179909605924E-004
+ PE   416: clamp_variable  QVAPOR lower bound   0.000000000000000E+000 min value  -1.624297467060387E-003
+ PE   241: clamp_variable  QVAPOR lower bound   0.000000000000000E+000 min value  -1.105159264712183E-003
+ PE   336: clamp_variable  QCLOUD lower bound   0.000000000000000E+000 min value  -6.277280371254329E-004
+ PE   224: clamp_variable  QCLOUD lower bound   0.000000000000000E+000 min value  -4.432846158979191E-004
+ PE   496: clamp_variable  QICE lower bound   0.000000000000000E+000 min value  -6.108312182071279E-005
+ PE   192: clamp_variable  QCLOUD lower bound   0.000000000000000E+000 min value  -7.977992477913468E-004
+ PE   144: clamp_variable  QCLOUD lower bound   0.000000000000000E+000 min value  -5.942327094138566E-004
+ PE   240: clamp_variable  QRAIN lower bound   0.000000000000000E+000 min value  -3.527347006077311E-004
+ PE    32: clamp_variable  QCLOUD lower bound   0.000000000000000E+000 min value  -6.740804402529829E-004
+ PE     1: clamp_variable  QRAIN lower bound   0.000000000000000E+000 min value  -3.983033305711110E-004
+ PE   208: clamp_variable  QRAIN lower bound   0.000000000000000E+000 min value  -3.861292694477410E-004
+ PE   384: clamp_variable  QVAPOR lower bound   0.000000000000000E+000 min value  -8.063489520911758E-004
+ PE    17: clamp_variable  QCLOUD lower bound   0.000000000000000E+000 min value  -7.148391646139606E-004
+ PE    96: clamp_variable  QCLOUD lower bound   0.000000000000000E+000 min value  -7.483691747040366E-004
+ PE   257: clamp_variable  QCLOUD lower bound   0.000000000000000E+000 min value  -7.180589968449860E-004
+ PE   145: clamp_variable  QVAPOR lower bound   0.000000000000000E+000 min value  -6.542413171801972E-004
+ PE   272: clamp_variable  QRAIN lower bound   0.000000000000000E+000 min value  -3.838534225183901E-004
+ PE    33: clamp_variable  QVAPOR lower bound   0.000000000000000E+000 min value  -7.361528614867952E-004
+ PE   160: clamp_variable  QRAIN lower bound   0.000000000000000E+000 min value  -4.173293670636822E-004
+ PE   432: clamp_variable  QCLOUD lower bound   0.000000000000000E+000 min value  -5.478236201389348E-004
+ PE   448: clamp_variable  QCLOUD lower bound   0.000000000000000E+000 min value  -7.479262729134663E-004
+ PE   304: clamp_variable  QCLOUD lower bound   0.000000000000000E+000 min value  -5.107553457654708E-004
+ PE   320: clamp_variable  QCLOUD lower bound   0.000000000000000E+000 min value  -7.436934738765101E-004
+ PE   225: clamp_variable  QCLOUD lower bound   0.000000000000000E+000 min value  -7.336634000858962E-004
+ PE    97: clamp_variable  QRAIN lower bound   0.000000000000000E+000 min value  -3.549409929684786E-004
+ PE    81: clamp_variable  QRAIN lower bound   0.000000000000000E+000 min value  -4.298346221752056E-004
+ PE   496: clamp_variable  QGRAUP lower bound   0.000000000000000E+000 min value  -3.792758754559590E-004
+ PE   193: clamp_variable  QCLOUD lower bound   0.000000000000000E+000 min value  -5.815949975418381E-004
+ PE     0: clamp_variable  QCLOUD lower bound   0.000000000000000E+000 min value  -4.807790111293271E-004
+ PE   464: clamp_variable  QRAIN lower bound   0.000000000000000E+000 min value  -5.062634944949535E-004
+ PE   368: clamp_variable  QCLOUD lower bound   0.000000000000000E+000 min value  -6.221676760849424E-004
+ PE    48: clamp_variable  QCLOUD lower bound   0.000000000000000E+000 min value  -7.444212600791678E-004
+ PE   176: clamp_variable  QCLOUD lower bound   0.000000000000000E+000 min value  -6.922563368501043E-004
+ PE   177: clamp_variable  QCLOUD lower bound   0.000000000000000E+000 min value  -5.580903096362151E-004
+ PE   400: clamp_variable  QRAIN lower bound   0.000000000000000E+000 min value  -5.613087405093525E-004
+ PE   480: clamp_variable  QRAIN lower bound   0.000000000000000E+000 min value  -4.946495478701008E-004
+ PE    64: clamp_variable  QRAIN lower bound   0.000000000000000E+000 min value  -3.889978542151004E-004
+ PE   289: clamp_variable  QRAIN lower bound   0.000000000000000E+000 min value  -3.401422953570457E-004
+ PE   336: clamp_variable  QRAIN lower bound   0.000000000000000E+000 min value  -3.488041712762841E-004
+ PE   112: clamp_variable  QRAIN lower bound   0.000000000000000E+000 min value  -4.497005589192092E-004
+ PE   209: clamp_variable  QCLOUD lower bound   0.000000000000000E+000 min value  -6.630425084337725E-004
+ PE    49: clamp_variable  QCLOUD lower bound   0.000000000000000E+000 min value  -7.956075407630698E-004
+ PE   192: clamp_variable  QRAIN lower bound   0.000000000000000E+000 min value  -4.448824418376685E-004
+ PE    16: clamp_variable  QRAIN lower bound   0.000000000000000E+000 min value  -3.783303183367760E-004
+ PE   288: clamp_variable  QCLOUD lower bound   0.000000000000000E+000 min value  -7.207013174764037E-004
+ PE   241: clamp_variable  QCLOUD lower bound   0.000000000000000E+000 min value  -6.201098536086265E-004
+ PE   256: clamp_variable  QRAIN lower bound   0.000000000000000E+000 min value  -4.317078746185730E-004
+ PE   224: clamp_variable  QRAIN lower bound   0.000000000000000E+000 min value  -4.437059929938199E-004
+ PE    80: clamp_variable  QCLOUD lower bound   0.000000000000000E+000 min value  -8.572499122479415E-004
+ PE   352: clamp_variable  QCLOUD lower bound   0.000000000000000E+000 min value  -6.882634701489633E-004
+ PE    32: clamp_variable  QRAIN lower bound   0.000000000000000E+000 min value  -3.940487639309100E-004
+ PE    65: clamp_variable  QCLOUD lower bound   0.000000000000000E+000 min value  -7.882588086008665E-004
+ PE   320: clamp_variable  QRAIN lower bound   0.000000000000000E+000 min value  -4.658727342157800E-004
+ PE    96: clamp_variable  QRAIN lower bound   0.000000000000000E+000 min value  -4.416647006842061E-004
+ PE   113: clamp_variable  QCLOUD lower bound   0.000000000000000E+000 min value  -7.290453421994697E-004
+ PE    17: clamp_variable  QRAIN lower bound   0.000000000000000E+000 min value  -4.745805374536883E-004
+ PE   144: clamp_variable  QRAIN lower bound   0.000000000000000E+000 min value  -4.517051223099821E-004
+ PE   416: clamp_variable  QCLOUD lower bound   0.000000000000000E+000 min value  -6.914858342392163E-004
+ PE   257: clamp_variable  QRAIN lower bound   0.000000000000000E+000 min value  -4.540311623735843E-004
+ PE   432: clamp_variable  QRAIN lower bound   0.000000000000000E+000 min value  -4.672788765602364E-004
+ PE   129: clamp_variable  QCLOUD lower bound   0.000000000000000E+000 min value  -7.705627931017001E-004
+ PE   273: clamp_variable  QCLOUD lower bound   0.000000000000000E+000 min value  -7.756649610662976E-004
+ PE   161: clamp_variable  QCLOUD lower bound   0.000000000000000E+000 min value  -7.318467330185412E-004
+ PE   448: clamp_variable  QRAIN lower bound   0.000000000000000E+000 min value  -4.517850293101048E-004
+ PE   145: clamp_variable  QCLOUD lower bound   0.000000000000000E+000 min value  -6.875126848784861E-004
+ PE   304: clamp_variable  QRAIN lower bound   0.000000000000000E+000 min value  -3.848727436016004E-004
+ PE    81: clamp_variable  QICE lower bound   0.000000000000000E+000 min value  -5.129048979055771E-005
+ PE   225: clamp_variable  QRAIN lower bound   0.000000000000000E+000 min value  -4.246169798001806E-004
+ PE   384: clamp_variable  QCLOUD lower bound   0.000000000000000E+000 min value  -6.767465953314970E-004
+ PE     0: clamp_variable  QRAIN lower bound   0.000000000000000E+000 min value  -3.718064124186822E-004
+ PE   368: clamp_variable  QRAIN lower bound   0.000000000000000E+000 min value  -4.557839410513660E-004
+ PE   128: clamp_variable  QCLOUD lower bound   0.000000000000000E+000 min value  -6.507597458689510E-004
+ PE   193: clamp_variable  QRAIN lower bound   0.000000000000000E+000 min value  -4.097211884330655E-004
+ PE     1: clamp_variable  QICE lower bound   0.000000000000000E+000 min value  -5.284113724528981E-005
+ PE   240: clamp_variable  QICE lower bound   0.000000000000000E+000 min value  -4.999989833593330E-005
+ PE    48: clamp_variable  QRAIN lower bound   0.000000000000000E+000 min value  -4.483988549394008E-004
+ PE   272: clamp_variable  QICE lower bound   0.000000000000000E+000 min value  -6.162524690408039E-005
+ PE   496: clamp_variable  QNICE lower bound   0.000000000000000E+000 min value   -341633.213479849
+ PE   160: clamp_variable  QICE lower bound   0.000000000000000E+000 min value  -6.847554662332604E-005
+ PE   176: clamp_variable  QRAIN lower bound   0.000000000000000E+000 min value  -5.101648043887873E-004
+ PE   177: clamp_variable  QRAIN lower bound   0.000000000000000E+000 min value  -4.258581637046937E-004
+ PE   208: clamp_variable  QICE lower bound   0.000000000000000E+000 min value  -4.429848736884187E-005
+ PE    97: clamp_variable  QICE lower bound   0.000000000000000E+000 min value  -7.847157309309200E-005
+ PE   209: clamp_variable  QRAIN lower bound   0.000000000000000E+000 min value  -3.687596230574069E-004
+ PE   352: clamp_variable  QRAIN lower bound   0.000000000000000E+000 min value  -4.157954258671382E-004
+ PE    65: clamp_variable  QRAIN lower bound   0.000000000000000E+000 min value  -4.621187121288487E-004
+ PE    49: clamp_variable  QRAIN lower bound   0.000000000000000E+000 min value  -4.662019786226226E-004
+ PE    33: clamp_variable  QCLOUD lower bound   0.000000000000000E+000 min value  -6.762870604113849E-004
+ PE   336: clamp_variable  QICE lower bound   0.000000000000000E+000 min value  -5.311764742972713E-005
+ PE   289: clamp_variable  QICE lower bound   0.000000000000000E+000 min value  -2.529111707984531E-005
+ PE   480: clamp_variable  QICE lower bound   0.000000000000000E+000 min value  -5.754426683367656E-005
+ PE   241: clamp_variable  QRAIN lower bound   0.000000000000000E+000 min value  -4.588057650544449E-004
+ PE   288: clamp_variable  QRAIN lower bound   0.000000000000000E+000 min value  -3.896459216759574E-004
+ PE    80: clamp_variable  QRAIN lower bound   0.000000000000000E+000 min value  -4.248029037798105E-004
+ PE   400: clamp_variable  QICE lower bound   0.000000000000000E+000 min value  -4.032672951764472E-005
+ PE   256: clamp_variable  QICE lower bound   0.000000000000000E+000 min value  -6.158768692327109E-005
+ PE   145: clamp_variable  QRAIN lower bound   0.000000000000000E+000 min value  -3.987850452072192E-004
+ PE    64: clamp_variable  QICE lower bound   0.000000000000000E+000 min value  -7.300512835523707E-005
+ PE   496: clamp_variable  QNRAIN lower bound   0.000000000000000E+000 min value   -3678.35936906085
+ PE    32: clamp_variable  QICE lower bound   0.000000000000000E+000 min value  -4.448858143894172E-005
+ PE   224: clamp_variable  QICE lower bound   0.000000000000000E+000 min value  -4.492105274906086E-005
+ PE   320: clamp_variable  QICE lower bound   0.000000000000000E+000 min value  -6.165441541572553E-005
+ PE   192: clamp_variable  QICE lower bound   0.000000000000000E+000 min value  -3.988508601498282E-005
+ PE   112: clamp_variable  QICE lower bound   0.000000000000000E+000 min value  -5.475795300456710E-005
+ PE   416: clamp_variable  QRAIN lower bound   0.000000000000000E+000 min value  -4.079019018792757E-004
+ PE    16: clamp_variable  QICE lower bound   0.000000000000000E+000 min value  -4.591627869436840E-005
+ PE   464: clamp_variable  QICE lower bound   0.000000000000000E+000 min value  -4.889035514144035E-005
+ PE    81: clamp_variable  QGRAUP lower bound   0.000000000000000E+000 min value  -1.795074540228927E-004
+ PE   113: clamp_variable  QRAIN lower bound   0.000000000000000E+000 min value  -3.275366602138341E-004
+ PE   273: clamp_variable  QRAIN lower bound   0.000000000000000E+000 min value  -3.890741248549858E-004
+ PE     1: clamp_variable  QGRAUP lower bound   0.000000000000000E+000 min value  -3.121707757031873E-004
+ PE   129: clamp_variable  QRAIN lower bound   0.000000000000000E+000 min value  -3.903534167139845E-004
+ PE   257: clamp_variable  QICE lower bound   0.000000000000000E+000 min value  -3.903640725022809E-005
+ PE   384: clamp_variable  QRAIN lower bound   0.000000000000000E+000 min value  -4.061931438283159E-004
+ PE    17: clamp_variable  QICE lower bound   0.000000000000000E+000 min value  -4.599250383849948E-005
+ PE   128: clamp_variable  QRAIN lower bound   0.000000000000000E+000 min value  -5.300644565015436E-004
+ PE   432: clamp_variable  QICE lower bound   0.000000000000000E+000 min value  -4.893087664995297E-005
+ PE   208: clamp_variable  QGRAUP lower bound   0.000000000000000E+000 min value  -2.658437159725833E-004
+ PE   160: clamp_variable  QGRAUP lower bound   0.000000000000000E+000 min value  -2.379337543245204E-004
+ PE    96: clamp_variable  QICE lower bound   0.000000000000000E+000 min value  -4.592627594155134E-005
+ PE   272: clamp_variable  QGRAUP lower bound   0.000000000000000E+000 min value  -1.676202324447316E-004
+ PE   240: clamp_variable  QGRAUP lower bound   0.000000000000000E+000 min value  -2.309586412087072E-004
+ PE   352: clamp_variable  QICE lower bound   0.000000000000000E+000 min value  -4.515791945136845E-005
+ PE   161: clamp_variable  QRAIN lower bound   0.000000000000000E+000 min value  -4.086130697385883E-004
+ PE   193: clamp_variable  QICE lower bound   0.000000000000000E+000 min value  -6.885409510241104E-005
+ PE   304: clamp_variable  QICE lower bound   0.000000000000000E+000 min value  -5.045477873246113E-005
+ PE    97: clamp_variable  QGRAUP lower bound   0.000000000000000E+000 min value  -2.975597056476481E-004
+ PE   480: clamp_variable  QGRAUP lower bound   0.000000000000000E+000 min value  -3.891439577917473E-004
+ PE   448: clamp_variable  QICE lower bound   0.000000000000000E+000 min value  -4.698387086427478E-005
+ PE   289: clamp_variable  QGRAUP lower bound   0.000000000000000E+000 min value  -2.243061062849566E-004
+ PE   336: clamp_variable  QGRAUP lower bound   0.000000000000000E+000 min value  -3.145328320807682E-004
+ PE    33: clamp_variable  QRAIN lower bound   0.000000000000000E+000 min value  -3.086661633058657E-004
+ PE    48: clamp_variable  QICE lower bound   0.000000000000000E+000 min value  -4.224573314641264E-005
+ PE   320: clamp_variable  QGRAUP lower bound   0.000000000000000E+000 min value  -3.096951718272213E-004
+ PE   368: clamp_variable  QICE lower bound   0.000000000000000E+000 min value  -5.187095640538364E-005
+ PE   400: clamp_variable  QGRAUP lower bound   0.000000000000000E+000 min value  -4.192205597423331E-004
+ PE   209: clamp_variable  QICE lower bound   0.000000000000000E+000 min value  -5.432708823063690E-005
+ PE   225: clamp_variable  QICE lower bound   0.000000000000000E+000 min value  -3.411467563168166E-005
+ PE   177: clamp_variable  QICE lower bound   0.000000000000000E+000 min value  -6.020659620303612E-005
+ PE    32: clamp_variable  QGRAUP lower bound   0.000000000000000E+000 min value  -2.158128258426649E-004
+ PE     0: clamp_variable  QICE lower bound   0.000000000000000E+000 min value  -4.156059624640354E-005
+ PE   144: clamp_variable  QICE lower bound   0.000000000000000E+000 min value  -5.652020588012256E-005
+ PE    80: clamp_variable  QICE lower bound   0.000000000000000E+000 min value  -4.787300342555165E-005
+ PE    49: clamp_variable  QICE lower bound   0.000000000000000E+000 min value  -5.181698844000932E-005
+ PE   176: clamp_variable  QICE lower bound   0.000000000000000E+000 min value  -3.638106687472246E-005
+ PE   192: clamp_variable  QGRAUP lower bound   0.000000000000000E+000 min value  -2.495918546159145E-004
+ PE   256: clamp_variable  QGRAUP lower bound   0.000000000000000E+000 min value  -2.534819512692741E-004
+ PE   224: clamp_variable  QGRAUP lower bound   0.000000000000000E+000 min value  -2.419480087253810E-004
+ PE    64: clamp_variable  QGRAUP lower bound   0.000000000000000E+000 min value  -2.587892198503628E-004
+ PE   112: clamp_variable  QGRAUP lower bound   0.000000000000000E+000 min value  -3.194042088593392E-004
+ PE   241: clamp_variable  QICE lower bound   0.000000000000000E+000 min value  -3.378828300561375E-005
+ PE    16: clamp_variable  QGRAUP lower bound   0.000000000000000E+000 min value  -2.191876325453017E-004
+ PE   288: clamp_variable  QICE lower bound   0.000000000000000E+000 min value  -7.202546057627532E-005
+ PE   464: clamp_variable  QGRAUP lower bound   0.000000000000000E+000 min value  -2.086291483946262E-004
+ PE   257: clamp_variable  QGRAUP lower bound   0.000000000000000E+000 min value  -3.118036359219546E-004
+ PE   432: clamp_variable  QGRAUP lower bound   0.000000000000000E+000 min value  -2.459019125295263E-004
+ PE   145: clamp_variable  QICE lower bound   0.000000000000000E+000 min value  -4.105788834356711E-005
+ PE   193: clamp_variable  QGRAUP lower bound   0.000000000000000E+000 min value  -3.189997445671601E-004
+ PE    17: clamp_variable  QGRAUP lower bound   0.000000000000000E+000 min value  -3.363208584497074E-004
+ PE    65: clamp_variable  QICE lower bound   0.000000000000000E+000 min value  -5.595062580877406E-005
+ PE    81: clamp_variable  QNICE lower bound   0.000000000000000E+000 min value   -409448.660381347
+ PE    96: clamp_variable  QGRAUP lower bound   0.000000000000000E+000 min value  -2.094885327611721E-004
+ PE     1: clamp_variable  QNICE lower bound   0.000000000000000E+000 min value   -444325.184039532
+ PE   480: clamp_variable  QNICE lower bound   0.000000000000000E+000 min value   -490108.526265242
+ PE   448: clamp_variable  QGRAUP lower bound   0.000000000000000E+000 min value  -1.935308834981208E-004
+ PE   416: clamp_variable  QICE lower bound   0.000000000000000E+000 min value  -7.583573615186646E-005
+ PE   352: clamp_variable  QGRAUP lower bound   0.000000000000000E+000 min value  -2.508914793014724E-004
+ PE   320: clamp_variable  QNICE lower bound   0.000000000000000E+000 min value   -361946.898646676
+ PE    48: clamp_variable  QGRAUP lower bound   0.000000000000000E+000 min value  -2.547107701217888E-004
+ PE   160: clamp_variable  QNICE lower bound   0.000000000000000E+000 min value   -396165.225953318
+ PE   208: clamp_variable  QNICE lower bound   0.000000000000000E+000 min value   -444154.372502372
+ PE   304: clamp_variable  QGRAUP lower bound   0.000000000000000E+000 min value  -2.433529893299261E-004
+ PE    80: clamp_variable  QGRAUP lower bound   0.000000000000000E+000 min value  -2.445914157513791E-004
+ PE   177: clamp_variable  QGRAUP lower bound   0.000000000000000E+000 min value  -2.292108211992526E-004
+ PE   368: clamp_variable  QGRAUP lower bound   0.000000000000000E+000 min value  -2.776713007796476E-004
+ PE   129: clamp_variable  QICE lower bound   0.000000000000000E+000 min value  -5.220063173481270E-005
+ PE   209: clamp_variable  QGRAUP lower bound   0.000000000000000E+000 min value  -2.911320076157724E-004
+ PE   240: clamp_variable  QNICE lower bound   0.000000000000000E+000 min value   -504623.043396046
+ PE   128: clamp_variable  QICE lower bound   0.000000000000000E+000 min value  -4.906387774013147E-005
+ PE   113: clamp_variable  QICE lower bound   0.000000000000000E+000 min value  -4.269946908456272E-005
+ PE    97: clamp_variable  QNICE lower bound   0.000000000000000E+000 min value   -312320.252937696
+ PE     0: clamp_variable  QGRAUP lower bound   0.000000000000000E+000 min value  -3.730350500049029E-004
+ PE   273: clamp_variable  QICE lower bound   0.000000000000000E+000 min value  -5.763655356759731E-005
+ PE   289: clamp_variable  QNICE lower bound   0.000000000000000E+000 min value   -232991.115889524
+ PE   161: clamp_variable  QICE lower bound   0.000000000000000E+000 min value  -5.230241295264804E-005
+ PE    49: clamp_variable  QGRAUP lower bound   0.000000000000000E+000 min value  -2.484285073467145E-004
+ PE   144: clamp_variable  QGRAUP lower bound   0.000000000000000E+000 min value  -3.104368472849238E-004
+ PE   241: clamp_variable  QGRAUP lower bound   0.000000000000000E+000 min value  -2.248044158169136E-004
+ PE    33: clamp_variable  QICE lower bound   0.000000000000000E+000 min value  -7.151081669368916E-005
+ PE   176: clamp_variable  QGRAUP lower bound   0.000000000000000E+000 min value  -3.593760337078436E-004
+ PE   225: clamp_variable  QGRAUP lower bound   0.000000000000000E+000 min value  -2.814899238522315E-004
+ PE   208: clamp_variable  QNRAIN lower bound   0.000000000000000E+000 min value   -3320.07185488024
+ PE   272: clamp_variable  QNICE lower bound   0.000000000000000E+000 min value   -370825.743577960
+ PE   480: clamp_variable  QNRAIN lower bound   0.000000000000000E+000 min value   -6651.75611798364
+ PE   192: clamp_variable  QNICE lower bound   0.000000000000000E+000 min value   -505712.104438632
+ PE   193: clamp_variable  QNICE lower bound   0.000000000000000E+000 min value   -413604.059682801
+ PE   256: clamp_variable  QNICE lower bound   0.000000000000000E+000 min value   -396196.917693371
+ PE   400: clamp_variable  QNICE lower bound   0.000000000000000E+000 min value   -484634.126033390
+ PE    65: clamp_variable  QGRAUP lower bound   0.000000000000000E+000 min value  -2.284585175537378E-004
+ PE   384: clamp_variable  QICE lower bound   0.000000000000000E+000 min value  -6.560605150705439E-005
+ PE    32: clamp_variable  QNICE lower bound   0.000000000000000E+000 min value   -465695.185250870
+ PE   464: clamp_variable  QNICE lower bound   0.000000000000000E+000 min value   -397272.241921052
+ PE    16: clamp_variable  QNICE lower bound   0.000000000000000E+000 min value   -421748.048412619
+ PE    80: clamp_variable  QNICE lower bound   0.000000000000000E+000 min value   -305869.235638161
+ PE   336: clamp_variable  QNICE lower bound   0.000000000000000E+000 min value   -348045.472876594
+ PE   224: clamp_variable  QNICE lower bound   0.000000000000000E+000 min value   -414268.158612450
+ PE   432: clamp_variable  QNICE lower bound   0.000000000000000E+000 min value   -355728.663871134
+ PE    81: clamp_variable  QNRAIN lower bound   0.000000000000000E+000 min value   -5526.52324421316
+ PE    64: clamp_variable  QNICE lower bound   0.000000000000000E+000 min value   -284246.712363417
+ PE   145: clamp_variable  QGRAUP lower bound   0.000000000000000E+000 min value  -2.581096433997672E-004
+ PE   288: clamp_variable  QGRAUP lower bound   0.000000000000000E+000 min value  -2.556849240296125E-004
+ PE     1: clamp_variable  QNRAIN lower bound   0.000000000000000E+000 min value   -3593.39922452748
+ PE   160: clamp_variable  QNRAIN lower bound   0.000000000000000E+000 min value   -2649.45118613461
+ PE    97: clamp_variable  QNRAIN lower bound   0.000000000000000E+000 min value   -3282.69977035504
+ PE   240: clamp_variable  QNRAIN lower bound   0.000000000000000E+000 min value   -2045.07781098453
+ PE   257: clamp_variable  QNICE lower bound   0.000000000000000E+000 min value   -328757.505380234
+ PE   112: clamp_variable  QNICE lower bound   0.000000000000000E+000 min value   -456301.480647264
+ PE   289: clamp_variable  QNRAIN lower bound   0.000000000000000E+000 min value   -2323.75427518564
+ PE   448: clamp_variable  QNICE lower bound   0.000000000000000E+000 min value   -324993.961371025
+ PE   128: clamp_variable  QGRAUP lower bound   0.000000000000000E+000 min value  -2.027326869023866E-004
+ PE    17: clamp_variable  QNICE lower bound   0.000000000000000E+000 min value   -371886.350312972
+ PE   113: clamp_variable  QGRAUP lower bound   0.000000000000000E+000 min value  -3.657752243171032E-004
+ PE   129: clamp_variable  QGRAUP lower bound   0.000000000000000E+000 min value  -1.754949910061751E-004
+ PE    96: clamp_variable  QNICE lower bound   0.000000000000000E+000 min value   -383594.012608858
+ PE   368: clamp_variable  QNICE lower bound   0.000000000000000E+000 min value   -333306.939684925
+ PE   193: clamp_variable  QNRAIN lower bound   0.000000000000000E+000 min value   -4140.32967023357
+ PE   352: clamp_variable  QNICE lower bound   0.000000000000000E+000 min value   -359952.864407160
+ PE    32: clamp_variable  QNRAIN lower bound   0.000000000000000E+000 min value   -2017.27713053942
+ PE   256: clamp_variable  QNRAIN lower bound   0.000000000000000E+000 min value   -6575.93418964652
+ PE    33: clamp_variable  QGRAUP lower bound   0.000000000000000E+000 min value  -2.354763279179532E-004
+ PE    80: clamp_variable  QNRAIN lower bound   0.000000000000000E+000 min value   -2760.20977067216
+ PE   272: clamp_variable  QNRAIN lower bound   0.000000000000000E+000 min value   -2260.41877006642
+ PE   432: clamp_variable  QNRAIN lower bound   0.000000000000000E+000 min value   -4056.43271937755
+ PE    49: clamp_variable  QNICE lower bound   0.000000000000000E+000 min value   -391840.527777262
+ PE   304: clamp_variable  QNICE lower bound   0.000000000000000E+000 min value   -352279.139753018
+ PE   273: clamp_variable  QGRAUP lower bound   0.000000000000000E+000 min value  -3.854671101187482E-004
+ PE   416: clamp_variable  QGRAUP lower bound   0.000000000000000E+000 min value  -2.256810704416822E-004
+ PE   177: clamp_variable  QNICE lower bound   0.000000000000000E+000 min value   -441556.933485220
+ PE   161: clamp_variable  QGRAUP lower bound   0.000000000000000E+000 min value  -2.113355641946146E-004
+ PE   464: clamp_variable  QNRAIN lower bound   0.000000000000000E+000 min value   -2165.38038601612
+ PE   400: clamp_variable  QNRAIN lower bound   0.000000000000000E+000 min value   -5392.27039047597
+ PE   384: clamp_variable  QGRAUP lower bound   0.000000000000000E+000 min value  -2.699439587080905E-004
+ PE   320: clamp_variable  QNRAIN lower bound   0.000000000000000E+000 min value   -7129.19674636188
+ PE   144: clamp_variable  QNICE lower bound   0.000000000000000E+000 min value   -509188.016163737
+ PE    16: clamp_variable  QNRAIN lower bound   0.000000000000000E+000 min value   -6283.99831383829
+ PE   209: clamp_variable  QNICE lower bound   0.000000000000000E+000 min value   -421702.288752114
+ PE     0: clamp_variable  QNICE lower bound   0.000000000000000E+000 min value   -517093.510473240
+ PE   192: clamp_variable  QNRAIN lower bound   0.000000000000000E+000 min value   -4552.16681096486
+ PE    64: clamp_variable  QNRAIN lower bound   0.000000000000000E+000 min value   -1583.54001735393
+ PE   241: clamp_variable  QNICE lower bound   0.000000000000000E+000 min value   -418220.823095352
+ PE   336: clamp_variable  QNRAIN lower bound   0.000000000000000E+000 min value   -3981.00826750599
+ PE   224: clamp_variable  QNRAIN lower bound   0.000000000000000E+000 min value   -2302.98905236978
+ PE   225: clamp_variable  QNICE lower bound   0.000000000000000E+000 min value   -405557.048774357
+ PE   145: clamp_variable  QNICE lower bound   0.000000000000000E+000 min value   -508565.011596837
+ PE   257: clamp_variable  QNRAIN lower bound   0.000000000000000E+000 min value   -1939.94603529959
+ PE    65: clamp_variable  QNICE lower bound   0.000000000000000E+000 min value   -398056.980274328
+ PE    17: clamp_variable  QNRAIN lower bound   0.000000000000000E+000 min value   -1849.52345109567
+ PE   112: clamp_variable  QNRAIN lower bound   0.000000000000000E+000 min value   -2443.78491590506
+ PE   368: clamp_variable  QNRAIN lower bound   0.000000000000000E+000 min value   -3550.69849080907
+ PE   352: clamp_variable  QNRAIN lower bound   0.000000000000000E+000 min value   -9396.21275003403
+ PE   288: clamp_variable  QNICE lower bound   0.000000000000000E+000 min value   -439543.248568363
+ PE    96: clamp_variable  QNRAIN lower bound   0.000000000000000E+000 min value   -1812.05428496684
+ PE   176: clamp_variable  QNICE lower bound   0.000000000000000E+000 min value   -503862.084765943
+ PE    49: clamp_variable  QNRAIN lower bound   0.000000000000000E+000 min value   -3155.67093421604
+ PE   128: clamp_variable  QNICE lower bound   0.000000000000000E+000 min value   -435183.427238085
+ PE   177: clamp_variable  QNRAIN lower bound   0.000000000000000E+000 min value   -2747.48952038299
+ PE   304: clamp_variable  QNRAIN lower bound   0.000000000000000E+000 min value   -6372.11682771799
+ PE   113: clamp_variable  QNICE lower bound   0.000000000000000E+000 min value   -313200.445518762
+ PE   448: clamp_variable  QNRAIN lower bound   0.000000000000000E+000 min value   -2555.64681324856
+ PE   144: clamp_variable  QNRAIN lower bound   0.000000000000000E+000 min value   -2457.82252286741
+ PE   384: clamp_variable  QNICE lower bound   0.000000000000000E+000 min value   -466959.404393294
+ PE   129: clamp_variable  QNICE lower bound   0.000000000000000E+000 min value   -461925.217451823
+ PE   416: clamp_variable  QNICE lower bound   0.000000000000000E+000 min value   -368278.241285360
+ PE   273: clamp_variable  QNICE lower bound   0.000000000000000E+000 min value   -440461.451707307
+ PE   209: clamp_variable  QNRAIN lower bound   0.000000000000000E+000 min value   -5078.74794614288
+ PE    48: clamp_variable  QNICE lower bound   0.000000000000000E+000 min value   -291248.482733155
+ PE   145: clamp_variable  QNRAIN lower bound   0.000000000000000E+000 min value   -3785.87336953924
+ PE   161: clamp_variable  QNICE lower bound   0.000000000000000E+000 min value   -310063.757635372
+ PE   241: clamp_variable  QNRAIN lower bound   0.000000000000000E+000 min value   -4044.29114492032
+ PE    65: clamp_variable  QNRAIN lower bound   0.000000000000000E+000 min value   -6966.11632062730
+ PE   225: clamp_variable  QNRAIN lower bound   0.000000000000000E+000 min value   -6285.86256848888
+ PE    33: clamp_variable  QNICE lower bound   0.000000000000000E+000 min value   -308412.486559178
+ PE     0: clamp_variable  QNRAIN lower bound   0.000000000000000E+000 min value   -3109.70059587805
+ PE   113: clamp_variable  QNRAIN lower bound   0.000000000000000E+000 min value   -2698.72741597905
+ PE   129: clamp_variable  QNRAIN lower bound   0.000000000000000E+000 min value   -1773.89670580380
+ PE    48: clamp_variable  QNRAIN lower bound   0.000000000000000E+000 min value   -4307.78602159616
+ PE   416: clamp_variable  QNRAIN lower bound   0.000000000000000E+000 min value   -2507.12530617468
+ PE   273: clamp_variable  QNRAIN lower bound   0.000000000000000E+000 min value   -2252.12584776670
+ PE   128: clamp_variable  QNRAIN lower bound   0.000000000000000E+000 min value   -2410.30796674441
+ PE   176: clamp_variable  QNRAIN lower bound   0.000000000000000E+000 min value   -2578.80035464585
+ PE    33: clamp_variable  QNRAIN lower bound   0.000000000000000E+000 min value   -2823.60030800477
+ PE   288: clamp_variable  QNRAIN lower bound   0.000000000000000E+000 min value   -2167.91236511880
+ PE   161: clamp_variable  QNRAIN lower bound   0.000000000000000E+000 min value   -3508.04249568677
+ PE   384: clamp_variable  QNRAIN lower bound   0.000000000000000E+000 min value   -1997.76342747308
+ PE   128: clamp_variable  QVAPOR lower bound   0.000000000000000E+000 min value  -1.457055504530744E-003
+ PE   384: clamp_variable  QVAPOR lower bound   0.000000000000000E+000 min value  -1.363248255009878E-003
+ PE   480: clamp_variable  QVAPOR lower bound   0.000000000000000E+000 min value  -1.929527732889797E-003
+ PE   432: clamp_variable  QVAPOR lower bound   0.000000000000000E+000 min value  -3.118363623925657E-003
+ PE   448: clamp_variable  QVAPOR lower bound   0.000000000000000E+000 min value  -2.760380989479917E-003
+ PE    48: clamp_variable  QVAPOR lower bound   0.000000000000000E+000 min value  -1.820009897311142E-003
+ PE   112: clamp_variable  QVAPOR lower bound   0.000000000000000E+000 min value  -2.890124524897261E-003
+ PE   416: clamp_variable  QVAPOR lower bound   0.000000000000000E+000 min value  -1.803840213827120E-003
+ PE    32: clamp_variable  QVAPOR lower bound   0.000000000000000E+000 min value  -1.644795073071191E-003
+ PE   225: clamp_variable  QVAPOR lower bound   0.000000000000000E+000 min value  -5.909026330466452E-004
+ PE    16: clamp_variable  QVAPOR lower bound   0.000000000000000E+000 min value  -3.185780876630257E-003
+ PE     0: clamp_variable  QVAPOR lower bound   0.000000000000000E+000 min value  -1.205207012310525E-003
+ PE   128: clamp_variable  QCLOUD lower bound   0.000000000000000E+000 min value  -7.901906790697636E-004
+ PE   304: clamp_variable  QVAPOR lower bound   0.000000000000000E+000 min value  -1.196195520997961E-003
+ PE   320: clamp_variable  QVAPOR lower bound   0.000000000000000E+000 min value  -2.577324617103363E-003
+ PE   224: clamp_variable  QVAPOR lower bound   0.000000000000000E+000 min value  -2.105730289171968E-003
+ PE    33: clamp_variable  QVAPOR lower bound   0.000000000000000E+000 min value  -1.486500568458079E-003
+ PE   432: clamp_variable  QCLOUD lower bound   0.000000000000000E+000 min value  -7.494510845231427E-004
+ PE   273: clamp_variable  QVAPOR lower bound   0.000000000000000E+000 min value  -7.405074007790397E-004
+ PE   448: clamp_variable  QCLOUD lower bound   0.000000000000000E+000 min value  -8.253138651002891E-004
+ PE    64: clamp_variable  QVAPOR lower bound   0.000000000000000E+000 min value  -1.361300168966376E-003
+ PE   161: clamp_variable  QVAPOR lower bound   0.000000000000000E+000 min value  -9.757581819173774E-004
+ PE    65: clamp_variable  QVAPOR lower bound   0.000000000000000E+000 min value  -1.165901092620887E-003
+ PE   208: clamp_variable  QVAPOR lower bound   0.000000000000000E+000 min value  -2.862891614971145E-003
+ PE   288: clamp_variable  QVAPOR lower bound   0.000000000000000E+000 min value  -1.871126777805964E-003
+ PE   257: clamp_variable  QVAPOR lower bound   0.000000000000000E+000 min value  -2.335077891556765E-003
+ PE   400: clamp_variable  QVAPOR lower bound   0.000000000000000E+000 min value  -1.528888774596281E-003
+ PE   272: clamp_variable  QVAPOR lower bound   0.000000000000000E+000 min value  -9.338955766595995E-004
+ PE    17: clamp_variable  QVAPOR lower bound   0.000000000000000E+000 min value  -6.367826303750021E-004
+ PE    49: clamp_variable  QVAPOR lower bound   0.000000000000000E+000 min value  -1.553546248040111E-003
+ PE   160: clamp_variable  QVAPOR lower bound   0.000000000000000E+000 min value  -1.148223727642321E-003
+ PE   240: clamp_variable  QVAPOR lower bound   0.000000000000000E+000 min value  -2.710287781184441E-003
+ PE    96: clamp_variable  QVAPOR lower bound   0.000000000000000E+000 min value  -1.906340782585490E-003
+ PE   192: clamp_variable  QVAPOR lower bound   0.000000000000000E+000 min value  -1.557003937555594E-003
+ PE   352: clamp_variable  QVAPOR lower bound   0.000000000000000E+000 min value  -1.954710347692074E-003
+ PE   480: clamp_variable  QCLOUD lower bound   0.000000000000000E+000 min value  -7.196865054107117E-004
+ PE   144: clamp_variable  QVAPOR lower bound   0.000000000000000E+000 min value  -1.769391139741716E-003
+ PE   432: clamp_variable  QRAIN lower bound   0.000000000000000E+000 min value  -9.803619843232014E-004
+ PE   496: clamp_variable  QVAPOR lower bound   0.000000000000000E+000 min value  -1.361893251931950E-003
+ PE    80: clamp_variable  QVAPOR lower bound   0.000000000000000E+000 min value  -2.163261195229100E-003
+ PE   177: clamp_variable  QVAPOR lower bound   0.000000000000000E+000 min value  -3.802335386081530E-003
+ PE   384: clamp_variable  QCLOUD lower bound   0.000000000000000E+000 min value  -6.589647681807840E-004
+ PE    48: clamp_variable  QCLOUD lower bound   0.000000000000000E+000 min value  -7.368212048789001E-004
+ PE   209: clamp_variable  QVAPOR lower bound   0.000000000000000E+000 min value  -1.224707089805027E-003
+ PE   225: clamp_variable  QCLOUD lower bound   0.000000000000000E+000 min value  -8.229029117974560E-004
+ PE   176: clamp_variable  QVAPOR lower bound   0.000000000000000E+000 min value  -2.377383106458394E-003
+ PE   112: clamp_variable  QCLOUD lower bound   0.000000000000000E+000 min value  -7.669224993618337E-004
+ PE    32: clamp_variable  QCLOUD lower bound   0.000000000000000E+000 min value  -7.936181696912080E-004
+ PE     1: clamp_variable  QVAPOR lower bound   0.000000000000000E+000 min value  -2.514128324220385E-003
+ PE   256: clamp_variable  QVAPOR lower bound   0.000000000000000E+000 min value  -5.595150256832600E-004
+ PE   129: clamp_variable  QVAPOR lower bound   0.000000000000000E+000 min value  -1.971139203497928E-003
+ PE    81: clamp_variable  QVAPOR lower bound   0.000000000000000E+000 min value  -2.422690897345655E-003
+ PE   416: clamp_variable  QCLOUD lower bound   0.000000000000000E+000 min value  -7.844164959435346E-004
+ PE   464: clamp_variable  QVAPOR lower bound   0.000000000000000E+000 min value  -1.675767877912689E-003
+ PE   320: clamp_variable  QCLOUD lower bound   0.000000000000000E+000 min value  -8.905430169337485E-004
+ PE    49: clamp_variable  QCLOUD lower bound   0.000000000000000E+000 min value  -6.533794932086350E-004
+ PE   289: clamp_variable  QVAPOR lower bound   0.000000000000000E+000 min value  -2.913310833492605E-004
+ PE   193: clamp_variable  QVAPOR lower bound   0.000000000000000E+000 min value  -2.519989401082464E-003
+ PE    97: clamp_variable  QVAPOR lower bound   0.000000000000000E+000 min value  -2.218683765956869E-003
+ PE   144: clamp_variable  QCLOUD lower bound   0.000000000000000E+000 min value  -6.519641781815807E-004
+ PE   128: clamp_variable  QRAIN lower bound   0.000000000000000E+000 min value  -7.470314477369247E-004
+ PE   224: clamp_variable  QCLOUD lower bound   0.000000000000000E+000 min value  -7.648042323619390E-004
+ PE   336: clamp_variable  QVAPOR lower bound   0.000000000000000E+000 min value  -3.265343866061919E-003
+ PE   432: clamp_variable  QICE lower bound   0.000000000000000E+000 min value  -6.790040627109048E-004
+ PE    16: clamp_variable  QCLOUD lower bound   0.000000000000000E+000 min value  -7.783432516779497E-004
+ PE    33: clamp_variable  QCLOUD lower bound   0.000000000000000E+000 min value  -6.177887989723327E-004
+ PE   273: clamp_variable  QCLOUD lower bound   0.000000000000000E+000 min value  -6.394537600585395E-004
+ PE   145: clamp_variable  QVAPOR lower bound   0.000000000000000E+000 min value  -1.981558639653497E-003
+ PE   448: clamp_variable  QRAIN lower bound   0.000000000000000E+000 min value  -8.396423692854871E-004
+ PE   161: clamp_variable  QCLOUD lower bound   0.000000000000000E+000 min value  -6.084547189264258E-004
+ PE    64: clamp_variable  QCLOUD lower bound   0.000000000000000E+000 min value  -8.345009367219931E-004
+ PE   241: clamp_variable  QVAPOR lower bound   0.000000000000000E+000 min value  -1.135262874388566E-003
+ PE   257: clamp_variable  QCLOUD lower bound   0.000000000000000E+000 min value  -7.451809689371718E-004
+ PE   288: clamp_variable  QCLOUD lower bound   0.000000000000000E+000 min value  -6.522458813700547E-004
+ PE   272: clamp_variable  QCLOUD lower bound   0.000000000000000E+000 min value  -7.061756550470016E-004
+ PE   368: clamp_variable  QVAPOR lower bound   0.000000000000000E+000 min value  -1.740551801694789E-003
+ PE   304: clamp_variable  QCLOUD lower bound   0.000000000000000E+000 min value  -8.006426964684422E-004
+ PE     0: clamp_variable  QCLOUD lower bound   0.000000000000000E+000 min value  -7.544740375244357E-004
+ PE   208: clamp_variable  QCLOUD lower bound   0.000000000000000E+000 min value  -6.903244429607309E-004
+ PE   400: clamp_variable  QCLOUD lower bound   0.000000000000000E+000 min value  -5.909504874065378E-004
+ PE   352: clamp_variable  QCLOUD lower bound   0.000000000000000E+000 min value  -7.400481454858210E-004
+ PE   176: clamp_variable  QCLOUD lower bound   0.000000000000000E+000 min value  -5.791204887889936E-004
+ PE   240: clamp_variable  QCLOUD lower bound   0.000000000000000E+000 min value  -7.908264804523952E-004
+ PE   144: clamp_variable  QRAIN lower bound   0.000000000000000E+000 min value  -9.378726852143193E-004
+ PE    96: clamp_variable  QCLOUD lower bound   0.000000000000000E+000 min value  -8.445542852318117E-004
+ PE   192: clamp_variable  QCLOUD lower bound   0.000000000000000E+000 min value  -6.871614979609828E-004
+ PE   160: clamp_variable  QCLOUD lower bound   0.000000000000000E+000 min value  -5.691906448349939E-004
+ PE   432: clamp_variable  QGRAUP lower bound   0.000000000000000E+000 min value  -1.259759444266953E-003
+ PE   177: clamp_variable  QCLOUD lower bound   0.000000000000000E+000 min value  -7.875179731130856E-004
+ PE    17: clamp_variable  QCLOUD lower bound   0.000000000000000E+000 min value  -6.071786444045456E-004
+ PE   320: clamp_variable  QRAIN lower bound   0.000000000000000E+000 min value  -9.460486276133994E-004
+ PE    48: clamp_variable  QRAIN lower bound   0.000000000000000E+000 min value  -9.586126925163900E-004
+ PE   113: clamp_variable  QVAPOR lower bound   0.000000000000000E+000 min value  -7.079782905840718E-004
+ PE   480: clamp_variable  QRAIN lower bound   0.000000000000000E+000 min value  -1.233176770400161E-003
+ PE    65: clamp_variable  QCLOUD lower bound   0.000000000000000E+000 min value  -7.734674847836279E-004
+ PE    32: clamp_variable  QRAIN lower bound   0.000000000000000E+000 min value  -8.075999980672678E-004
+ PE     1: clamp_variable  QCLOUD lower bound   0.000000000000000E+000 min value  -7.142547796186274E-004
+ PE   416: clamp_variable  QRAIN lower bound   0.000000000000000E+000 min value  -8.139284062741692E-004
+ PE    97: clamp_variable  QCLOUD lower bound   0.000000000000000E+000 min value  -5.918195184833415E-004
+ PE   112: clamp_variable  QRAIN lower bound   0.000000000000000E+000 min value  -8.029004052976177E-004
+ PE   129: clamp_variable  QCLOUD lower bound   0.000000000000000E+000 min value  -9.528916797043926E-004
+ PE    49: clamp_variable  QRAIN lower bound   0.000000000000000E+000 min value  -1.006228573274372E-003
+ PE   225: clamp_variable  QRAIN lower bound   0.000000000000000E+000 min value  -9.232143664264061E-004
+ PE   256: clamp_variable  QCLOUD lower bound   0.000000000000000E+000 min value  -6.898671309971956E-004
+ PE   464: clamp_variable  QCLOUD lower bound   0.000000000000000E+000 min value  -7.199815827695717E-004
+ PE   224: clamp_variable  QRAIN lower bound   0.000000000000000E+000 min value  -8.129633475527969E-004
+ PE   289: clamp_variable  QCLOUD lower bound   0.000000000000000E+000 min value  -4.745033522356192E-004
+ PE    81: clamp_variable  QCLOUD lower bound   0.000000000000000E+000 min value  -8.395836470085536E-004
+ PE   193: clamp_variable  QCLOUD lower bound   0.000000000000000E+000 min value  -7.296871362850452E-004
+ PE   144: clamp_variable  QICE lower bound   0.000000000000000E+000 min value  -6.044784436974902E-004
+ PE   209: clamp_variable  QCLOUD lower bound   0.000000000000000E+000 min value  -7.612241317745432E-004
+ PE    80: clamp_variable  QCLOUD lower bound   0.000000000000000E+000 min value  -7.889541469701332E-004
+ PE   432: clamp_variable  QNICE lower bound   0.000000000000000E+000 min value   -527473.519684565
+ PE    16: clamp_variable  QRAIN lower bound   0.000000000000000E+000 min value  -9.497632323136290E-004
+ PE   161: clamp_variable  QRAIN lower bound   0.000000000000000E+000 min value  -1.006547025861354E-003
+ PE    64: clamp_variable  QRAIN lower bound   0.000000000000000E+000 min value  -7.669507235814919E-004
+ PE   336: clamp_variable  QCLOUD lower bound   0.000000000000000E+000 min value  -9.765639340768096E-004
+ PE   145: clamp_variable  QCLOUD lower bound   0.000000000000000E+000 min value  -5.941362871832328E-004
+ PE   241: clamp_variable  QCLOUD lower bound   0.000000000000000E+000 min value  -6.140427212383741E-004
+ PE   128: clamp_variable  QICE lower bound   0.000000000000000E+000 min value  -7.226275042016918E-004
+ PE   257: clamp_variable  QRAIN lower bound   0.000000000000000E+000 min value  -1.094723164284455E-003
+ PE     0: clamp_variable  QRAIN lower bound   0.000000000000000E+000 min value  -8.556837787973426E-004
+ PE   240: clamp_variable  QRAIN lower bound   0.000000000000000E+000 min value  -8.083910681229579E-004
+ PE   208: clamp_variable  QRAIN lower bound   0.000000000000000E+000 min value  -9.769731216838909E-004
+ PE   288: clamp_variable  QRAIN lower bound   0.000000000000000E+000 min value  -7.947814833755920E-004
+ PE   176: clamp_variable  QRAIN lower bound   0.000000000000000E+000 min value  -7.619576036953104E-004
+ PE   352: clamp_variable  QRAIN lower bound   0.000000000000000E+000 min value  -1.034484392858542E-003
+ PE   160: clamp_variable  QRAIN lower bound   0.000000000000000E+000 min value  -9.076811628084728E-004
+ PE   113: clamp_variable  QCLOUD lower bound   0.000000000000000E+000 min value  -9.394223317240276E-004
+ PE   272: clamp_variable  QRAIN lower bound   0.000000000000000E+000 min value  -1.204027552943024E-003
+ PE   320: clamp_variable  QICE lower bound   0.000000000000000E+000 min value  -6.338978674216410E-004
+ PE   400: clamp_variable  QRAIN lower bound   0.000000000000000E+000 min value  -9.018145201153486E-004
+ PE   192: clamp_variable  QRAIN lower bound   0.000000000000000E+000 min value  -1.017600786895712E-003
+ PE    49: clamp_variable  QICE lower bound   0.000000000000000E+000 min value  -5.367352305996609E-004
+ PE   368: clamp_variable  QCLOUD lower bound   0.000000000000000E+000 min value  -6.968100428919364E-004
+ PE   432: clamp_variable  QNRAIN lower bound   0.000000000000000E+000 min value   -23403.7225979132
+ PE   480: clamp_variable  QICE lower bound   0.000000000000000E+000 min value  -5.915507096522188E-004
+ PE    96: clamp_variable  QRAIN lower bound   0.000000000000000E+000 min value  -7.819054132373256E-004
+ PE   225: clamp_variable  QICE lower bound   0.000000000000000E+000 min value  -5.834996589153115E-004
+ PE    32: clamp_variable  QICE lower bound   0.000000000000000E+000 min value  -6.479710837715650E-004
+ PE   144: clamp_variable  QGRAUP lower bound   0.000000000000000E+000 min value  -1.026429248735570E-003
+ PE   224: clamp_variable  QICE lower bound   0.000000000000000E+000 min value  -7.403142013467899E-004
+ PE    48: clamp_variable  QICE lower bound   0.000000000000000E+000 min value  -7.287030322545966E-004
+ PE   256: clamp_variable  QRAIN lower bound   0.000000000000000E+000 min value  -1.015536035237002E-003
+ PE   177: clamp_variable  QRAIN lower bound   0.000000000000000E+000 min value  -8.134361504366354E-004
+ PE   464: clamp_variable  QRAIN lower bound   0.000000000000000E+000 min value  -8.231622876877159E-004
+ PE   129: clamp_variable  QRAIN lower bound   0.000000000000000E+000 min value  -9.879929776708870E-004
+ PE   112: clamp_variable  QICE lower bound   0.000000000000000E+000 min value  -4.333469026397761E-004
+ PE   416: clamp_variable  QICE lower bound   0.000000000000000E+000 min value  -5.796713819552011E-004
+ PE   384: clamp_variable  QRAIN lower bound   0.000000000000000E+000 min value  -9.554345740815688E-004
+ PE    80: clamp_variable  QRAIN lower bound   0.000000000000000E+000 min value  -8.640157909198158E-004
+ PE    49: clamp_variable  QGRAUP lower bound   0.000000000000000E+000 min value  -1.208696764075433E-003
+ PE   128: clamp_variable  QGRAUP lower bound   0.000000000000000E+000 min value  -1.154361545556246E-003
+ PE   496: clamp_variable  QCLOUD lower bound   0.000000000000000E+000 min value  -7.766869020387145E-004
+ PE   113: clamp_variable  QRAIN lower bound   0.000000000000000E+000 min value  -7.430929798817310E-004
+ PE    81: clamp_variable  QRAIN lower bound   0.000000000000000E+000 min value  -9.714205404328726E-004
+ PE   209: clamp_variable  QRAIN lower bound   0.000000000000000E+000 min value  -1.022144678356329E-003
+ PE     1: clamp_variable  QRAIN lower bound   0.000000000000000E+000 min value  -9.371940075922525E-004
+ PE   193: clamp_variable  QRAIN lower bound   0.000000000000000E+000 min value  -9.705173722803583E-004
+ PE   145: clamp_variable  QRAIN lower bound   0.000000000000000E+000 min value  -1.070761177698473E-003
+ PE    17: clamp_variable  QRAIN lower bound   0.000000000000000E+000 min value  -8.539250147623519E-004
+ PE   336: clamp_variable  QRAIN lower bound   0.000000000000000E+000 min value  -1.021986951113006E-003
+ PE   448: clamp_variable  QICE lower bound   0.000000000000000E+000 min value  -5.726122582231886E-004
+ PE    16: clamp_variable  QICE lower bound   0.000000000000000E+000 min value  -6.841107144296181E-004
+ PE    33: clamp_variable  QRAIN lower bound   0.000000000000000E+000 min value  -8.926495801281540E-004
+ PE   320: clamp_variable  QGRAUP lower bound   0.000000000000000E+000 min value  -1.183987501835860E-003
+ PE    64: clamp_variable  QICE lower bound   0.000000000000000E+000 min value  -5.972317598841651E-004
+ PE   176: clamp_variable  QICE lower bound   0.000000000000000E+000 min value  -7.092633895849307E-004
+ PE    65: clamp_variable  QRAIN lower bound   0.000000000000000E+000 min value  -9.449786932467124E-004
+ PE    97: clamp_variable  QRAIN lower bound   0.000000000000000E+000 min value  -9.816396680298288E-004
+ PE   304: clamp_variable  QRAIN lower bound   0.000000000000000E+000 min value  -9.972030825447418E-004
+ PE   480: clamp_variable  QGRAUP lower bound   0.000000000000000E+000 min value  -1.258726484832606E-003
+ PE   160: clamp_variable  QICE lower bound   0.000000000000000E+000 min value  -6.899435587805729E-004
+ PE   289: clamp_variable  QRAIN lower bound   0.000000000000000E+000 min value  -7.199490068065619E-004
+ PE   288: clamp_variable  QICE lower bound   0.000000000000000E+000 min value  -7.046462003182678E-004
+ PE   257: clamp_variable  QICE lower bound   0.000000000000000E+000 min value  -5.466595915453985E-004
+ PE   225: clamp_variable  QGRAUP lower bound   0.000000000000000E+000 min value  -8.739449205426096E-004
+ PE   272: clamp_variable  QICE lower bound   0.000000000000000E+000 min value  -6.425984631818653E-004
+ PE   400: clamp_variable  QICE lower bound   0.000000000000000E+000 min value  -6.509473991705380E-004
+ PE    49: clamp_variable  QNICE lower bound   0.000000000000000E+000 min value   -555443.249949281
+ PE   113: clamp_variable  QICE lower bound   0.000000000000000E+000 min value  -7.387196725445222E-004
+ PE   224: clamp_variable  QGRAUP lower bound   0.000000000000000E+000 min value  -1.290516554449117E-003
+ PE    32: clamp_variable  QGRAUP lower bound   0.000000000000000E+000 min value  -1.242921340191984E-003
+ PE   161: clamp_variable  QICE lower bound   0.000000000000000E+000 min value  -7.179925338705764E-004
+ PE   240: clamp_variable  QICE lower bound   0.000000000000000E+000 min value  -6.369346309833385E-004
+ PE   241: clamp_variable  QRAIN lower bound   0.000000000000000E+000 min value  -1.002722013498932E-003
+ PE    48: clamp_variable  QGRAUP lower bound   0.000000000000000E+000 min value  -1.378779809145926E-003
+ PE    96: clamp_variable  QICE lower bound   0.000000000000000E+000 min value  -6.139766990575319E-004
+ PE   352: clamp_variable  QICE lower bound   0.000000000000000E+000 min value  -6.043365573077345E-004
+ PE   416: clamp_variable  QGRAUP lower bound   0.000000000000000E+000 min value  -1.088952511019930E-003
+ PE   208: clamp_variable  QICE lower bound   0.000000000000000E+000 min value  -6.604780109871699E-004
+ PE   176: clamp_variable  QGRAUP lower bound   0.000000000000000E+000 min value  -1.400988054520984E-003
+ PE   192: clamp_variable  QICE lower bound   0.000000000000000E+000 min value  -6.276417189202502E-004
+ PE   320: clamp_variable  QNICE lower bound   0.000000000000000E+000 min value   -403005.140026314
+ PE   112: clamp_variable  QGRAUP lower bound   0.000000000000000E+000 min value  -1.014824930643084E-003
+ PE   256: clamp_variable  QICE lower bound   0.000000000000000E+000 min value  -5.406828273262799E-004
+ PE   145: clamp_variable  QICE lower bound   0.000000000000000E+000 min value  -6.865232172142530E-004
+ PE   368: clamp_variable  QRAIN lower bound   0.000000000000000E+000 min value  -9.122880422652847E-004
+ PE   144: clamp_variable  QNICE lower bound   0.000000000000000E+000 min value   -459922.405820230
+ PE   464: clamp_variable  QICE lower bound   0.000000000000000E+000 min value  -6.552641529880244E-004
+ PE   273: clamp_variable  QRAIN lower bound   0.000000000000000E+000 min value  -1.010581645828651E-003
+ PE   129: clamp_variable  QICE lower bound   0.000000000000000E+000 min value  -6.070251191813464E-004
+ PE   177: clamp_variable  QICE lower bound   0.000000000000000E+000 min value  -7.603349670692646E-004
+ PE    16: clamp_variable  QGRAUP lower bound   0.000000000000000E+000 min value  -1.158618363555903E-003
+ PE    64: clamp_variable  QGRAUP lower bound   0.000000000000000E+000 min value  -1.158497363176824E-003
+ PE     1: clamp_variable  QICE lower bound   0.000000000000000E+000 min value  -7.191363562105604E-004
+ PE   336: clamp_variable  QICE lower bound   0.000000000000000E+000 min value  -7.421113643836921E-004
+ PE   113: clamp_variable  QGRAUP lower bound   0.000000000000000E+000 min value  -1.332007242565765E-003
+ PE   209: clamp_variable  QICE lower bound   0.000000000000000E+000 min value  -5.282875413232112E-004
+ PE   193: clamp_variable  QICE lower bound   0.000000000000000E+000 min value  -5.276123686388222E-004
+ PE   160: clamp_variable  QGRAUP lower bound   0.000000000000000E+000 min value  -1.241880402998138E-003
+ PE    49: clamp_variable  QNRAIN lower bound   0.000000000000000E+000 min value   -43827.0770607475
+ PE   128: clamp_variable  QNICE lower bound   0.000000000000000E+000 min value   -656114.746191150
+ PE   257: clamp_variable  QGRAUP lower bound   0.000000000000000E+000 min value  -1.229001208342615E-003
+ PE    80: clamp_variable  QICE lower bound   0.000000000000000E+000 min value  -7.629681230019372E-004
+ PE     0: clamp_variable  QICE lower bound   0.000000000000000E+000 min value  -7.056157841461570E-004
+ PE   400: clamp_variable  QGRAUP lower bound   0.000000000000000E+000 min value  -1.070643122356582E-003
+ PE    81: clamp_variable  QICE lower bound   0.000000000000000E+000 min value  -5.774292872289079E-004
+ PE   145: clamp_variable  QGRAUP lower bound   0.000000000000000E+000 min value  -1.258621089332698E-003
+ PE   384: clamp_variable  QICE lower bound   0.000000000000000E+000 min value  -6.556876022258545E-004
+ PE   448: clamp_variable  QGRAUP lower bound   0.000000000000000E+000 min value  -1.136602671968349E-003
+ PE    65: clamp_variable  QICE lower bound   0.000000000000000E+000 min value  -5.750072561112081E-004
+ PE   272: clamp_variable  QGRAUP lower bound   0.000000000000000E+000 min value  -1.264908094742425E-003
+ PE   240: clamp_variable  QGRAUP lower bound   0.000000000000000E+000 min value  -1.194110842435582E-003
+ PE   320: clamp_variable  QNRAIN lower bound   0.000000000000000E+000 min value   -34965.8117441121
+ PE   480: clamp_variable  QNICE lower bound   0.000000000000000E+000 min value   -659180.915453189
+ PE   288: clamp_variable  QGRAUP lower bound   0.000000000000000E+000 min value  -1.212019299028854E-003
+ PE   496: clamp_variable  QRAIN lower bound   0.000000000000000E+000 min value  -9.064633179418638E-004
+ PE   225: clamp_variable  QNICE lower bound   0.000000000000000E+000 min value   -425987.323457252
+ PE   176: clamp_variable  QNICE lower bound   0.000000000000000E+000 min value   -590120.074696136
+ PE    17: clamp_variable  QICE lower bound   0.000000000000000E+000 min value  -6.706102072025857E-004
+ PE   161: clamp_variable  QGRAUP lower bound   0.000000000000000E+000 min value  -1.290227428198153E-003
+ PE    33: clamp_variable  QICE lower bound   0.000000000000000E+000 min value  -4.503945633442225E-004
+ PE   289: clamp_variable  QICE lower bound   0.000000000000000E+000 min value  -5.753352182833542E-004
+ PE   241: clamp_variable  QICE lower bound   0.000000000000000E+000 min value  -5.863821073011403E-004
+ PE   192: clamp_variable  QGRAUP lower bound   0.000000000000000E+000 min value  -1.397292167333393E-003
+ PE   208: clamp_variable  QGRAUP lower bound   0.000000000000000E+000 min value  -1.217074197903572E-003
+ PE    96: clamp_variable  QGRAUP lower bound   0.000000000000000E+000 min value  -1.097473115462418E-003
+ PE   224: clamp_variable  QNICE lower bound   0.000000000000000E+000 min value   -540208.973114446
+ PE   256: clamp_variable  QGRAUP lower bound   0.000000000000000E+000 min value  -1.201137176201039E-003
+ PE   352: clamp_variable  QGRAUP lower bound   0.000000000000000E+000 min value  -1.207330355377202E-003
+ PE    32: clamp_variable  QNICE lower bound   0.000000000000000E+000 min value   -547232.246969474
+ PE   416: clamp_variable  QNICE lower bound   0.000000000000000E+000 min value   -644917.986629200
+ PE   368: clamp_variable  QICE lower bound   0.000000000000000E+000 min value  -6.021079894341528E-004
+ PE   464: clamp_variable  QGRAUP lower bound   0.000000000000000E+000 min value  -9.825666464972046E-004
+ PE   129: clamp_variable  QGRAUP lower bound   0.000000000000000E+000 min value  -1.186304461521614E-003
+ PE    97: clamp_variable  QICE lower bound   0.000000000000000E+000 min value  -6.567486492877388E-004
+ PE     1: clamp_variable  QGRAUP lower bound   0.000000000000000E+000 min value  -1.237954434192328E-003
+ PE   112: clamp_variable  QNICE lower bound   0.000000000000000E+000 min value   -554911.932757831
+ PE   336: clamp_variable  QGRAUP lower bound   0.000000000000000E+000 min value  -1.486784722629456E-003
+ PE   177: clamp_variable  QGRAUP lower bound   0.000000000000000E+000 min value  -1.225672215881641E-003
+ PE   145: clamp_variable  QNICE lower bound   0.000000000000000E+000 min value   -525652.244422644
+ PE   209: clamp_variable  QGRAUP lower bound   0.000000000000000E+000 min value  -1.197577860782600E-003
+ PE   176: clamp_variable  QNRAIN lower bound   0.000000000000000E+000 min value   -29514.9998699985
+ PE   304: clamp_variable  QICE lower bound   0.000000000000000E+000 min value  -8.929194891895437E-004
+ PE   193: clamp_variable  QGRAUP lower bound   0.000000000000000E+000 min value  -1.155152871647685E-003
+ PE    16: clamp_variable  QNICE lower bound   0.000000000000000E+000 min value   -630644.664893837
+ PE   113: clamp_variable  QNICE lower bound   0.000000000000000E+000 min value   -531159.697972646
+ PE   289: clamp_variable  QGRAUP lower bound   0.000000000000000E+000 min value  -1.043662836744606E-003
+ PE    65: clamp_variable  QGRAUP lower bound   0.000000000000000E+000 min value  -1.227509860846213E-003
+ PE    64: clamp_variable  QNICE lower bound   0.000000000000000E+000 min value   -574364.306649302
+ PE   160: clamp_variable  QNICE lower bound   0.000000000000000E+000 min value   -591686.982839694
+ PE   273: clamp_variable  QICE lower bound   0.000000000000000E+000 min value  -5.975750957590229E-004
+ PE   448: clamp_variable  QNICE lower bound   0.000000000000000E+000 min value   -502749.663886190
+ PE     0: clamp_variable  QGRAUP lower bound   0.000000000000000E+000 min value  -1.208082358881276E-003
+ PE    17: clamp_variable  QGRAUP lower bound   0.000000000000000E+000 min value  -1.262129857157220E-003
+ PE   384: clamp_variable  QGRAUP lower bound   0.000000000000000E+000 min value  -1.159773287973702E-003
+ PE   144: clamp_variable  QNRAIN lower bound   0.000000000000000E+000 min value   -35103.2988327785
+ PE   257: clamp_variable  QNICE lower bound   0.000000000000000E+000 min value   -556802.049790279
+ PE   225: clamp_variable  QNRAIN lower bound   0.000000000000000E+000 min value   -31738.6837055468
+ PE   241: clamp_variable  QGRAUP lower bound   0.000000000000000E+000 min value  -1.088869419245936E-003
+ PE    33: clamp_variable  QGRAUP lower bound   0.000000000000000E+000 min value  -1.102132912193874E-003
+ PE    80: clamp_variable  QGRAUP lower bound   0.000000000000000E+000 min value  -1.318734247449680E-003
+ PE   161: clamp_variable  QNICE lower bound   0.000000000000000E+000 min value   -503879.591150346
+ PE   416: clamp_variable  QNRAIN lower bound   0.000000000000000E+000 min value   -34641.1272326182
+ PE    97: clamp_variable  QGRAUP lower bound   0.000000000000000E+000 min value  -1.312317185227144E-003
+ PE   240: clamp_variable  QNICE lower bound   0.000000000000000E+000 min value   -462285.178740274
+ PE   480: clamp_variable  QNRAIN lower bound   0.000000000000000E+000 min value   -41223.6324523104
+ PE    48: clamp_variable  QNICE lower bound   0.000000000000000E+000 min value   -547740.153330710
+ PE   145: clamp_variable  QNRAIN lower bound   0.000000000000000E+000 min value   -39613.6229211489
+ PE   128: clamp_variable  QNRAIN lower bound   0.000000000000000E+000 min value   -41868.1968078304
+ PE   368: clamp_variable  QGRAUP lower bound   0.000000000000000E+000 min value  -1.194140318686754E-003
+ PE   496: clamp_variable  QICE lower bound   0.000000000000000E+000 min value  -7.179435635978601E-004
+ PE   400: clamp_variable  QNICE lower bound   0.000000000000000E+000 min value   -512484.380299031
+ PE   192: clamp_variable  QNICE lower bound   0.000000000000000E+000 min value   -449816.645529866
+ PE   208: clamp_variable  QNICE lower bound   0.000000000000000E+000 min value   -498220.710438163
+ PE   288: clamp_variable  QNICE lower bound   0.000000000000000E+000 min value   -491772.302359172
+ PE   272: clamp_variable  QNICE lower bound   0.000000000000000E+000 min value   -554204.354650555
+ PE   352: clamp_variable  QNICE lower bound   0.000000000000000E+000 min value   -439791.581928911
+ PE    32: clamp_variable  QNRAIN lower bound   0.000000000000000E+000 min value   -32969.3322716825
+ PE   304: clamp_variable  QGRAUP lower bound   0.000000000000000E+000 min value  -1.350990496986316E-003
+ PE   112: clamp_variable  QNRAIN lower bound   0.000000000000000E+000 min value   -33474.4897941270
+ PE   464: clamp_variable  QNICE lower bound   0.000000000000000E+000 min value   -488159.811005123
+ PE    96: clamp_variable  QNICE lower bound   0.000000000000000E+000 min value   -497704.137010541
+ PE   224: clamp_variable  QNRAIN lower bound   0.000000000000000E+000 min value   -29649.6923807182
+ PE   336: clamp_variable  QNICE lower bound   0.000000000000000E+000 min value   -508498.788416113
+ PE   129: clamp_variable  QNICE lower bound   0.000000000000000E+000 min value   -510673.111777062
+ PE     1: clamp_variable  QNICE lower bound   0.000000000000000E+000 min value   -496410.369304333
+ PE   289: clamp_variable  QNICE lower bound   0.000000000000000E+000 min value   -399974.777696537
+ PE   273: clamp_variable  QGRAUP lower bound   0.000000000000000E+000 min value  -1.199395639944946E-003
+ PE   160: clamp_variable  QNRAIN lower bound   0.000000000000000E+000 min value   -30956.4995759128
+ PE   113: clamp_variable  QNRAIN lower bound   0.000000000000000E+000 min value   -33881.7097690501
+ PE    81: clamp_variable  QGRAUP lower bound   0.000000000000000E+000 min value  -8.659525401839355E-004
+ PE   256: clamp_variable  QNICE lower bound   0.000000000000000E+000 min value   -687230.730829607
+ PE   193: clamp_variable  QNICE lower bound   0.000000000000000E+000 min value   -477445.280518320
+ PE    65: clamp_variable  QNICE lower bound   0.000000000000000E+000 min value   -612778.573300564
+ PE    64: clamp_variable  QNRAIN lower bound   0.000000000000000E+000 min value   -32166.6550250794
+ PE   177: clamp_variable  QNICE lower bound   0.000000000000000E+000 min value   -607868.607986414
+ PE   448: clamp_variable  QNRAIN lower bound   0.000000000000000E+000 min value   -22369.4805131417
+ PE    33: clamp_variable  QNICE lower bound   0.000000000000000E+000 min value   -440198.930994813
+ PE    17: clamp_variable  QNICE lower bound   0.000000000000000E+000 min value   -555140.500015095
+ PE    97: clamp_variable  QNICE lower bound   0.000000000000000E+000 min value   -519618.444769926
+ PE   496: clamp_variable  QGRAUP lower bound   0.000000000000000E+000 min value  -1.404786135111408E-003
+ PE   384: clamp_variable  QNICE lower bound   0.000000000000000E+000 min value   -572629.003406678
+ PE   209: clamp_variable  QNICE lower bound   0.000000000000000E+000 min value   -521901.404326891
+ PE   240: clamp_variable  QNRAIN lower bound   0.000000000000000E+000 min value   -20962.4895943596
+ PE   257: clamp_variable  QNRAIN lower bound   0.000000000000000E+000 min value   -36572.3989197209
+ PE    48: clamp_variable  QNRAIN lower bound   0.000000000000000E+000 min value   -28716.9700848602
+ PE   368: clamp_variable  QNICE lower bound   0.000000000000000E+000 min value   -523050.811974434
+ PE   161: clamp_variable  QNRAIN lower bound   0.000000000000000E+000 min value   -29710.5768992535
+ PE   241: clamp_variable  QNICE lower bound   0.000000000000000E+000 min value   -510318.232957848
+ PE     0: clamp_variable  QNICE lower bound   0.000000000000000E+000 min value   -492791.715004572
+ PE   464: clamp_variable  QNRAIN lower bound   0.000000000000000E+000 min value   -30359.6702797432
+ PE   289: clamp_variable  QNRAIN lower bound   0.000000000000000E+000 min value   -24093.8757612020
+ PE    80: clamp_variable  QNICE lower bound   0.000000000000000E+000 min value   -503316.580117468
+ PE   400: clamp_variable  QNRAIN lower bound   0.000000000000000E+000 min value   -28194.4422442503
+ PE   272: clamp_variable  QNRAIN lower bound   0.000000000000000E+000 min value   -31996.0085256465
+ PE   192: clamp_variable  QNRAIN lower bound   0.000000000000000E+000 min value   -39920.2335888997
+ PE   208: clamp_variable  QNRAIN lower bound   0.000000000000000E+000 min value   -27888.8641106222
+ PE   288: clamp_variable  QNRAIN lower bound   0.000000000000000E+000 min value   -27113.9577951999
+ PE    16: clamp_variable  QNRAIN lower bound   0.000000000000000E+000 min value   -39099.4504078761
+ PE   304: clamp_variable  QNICE lower bound   0.000000000000000E+000 min value   -435390.450459632
+ PE    96: clamp_variable  QNRAIN lower bound   0.000000000000000E+000 min value   -30694.3541565011
+ PE   352: clamp_variable  QNRAIN lower bound   0.000000000000000E+000 min value   -49396.2665866332
+ PE   129: clamp_variable  QNRAIN lower bound   0.000000000000000E+000 min value   -35222.2010293521
+ PE   177: clamp_variable  QNRAIN lower bound   0.000000000000000E+000 min value   -29901.7584301225
+ PE   256: clamp_variable  QNRAIN lower bound   0.000000000000000E+000 min value   -39702.7865483760
+ PE    81: clamp_variable  QNICE lower bound   0.000000000000000E+000 min value   -547000.024217635
+ PE     1: clamp_variable  QNRAIN lower bound   0.000000000000000E+000 min value   -30412.6399351798
+ PE   336: clamp_variable  QNRAIN lower bound   0.000000000000000E+000 min value   -36897.8290948272
+ PE    33: clamp_variable  QNRAIN lower bound   0.000000000000000E+000 min value   -31035.8247172012
+ PE   273: clamp_variable  QNICE lower bound   0.000000000000000E+000 min value   -602109.291580685
+ PE   193: clamp_variable  QNRAIN lower bound   0.000000000000000E+000 min value   -47842.4982410978
+ PE   209: clamp_variable  QNRAIN lower bound   0.000000000000000E+000 min value   -27133.5839554057
+ PE   368: clamp_variable  QNRAIN lower bound   0.000000000000000E+000 min value   -24255.7931376130
+ PE    17: clamp_variable  QNRAIN lower bound   0.000000000000000E+000 min value   -30987.8405337060
+ PE   384: clamp_variable  QNRAIN lower bound   0.000000000000000E+000 min value   -47328.9792008307
+ PE    65: clamp_variable  QNRAIN lower bound   0.000000000000000E+000 min value   -36971.8680645099
+ PE    97: clamp_variable  QNRAIN lower bound   0.000000000000000E+000 min value   -28393.2285450616
+ PE    80: clamp_variable  QNRAIN lower bound   0.000000000000000E+000 min value   -32772.5387658720
+ PE   496: clamp_variable  QNICE lower bound   0.000000000000000E+000 min value   -676017.585602923
+ PE   241: clamp_variable  QNRAIN lower bound   0.000000000000000E+000 min value   -28397.7536399784
+ PE   304: clamp_variable  QNRAIN lower bound   0.000000000000000E+000 min value   -33240.4670468444
+ PE    81: clamp_variable  QNRAIN lower bound   0.000000000000000E+000 min value   -29029.6290898261
+ PE   273: clamp_variable  QNRAIN lower bound   0.000000000000000E+000 min value   -30101.9792986084
+ PE   496: clamp_variable  QNRAIN lower bound   0.000000000000000E+000 min value   -43490.3757882447
+ PE     0: clamp_variable  QNRAIN lower bound   0.000000000000000E+000 min value   -28936.5108168423
+ After  state space output TIME: 2017/09/14 13:47:15
+ PE 0:  filter trace: After  state space output
+ PE 0:  filter trace: Before writing output sequence file
+ PE 0: write_obs_seq  opening formatted observation sequence file "obs_seq.final"
+ PE 0: write_obs_seq  closed observation sequence file "obs_seq.final"
+ PE 0:  filter trace: After  writing output sequence file
+ PE 0:  filter trace: Before end_model call
+ PE 0:  filter trace: After  end_model call
+ PE 0:  filter trace: Before ensemble and obs memory cleanup
+ PE 0:  filter trace: After  ensemble and obs memory cleanup
+ PE 0:  filter trace: Filter done
+ Filter done TIME: 2017/09/14 13:47:21
+ 
+ --------------------------------------
+ Finished ... at YYYY MM DD HH MM SS = 
+                 2017  9 14 13 47 21
+ Program Filter
+ --------------------------------------
+ 
+*****************************
+ --- mpiexec_mpt FINISHED ---
+*****************************
