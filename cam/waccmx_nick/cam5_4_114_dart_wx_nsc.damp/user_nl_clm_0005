@@ -1,0 +1,6 @@
+finidat = 'waccmx_gen_oct_ens_fxrefc1.clm2_0005.r.2008-10-04-00000.nc'
+hist_empty_htapes = .true.
+hist_fincl1 = 'TSA'
+ hist_nhtfrq = -6
+hist_mfilt  = 1
+hist_avgflag_pertape = 'I'

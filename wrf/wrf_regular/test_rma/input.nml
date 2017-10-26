@@ -1,52 +1,57 @@
 &filter_nml
-   async                    =  0,
-   adv_ens_command          = "no_model_advance"
-   ens_size                 =  3,
-   output_restart           = .true.,
-   obs_sequence_in_name     = "obs_seq.700obs",
-   obs_sequence_out_name    = "obs_seq.final",
-   restart_in_file_name     = 'advance_tmp',
-   restart_out_file_name    = 'wrf_out',
-   init_time_days           = -1,
-   init_time_seconds        = -1,
-   first_obs_days           = -1,
-   first_obs_seconds        = -1,
-   last_obs_days            = -1,
-   last_obs_seconds         = -1,
-   num_output_state_members = 50,
-   num_output_obs_members   = 50,
-   output_interval          = 1,
-   num_groups               = 1,
-   output_forward_op_errors = .true.,
-   output_timestamps        = .true.,
-   trace_execution          = .true.,
-   output_timestamps        = .true.,
-   output_inflation         = .false.,
-   output_restart_mean      = .false.,
-   direct_netcdf_read       = .true., 
-   direct_netcdf_write      = .true., 
-   single_restart_file_in   = .false.,
-   single_restart_file_out  = .false.,
+   single_file_in               = .false.,
+   input_state_files            = ''
+   input_state_file_list        = 'restart_files_in.txt'
 
-   inf_flavor                  = 0,                      0,
-   inf_initial_from_restart    = .false.,                .false.,
-   inf_sd_initial_from_restart = .false.,                .false.,
-   inf_output_restart          = .true.,                 .true.,
-   inf_deterministic           = .true.,                 .true.,
-   inf_in_file_name            = 'prior_inf_ic',     'post_inf_ic_old',
-   inf_out_file_name           = 'prior_inf_ic_new',     'post_inf_ic_new',
-   inf_diag_file_name          = 'prior_inf_diag',       'post_inf_diag',
+   stages_to_write  = 'preassim', 'output'
+
+   single_file_out              = .false.,
+   output_state_files           = ''
+   output_state_file_list       = 'restart_files_out.txt'
+   output_interval              = 1,
+   output_members               = .true.
+   num_output_state_members     = 3,
+   output_mean                  = .true.
+   output_sd                    = .true.
+
+   ens_size                     = 50,
+   num_groups                   = 1,
+   perturb_from_single_instance = .false.,
+   perturbation_amplitude       = 0.2,
+   distributed_state            = .true.
+
+   async                        = 2,
+   adv_ens_command              = './advance_model.csh',
+
+   obs_sequence_in_name         = 'obs_seq.out',
+   obs_sequence_out_name        = 'obs_seq.final',
+   num_output_obs_members       = 3,
+   init_time_days               = -1,
+   init_time_seconds            = -1,
+   first_obs_days               = -1,
+   first_obs_seconds            = -1,
+   last_obs_days                = -1,
+   last_obs_seconds             = -1,
+
+   inf_flavor                  = 2,                       0,
+   inf_initial_from_restart    = .false.,                 .false.,
+   inf_sd_initial_from_restart = .false.,                 .false.,
+   inf_deterministic           = .true.,                  .true.,
    inf_initial                 = 1.00,                   1.00,
-   inf_sd_initial              = 0.80,                   0.50,
-   inf_damping                 = 0.90,                   1.00,
-   inf_lower_bound             = 1.0,                    1.0,
-   inf_upper_bound             = 10000.0,              10000.0,
+   inf_sd_initial              = 0.60,                   0.50,
+   inf_damping                 = 0.95,                   1.00, 
+   inf_lower_bound             = 0.50,                   1.0,
+   inf_upper_bound             = 1000000.0,              1000000.0,
    inf_sd_lower_bound          = 0.60,                   0.10
+
+   trace_execution              = .true.,
+   output_timestamps            = .true.,
+   silence                      = .false.,
 /
 
 &ensemble_manager_nml
    layout = 2
-   tasks_per_node = 8
+   tasks_per_node = 36
 /
 
 &smoother_nml
@@ -93,7 +98,6 @@
    nlat = 72  /
 
 &model_nml
-   output_state_vector = .false.,
    default_state_variables = .false.,
    wrf_state_variables     = 'U','QTY_U_WIND_COMPONENT','TYPE_U','UPDATE','999',
                              'V','QTY_V_WIND_COMPONENT','TYPE_V','UPDATE','999',

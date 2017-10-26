@@ -1,0 +1,79 @@
+Mon Sep 25 17:13:03 MDT 2017 -- BEGIN CAM_ASSIMILATE
+LSB_SUB_RES_REQ: Undefined variable.
+ls -d ../Hide*
+ls -d ../Hide*
+ls: cannot access ../Hide*: No such file or directory
+if ( $status == 0 ) then
+if ( 2 == 0 ) then
+
+
+set log_list = `ls -t cesm.log.*`
+set log_list = `ls -t cesm.log.*`
+ls -t cesm.log.*
+ls: cannot access cesm.log.*: No such file or directory
+echo "log_list is $log_list"
+echo log_list is 
+log_list is 
+
+
+
+
+
+
+if ( $#log_list > = 3 ) then
+if ( 0 > = 3 ) then
+unset echo
+unset echo
+
+
+
+
+
+
+
+
+
+set FILE = `head -n 1 rpointer.atm_0001`
+set FILE = $FILE:r
+set ATM_DATE_EXT = `echo $FILE:e`
+set ATM_DATE = `echo $FILE:e | sed -e "s#-# #g"`
+set ATM_YEAR = `echo $ATM_DATE[1] | bc`
+set ATM_MONTH = `echo $ATM_DATE[2] | bc`
+set ATM_DAY = `echo $ATM_DATE[3] | bc`
+set ATM_SECONDS = `echo $ATM_DATE[4] | bc`
+set ATM_HOUR = `echo $ATM_DATE[4] / 3600 | bc`
+
+echo "valid time of model is $ATM_YEAR $ATM_MONTH $ATM_DAY $ATM_SECONDS (seconds)"
+valid time of model is 2010 9 18 43200 (seconds)
+echo "valid time of model is $ATM_YEAR $ATM_MONTH $ATM_DAY $ATM_HOUR (hours)"
+valid time of model is 2010 9 18 12 (hours)
+
+
+
+
+
+set temp_dir = assimilate_cam
+echo "temp_dir is $temp_dir"
+temp_dir is assimilate_cam
+
+if ( -d $temp_dir ) then
+${REMOVE} $temp_dir/*
+/usr/local/bin/rm: Command not found.
+else
+cd $temp_dir
+
+
+
+
+
+
+
+
+set YYYYMM = `printf %04d%02d                ${ATM_YEAR} ${ATM_MONTH}`
+if ( ! -d ${BASEOBSDIR}/${YYYYMM}_6H ) then
+
+echo "CESM+DART requires 6 hourly obs_seq files in directories of the form YYYYMM_6H_CESM"
+CESM+DART requires 6 hourly obs_seq files in directories of the form YYYYMM_6H_CESM
+echo "The directory ${BASEOBSDIR}/${YYYYMM}_6H_CESM is not found.  Exiting"
+The directory BOGUSBASEOBSDIR/201009_6H_CESM is not found.  Exiting
+exit -10

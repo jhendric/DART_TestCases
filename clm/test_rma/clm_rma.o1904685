@@ -1,0 +1,672 @@
+*******************************
+ running with PBS
+*******************************
+ PBS_JOB_ID  '1904685.chadmin1'
+ PBS_JOBNAME 'clm_rma'
+ NCPUS       '72'
+ NODES       '2'
+*******************************
+*************************
+ --- filter Started -----
+*************************
+ running with mpt
+
+Currently Loaded Modules:
+  1) ncarenv/1.2           4) mpt/2.15f        7) peak_memusage/1.1
+  2) intel/17.0.1          5) netcdf/4.4.1.1
+  3) ncarcompilers/0.4.1   6) xxdiff/4.0.1
+
+ 
+
+
+Running: ./filter; sleep 1  - Please wait...
+ Starting program Filter
+ Initializing the utilities module.
+ Trying to log to unit           10
+ Trying to open file dart_log.out
+ 
+ --------------------------------------
+ Starting ... at YYYY MM DD HH MM SS = 
+                 2017  9 29 14 11 49
+ Program Filter
+ --------------------------------------
+ 
+ set_nml_output Echo NML values to log file only
+ Trying to open namelist log dart_log.nml
+ ERROR FROM:
+  task id:            6
+  routine: read_model_time
+  message:  cannot open file clm_restart.nc for reading.
+  
+  source file: $URL: https://svn-dares-dart.cgd.ucar.edu/DART/branches/rma_trunk/models/clm/model_mod.f90 $
+  file revision: $Revision: 11920 $
+  revision date: $Date: 2017-08-29 16:20:46 -0600 (Tue, 29 Aug 2017) $
+ ERROR FROM:
+  task id:           14
+  routine: read_model_time
+  message:  cannot open file clm_restart.nc for reading.
+  
+  source file: $URL: https://svn-dares-dart.cgd.ucar.edu/DART/branches/rma_trunk/models/clm/model_mod.f90 $
+  file revision: $Revision: 11920 $
+  revision date: $Date: 2017-08-29 16:20:46 -0600 (Tue, 29 Aug 2017) $
+ ERROR FROM:
+  task id:           21
+  routine: read_model_time
+  message:  cannot open file clm_restart.nc for reading.
+ ERROR FROM:
+MPT ERROR: Rank 6(g:6) is aborting with error code 99.
+	Process ID: 17006, Host: r1i2n29, Program: /glade/p/work/hendric/DART/rma_timing/models/clm/work/filter
+	MPT Version: SGI MPT 2.15  12/18/16 02:58:06
+
+MPT: --------stack traceback-------
+ ERROR FROM:
+  task id:           34
+  routine: read_model_time
+  message:  cannot open file clm_restart.nc for reading.
+  task id:           32
+  routine: read_model_time
+  message:  cannot open file clm_restart.nc for reading.
+  
+  source file: $URL: https://svn-dares-dart.cgd.ucar.edu/DART/branches/rma_trunk/models/clm/model_mod.f90 $
+  file revision: $Revision: 11920 $
+  revision date: $Date: 2017-08-29 16:20:46 -0600 (Tue, 29 Aug 2017) $
+  
+  source file: $URL: https://svn-dares-dart.cgd.ucar.edu/DART/branches/rma_trunk/models/clm/model_mod.f90 $
+  file revision: $Revision: 11920 $
+  revision date: $Date: 2017-08-29 16:20:46 -0600 (Tue, 29 Aug 2017) $
+ ERROR FROM:
+ ERROR FROM:
+  task id:            5
+  routine: read_model_time
+  message:  cannot open file clm_restart.nc for reading.
+  
+  source file: $URL: https://svn-dares-dart.cgd.ucar.edu/DART/branches/rma_trunk/models/clm/model_mod.f90 $
+  file revision: $Revision: 11920 $
+  revision date: $Date: 2017-08-29 16:20:46 -0600 (Tue, 29 Aug 2017) $
+  task id:            4
+  routine: read_model_time
+  message:  cannot open file clm_restart.nc for reading.
+  
+  source file: $URL: https://svn-dares-dart.cgd.ucar.edu/DART/branches/rma_trunk/models/clm/model_mod.f90 $
+  file revision: $Revision: 11920 $
+  revision date: $Date: 2017-08-29 16:20:46 -0600 (Tue, 29 Aug 2017) $
+  
+  source file: $URL: https://svn-dares-dart.cgd.ucar.edu/DART/branches/rma_trunk/models/clm/model_mod.f90 $
+  file revision: $Revision: 11920 $
+  revision date: $Date: 2017-08-29 16:20:46 -0600 (Tue, 29 Aug 2017) $
+ ERROR FROM:
+  task id:            8
+  routine: read_model_time
+  message:  cannot open file clm_restart.nc for reading.
+  
+  source file: $URL: https://svn-dares-dart.cgd.ucar.edu/DART/branches/rma_trunk/models/clm/model_mod.f90 $
+  file revision: $Revision: 11920 $
+  revision date: $Date: 2017-08-29 16:20:46 -0600 (Tue, 29 Aug 2017) $
+ ERROR FROM:
+ ERROR FROM:
+ ERROR FROM:
+ ERROR FROM:
+  task id:           28
+  routine: read_model_time
+  message:  cannot open file clm_restart.nc for reading.
+  task id:            9
+  routine: read_model_time
+  message:  cannot open file clm_restart.nc for reading.
+  
+  source file: $URL: https://svn-dares-dart.cgd.ucar.edu/DART/branches/rma_trunk/models/clm/model_mod.f90 $
+  file revision: $Revision: 11920 $
+  revision date: $Date: 2017-08-29 16:20:46 -0600 (Tue, 29 Aug 2017) $
+  
+  source file: $URL: https://svn-dares-dart.cgd.ucar.edu/DART/branches/rma_trunk/models/clm/model_mod.f90 $
+  file revision: $Revision: 11920 $
+  revision date: $Date: 2017-08-29 16:20:46 -0600 (Tue, 29 Aug 2017) $
+  task id:            1
+  routine: read_model_time
+  message:  cannot open file clm_restart.nc for reading.
+  task id:           10
+  routine: read_model_time
+  message:  cannot open file clm_restart.nc for reading.
+  
+  source file: $URL: https://svn-dares-dart.cgd.ucar.edu/DART/branches/rma_trunk/models/clm/model_mod.f90 $
+  file revision: $Revision: 11920 $
+  revision date: $Date: 2017-08-29 16:20:46 -0600 (Tue, 29 Aug 2017) $
+  
+  source file: $URL: https://svn-dares-dart.cgd.ucar.edu/DART/branches/rma_trunk/models/clm/model_mod.f90 $
+  file revision: $Revision: 11920 $
+  revision date: $Date: 2017-08-29 16:20:46 -0600 (Tue, 29 Aug 2017) $
+ ERROR FROM:
+  task id:           30
+  routine: read_model_time
+  message:  cannot open file clm_restart.nc for reading.
+ ERROR FROM:
+  
+  source file: $URL: https://svn-dares-dart.cgd.ucar.edu/DART/branches/rma_trunk/models/clm/model_mod.f90 $
+  file revision: $Revision: 11920 $
+  revision date: $Date: 2017-08-29 16:20:46 -0600 (Tue, 29 Aug 2017) $
+ ERROR FROM:
+ ERROR FROM:
+ ERROR FROM:
+ ERROR FROM:
+  task id:           22
+  routine: read_model_time
+  message:  cannot open file clm_restart.nc for reading.
+  task id:           15
+  routine: read_model_time
+  message:  cannot open file clm_restart.nc for reading.
+  task id:            2
+  routine: read_model_time
+  message:  cannot open file clm_restart.nc for reading.
+  
+  source file: $URL: https://svn-dares-dart.cgd.ucar.edu/DART/branches/rma_trunk/models/clm/model_mod.f90 $
+  file revision: $Revision: 11920 $
+  revision date: $Date: 2017-08-29 16:20:46 -0600 (Tue, 29 Aug 2017) $
+  task id:           11
+  routine: read_model_time
+  message:  cannot open file clm_restart.nc for reading.
+  
+  source file: $URL: https://svn-dares-dart.cgd.ucar.edu/DART/branches/rma_trunk/models/clm/model_mod.f90 $
+  file revision: $Revision: 11920 $
+  revision date: $Date: 2017-08-29 16:20:46 -0600 (Tue, 29 Aug 2017) $
+  
+  source file: $URL: https://svn-dares-dart.cgd.ucar.edu/DART/branches/rma_trunk/models/clm/model_mod.f90 $
+  file revision: $Revision: 11920 $
+  revision date: $Date: 2017-08-29 16:20:46 -0600 (Tue, 29 Aug 2017) $
+  task id:           33
+  routine: read_model_time
+  message:  cannot open file clm_restart.nc for reading.
+  
+  source file: $URL: https://svn-dares-dart.cgd.ucar.edu/DART/branches/rma_trunk/models/clm/model_mod.f90 $
+  file revision: $Revision: 11920 $
+  revision date: $Date: 2017-08-29 16:20:46 -0600 (Tue, 29 Aug 2017) $
+  
+  source file: $URL: https://svn-dares-dart.cgd.ucar.edu/DART/branches/rma_trunk/models/clm/model_mod.f90 $
+  file revision: $Revision: 11920 $
+  revision date: $Date: 2017-08-29 16:20:46 -0600 (Tue, 29 Aug 2017) $
+ ERROR FROM:
+ ERROR FROM:
+ ERROR FROM:
+  task id:           12
+  routine: read_model_time
+  message:  cannot open file clm_restart.nc for reading.
+ ERROR FROM:
+  
+  source file: $URL: https://svn-dares-dart.cgd.ucar.edu/DART/branches/rma_trunk/models/clm/model_mod.f90 $
+  file revision: $Revision: 11920 $
+  revision date: $Date: 2017-08-29 16:20:46 -0600 (Tue, 29 Aug 2017) $
+  task id:           35
+  routine: read_model_time
+  message:  cannot open file clm_restart.nc for reading.
+  task id:           26
+  routine: read_model_time
+  message:  cannot open file clm_restart.nc for reading.
+  
+  source file: $URL: https://svn-dares-dart.cgd.ucar.edu/DART/branches/rma_trunk/models/clm/model_mod.f90 $
+  file revision: $Revision: 11920 $
+  revision date: $Date: 2017-08-29 16:20:46 -0600 (Tue, 29 Aug 2017) $
+ ERROR FROM:
+  
+  source file: $URL: https://svn-dares-dart.cgd.ucar.edu/DART/branches/rma_trunk/models/clm/model_mod.f90 $
+  file revision: $Revision: 11920 $
+  revision date: $Date: 2017-08-29 16:20:46 -0600 (Tue, 29 Aug 2017) $
+  task id:           13
+  routine: read_model_time
+  message:  cannot open file clm_restart.nc for reading.
+  
+  source file: $URL: https://svn-dares-dart.cgd.ucar.edu/DART/branches/rma_trunk/models/clm/model_mod.f90 $
+  file revision: $Revision: 11920 $
+  revision date: $Date: 2017-08-29 16:20:46 -0600 (Tue, 29 Aug 2017) $
+ ERROR FROM:
+  task id:            7
+  routine: read_model_time
+  message:  cannot open file clm_restart.nc for reading.
+ ERROR FROM:
+  
+  source file: $URL: https://svn-dares-dart.cgd.ucar.edu/DART/branches/rma_trunk/models/clm/model_mod.f90 $
+  file revision: $Revision: 11920 $
+  revision date: $Date: 2017-08-29 16:20:46 -0600 (Tue, 29 Aug 2017) $
+  task id:           25
+  routine: read_model_time
+  message:  cannot open file clm_restart.nc for reading.
+  
+  source file: $URL: https://svn-dares-dart.cgd.ucar.edu/DART/branches/rma_trunk/models/clm/model_mod.f90 $
+  file revision: $Revision: 11920 $
+  revision date: $Date: 2017-08-29 16:20:46 -0600 (Tue, 29 Aug 2017) $
+ ERROR FROM:
+  task id:           23
+  routine: read_model_time
+  message:  cannot open file clm_restart.nc for reading.
+ PE 0: initialize_mpi_utilities:  Running with           72  MPI processes.
+  
+  source file: $URL: https://svn-dares-dart.cgd.ucar.edu/DART/branches/rma_trunk/models/clm/model_mod.f90 $
+  file revision: $Revision: 11920 $
+  revision date: $Date: 2017-08-29 16:20:46 -0600 (Tue, 29 Aug 2017) $
+  task id:           24
+  routine: read_model_time
+  message:  cannot open file clm_restart.nc for reading.
+ ERROR FROM:
+  
+  source file: $URL: https://svn-dares-dart.cgd.ucar.edu/DART/branches/rma_trunk/models/clm/model_mod.f90 $
+  file revision: $Revision: 11920 $
+  revision date: $Date: 2017-08-29 16:20:46 -0600 (Tue, 29 Aug 2017) $
+  task id:           17
+  routine: read_model_time
+  message:  cannot open file clm_restart.nc for reading.
+  
+  source file: $URL: https://svn-dares-dart.cgd.ucar.edu/DART/branches/rma_trunk/models/clm/model_mod.f90 $
+  file revision: $Revision: 11920 $
+  revision date: $Date: 2017-08-29 16:20:46 -0600 (Tue, 29 Aug 2017) $
+ ERROR FROM:
+  task id:           29
+  routine: read_model_time
+  message:  cannot open file clm_restart.nc for reading.
+ ERROR FROM:
+ ERROR FROM:
+  task id:           27
+  routine: read_model_time
+  message:  cannot open file clm_restart.nc for reading.
+  task id:           20
+  routine: read_model_time
+  message:  cannot open file clm_restart.nc for reading.
+  
+  source file: $URL: https://svn-dares-dart.cgd.ucar.edu/DART/branches/rma_trunk/models/clm/model_mod.f90 $
+  file revision: $Revision: 11920 $
+  revision date: $Date: 2017-08-29 16:20:46 -0600 (Tue, 29 Aug 2017) $
+  
+  source file: $URL: https://svn-dares-dart.cgd.ucar.edu/DART/branches/rma_trunk/models/clm/model_mod.f90 $
+  file revision: $Revision: 11920 $
+  revision date: $Date: 2017-08-29 16:20:46 -0600 (Tue, 29 Aug 2017) $
+  
+  source file: $URL: https://svn-dares-dart.cgd.ucar.edu/DART/branches/rma_trunk/models/clm/model_mod.f90 $
+  file revision: $Revision: 11920 $
+  revision date: $Date: 2017-08-29 16:20:46 -0600 (Tue, 29 Aug 2017) $
+ ERROR FROM:
+  task id:           19
+  routine: read_model_time
+  message:  cannot open file clm_restart.nc for reading.
+  
+  source file: $URL: https://svn-dares-dart.cgd.ucar.edu/DART/branches/rma_trunk/models/clm/model_mod.f90 $
+  file revision: $Revision: 11920 $
+  revision date: $Date: 2017-08-29 16:20:46 -0600 (Tue, 29 Aug 2017) $
+ ERROR FROM:
+ ERROR FROM:
+  task id:           18
+  routine: read_model_time
+  message:  cannot open file clm_restart.nc for reading.
+  
+  source file: $URL: https://svn-dares-dart.cgd.ucar.edu/DART/branches/rma_trunk/models/clm/model_mod.f90 $
+  file revision: $Revision: 11920 $
+  revision date: $Date: 2017-08-29 16:20:46 -0600 (Tue, 29 Aug 2017) $
+  task id:            3
+  routine: read_model_time
+  message:  cannot open file clm_restart.nc for reading.
+  
+  source file: $URL: https://svn-dares-dart.cgd.ucar.edu/DART/branches/rma_trunk/models/clm/model_mod.f90 $
+  file revision: $Revision: 11920 $
+  revision date: $Date: 2017-08-29 16:20:46 -0600 (Tue, 29 Aug 2017) $
+ ERROR FROM:
+  task id:           31
+  routine: read_model_time
+  message:  cannot open file clm_restart.nc for reading.
+ ERROR FROM:
+  
+  source file: $URL: https://svn-dares-dart.cgd.ucar.edu/DART/branches/rma_trunk/models/clm/model_mod.f90 $
+  file revision: $Revision: 11920 $
+  revision date: $Date: 2017-08-29 16:20:46 -0600 (Tue, 29 Aug 2017) $
+  task id:           16
+  routine: read_model_time
+  message:  cannot open file clm_restart.nc for reading.
+  
+  source file: $URL: https://svn-dares-dart.cgd.ucar.edu/DART/branches/rma_trunk/models/clm/model_mod.f90 $
+  file revision: $Revision: 11920 $
+  revision date: $Date: 2017-08-29 16:20:46 -0600 (Tue, 29 Aug 2017) $
+ ERROR FROM:
+  task id:            0
+  routine: read_model_time
+  message:  cannot open file clm_restart.nc for reading.
+  
+  source file: $URL: https://svn-dares-dart.cgd.ucar.edu/DART/branches/rma_trunk/models/clm/model_mod.f90 $
+  file revision: $Revision: 11920 $
+  revision date: $Date: 2017-08-29 16:20:46 -0600 (Tue, 29 Aug 2017) $
+ ERROR FROM:
+ ERROR FROM:
+ ERROR FROM:
+ ERROR FROM:
+ ERROR FROM:
+ ERROR FROM:
+ ERROR FROM:
+ ERROR FROM:
+ ERROR FROM:
+ ERROR FROM:
+ ERROR FROM:
+ ERROR FROM:
+ ERROR FROM:
+ ERROR FROM:
+ ERROR FROM:
+ ERROR FROM:
+ ERROR FROM:
+  task id:           39
+  routine: read_model_time
+  message:  cannot open file clm_restart.nc for reading.
+  task id:           58
+  routine: read_model_time
+  message:  cannot open file clm_restart.nc for reading.
+ ERROR FROM:
+  task id:           45
+  routine: read_model_time
+  message:  cannot open file clm_restart.nc for reading.
+  task id:           54
+  routine: read_model_time
+  message:  cannot open file clm_restart.nc for reading.
+ ERROR FROM:
+ ERROR FROM:
+  task id:           63
+  routine: read_model_time
+  message:  cannot open file clm_restart.nc for reading.
+  task id:           57
+  routine: read_model_time
+  message:  cannot open file clm_restart.nc for reading.
+  task id:           36
+  routine: read_model_time
+  message:  cannot open file clm_restart.nc for reading.
+ ERROR FROM:
+  task id:           66
+  routine: read_model_time
+  message:  cannot open file clm_restart.nc for reading.
+  
+  source file: $URL: https://svn-dares-dart.cgd.ucar.edu/DART/branches/rma_trunk/models/clm/model_mod.f90 $
+  file revision: $Revision: 11920 $
+  revision date: $Date: 2017-08-29 16:20:46 -0600 (Tue, 29 Aug 2017) $
+ ERROR FROM:
+  
+  source file: $URL: https://svn-dares-dart.cgd.ucar.edu/DART/branches/rma_trunk/models/clm/model_mod.f90 $
+  file revision: $Revision: 11920 $
+  revision date: $Date: 2017-08-29 16:20:46 -0600 (Tue, 29 Aug 2017) $
+  
+  source file: $URL: https://svn-dares-dart.cgd.ucar.edu/DART/branches/rma_trunk/models/clm/model_mod.f90 $
+  file revision: $Revision: 11920 $
+  revision date: $Date: 2017-08-29 16:20:46 -0600 (Tue, 29 Aug 2017) $
+  task id:           61
+  routine: read_model_time
+  message:  cannot open file clm_restart.nc for reading.
+  
+  source file: $URL: https://svn-dares-dart.cgd.ucar.edu/DART/branches/rma_trunk/models/clm/model_mod.f90 $
+  file revision: $Revision: 11920 $
+  revision date: $Date: 2017-08-29 16:20:46 -0600 (Tue, 29 Aug 2017) $
+  
+  source file: $URL: https://svn-dares-dart.cgd.ucar.edu/DART/branches/rma_trunk/models/clm/model_mod.f90 $
+  file revision: $Revision: 11920 $
+  revision date: $Date: 2017-08-29 16:20:46 -0600 (Tue, 29 Aug 2017) $
+  task id:           52
+  routine: read_model_time
+  message:  cannot open file clm_restart.nc for reading.
+  
+  source file: $URL: https://svn-dares-dart.cgd.ucar.edu/DART/branches/rma_trunk/models/clm/model_mod.f90 $
+  file revision: $Revision: 11920 $
+  revision date: $Date: 2017-08-29 16:20:46 -0600 (Tue, 29 Aug 2017) $
+ ERROR FROM:
+  task id:           48
+  routine: read_model_time
+  message:  cannot open file clm_restart.nc for reading.
+  task id:           56
+  routine: read_model_time
+  message:  cannot open file clm_restart.nc for reading.
+ ERROR FROM:
+ ERROR FROM:
+  
+  source file: $URL: https://svn-dares-dart.cgd.ucar.edu/DART/branches/rma_trunk/models/clm/model_mod.f90 $
+  file revision: $Revision: 11920 $
+  revision date: $Date: 2017-08-29 16:20:46 -0600 (Tue, 29 Aug 2017) $
+  task id:           70
+  routine: read_model_time
+  message:  cannot open file clm_restart.nc for reading.
+  
+  source file: $URL: https://svn-dares-dart.cgd.ucar.edu/DART/branches/rma_trunk/models/clm/model_mod.f90 $
+  file revision: $Revision: 11920 $
+  revision date: $Date: 2017-08-29 16:20:46 -0600 (Tue, 29 Aug 2017) $
+  
+  source file: $URL: https://svn-dares-dart.cgd.ucar.edu/DART/branches/rma_trunk/models/clm/model_mod.f90 $
+  file revision: $Revision: 11920 $
+  revision date: $Date: 2017-08-29 16:20:46 -0600 (Tue, 29 Aug 2017) $
+  task id:           65
+  routine: read_model_time
+  message:  cannot open file clm_restart.nc for reading.
+  
+  source file: $URL: https://svn-dares-dart.cgd.ucar.edu/DART/branches/rma_trunk/models/clm/model_mod.f90 $
+  file revision: $Revision: 11920 $
+  revision date: $Date: 2017-08-29 16:20:46 -0600 (Tue, 29 Aug 2017) $
+  task id:           60
+  routine: read_model_time
+  message:  cannot open file clm_restart.nc for reading.
+  task id:           46
+  routine: read_model_time
+  message:  cannot open file clm_restart.nc for reading.
+  
+  source file: $URL: https://svn-dares-dart.cgd.ucar.edu/DART/branches/rma_trunk/models/clm/model_mod.f90 $
+  file revision: $Revision: 11920 $
+  revision date: $Date: 2017-08-29 16:20:46 -0600 (Tue, 29 Aug 2017) $
+  
+  source file: $URL: https://svn-dares-dart.cgd.ucar.edu/DART/branches/rma_trunk/models/clm/model_mod.f90 $
+  file revision: $Revision: 11920 $
+  revision date: $Date: 2017-08-29 16:20:46 -0600 (Tue, 29 Aug 2017) $
+  task id:           67
+  routine: read_model_time
+  message:  cannot open file clm_restart.nc for reading.
+  
+  source file: $URL: https://svn-dares-dart.cgd.ucar.edu/DART/branches/rma_trunk/models/clm/model_mod.f90 $
+  file revision: $Revision: 11920 $
+  revision date: $Date: 2017-08-29 16:20:46 -0600 (Tue, 29 Aug 2017) $
+  task id:           42
+  routine: read_model_time
+  message:  cannot open file clm_restart.nc for reading.
+  
+  source file: $URL: https://svn-dares-dart.cgd.ucar.edu/DART/branches/rma_trunk/models/clm/model_mod.f90 $
+  file revision: $Revision: 11920 $
+  revision date: $Date: 2017-08-29 16:20:46 -0600 (Tue, 29 Aug 2017) $
+ ERROR FROM:
+  task id:           51
+  routine: read_model_time
+  message:  cannot open file clm_restart.nc for reading.
+  
+  source file: $URL: https://svn-dares-dart.cgd.ucar.edu/DART/branches/rma_trunk/models/clm/model_mod.f90 $
+  file revision: $Revision: 11920 $
+  revision date: $Date: 2017-08-29 16:20:46 -0600 (Tue, 29 Aug 2017) $
+  
+  source file: $URL: https://svn-dares-dart.cgd.ucar.edu/DART/branches/rma_trunk/models/clm/model_mod.f90 $
+  file revision: $Revision: 11920 $
+  revision date: $Date: 2017-08-29 16:20:46 -0600 (Tue, 29 Aug 2017) $
+ ERROR FROM:
+ ERROR FROM:
+  task id:           71
+  routine: read_model_time
+  message:  cannot open file clm_restart.nc for reading.
+  
+  source file: $URL: https://svn-dares-dart.cgd.ucar.edu/DART/branches/rma_trunk/models/clm/model_mod.f90 $
+  file revision: $Revision: 11920 $
+  revision date: $Date: 2017-08-29 16:20:46 -0600 (Tue, 29 Aug 2017) $
+  task id:           62
+  routine: read_model_time
+  message:  cannot open file clm_restart.nc for reading.
+  
+  source file: $URL: https://svn-dares-dart.cgd.ucar.edu/DART/branches/rma_trunk/models/clm/model_mod.f90 $
+  file revision: $Revision: 11920 $
+  revision date: $Date: 2017-08-29 16:20:46 -0600 (Tue, 29 Aug 2017) $
+MPT ERROR: Rank 56(g:56) is aborting with error code 99.
+	Process ID: 34091, Host: r12i6n22, Program: /glade/p/work/hendric/DART/rma_timing/models/clm/work/filter
+	MPT Version: SGI MPT 2.15  12/18/16 02:58:06
+
+MPT: --------stack traceback-------
+ ERROR FROM:
+  task id:           59
+  routine: read_model_time
+  message:  cannot open file clm_restart.nc for reading.
+  
+  source file: $URL: https://svn-dares-dart.cgd.ucar.edu/DART/branches/rma_trunk/models/clm/model_mod.f90 $
+  file revision: $Revision: 11920 $
+  revision date: $Date: 2017-08-29 16:20:46 -0600 (Tue, 29 Aug 2017) $
+  
+  source file: $URL: https://svn-dares-dart.cgd.ucar.edu/DART/branches/rma_trunk/models/clm/model_mod.f90 $
+  file revision: $Revision: 11920 $
+  revision date: $Date: 2017-08-29 16:20:46 -0600 (Tue, 29 Aug 2017) $
+  task id:           41
+  routine: read_model_time
+  message:  cannot open file clm_restart.nc for reading.
+  
+  source file: $URL: https://svn-dares-dart.cgd.ucar.edu/DART/branches/rma_trunk/models/clm/model_mod.f90 $
+  file revision: $Revision: 11920 $
+  revision date: $Date: 2017-08-29 16:20:46 -0600 (Tue, 29 Aug 2017) $
+  task id:           53
+  routine: read_model_time
+  message:  cannot open file clm_restart.nc for reading.
+ ERROR FROM:
+  
+  source file: $URL: https://svn-dares-dart.cgd.ucar.edu/DART/branches/rma_trunk/models/clm/model_mod.f90 $
+  file revision: $Revision: 11920 $
+  revision date: $Date: 2017-08-29 16:20:46 -0600 (Tue, 29 Aug 2017) $
+  task id:           37
+  routine: read_model_time
+  message:  cannot open file clm_restart.nc for reading.
+  
+  source file: $URL: https://svn-dares-dart.cgd.ucar.edu/DART/branches/rma_trunk/models/clm/model_mod.f90 $
+  file revision: $Revision: 11920 $
+  revision date: $Date: 2017-08-29 16:20:46 -0600 (Tue, 29 Aug 2017) $
+  
+  source file: $URL: https://svn-dares-dart.cgd.ucar.edu/DART/branches/rma_trunk/models/clm/model_mod.f90 $
+  file revision: $Revision: 11920 $
+  revision date: $Date: 2017-08-29 16:20:46 -0600 (Tue, 29 Aug 2017) $
+  task id:           38
+  routine: read_model_time
+  message:  cannot open file clm_restart.nc for reading.
+  
+  source file: $URL: https://svn-dares-dart.cgd.ucar.edu/DART/branches/rma_trunk/models/clm/model_mod.f90 $
+  file revision: $Revision: 11920 $
+  revision date: $Date: 2017-08-29 16:20:46 -0600 (Tue, 29 Aug 2017) $
+ ERROR FROM:
+  task id:           55
+  routine: read_model_time
+  message:  cannot open file clm_restart.nc for reading.
+  
+  source file: $URL: https://svn-dares-dart.cgd.ucar.edu/DART/branches/rma_trunk/models/clm/model_mod.f90 $
+  file revision: $Revision: 11920 $
+  revision date: $Date: 2017-08-29 16:20:46 -0600 (Tue, 29 Aug 2017) $
+ ERROR FROM:
+  task id:           50
+  routine: read_model_time
+  message:  cannot open file clm_restart.nc for reading.
+  
+  source file: $URL: https://svn-dares-dart.cgd.ucar.edu/DART/branches/rma_trunk/models/clm/model_mod.f90 $
+  file revision: $Revision: 11920 $
+  revision date: $Date: 2017-08-29 16:20:46 -0600 (Tue, 29 Aug 2017) $
+ ERROR FROM:
+  task id:           44
+  routine: read_model_time
+  message:  cannot open file clm_restart.nc for reading.
+  
+  source file: $URL: https://svn-dares-dart.cgd.ucar.edu/DART/branches/rma_trunk/models/clm/model_mod.f90 $
+  file revision: $Revision: 11920 $
+  revision date: $Date: 2017-08-29 16:20:46 -0600 (Tue, 29 Aug 2017) $
+  task id:           47
+  routine: read_model_time
+  message:  cannot open file clm_restart.nc for reading.
+  
+  source file: $URL: https://svn-dares-dart.cgd.ucar.edu/DART/branches/rma_trunk/models/clm/model_mod.f90 $
+  file revision: $Revision: 11920 $
+  revision date: $Date: 2017-08-29 16:20:46 -0600 (Tue, 29 Aug 2017) $
+  task id:           68
+  routine: read_model_time
+  message:  cannot open file clm_restart.nc for reading.
+  
+  source file: $URL: https://svn-dares-dart.cgd.ucar.edu/DART/branches/rma_trunk/models/clm/model_mod.f90 $
+  file revision: $Revision: 11920 $
+  revision date: $Date: 2017-08-29 16:20:46 -0600 (Tue, 29 Aug 2017) $
+  
+  source file: $URL: https://svn-dares-dart.cgd.ucar.edu/DART/branches/rma_trunk/models/clm/model_mod.f90 $
+  file revision: $Revision: 11920 $
+  revision date: $Date: 2017-08-29 16:20:46 -0600 (Tue, 29 Aug 2017) $
+  task id:           49
+  routine: read_model_time
+  message:  cannot open file clm_restart.nc for reading.
+ ERROR FROM:
+  task id:           69
+  routine: read_model_time
+  message:  cannot open file clm_restart.nc for reading.
+  
+  source file: $URL: https://svn-dares-dart.cgd.ucar.edu/DART/branches/rma_trunk/models/clm/model_mod.f90 $
+  file revision: $Revision: 11920 $
+  revision date: $Date: 2017-08-29 16:20:46 -0600 (Tue, 29 Aug 2017) $
+  
+  source file: $URL: https://svn-dares-dart.cgd.ucar.edu/DART/branches/rma_trunk/models/clm/model_mod.f90 $
+  file revision: $Revision: 11920 $
+  revision date: $Date: 2017-08-29 16:20:46 -0600 (Tue, 29 Aug 2017) $
+ ERROR FROM:
+ ERROR FROM:
+  task id:           43
+  routine: read_model_time
+  message:  cannot open file clm_restart.nc for reading.
+  
+  source file: $URL: https://svn-dares-dart.cgd.ucar.edu/DART/branches/rma_trunk/models/clm/model_mod.f90 $
+  file revision: $Revision: 11920 $
+  revision date: $Date: 2017-08-29 16:20:46 -0600 (Tue, 29 Aug 2017) $
+  task id:           40
+  routine: read_model_time
+  message:  cannot open file clm_restart.nc for reading.
+  
+  source file: $URL: https://svn-dares-dart.cgd.ucar.edu/DART/branches/rma_trunk/models/clm/model_mod.f90 $
+  file revision: $Revision: 11920 $
+  revision date: $Date: 2017-08-29 16:20:46 -0600 (Tue, 29 Aug 2017) $
+  task id:           64
+  routine: read_model_time
+  message:  cannot open file clm_restart.nc for reading.
+  
+  source file: $URL: https://svn-dares-dart.cgd.ucar.edu/DART/branches/rma_trunk/models/clm/model_mod.f90 $
+  file revision: $Revision: 11920 $
+  revision date: $Date: 2017-08-29 16:20:46 -0600 (Tue, 29 Aug 2017) $
+MPT: Attaching to program: /proc/17006/exe, process 17006
+MPT: Try: zypper install -C "debuginfo(build-id)=5409c48fdb15e90649c1407e444fbe31d6dc8ec1"
+MPT: (no debugging symbols found)...done.
+MPT: [Thread debugging using libthread_db enabled]
+MPT: Using host libthread_db library "/glade/u/apps/ch/os/lib64/libthread_db.so.1".
+MPT: Try: zypper install -C "debuginfo(build-id)=3d290be00d48b823d3b71df2249e80d881bc473d"
+MPT: (no debugging symbols found)...done.
+MPT: Try: zypper install -C "debuginfo(build-id)=e97cfdb062d6f0c41073f2109a7605d0ae991c03"
+MPT: (no debugging symbols found)...done.
+MPT: Try: zypper install -C "debuginfo(build-id)=f43d7754940a14ffe3d9bd8fc9472ffbbfead544"
+MPT: (no debugging symbols found)...done.
+MPT: Try: zypper install -C "debuginfo(build-id)=0ea764119690f32c98faae9a63a73f35ed8b1099"
+MPT: (no debugging symbols found)...done.
+MPT: Try: zypper install -C "debuginfo(build-id)=15916519d9dbaea26ec88427460b4cedb9c0a6ab"
+MPT: (no debugging symbols found)...done.
+MPT: Try: zypper install -C "debuginfo(build-id)=79264652a62453da222372a430cd9351d4bbcbde"
+MPT: (no debugging symbols found)...done.
+MPT: Try: zypper install -C "debuginfo(build-id)=68682e9ac223d269cbecb94315fcec5e16b32bfb"
+MPT: (no debugging symbols found)...done.
+MPT: 0x00002aaaaaee341c in waitpid () from /glade/u/apps/ch/os/lib64/libpthread.so.0
+MPT: Missing separate debuginfos, use: zypper install glibc-debuginfo-2.19-35.1.x86_64
+MPT: (gdb) #0  0x00002aaaaaee341c in waitpid ()
+MPT:    from /glade/u/apps/ch/os/lib64/libpthread.so.0
+MPT: #1  0x00002aaaab6105d6 in mpi_sgi_system (
+MPT: #2  MPI_SGI_stacktraceback (
+MPT:     header=header@entry=0x7fffffff1cc0 "MPT ERROR: Rank 6(g:6) is aborting with error code 99.\n\tProcess ID: 17006, Host: r1i2n29, Program: /glade/p/work/hendric/DART/rma_timing/models/clm/work/filter\n\tMPT Version: SGI MPT 2.15  12/18/16 02:"...) at sig.c:339
+MPT: #3  0x00002aaaab563d6f in print_traceback (ecode=ecode@entry=99) at abort.c:227
+MPT: #4  0x00002aaaab563fda in PMPI_Abort (comm=<optimized out>, errorcode=99)
+MPT:     at abort.c:66
+MPT: #5  0x00002aaaab56428d in pmpi_abort__ ()
+MPT:    from /opt/sgi/mpt/mpt-2.15/lib/libmpi.so
+MPT: #6  0x00000000004cfb7c in exit_all_ ()
+MPT: #7  0x00000000004be7ff in utilities_mod_mp_error_handler_ ()
+MPT: #8  0x0000000000511f4f in model_mod_mp_static_init_model_ ()
+MPT: #9  0x000000000054f83a in filter_mod_mp_filter_main_ ()
+MPT: #10 0x000000000058963c in MAIN__ ()
+MPT: #11 0x000000000040489e in main ()
+MPT: (gdb) A debugging session is active.
+MPT: 
+MPT: 	Inferior 1 [process 17006] will be detached.
+MPT: 
+MPT: Quit anyway? (y or n) [answered Y; input not from terminal]
+MPT: Detaching from program: /proc/17006/exe, process 17006
+Used memory in task 14/36: 30.77MiB (+0.63MiB overhead). ExitStatus: 0. Signal: 0
+Used memory in task 34/36: 30.77MiB (+0.63MiB overhead). ExitStatus: 0. Signal: 0
+MPT ERROR: MPI_COMM_WORLD rank 14 has terminated without calling MPI_Finalize()
+	aborting job
+*************************
+ --- filter Finished ----
+*************************

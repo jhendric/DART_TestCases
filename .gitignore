@@ -20,10 +20,26 @@ ompiled source #
 *.rar
 *.tar
 *.zip
+*.txt
+dart_log.*
+
+# Directories #
+######################
+waccmx*
+
+# programs #
+######################
+filter
+perfect_model_obs
+clm_to_dart
+dart_to_clm
+compare_states
+file
+wrfinput_d*
 
 # Logs and databases #
 ######################
-*.log
+*.log*
 *.sql
 *.sqlite
 

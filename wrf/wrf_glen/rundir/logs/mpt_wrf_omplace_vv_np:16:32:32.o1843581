@@ -1,0 +1,252 @@
+*******************************
+ PBS_JOB_ID  '1843581.chadmin1'
+ PBS_JOBNAME 'mpt_wrf_omplace_vv_np:16:32:32'
+ NCPUS       '512'
+ NODES       '16'
+*******************************
+*****************************
+ --- mpiexec_mpt STARTED ----
+*****************************
+
+Currently Loaded Modules:
+  1) ncarenv/1.2           4) netcdf/4.4.1.1   7) peak_memusage/1.1
+  2) intel/17.0.1          5) xxdiff/4.0.1
+  3) ncarcompilers/0.4.1   6) mpt/2.15f
+
+ 
+
+
+omplace information:
+   32 threads, thread model is intel
+   placement file /tmp/omplace.file.hendric.58175:
+omplace information:
+   32 threads, thread model is intel
+   placement file /tmp/omplace.file.hendric.58174:
+omplace information:
+   32 threads, thread model is intel
+   placement file /tmp/omplace.file.hendric.58177:
+omplace information:
+   32 threads, thread model is intel
+   placement file /tmp/omplace.file.hendric.58187:
+    firsttask cpu=0 
+    thread oncpu=0 cpu=1-16 noplace=1  exact
+omplace information:
+   32 threads, thread model is intel
+   placement file /tmp/omplace.file.hendric.58176:
+omplace information:
+   32 threads, thread model is intel
+   placement file /tmp/omplace.file.hendric.58183:
+    firsttask cpu=0 
+    thread oncpu=0 cpu=1-16 noplace=1  exact
+omplace information:
+   32 threads, thread model is intel
+   placement file /tmp/omplace.file.hendric.58186:
+omplace information:
+   32 threads, thread model is intel
+   placement file /tmp/omplace.file.hendric.58181:
+omplace information:
+   32 threads, thread model is intel
+   placement file /tmp/omplace.file.hendric.58184:
+omplace information:
+   32 threads, thread model is intel
+   placement file /tmp/omplace.file.hendric.58188:
+omplace information:
+   32 threads, thread model is intel
+   placement file /tmp/omplace.file.hendric.58180:
+omplace information:
+   32 threads, thread model is intel
+   placement file /tmp/omplace.file.hendric.58182:
+omplace information:
+   32 threads, thread model is intel
+   placement file /tmp/omplace.file.hendric.58189:
+omplace information:
+   32 threads, thread model is intel
+   placement file /tmp/omplace.file.hendric.58178:
+omplace information:
+   32 threads, thread model is intel
+   placement file /tmp/omplace.file.hendric.58185:
+omplace information:
+   32 threads, thread model is intel
+   placement file /tmp/omplace.file.hendric.58179:
+    firsttask cpu=0 
+    thread oncpu=0 cpu=1-16 noplace=1  exact
+    firsttask cpu=0 
+    thread oncpu=0 cpu=1-16 noplace=1  exact
+    firsttask cpu=0 
+    thread oncpu=0 cpu=1-16 noplace=1  exact
+    firsttask cpu=0 
+    thread oncpu=0 cpu=1-16 noplace=1  exact
+    firsttask cpu=0 
+    thread oncpu=0 cpu=1-16 noplace=1  exact
+    firsttask cpu=0 
+    thread oncpu=0 cpu=1-16 noplace=1  exact
+    firsttask cpu=0 
+    thread oncpu=0 cpu=1-16 noplace=1  exact
+    firsttask cpu=0 
+    thread oncpu=0 cpu=1-16 noplace=1  exact
+    firsttask cpu=0 
+    thread oncpu=0 cpu=1-16 noplace=1  exact
+    firsttask cpu=0 
+    thread oncpu=0 cpu=1-16 noplace=1  exact
+    firsttask cpu=0 
+    thread oncpu=0 cpu=1-16 noplace=1  exact
+    firsttask cpu=0 
+    thread oncpu=0 cpu=1-16 noplace=1  exact
+    firsttask cpu=0 
+    thread oncpu=0 cpu=1-16 noplace=1  exact
+    firsttask cpu=0 
+    thread oncpu=0 cpu=1-16 noplace=1  exact
+ Starting program Filter
+ Initializing the utilities module.
+ Trying to log to unit           10
+ Trying to open file dart_log.out
+ 
+ --------------------------------------
+ Starting ... at YYYY MM DD HH MM SS = 
+                 2017  9 21 15 26 27
+ Program Filter
+ --------------------------------------
+ 
+ set_nml_output Echo NML values to log file only
+ Trying to open namelist log dart_log.nml
+ 
+ DEBUG FROM: initialize_utilities  ..  digits12 is            8
+ DEBUG FROM: initialize_utilities ...  r8       is            8
+ DEBUG FROM: initialize_utilities ...  r4       is            4
+ DEBUG FROM: initialize_utilities  ..  integer  is            4
+ DEBUG FROM: initialize_utilities ...  i8       is            8
+ DEBUG FROM: initialize_utilities ...  i4       is            4
+ PE 0: initialize_mpi_utilities:  Running with           16  MPI processes.
+ ------------------------------------------------------
+ 
+ 
+ -------------- ASSIMILATE_THESE_OBS_TYPES --------------
+ RADIOSONDE_TEMPERATURE
+ RADIOSONDE_U_WIND_COMPONENT
+ RADIOSONDE_V_WIND_COMPONENT
+ RADIOSONDE_SPECIFIC_HUMIDITY
+ RADIOSONDE_SURFACE_ALTIMETER
+ ACARS_U_WIND_COMPONENT
+ ACARS_V_WIND_COMPONENT
+ ACARS_TEMPERATURE
+ ACARS_DEWPOINT
+ SAT_U_WIND_COMPONENT
+ SAT_V_WIND_COMPONENT
+ GPSRO_REFRACTIVITY
+ PROFILER_U_WIND_COMPONENT
+ PROFILER_V_WIND_COMPONENT
+ METAR_U_10_METER_WIND
+ METAR_V_10_METER_WIND
+ METAR_TEMPERATURE_2_METER
+ METAR_DEWPOINT_2_METER
+ METAR_ALTIMETER
+ MARINE_SFC_U_WIND_COMPONENT
+ MARINE_SFC_V_WIND_COMPONENT
+ MARINE_SFC_TEMPERATURE
+ MARINE_SFC_ALTIMETER
+ MARINE_SFC_DEWPOINT
+ RADAR_REFLECTIVITY
+ DOPPLER_RADIAL_VELOCITY
+ RADAR_CLEARAIR_REFLECTIVITY
+ -------------- EVALUATE_THESE_OBS_TYPES --------------
+ LAND_SFC_TEMPERATURE
+ LAND_SFC_U_WIND_COMPONENT
+ LAND_SFC_V_WIND_COMPONENT
+ LAND_SFC_ALTIMETER
+ LAND_SFC_DEWPOINT
+ ------------------------------------------------------
+ 
+ ---------- USE_PRECOMPUTED_FO_OBS_TYPES --------------
+ ------------------------------------------------------
+ 
+ ******************
+ **  DOMAIN # 1  **
+ ******************
+ PE 0:   dt from wrfinput_d0X file is:    75.0000000000000
+ PE 0: static_init_model: state vector array    1 is U
+ PE 0: static_init_model: state vector array    2 is V
+ PE 0: static_init_model: state vector array    3 is W
+ PE 0: static_init_model: state vector array    4 is T
+ PE 0: static_init_model: state vector array    5 is PH
+ PE 0: static_init_model: state vector array    6 is MU
+ PE 0: static_init_model: state vector array    7 is QVAPOR
+ PE 0: static_init_model: state vector array    8 is QCLOUD
+ PE 0: static_init_model: state vector array    9 is QRAIN
+ PE 0: static_init_model: state vector array   10 is QICE
+ PE 0: static_init_model: state vector array   11 is QGRAUP
+ PE 0: static_init_model: state vector array   12 is QNICE
+ PE 0: static_init_model: state vector array   13 is QNRAIN
+ PE 0: static_init_model: state vector array   14 is H_DIABATIC
+ PE 0: static_init_model: state vector array   15 is U10
+ PE 0: static_init_model: state vector array   16 is V10
+ PE 0: static_init_model: state vector array   17 is T2
+ PE 0: static_init_model: state vector array   18 is Q2
+ PE 0: static_init_model: state vector array   19 is PSFC
+ ******************
+ **  DOMAIN # 2  **
+ ******************
+ PE 0:   dt from wrfinput_d0X file is:    18.7500000000000
+ PE 0: static_init_model: state vector array    1 is U
+ PE 0: static_init_model: state vector array    2 is V
+ PE 0: static_init_model: state vector array    3 is W
+ PE 0: static_init_model: state vector array    4 is T
+ PE 0: static_init_model: state vector array    5 is PH
+ PE 0: static_init_model: state vector array    6 is MU
+ PE 0: static_init_model: state vector array    7 is QVAPOR
+ PE 0: static_init_model: state vector array    8 is QCLOUD
+ PE 0: static_init_model: state vector array    9 is QRAIN
+ PE 0: static_init_model: state vector array   10 is QICE
+ PE 0: static_init_model: state vector array   11 is QGRAUP
+ PE 0: static_init_model: state vector array   12 is QNICE
+ PE 0: static_init_model: state vector array   13 is QNRAIN
+ PE 0: static_init_model: state vector array   14 is H_DIABATIC
+ PE 0: static_init_model: state vector array   15 is U10
+ PE 0: static_init_model: state vector array   16 is V10
+ PE 0: static_init_model: state vector array   17 is T2
+ PE 0: static_init_model: state vector array   18 is Q2
+ PE 0: static_init_model: state vector array   19 is PSFC
+ PE 0: static_init_model   wrf model size is    143504462
+ PE 0: location_mod: using code with optimized cutoffs
+ PE 0: location_mod: Including vertical separation when computing distances:
+ PE 0: location_mod:        # pascals ~ 1 horiz radian:      700000.00000
+ PE 0: location_mod:         # meters ~ 1 horiz radian:       80000.00000
+ PE 0: location_mod:   # model levels ~ 1 horiz radian:        2666.70000
+ PE 0: location_mod:  # scale heights ~ 1 horiz radian:          10.00000
+ PE 0: quality_control_mod: Will reject obs with Data QC larger than    4
+ PE 0: quality_control_mod: Will reject obs values more than    3.000000 sigma from mean
+ PE 0: assim_tools_init: Selected filter type is Ensemble Adjustment Kalman Filter (EAKF)
+ PE 0: assim_tools_init: The cutoff namelist value is           0.050000
+ PE 0: assim_tools_init: ... cutoff is the localization half-width parameter,
+ PE 0: assim_tools_init: ... so the effective localization radius is           0.100000
+ PE 0:  
+ PE 0: assim_tools_init: Observations with special localization treatment:
+ PE 0: assim_tools_init: (type name, specified cutoff distance, effective localization radius)
+ PE 0: assim_tools_init: RADAR_REFLECTIVITY                        0.003760          0.007520
+ PE 0: assim_tools_init: DOPPLER_RADIAL_VELOCITY                   0.003760          0.007520
+ PE 0: assim_tools_init: RADAR_CLEARAIR_REFLECTIVITY               0.003760          0.007520
+ PE 0: assim_tools_init: all other observation types will use the default cutoff distance
+ PE 0:  
+ PE 0: assim_tools_init: Disabling the close obs caching because specialized localization
+ PE 0: assim_tools_init: distances are enabled.
+ PE 0: assim_tools_init: Using adaptive localization, threshold       2000 obs
+ PE 0: assim_tools_init: Using Sampling Error Correction
+ PE 0: assim_tools_init: Replicating a copy of the ensemble mean on every task
+ PE 0: assim_tools_init: ... uses more memory per task but may run faster if doing vertical
+ PE 0: assim_tools_init: ... coordinate conversion; controlled by namelist item "distribute_mean"
+ PE 0: assim_tools_init: Doing vertical localization, vertical coordinate conversion may be required
+ PE 0: assim_tools_init: ... Converting all state vector verticals to localization coordinate first.
+ PE 0: assim_tools_init: ... Converting all observation verticals to localization coordinate first.
+ PE 0:  filter trace: Filter start
+ Filter start TIME: 2017/09/21 15:26:30
+ PE 0: filter_main: running with an ensemble size of    50
+ PE 0:  filter trace: Before initializing inflation
+ PE 0: filter_main: Prior inflation damping of     0.900000 will be used
+ PE 0:  filter trace: After  initializing inflation
+ PE 0: parse_stages_to_write:  filter will write stage : preassim
+ PE 0: parse_stages_to_write:  filter will write stage : postassim
+ PE 0: parse_stages_to_write:  filter will write stage : output
+ PE 0:  filter trace: Before setting up space for observations
+ Before setting up space for observations TIME: 2017/09/21 15:26:30
+ After  setting up space for observations TIME: 2017/09/21 15:26:42
+ PE 0:  filter trace: After  setting up space for observations
+ PE 0:  filter trace: Before setting up space for ensembles
