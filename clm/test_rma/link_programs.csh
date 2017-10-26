@@ -5,7 +5,7 @@ set DART_DIR = '/glade/p/work/hendric/DART/rma_timing/models/clm/work'
 
 cd $DART_DIR
 
-# csh quickbuild.csh -mpi
+csh quickbuild.csh -mpi
 
 cd $PWD
 

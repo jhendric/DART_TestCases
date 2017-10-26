@@ -12,9 +12,9 @@
 # pin tasks to processors
 setenv TARGET_CPU_LIST "-1"
 
-time mpirun.lsf ./filter
+time mpirun -n 4 ./filter > my_log.$$.txt
 
-mkdir -p LOGS
-mv *.log *.err LOGS
+mkdir -p logs
+mv my_log.*.txt logs
 
 exit 0
