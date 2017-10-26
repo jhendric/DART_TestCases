@@ -14,7 +14,7 @@
    output_mean                  = .true.
    output_sd                    = .true.
 
-   ens_size                     = 3,
+   ens_size                     = 50,
    num_groups                   = 1,
    perturb_from_single_instance = .false.,
    perturbation_amplitude       = 0.2,
@@ -44,8 +44,8 @@
    inf_upper_bound             = 1000000.0,              1000000.0,
    inf_sd_lower_bound          = 0.60,                   0.10
 
-   trace_execution              = .false.,
-   output_timestamps            = .false.,
+   trace_execution              = .true.,
+   output_timestamps            = .true.,
    silence                      = .false.,
 /
 
