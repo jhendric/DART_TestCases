@@ -1,3 +1,0 @@
-fv_testcase.i.0001.nc
-fv_testcase.i.0002.nc
-fv_testcase.i.0003.nc
