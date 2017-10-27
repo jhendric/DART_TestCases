@@ -42,3 +42,6 @@ end
 cp $CAM_DIR/restarts/camfile.nc   .
 cp $CAM_DIR/restarts/caminput.nc  . 
 cp $CAM_DIR/restarts/cam_phis.nc  . 
+
+ls -1 $CAM_DIR/restarts/fv_testcase.i.*.nc > restart_files_in.txt
+ls -1 cam_out.*.nc       > restart_files_out.txt
