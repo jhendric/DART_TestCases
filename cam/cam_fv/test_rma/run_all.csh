@@ -1,6 +1,6 @@
 #!/bin/csh
 
-# for runningn on Cheyenne
+# for running on Cheyenne
 set job_name       = "clm_rma "
 set account_string = "P86850054 "
 set destination    = "regular"
