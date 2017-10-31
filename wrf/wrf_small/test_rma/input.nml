@@ -30,13 +30,13 @@
 &filter_nml
    single_file_in               = .false.,
    input_state_files            = ''
-   input_state_file_list        = 'restart_list_in_d01.txt'
+   input_state_file_list        = 'restart_files_in_d01.txt', 'restart_files_in_d02.txt'
 
    stages_to_write  = 'preassim', 'output'
 
    single_file_out              = .false.,
    output_state_files           = ''
-   output_state_file_list       = 'restart_list_out_d01.txt'
+   output_state_file_list       = 'restart_files_out_d01.txt', 'restart_files_out_d02.txt'
    output_interval              = 1,
    output_members               = .true.
    num_output_state_members     = 3,
@@ -116,7 +116,6 @@
    #vert_normalization_scale_height = 5.0,
 
 &model_nml
-   output_state_vector         = .false.,
    default_state_variables     = .false.
    wrf_state_variables         = 'U','QTY_U_WIND_COMPONENT','TYPE_U','UPDATE','999',
                                'V','QTY_V_WIND_COMPONENT','TYPE_V','UPDATE','999',
@@ -137,7 +136,7 @@
                                  'QRAIN','0.0','NULL','CLAMP',
                                  'QCLOUD','0.0','NULL','CLAMP',
    num_moist_vars              = 3,
-   num_domains                 = 1,
+   num_domains                 = 2,
    calendar_type               = 3,
    surf_obs                    = .true.,
    assimilation_period_seconds = 21600,

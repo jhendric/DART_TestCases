@@ -1,6 +1,6 @@
 #!/bin/csh
 
-set job_name       = "clm_rma "
+set job_name       = "wrf_small "
 set account_string = "P86850054 "
 set destination    = "regular"
 set join           = "oe" 
@@ -8,87 +8,90 @@ set resource_list  = "select=2:ncpus=36:mpiprocs=36"
 set user_list      = "hendric@ucar.edu"
 set wall_time      = "walltime=00:10:00"
 
-# module list
-# 
-# echo "--------------------------------------------------------------------------"
-# echo "Linking CLM files "
-# echo "--------------------------------------------------------------------------"
-# 
-# csh link_programs.csh          || exit 1
-# 
-# echo "--------------------------------------------------------------------------"
-# echo "Staging CLM files "
-# echo "--------------------------------------------------------------------------"
-# 
-# csh stage_restarts.csh         || exit 2
-# set PID=$!
-# while(`ps -p $PID`)
-#    sleep 1
-# end
-# 
-# echo "--------------------------------------------------------------------------"
-# echo "Converting CLM files to DART files "
-# echo "--------------------------------------------------------------------------"
-# 
-# csh convert_clm_to_dart.csh    || exit 3
-# set PID=$!
-# while(`ps -p $PID`)
-#    sleep 1
-# end
-# 
-# echo "--------------------------------------------------------------------------"
-# echo "Running filter"
-# echo "--------------------------------------------------------------------------"
+# I am sure there is a more elegant way to do this
+set build = TRUE
+set stage = TRUE
 
-if     (`hostname | grep ch` != "") then
-qsub -W block=true -N clm_rma  -A P86850054  -q regular -j oe -m 'abe' -M hendric@ucar.edu -l walltime=00:10:00 -l select=2:ncpus=36:mpiprocs=36 run_cy.csh
-   echo "qsub -W block=true "
-   echo "     -N $job_name "
-   echo "     -A $account_string "
-   echo "     -q $destination "
-   echo "     -j $join "
-   echo "     -m 'abe' "
-   echo "     -M $user_list "
-   echo "     -l $wall_time"
-   echo "     -l $resource_list run_cy.csh"
+if ( $#argv > 0 ) then
+   if (("$1" == "-nobuild") || ("$2" == "-nobuild")) then
+      set build = FALSE
+   endif 
 
-   echo " running on cheyenne "
-
-   qsub -W block=true \
-        -N $job_name \
-        -A $account_string \
-        -q $destination \
-        -j $join \
-        -m "abe" \
-        -M $user_list \
-        -l $wall_time
-        -l $resource_list run_cy.csh
-
-else if (`hostname | grep ye`!= "") then
-   echo " running on yellowstone "
-else 
-   echo " running on interactive "
+   if (("$1" == "-nostage") || ("$2" == "-nostage")) then
+      set stage = FALSE
+   endif 
 endif
 
-#cp ../../run_scripts/run_cy.csh .
+echo "--------------------------------------------------------------------------"
+echo "Run All Scripts"
+echo "--------------------------------------------------------------------------"
 
-# if      ($?LS_SUBCWD) then 
-#    bsub -k < run_cy.csh           || exit 4
-# else if ($?PBS_NODE_FILE) then 
-#    qsub -W block=true run_cy.csh  || exit 5
+if ("$build" == "TRUE") then
+   echo "--------------------------------------------------------------------------"
+   echo "Build and linking WRF files "
+   echo "--------------------------------------------------------------------------"
+
+   csh build_and_link.csh          || exit 1
+endif
+
+if ("$stage" == "TRUE") then
+   echo "--------------------------------------------------------------------------"
+   echo "Staging WFR files "
+   echo "--------------------------------------------------------------------------"
+   
+   csh stage_restarts.csh         || exit 2
+endif
+
+echo "--------------------------------------------------------------------------"
+echo "Running pmo"
+echo "--------------------------------------------------------------------------"
+
+# if     (`hostname | grep ch` != "") then
+#    echo " running on cheyenne "
+# 
+#    qsub -W block=true \
+#         -N $job_name \
+#         -A $account_string \
+#         -q $destination \
+#         -j $join \
+#         -m "abe" \
+#         -M $user_list \
+#         -l $wall_time
+#         -l $resource_list run_cy.csh
+# 
+# else if (`hostname | grep ye`!= "") then
+#    echo "running on yellowstone "
 # else
-#    csh run_cy.csh                 || exit 6
+   echo "running interactively "
+   mpirun -n 1 ./perfect_model_obs
 # endif
 
+echo "--------------------------------------------------------------------------"
+echo "Running filter"
+echo "--------------------------------------------------------------------------"
 
-echo "--- -----------------------------------------------------------------------"
+# if     (`hostname | grep ch` != "") then
+#    echo " running on cheyenne "
+# 
+#    qsub -W block=true \
+#         -N $job_name \
+#         -A $account_string \
+#         -q $destination \
+#         -j $join \
+#         -m "abe" \
+#         -M $user_list \
+#         -l $wall_time
+#         -l $resource_list run_cy.csh
+# 
+# else if (`hostname | grep ye`!= "") then
+#    echo "running on yellowstone "
+# else
+   echo "running interactively "
+   mpirun -n 4 ./filter
+# endif
+
+echo "---------------------------------------------------------------------------"
 echo "Finished running filter"
 echo "--------------------------------------------------------------------------"
-
-echo "--------------------------------------------------------------------------"
-echo "Converting DART files to CLM files "
-echo "--------------------------------------------------------------------------"
-
-# csh  convert_dart_to_clm.csh   || exit 7
 
 exit 0
